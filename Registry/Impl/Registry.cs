@@ -220,6 +220,13 @@ namespace Dekuple.Registry
             return model;
         }
 
+        public TBase Inject<TIFace>(TBase model)
+        {
+            if (_preparers.TryGetValue(typeof(TIFace), out var prep))
+                prep.Inject(model);
+            return model;
+        }
+
         private static string ToArgTypeList(IEnumerable<object> args)
         {
             if (args == null)

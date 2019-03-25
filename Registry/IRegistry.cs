@@ -36,7 +36,13 @@ namespace Dekuple.Registry
         bool Bind<TInterface, TImpl>()
             where TInterface : TBase where TImpl : TInterface;
 
-        // bind an interface to a singleton
+        /// <summary>
+        /// Bind an interface to a singleton 
+        /// </summary>
+        /// <typeparam name="TInterface">The query interface</typeparam>
+        /// <typeparam name="TImpl">The Concrete type to create</typeparam>
+        /// <param name="single">The </param>
+        /// <returns>True if bound</returns>
         bool Bind<TInterface, TImpl>(TImpl single)
             where TInterface : TBase where TImpl : TInterface;
 
@@ -44,8 +50,22 @@ namespace Dekuple.Registry
         TIBase New<TIBase>(params object[] args)
             where TIBase : class, TBase, IHasRegistry<TBase>, IHasDestroyHandler<TBase>;
 
-        TBase Inject(TBase model, Inject inject, Type iface, TBase single);
+        /// <summary>
+        /// Perform all dependency injections manually. This is useful for
+        /// not objects created using Registry.New. Such as Unit3d Components.
+        /// </summary>
+        TBase Inject<TIFace>(TBase model);
 
+        /// <summary>
+        /// Adds an Id, sets the Registry
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         TBase Prepare(TBase model);
+
+        /// <summary>
+        /// Internally used by Injection inner-class. Do not touch.
+        /// </summary>
+        TBase Inject(TBase model, Inject inject, Type iface, TBase single);
     }
 }
