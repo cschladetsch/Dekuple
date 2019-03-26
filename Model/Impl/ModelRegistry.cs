@@ -2,6 +2,11 @@
 {
     using Registry;
 
+    public interface IModelRegistry
+        : IRegistry<IModel>
+    {
+    }
+
     /// <summary>
     /// Default registry for models. Of course, you can create
     /// your own registry that is not based on Dekuple.Model.IModel.
@@ -10,7 +15,7 @@
     /// serve well for most applications.
     /// </summary>
     public class ModelRegistry
-        : Registry<IModel>
+        : Registry<IModel>, IModelRegistry 
     {
     }
 }

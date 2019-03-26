@@ -21,7 +21,7 @@ namespace Dekuple.Agent
         public IModel BaseModel { get; }
         public TModel Model => BaseModel as TModel;
         public IReadOnlyReactiveProperty<bool> Destroyed => _destroyed;
-        public IReadOnlyReactiveProperty<IOwner> Owner => Model.Owner;
+        public IReadOnlyReactiveProperty<IOwner> Owner => Model?.Owner;
 
         private readonly BoolReactiveProperty _destroyed = new BoolReactiveProperty(false);
         private bool _started = false;

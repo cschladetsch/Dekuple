@@ -3,6 +3,13 @@
     using Flow;
     using Registry;
 
+    public interface IAgentRegistry
+        : IRegistry<IAgent>
+    {
+        IKernel Kernel { get; }
+        IFactory Factory { get; }
+    }
+
     /// <summary>
     /// Factory and registry for creating agents.
     ///
@@ -13,7 +20,7 @@
     /// that do not require you to use IAgent. But this is a good starting point.
     /// </summary>
     public class AgentRegistry
-        : Registry<IAgent>
+        : Registry<IAgent>, IAgentRegistry
     {
         public IKernel Kernel { get; }
         public IFactory Factory { get; }
