@@ -29,6 +29,16 @@ namespace Dekuple.View.Impl
             return base.Prepare(view);
         }
 
+        public override bool Bind<TInterface, TImpl>(TImpl single)
+        {
+            var inScene = single.GameObject.scene.IsValid();
+            if (!inScene)
+            {
+                single = Object.Instantiate(single.GameObject).GetComponent<TImpl>();
+            }
+            return base.Bind<TInterface, TImpl>(single);
+        }
+
         public TIView FromPrefab<TIView>(Object prefab)
             where TIView : class, IViewBase
         {

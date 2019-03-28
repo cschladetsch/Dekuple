@@ -170,7 +170,7 @@ namespace Dekuple.Registry
             throw new NotImplementedException();
         }
 
-        public bool Bind<TInterface, TImpl>(TImpl single)
+        public virtual bool Bind<TInterface, TImpl>(TImpl single)
             where TInterface
                 : TBase 
             where TImpl 
@@ -206,7 +206,7 @@ namespace Dekuple.Registry
             return _resolved = _pendingInjections.Count == 0;
         }
 
-        public virtual TBase Prepare(TBase model)
+        public virtual TBase Prepare(TBase model) //DK TODO This should probably also handle injections.
         {
             Assert.IsNotNull(model);
             if (model.Id == Guid.Empty)
