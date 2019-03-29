@@ -56,6 +56,8 @@ namespace Dekuple.Registry
         /// </summary>
         TBase Inject<TIFace>(TBase model);
 
+        TBase Inject(Type type, TBase model);
+
         /// <summary>
         /// Adds an Id, sets the Registry
         /// </summary>

@@ -220,9 +220,11 @@ namespace Dekuple.Registry
             return model;
         }
 
-        public TBase Inject<TIFace>(TBase model)
+        public TBase Inject<TIFace>(TBase model) => Inject(typeof(TIFace), model);
+
+        public TBase Inject(Type ity, TBase model)
         {
-            if (_preparers.TryGetValue(typeof(TIFace), out var prep))
+            if (_preparers.TryGetValue(ity, out var prep))
                 prep.Inject(model);
             return model;
         }
