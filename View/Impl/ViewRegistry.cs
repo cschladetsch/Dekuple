@@ -31,6 +31,7 @@ namespace Dekuple.View.Impl
 
         public override bool Bind<TInterface, TImpl>(TImpl single)
         {
+            Assert.IsNotNull(single);
             var inScene = single.GameObject.scene.IsValid();
             if (!inScene)
             {
@@ -54,7 +55,7 @@ namespace Dekuple.View.Impl
         {
             var view = FromPrefab<TIView>(prefab);
             Assert.IsNotNull(view);
-            var agent = agents.New<TIAgent>();
+            var agent = agents.Get<TIAgent>();
             view.SetAgent(agent);
             Assert.IsTrue(view.IsValid);
             return view;
@@ -67,10 +68,10 @@ namespace Dekuple.View.Impl
         {
             var view = FromPrefab<TIView>(prefab);
             Assert.IsNotNull(view);
-            var model = models.New<TIModel>();
+            var model = models.Get<TIModel>();
             if (agents != null)
             {
-                var agent = agents.New<TIAgent>(model);
+                var agent = agents.Get<TIAgent>(model);
                 view.SetAgent(agent);
             }
             view.SetModel(model);
@@ -86,7 +87,7 @@ namespace Dekuple.View.Impl
         {
             var view = FromPrefab<TIView>(prefab);
             Assert.IsNotNull(view);
-            var agent = viewBase.AgentBase.Registry.New<TIAgent>(model);
+            var agent = viewBase.AgentBase.Registry.Get<TIAgent>(model);
             view.SetAgent(agent);
             view.SetModel(model);
             Assert.IsTrue(view.IsValid);

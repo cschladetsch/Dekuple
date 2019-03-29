@@ -11,6 +11,10 @@ namespace Dekuple.Model
 
         private readonly ReactiveProperty<Vector3> _position = new ReactiveProperty<Vector3>();
 
+        public PositionedModelBase()
+        {
+        }
+
         public PositionedModelBase(IOwner owner) : base(owner)
         {
         }

@@ -115,8 +115,9 @@ namespace Dekuple.View.Impl
             _created = true;
         }
 
-        protected virtual void Begin()
+        public override void Begin()
         {
+            base.Begin();
             BindTransformComponents();
         }
 
@@ -126,7 +127,7 @@ namespace Dekuple.View.Impl
                 positionedModel.Position.DistinctUntilChanged().Subscribe(pos => Transform.position = pos);
             if (Model is ILocalScaledModel localScaledModel)
                 localScaledModel.LocalScale.DistinctUntilChanged().Subscribe(scale => Transform.localScale = scale);
-            if (Model is IWorldScaledModel worldScaledModel) //DK TODO there is no way to access a transforms local scale directly - do we need a world scale interface?
+            if (Model is IWorldScaledModel worldScaledModel)
                 worldScaledModel.Scale.DistinctUntilChanged().Subscribe(_ => throw new NotImplementedException());
             if (Model is IRotatedModel rotatedModel)
                 rotatedModel.Rotation.DistinctUntilChanged().Subscribe(rot => Transform.rotation = rot);

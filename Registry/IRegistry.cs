@@ -12,6 +12,8 @@ namespace Dekuple.Registry
         int NumInstances { get; }
         bool Has(Guid id);
         bool Resolve();
+        bool HasInjector(Type type);
+        bool HasInjector<T>();
     }
 
     /// <inheritdoc />
@@ -47,7 +49,7 @@ namespace Dekuple.Registry
             where TInterface : TBase where TImpl : TInterface;
 
         // make a new instance given interface
-        TIBase New<TIBase>(params object[] args)
+        TIBase Get<TIBase>(params object[] args)
             where TIBase : class, TBase, IHasRegistry<TBase>, IHasDestroyHandler<TBase>;
 
         /// <summary>

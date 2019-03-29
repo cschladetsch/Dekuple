@@ -92,13 +92,13 @@ namespace Dekuple.Registry
             return true;
         }
 
-        public TIBase New<TIBase>(params object[] args)
+        public TIBase Get<TIBase>(params object[] args)
             where TIBase
                 : class, TBase, IHasRegistry<TBase>, IHasDestroyHandler<TBase>
         {
             var type = typeof(TIBase);
 
-            if (GetSinglton(args, type, out TIBase singleton))
+            if (GetSingleton(args, type, out TIBase singleton))
                 return singleton;
 
             if (NewInstance(type, args) is TIBase instance)
@@ -108,7 +108,7 @@ namespace Dekuple.Registry
             return null;
         }
 
-        private bool GetSinglton<TIBase>(IReadOnlyCollection<object> args, Type type, out TIBase singleton)
+        private bool GetSingleton<TIBase>(IReadOnlyCollection<object> args, Type type, out TIBase singleton)
             where TIBase
                 : class, TBase, IHasRegistry<TBase>, IHasDestroyHandler<TBase>
         {
@@ -184,7 +184,9 @@ namespace Dekuple.Registry
             }
 
             var prep = new Injections(this, typeof(TImpl));
-            _singles[ity] = Prepare(prep.Inject(single, ity, single));
+            var obj = Prepare(prep.Inject(single, ity, single));
+            _singles[ity] = obj;
+
             return true;
         }
 
@@ -226,7 +228,18 @@ namespace Dekuple.Registry
         {
             if (_preparers.TryGetValue(ity, out var prep))
                 prep.Inject(model);
+            model.Begin();
             return model;
+        }
+
+        public bool HasInjector(Type type)
+        {
+            return _preparers.ContainsKey(type);
+        }
+
+        public bool HasInjector<T>()
+        {
+            return HasInjector(typeof(T));
         }
 
         private static string ToArgTypeList(IEnumerable<object> args)
