@@ -27,7 +27,7 @@
 
         public AgentRegistry()
         {
-            Kernel = Create.Kernel();
+            Kernel = Flow.Create.Kernel();
             Factory = Kernel.Factory;
         }
 

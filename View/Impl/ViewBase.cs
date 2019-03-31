@@ -109,15 +109,15 @@ namespace Dekuple.View.Impl
             _localTime += Time.deltaTime;
         }
 
-        public virtual void Create()
+        protected virtual void Begin()
         {
             Assert.IsFalse(_created);
             _created = true;
         }
 
-        public override void Begin()
+        public override void Create()
         {
-            base.Begin();
+            base.Create();
             BindTransformComponents();
         }
 

@@ -10,10 +10,10 @@ namespace Dekuple
 
         /// <summary>
         /// Agents (and other things) can have injected fields or properties.
-        /// These cannot be used during construction, so we use `Begin` to
+        /// These cannot be used during construction, so we use `Create` to
         /// be a point of entry that can work with injected and other dependencies.
         /// </summary>
-        void Begin();
+        void Create();
 
         void Destroy();
     }

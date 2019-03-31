@@ -68,6 +68,11 @@ namespace Dekuple.Model
             return ReferenceEquals(other.Owner.Value, Owner.Value);
         }
 
+        public virtual void Create()
+        {
+
+        }
+
         public virtual void Begin()
         {
             Assert.IsFalse(_prepared);

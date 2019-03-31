@@ -228,7 +228,7 @@ namespace Dekuple.Registry
         {
             if (_preparers.TryGetValue(ity, out var prep))
                 prep.Inject(model);
-            model.Begin();
+            model.Create();
             return model;
         }
 
