@@ -44,6 +44,7 @@ namespace Dekuple.View.Impl
             var injections = new Injections(this, view.GetType());
             injections.Inject(view);
             Prepare(view);
+            view.AddSubscriptions();
         }
 
         public override bool Bind<TInterface, TImpl>(TImpl single)

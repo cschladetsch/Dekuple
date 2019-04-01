@@ -117,10 +117,6 @@ namespace Dekuple.View.Impl
         {
             Assert.IsFalse(_created);
             _created = true;
-        }
-
-        public virtual void AddSubscriptions()
-        {
             BindTransformComponents();
         }
 
@@ -154,6 +150,10 @@ namespace Dekuple.View.Impl
         public bool SameOwner(IOwned other)
         {
             return ReferenceEquals(Owner.Value, other);
+        }
+
+        public virtual void AddSubscriptions()
+        {
         }
 
         public virtual void Destroy()
