@@ -13,7 +13,7 @@ namespace Dekuple
         /// These cannot be used during construction, so we use `Create` to
         /// be a point of entry that can work with injected and other dependencies.
         /// </summary>
-        void Create();
+        void AddSubscriptions();
 
         void Destroy();
     }

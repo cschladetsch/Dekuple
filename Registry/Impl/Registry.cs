@@ -39,7 +39,7 @@ namespace Dekuple.Registry
         private readonly Dictionary<Guid, Type> _idToType = new Dictionary<Guid, Type>();
         private readonly Dictionary<Type, Guid> _typeToGuid = new Dictionary<Type, Guid>();
         private readonly Dictionary<Type, Type> _bindings = new Dictionary<Type, Type>();
-        private readonly Dictionary<Type, Injections> _preparers = new Dictionary<Type, Injections>();
+        private readonly Dictionary<Type, Injections> _injections = new Dictionary<Type, Injections>();
         private readonly Dictionary<Type, TBase> _singles = new Dictionary<Type, TBase>();
         private IRegistry<TBase> _registry;
 
@@ -87,7 +87,7 @@ namespace Dekuple.Registry
             // TODO: combine these to one lookup.
             // That is, put the TImpl into PrepareModel, and parameterise it.
             _bindings[ity] = typeof(TImpl);
-            _preparers[ity] = new Injections(this, typeof(TImpl));
+            _injections[ity] = new Injections(this, typeof(TImpl));
 
             return true;
         }
@@ -186,6 +186,7 @@ namespace Dekuple.Registry
             var prep = new Injections(this, typeof(TImpl));
             var obj = Prepare(prep.Inject(single, ity, single));
             _singles[ity] = obj;
+            _injections[ity] = prep;
 
             return true;
         }
@@ -226,15 +227,15 @@ namespace Dekuple.Registry
 
         public TBase Inject(Type ity, TBase model)
         {
-            if (_preparers.TryGetValue(ity, out var prep))
+            if (_injections.TryGetValue(ity, out var prep))
                 prep.Inject(model);
-            model.Create();
+            model.AddSubscriptions();
             return model;
         }
 
         public bool HasInjector(Type type)
         {
-            return _preparers.ContainsKey(type);
+            return _injections.ContainsKey(type);
         }
 
         public bool HasInjector<T>()
@@ -417,7 +418,7 @@ namespace Dekuple.Registry
 
         protected TBase Prepare(Type ity, TBase model)
         {
-            if (!_preparers.TryGetValue(ity, out var prep))
+            if (!_injections.TryGetValue(ity, out var prep))
                 throw new Exception($"No preparer for type {ity}");
             
             return prep.Inject(model);

@@ -70,7 +70,6 @@ namespace Dekuple.Model
 
         public virtual void Create()
         {
-
         }
 
         public virtual void Begin()
@@ -82,6 +81,10 @@ namespace Dekuple.Model
                 return;
             }
             _prepared = true;
+        }
+
+        public virtual void AddSubscriptions()
+        {
         }
 
         public virtual void Destroy()

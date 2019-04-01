@@ -31,5 +31,7 @@ namespace Dekuple.View
         //    where TIView : class, IViewBase
         //    where TIAgent : class, IAgent, IHasDestroyHandler<IAgent>
         //    where TModel : IModel;
+        void InjectGameObject(IViewBase view);
+        void InjectAllGameObjects();
     }
 }

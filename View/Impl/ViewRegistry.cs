@@ -25,8 +25,25 @@ namespace Dekuple.View.Impl
     {
         public override IViewBase Prepare(IViewBase view)
         {
-            //?? view.OnDestroyed += v => view.AgentBase.Destroy();
             return base.Prepare(view);
+        }
+
+        public void InjectAllGameObjects()
+        {
+            foreach (var view in Object.FindObjectsOfType<ViewBase>())
+                InjectGameObject(view);
+        }
+
+        /// <summary>
+        /// Inject and prepare GameObjects that reside in the scene
+        /// that have not been previously bound using Bind&lt;T&gt;
+        /// </summary>
+        /// <param name="view"></param>
+        public void InjectGameObject(IViewBase view)
+        {
+            var injections = new Injections(this, view.GetType());
+            injections.Inject(view);
+            Prepare(view);
         }
 
         public override bool Bind<TInterface, TImpl>(TImpl single)

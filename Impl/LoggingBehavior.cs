@@ -17,10 +17,6 @@ namespace Dekuple
 
         private readonly Flow.Impl.Logger _log = new Flow.Impl.Logger("");
 
-        public virtual void Create()
-        {
-        }
-
         protected LoggingBehavior()
         {
             _log.LogSubject = this;

@@ -85,6 +85,10 @@ namespace Dekuple.Agent
         //    _started = false;
         //}
 
+        public virtual void AddSubscriptions()
+        {
+        }
+
         public virtual void Destroy()
         {
             TransientCompleted();

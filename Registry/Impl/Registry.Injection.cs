@@ -9,12 +9,12 @@ namespace Dekuple.Registry
         /// <summary>
         /// Represents an actual injection to a set of values and/or properties to target object.
         /// </summary>
-        private class Injections
+        public class Injections
         {
             private readonly IRegistry<TBase> _reg;
             private readonly List<Inject> _injections = new List<Inject>();
 
-            private static BindingFlags Flags =>
+            public static BindingFlags Flags =>
                 BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
 
             internal Injections(IRegistry<TBase> reg, Type ty)
