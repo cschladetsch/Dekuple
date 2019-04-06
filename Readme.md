@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 # Dekuple
+=======
+# TODO
+Remove all .meta files.
+>>>>>>> 907aff7637994760b342aa4fc85643d496e17111
 
+# Dekuple
 A dependancy-injection and entity system designed from the ground up to support both rapid prototyping and long-term development and support of `Unity3d` based applications.
 
 The system also adds a `MVC` or `Model-View-Controller` pattern.

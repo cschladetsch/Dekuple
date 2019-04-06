@@ -15,7 +15,6 @@ namespace Dekuple.Agent
         public bool Active { get; private set; }
         public IKernel Kernel { get; set; }
         public IFactory Factory => Kernel.Factory;
-        public IFactory New => Kernel.Factory;
         public INode Root => Kernel.Root;
         public string Name { get; set; }
         public string LogPrefix { get => _log.LogPrefix; set => _log.LogPrefix = value; }
@@ -30,6 +29,10 @@ namespace Dekuple.Agent
         {
             Name = name;
             return this;
+        }
+
+        public virtual void Begin()
+        {
         }
 
         public void Complete()

@@ -65,7 +65,7 @@ namespace Dekuple.Registry
         }
 
         /// <summary>
-        /// Used to postpone depdancy injection to avoid cyclic dependancy issues
+        /// Used to postpone dependency injection to avoid cyclic dependency issues
         /// </summary>
         private class PendingInjection
         {

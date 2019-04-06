@@ -45,15 +45,20 @@ namespace Dekuple.Model
             return other.Owner.Value == Owner.Value;
         }
 
-        protected ModelBase(IOwner owner)
+        protected ModelBase()
         {
             LogSubject = this;
             LogPrefix = GetType().Name;
-            _owner = new ReactiveProperty<IOwner>(owner);
             _destroyed = new BoolReactiveProperty(false);
             Verbosity = Parameters.DefaultLogVerbosity;
             ShowStack = Parameters.DefaultShowTraceStack;
             ShowSource = Parameters.DefaultShowTraceSource;
+        }
+
+        protected ModelBase(IOwner owner)
+            : this()
+        {
+            _owner = new ReactiveProperty<IOwner>(owner);
         }
 
         public bool SameOwner(IOwned other)
@@ -63,7 +68,7 @@ namespace Dekuple.Model
             return ReferenceEquals(other.Owner.Value, Owner.Value);
         }
 
-        public virtual void PrepareModels()
+        public virtual void Begin()
         {
             Assert.IsFalse(_prepared);
             if (_prepared)

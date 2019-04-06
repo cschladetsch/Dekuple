@@ -29,6 +29,17 @@ namespace Dekuple.View.Impl
             return base.Prepare(view);
         }
 
+        public override bool Bind<TInterface, TImpl>(TImpl single)
+        {
+            Assert.IsNotNull(single);
+            var inScene = single.GameObject.scene.IsValid();
+            if (!inScene)
+            {
+                single = Object.Instantiate(single.GameObject).GetComponent<TImpl>();
+            }
+            return base.Bind<TInterface, TImpl>(single);
+        }
+
         public TIView FromPrefab<TIView>(Object prefab)
             where TIView : class, IViewBase
         {
@@ -38,6 +49,37 @@ namespace Dekuple.View.Impl
             return Prepare(Prepare(typeof(TIView), view)) as TIView;
         }
 
+        public TIView FromPrefab<TIView, TIAgent>(Object prefab, IRegistry<TIAgent> agents)
+            where TIView : class, IViewBase
+            where TIAgent : class, IAgent, IHasDestroyHandler<TIAgent>, IHasRegistry<TIAgent>
+        {
+            var view = FromPrefab<TIView>(prefab);
+            Assert.IsNotNull(view);
+            var agent = agents.Get<TIAgent>();
+            view.SetAgent(agent);
+            Assert.IsTrue(view.IsValid);
+            return view;
+        }
+
+        public TIView FromPrefab<TIView, TIAgent, TIModel>(Object prefab, IRegistry<TIModel> models, IRegistry<TIAgent> agents = null)
+            where TIView : class, IViewBase
+            where TIAgent : class, IAgent, IHasDestroyHandler<TIAgent>, IHasRegistry<TIAgent>
+            where TIModel : class, IModel, IHasDestroyHandler<TIModel>, IHasRegistry<TIModel>
+        {
+            var view = FromPrefab<TIView>(prefab);
+            Assert.IsNotNull(view);
+            var model = models.Get<TIModel>();
+            if (agents != null)
+            {
+                var agent = agents.Get<TIAgent>(model);
+                view.SetAgent(agent);
+            }
+            view.SetModel(model);
+            Assert.IsTrue(view.IsValid);
+            return view;
+        }
+
+        [System.Obsolete("This is a remnant from first usage in Chess2")]
         public TIView FromPrefab<TIView, TIAgent, TModel>(IViewBase viewBase, Object prefab, TModel model)
             where TIView : class , IViewBase
             where TIAgent : class, IAgent, IHasDestroyHandler<IAgent>
@@ -45,8 +87,9 @@ namespace Dekuple.View.Impl
         {
             var view = FromPrefab<TIView>(prefab);
             Assert.IsNotNull(view);
-            var agent = viewBase.AgentBase.Registry.New<TIAgent>(model);
+            var agent = viewBase.AgentBase.Registry.Get<TIAgent>(model);
             view.SetAgent(agent);
+            view.SetModel(model);
             Assert.IsTrue(view.IsValid);
             return view;
         }

@@ -19,9 +19,10 @@ namespace Dekuple.Agent
         public IRegistry<IAgent> Registry { get; set; }
         public Guid Id { get; /*private*/ set; }
         public IModel BaseModel { get; }
+
         public TModel Model => BaseModel as TModel;
         public IReadOnlyReactiveProperty<bool> Destroyed => _destroyed;
-        public IReadOnlyReactiveProperty<IOwner> Owner => Model.Owner;
+        public IReadOnlyReactiveProperty<IOwner> Owner => Model?.Owner;
 
         private readonly BoolReactiveProperty _destroyed = new BoolReactiveProperty(false);
         private bool _started = false;
@@ -50,8 +51,7 @@ namespace Dekuple.Agent
 
         public bool SameOwner(IEntity other)
         {
-            if (other == null)
-                return Owner.Value == null;
+            if (other == null)return Owner.Value == null;
 
             return other.Owner.Value == Owner.Value;
         }
