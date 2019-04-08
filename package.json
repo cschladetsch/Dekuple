@@ -1,0 +1,18 @@
+{
+    "name": "com.liminal.dekuple",
+    "displayName": "Dekuple",
+    "version": "0.0.1",
+    "unity": "2018.3",
+    "description": "A dependancy-injection and entity system designed from the ground up to support both rapid prototyping and long-term development and support of Unity3d based applications",
+    "keywords": 
+    [
+        "liminal",
+        "dekuple",
+        "dependency-injection"
+    ],
+    "category": "Unity",
+    "dependencies": 
+    [
+        "com.liminal.flow"
+    ]
+}
