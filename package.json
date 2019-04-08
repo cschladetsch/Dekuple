@@ -12,7 +12,8 @@
     ],
     "category": "Unity",
     "dependencies": 
-    [
-        "com.liminal.flow"
-    ]
+    {
+        "com.liminal.flow": "0.0.1",
+        "com.neuecc.unirx": "0.0.1"
+    }
 }
