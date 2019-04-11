@@ -31,10 +31,6 @@ namespace Dekuple.Agent
             return this;
         }
 
-        public virtual void Begin()
-        {
-        }
-
         public void Complete()
         {
             if (!Active)

@@ -44,7 +44,6 @@ namespace Dekuple.View.Impl
             var injections = new Injections(this, view.GetType());
             injections.Inject(view);
             Prepare(view);
-            view.AddSubscriptions();
         }
 
         public override bool Bind<TInterface, TImpl>(TImpl single)
@@ -56,6 +55,16 @@ namespace Dekuple.View.Impl
                 single = Object.Instantiate(single.GameObject).GetComponent<TImpl>();
             }
             return base.Bind<TInterface, TImpl>(single);
+        }
+
+        public TIView FromPrefab<TIView>(Object prefab, IAgent agent)
+            where TIView : class, IViewBase
+        {
+            var view = FromPrefab<TIView>(prefab);
+            view.SetAgent(agent);
+            view.SetModel(agent.BaseModel);
+            view.AddSubscriptions();
+            return view;
         }
 
         public TIView FromPrefab<TIView>(Object prefab)

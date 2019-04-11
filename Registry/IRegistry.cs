@@ -9,11 +9,13 @@ namespace Dekuple.Registry
     public interface IRegistry
         : IPrintable
     {
+        IEnumerable<IHasDestroyHandler> Instances { get; }
         int NumInstances { get; }
         bool Has(Guid id);
         bool Resolve();
         bool HasInjector(Type type);
         bool HasInjector<T>();
+        void AddAllSubscriptions();
     }
 
     /// <inheritdoc />
@@ -29,7 +31,7 @@ namespace Dekuple.Registry
             , IHasId
             , IHasDestroyHandler<TBase>
     {
-        IEnumerable<TBase> Instances { get; }
+        new IEnumerable<TBase> Instances { get; }
 
         bool Has(TBase instance);
         TBase Get(Guid id);

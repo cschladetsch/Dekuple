@@ -31,6 +31,8 @@ namespace Dekuple.Registry
             , IHasDestroyHandler<TBase>
     {
         public IEnumerable<TBase> Instances => _models.Values;
+        IEnumerable<IHasDestroyHandler> IRegistry.Instances => Instances;
+
         public int NumInstances => _models.Count;
 
         private bool _resolved;
@@ -51,6 +53,14 @@ namespace Dekuple.Registry
             ShowSource = true;
             LogSubject = this;
             LogPrefix = "Registry";
+        }
+
+        public void AddAllSubscriptions()
+        {
+            foreach (var obj in Instances)
+            {
+                obj.AddSubscriptions();
+            }
         }
 
         public bool Has(TBase instance)
@@ -229,7 +239,6 @@ namespace Dekuple.Registry
         {
             if (_injections.TryGetValue(ity, out var prep))
                 prep.Inject(model);
-            model.AddSubscriptions();
             return model;
         }
 

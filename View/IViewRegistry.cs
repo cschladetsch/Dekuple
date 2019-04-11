@@ -33,5 +33,8 @@ namespace Dekuple.View
         //    where TModel : IModel;
         void InjectGameObject(IViewBase view);
         void InjectAllGameObjects();
+
+        TIView FromPrefab<TIView>(Object prefab, IAgent agent)
+            where TIView : class, IViewBase;
     }
 }
