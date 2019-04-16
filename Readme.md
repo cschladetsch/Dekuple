@@ -42,6 +42,28 @@ Currently, only the View system has any reference to Unity3d.
 
 It would be nice to separate that into a separate Assembly, so the system could be used outside the context of `Unity3d`.
 
+## Docs
+
+[Start | Unity](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html)
+
+        Unity's Start function, do not use within Dekuple entities - see Begin.
+
+Begin | Dekuple
+
+    Alternative to Start within Dekuple entities. Ensure that base.Begin() is called.
+
+[Awake | Unity](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Awake.html)
+
+    Unity's Awake function, do not use within Dekuple entities - see Create.
+
+Create | Dekuple
+
+    Alternative to Awake within Dekuple entities, called before Begin. Ensure that base.Create() is called.
+
+Construct | Dekuple
+
+    Construct is a pseudo C# constructor for views in Dekuple. Use this in places where you would normally use a class contructor.
+
 ### TODO
 
 Make Error(..) etc log methods return object so they can return null and simplify usage.
