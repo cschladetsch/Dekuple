@@ -17,22 +17,19 @@ namespace Dekuple.View.Impl
     /// </summary>
     public abstract class ViewBase
         : LoggingBehavior
-        , IHasName
         , IViewBase
     {
         public Guid Id { get; set; }
-        public string Name { get; set; }
         public IRegistry<IViewBase> Registry { get; set; }
         public IViewRegistry ViewRegistry => Registry as IViewRegistry;
         public IReadOnlyReactiveProperty<IOwner> Owner => AgentBase?.Owner ?? Model?.Owner;
-        public IReadOnlyReactiveProperty<bool> Destroyed => _destroyed;
         public event Action<IViewBase> OnDestroyed;
         public IAgent AgentBase { get; set; }
         public IViewBase OwnerView { get; set; }
         public IModel OwnerModel => Owner?.Value as IModel;
         public GameObject GameObject => gameObject;
         public Transform Transform => gameObject.transform;
-        public IModel Model => AgentBase?.BaseModel ?? _model;
+        public IModel Model => AgentBase?.BaseModel ?? _localModel;
 
         // lazy create because most views won't need a queue or audio source
         protected CommandQueue _Queue => _queue ?? (_queue = new CommandQueue());
@@ -40,11 +37,11 @@ namespace Dekuple.View.Impl
 
         private bool _paused;
         private bool _created;
+        private bool _destroyed;
         private float _localTime;
         private CommandQueue _queue;
         private AudioSource _audioSource;
-        private readonly BoolReactiveProperty _destroyed = new BoolReactiveProperty(false);
-        private IModel _model;
+        private IModel _localModel;
 
         public virtual bool IsValid
         {
@@ -67,13 +64,13 @@ namespace Dekuple.View.Impl
             return other.Owner.Value == Owner.Value;
         }
 
-        public virtual void SetModel(IModel model)
+        public void SetModel(IModel model)
         {
-            _model = model;
-            model.OnDestroyed += obj => Destroy();
+            _localModel = model;
+            model.OnDestroyed += o => Destroy();
         }
 
-        public virtual void SetAgent(IAgent agent)
+        public void SetAgent(IAgent agent)
         {
             AgentBase = agent;
         }
@@ -85,13 +82,15 @@ namespace Dekuple.View.Impl
             Model?.SetOwner(owner);
         }
 
-        private bool Is<T>()
-        {
-            return typeof(T).IsAssignableFrom(GetType());
-        }
-
         private void Awake()
         {
+            // Awake can be called twice for an unknown reason (DontDestroyOnLoad?)
+            if (_created)
+            {
+                Warn($"{this} has already been Awoken. Aborting.");
+                return;
+            }
+            _created = true;
             Create();
         }
 
@@ -111,13 +110,12 @@ namespace Dekuple.View.Impl
 
         protected virtual void Create()
         {
+
         }
 
         protected virtual void Begin()
         {
-            Assert.IsFalse(_created);
-            _created = true;
-            BindTransformComponents();
+
         }
 
         private void BindTransformComponents()
@@ -154,34 +152,37 @@ namespace Dekuple.View.Impl
 
         public virtual void AddSubscriptions()
         {
+            BindTransformComponents();
         }
+
+        private void OnDestroy() => Destroy();
 
         public virtual void Destroy()
         {
-            Verbose(10, $"Destroy {this}");
-            if (Destroyed.Value)
+            if (_destroyed)
             {
-                Warn($"Object {Id} of type {GetType()} already destoyed");
+                Warn($"Attempt to destroy {this} twice.");
                 return;
             }
+            _destroyed = true;
 
+            AgentBase?.Destroy();
+            if (AgentBase == null)
+                _localModel?.Destroy();
             OnDestroyed?.Invoke(this);
-            GameObject.transform.SetParent(null);
-            _destroyed.Value = true;
-
-            Destroy(GameObject);
+            UnityEngine.Object.Destroy(GameObject);
         }
 
         public override string ToString()
         {
-            return $"View {name} of type {GetType()}, Id={Id}";
+            return $"View {name} of type {GetType().Name}, Id={Id}";
         }
     }
 
     public class ViewBase<TIAgent>
         : ViewBase
         , IView<TIAgent>
-        where TIAgent 
+        where TIAgent
             : class, IAgent
     {
         public TIAgent Agent => AgentBase as TIAgent;

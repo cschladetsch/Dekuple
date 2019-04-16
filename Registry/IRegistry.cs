@@ -41,11 +41,11 @@ namespace Dekuple.Registry
             where TInterface : TBase where TImpl : TInterface;
 
         /// <summary>
-        /// Bind an interface to a singleton 
+        /// Bind an interface to a singleton
         /// </summary>
         /// <typeparam name="TInterface">The query interface</typeparam>
         /// <typeparam name="TImpl">The Concrete type to create</typeparam>
-        /// <param name="single">The </param>
+        /// <param name="single">The prefab OR object instance to bind to</param>
         /// <returns>True if bound</returns>
         bool Bind<TInterface, TImpl>(TImpl single)
             where TInterface : TBase where TImpl : TInterface;
@@ -63,7 +63,7 @@ namespace Dekuple.Registry
         TBase Inject(Type type, TBase model);
 
         /// <summary>
-        /// Adds an Id, sets the Registry
+        /// Adds an Id, sets the Registry and adds destroy handler.
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>

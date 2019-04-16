@@ -15,7 +15,7 @@ namespace Dekuple.Registry
             private readonly List<Inject> _injections = new List<Inject>();
 
             public static BindingFlags Flags =>
-                BindingFlags.FlattenHierarchy | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
+                /*BindingFlags.FlattenHierarchy |*/ BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
 
             internal Injections(IRegistry<TBase> reg, Type ty)
             {

@@ -22,10 +22,9 @@ namespace Dekuple.Model
         public IRegistry<IModel> Registry { get; set; }
         public string Name { get; set; }
         public Guid Id { get; /*private*/ set; }
-        public IReadOnlyReactiveProperty<bool> Destroyed => _destroyed;
         public IReadOnlyReactiveProperty<IOwner> Owner => _owner;
 
-        private readonly BoolReactiveProperty _destroyed;
+        private bool _destroyed;
         private readonly ReactiveProperty<IOwner> _owner;
         private bool _prepared;
 
@@ -49,7 +48,6 @@ namespace Dekuple.Model
         {
             LogSubject = this;
             LogPrefix = GetType().Name;
-            _destroyed = new BoolReactiveProperty(false);
             Verbosity = Parameters.DefaultLogVerbosity;
             ShowStack = Parameters.DefaultShowTraceStack;
             ShowSource = Parameters.DefaultShowTraceSource;
@@ -90,14 +88,12 @@ namespace Dekuple.Model
         public virtual void Destroy()
         {
             Verbose(40, $"Destroy {this}");
-            if (Destroyed.Value)
-            {
-                Warn($"Attempt to destroy {this} twice");
+            if (_destroyed)
                 return;
-            }
+
+            _destroyed = true;
 
             OnDestroyed?.Invoke(this);
-            _destroyed.Value = true;
             Id = Guid.Empty;
         }
 
@@ -114,28 +110,15 @@ namespace Dekuple.Model
         {
             Error($"Not {text} implemented");
         }
-
-        public virtual void StartGame()
-        {
-            Assert.IsFalse(_started);
-            _started = true;
-        }
-
-        public virtual void EndGame()
-        {
-            _started = false;
-        }
-
-        private bool _started;
     }
 }
 
-static class ModelExt
-{
-    public static T AddTo<T>(this T disposable, Dekuple.Model.IModel model)
-        where T : IDisposable
-    {
-        model.Destroyed.Subscribe(m => disposable.Dispose());
-        return disposable;
-    }
-}
+//static class ModelExt
+//{
+//    public static T AddTo<T>(this T disposable, Dekuple.Model.IModel model)
+//        where T : IDisposable
+//    {
+//        model.Destroyed.Subscribe(m => disposable.Dispose());
+//        return disposable;
+//    }
+//}

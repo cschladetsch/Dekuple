@@ -23,11 +23,6 @@ namespace Dekuple.View.Impl
         : Registry<IViewBase>
         , IViewRegistry
     {
-        public override IViewBase Prepare(IViewBase view)
-        {
-            return base.Prepare(view);
-        }
-
         public void InjectAllGameObjects()
         {
             foreach (var view in Object.FindObjectsOfType<ViewBase>())
@@ -64,16 +59,23 @@ namespace Dekuple.View.Impl
             view.SetAgent(agent);
             view.SetModel(agent.BaseModel);
             view.AddSubscriptions();
+            agent.AddSubscriptions();
+            agent.BaseModel.AddSubscriptions();
             return view;
         }
 
         public TIView FromPrefab<TIView>(Object prefab)
             where TIView : class, IViewBase
         {
+            return FromPrefab<TIView>(prefab, (Transform) null);
+        }
+
+        public TIView FromPrefab<TIView>(Object prefab, Transform parent) where TIView : class, IViewBase
+        {
             Assert.IsNotNull(prefab);
-            var view = Object.Instantiate(prefab) as TIView;
+            var view = Object.Instantiate(prefab, parent) as TIView;
             Assert.IsNotNull(view);
-            return Prepare(Prepare(typeof(TIView), view)) as TIView;
+            return Prepare(Inject(typeof(TIView), view)) as TIView;
         }
 
         public TIView FromPrefab<TIView, TIAgent>(Object prefab, IRegistry<TIAgent> agents)

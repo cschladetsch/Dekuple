@@ -18,8 +18,6 @@ namespace Dekuple
     public interface IHasDestroyHandler<out T>
         : IHasDestroyHandler
     {
-        IReadOnlyReactiveProperty<bool> Destroyed { get; }
-        event Action<T> OnDestroyed;
-
+        event Action<T> OnDestroyed; 
     }
 }

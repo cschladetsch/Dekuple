@@ -20,7 +20,8 @@
     /// that do not require you to use IAgent. But this is a good starting point.
     /// </summary>
     public class AgentRegistry
-        : Registry<IAgent>, IAgentRegistry
+        : Registry<IAgent>
+        , IAgentRegistry
     {
         public IKernel Kernel { get; }
         public IFactory Factory { get; }

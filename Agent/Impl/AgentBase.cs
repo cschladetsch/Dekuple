@@ -1,5 +1,6 @@
 ﻿using System;
 using UniRx;
+using UnityEngine.AI;
 
 namespace Dekuple.Agent
 {
@@ -18,14 +19,11 @@ namespace Dekuple.Agent
         public event Action<IAgent> OnDestroyed;
         public IRegistry<IAgent> Registry { get; set; }
         public Guid Id { get; /*private*/ set; }
+
         public IModel BaseModel { get; }
 
         public TModel Model => BaseModel as TModel;
-        public IReadOnlyReactiveProperty<bool> Destroyed => _destroyed;
         public IReadOnlyReactiveProperty<IOwner> Owner => Model?.Owner;
-
-        private readonly BoolReactiveProperty _destroyed = new BoolReactiveProperty(false);
-        private bool _started = false;
 
         public virtual bool IsValid
         {
@@ -92,11 +90,8 @@ namespace Dekuple.Agent
         public virtual void Destroy()
         {
             TransientCompleted();
-
-            if (!_destroyed.Value)
-                _destroyed.Value = true;
-
-            OnDestroyed?.Invoke(this);
+            Model?.Destroy();
+            this.OnDestroyed?.Invoke(this);
         }
     }
 }

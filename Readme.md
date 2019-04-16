@@ -59,10 +59,10 @@ Begin | Dekuple
 Create | Dekuple
 
     Alternative to Awake within Dekuple entities, called before Begin. Ensure that base.Create() is called.
+    
+[OnDestroy | Unity](https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnDestroy.html)
 
-Construct | Dekuple
-
-    Construct is a pseudo C# constructor for views in Dekuple. Use this in places where you would normally use a class contructor.
+    Unity's OnDestroy function, do not use within Dekuple entities - instead subscribe to the OnDestroyed event.
 
 ### TODO
 

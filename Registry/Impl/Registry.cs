@@ -30,14 +30,14 @@ namespace Dekuple.Registry
             , IHasRegistry<TBase>
             , IHasDestroyHandler<TBase>
     {
-        public IEnumerable<TBase> Instances => _models.Values;
+        public IEnumerable<TBase> Instances => _instances.Values;
         IEnumerable<IHasDestroyHandler> IRegistry.Instances => Instances;
 
-        public int NumInstances => _models.Count;
+        public int NumInstances => _instances.Count;
 
         private bool _resolved;
         private readonly List<PendingInjection> _pendingInjections = new List<PendingInjection>();
-        private readonly Dictionary<Guid, TBase> _models = new Dictionary<Guid, TBase>();
+        private readonly Dictionary<Guid, TBase> _instances = new Dictionary<Guid, TBase>();
         private readonly Dictionary<Guid, Type> _idToType = new Dictionary<Guid, Type>();
         private readonly Dictionary<Type, Guid> _typeToGuid = new Dictionary<Type, Guid>();
         private readonly Dictionary<Type, Type> _bindings = new Dictionary<Type, Type>();
@@ -53,6 +53,7 @@ namespace Dekuple.Registry
             ShowSource = true;
             LogSubject = this;
             LogPrefix = "Registry";
+            Id = Guid.NewGuid();
         }
 
         public void AddAllSubscriptions()
@@ -75,7 +76,7 @@ namespace Dekuple.Registry
 
         public TBase Get(Guid id)
         {
-            if (_models.TryGetValue(id, out var model))
+            if (_instances.TryGetValue(id, out var model))
                 return model;
             Warn($"Failed to find targetModel with id {id}");
             return null;
@@ -114,7 +115,7 @@ namespace Dekuple.Registry
             if (NewInstance(type, args) is TIBase instance)
                 return StoreTypedIntance(instance, type);
 
-            Error($"Failed to make or find instance for interface {type}");
+            Error($"Failed to make or find instance for interface {type} with args {args}");
             return null;
         }
 
@@ -142,7 +143,7 @@ namespace Dekuple.Registry
             where TIBase
                 : class, TBase, IHasRegistry<TBase>, IHasDestroyHandler<TBase>
         {
-            _models[iBase.Id] = iBase;
+            _instances[iBase.Id] = iBase;
             if (!_typeToGuid.ContainsKey(type))
             {
                 _idToType[iBase.Id] = type;
@@ -219,18 +220,18 @@ namespace Dekuple.Registry
             return _resolved = _pendingInjections.Count == 0;
         }
 
-        public virtual TBase Prepare(TBase model) //DK TODO This should probably also handle injections.
+        public virtual TBase Prepare(TBase instance) //DK TODO This should probably also handle injections.
         {
-            Assert.IsNotNull(model);
-            if (model.Id == Guid.Empty)
+            Assert.IsNotNull(instance);
+            if (instance.Id == Guid.Empty)
             {
-                model.Id = Guid.NewGuid();
-                _models[model.Id] = model;
+                instance.Id = Guid.NewGuid();
+                _instances[instance.Id] = instance;
             }
-
-            model.OnDestroyed += ModelDestroyed;
-            model.Registry = this;
-            return model;
+            
+            instance.OnDestroyed += ModelDestroyed;
+            instance.Registry = this;
+            return instance;
         }
 
         public TBase Inject<TIFace>(TBase model) => Inject(typeof(TIFace), model);
@@ -317,12 +318,17 @@ namespace Dekuple.Registry
             }
         }
 
-        private void Remove(TBase model)
+        public override string ToString()
         {
-            if (!_models.ContainsKey(model.Id))
-                Warn($"Attempt to destroy unknown {model.GetType()} Id={model.Id}");
+            return $"Registry {GetType().Name} with {_instances.Count} instances and {_singles.Count} singles with id {Id}";
+        }
+
+        private void Remove(TBase instance)
+        {
+            if (!_instances.ContainsKey(instance.Id))
+                Warn($"Attempt to destroy unknown {instance.GetType()} Id={instance.Id}");
             else
-                _models.Remove(model.Id);
+                _instances.Remove(instance.Id);
         }
 
         private void ModelDestroyed<TIBase>(TIBase model)
@@ -353,7 +359,7 @@ namespace Dekuple.Registry
             {
                 if (_resolved)
                     Error($"Registry has no binding for {ity}");
-
+                
                 return null;
             }
 
@@ -364,35 +370,10 @@ namespace Dekuple.Registry
                 if (!MatchingConstructor(args, con.GetParameters()))
                     continue;
                 if (con.Invoke(args) is TBase model)
-                    return Prepare(Prepare(ity, model));
+                    return Prepare(Inject(ity, model));
             }
 
-            // rather, search for a method called 'Construct'
-            // this is mostly to allow for MonoBehaviour-based instances,
-            // which cannot use ctors. In this case, any and all methods
-            // named 'Construct' are treated as if they were ctors.
-            foreach (var method in ty.GetMethods(BindingFlags.Instance | BindingFlags.Public))
-            {
-                if (method.Name != "Construct")
-                    continue;
-
-                if (!MatchingConstructor(args, method.GetParameters()))
-                    continue;
-
-                if (!(Activator.CreateInstance(ty) is TBase model))
-                {
-                    Error($"Couldn't make a {ty} of type {typeof(TBase).Name}");
-                    return null;
-                }
-
-                if ((bool) method.Invoke(model, args))
-                    return Prepare(Prepare(ity, model));
-
-                Error($"Create method failed for type {ty} with args {ToArgTypeList(args)}");
-                return null;
-            }
-
-            Error($"No matching Ctor or 'Construct' method for {ty} with args '{ToArgTypeList(args)}'");
+            Error($"No matching Ctor for {ty} with args '{ToArgTypeList(args)}'");
             return null;
         }
 
@@ -425,14 +406,6 @@ namespace Dekuple.Registry
             return n == args.Count;
         }
 
-        protected TBase Prepare(Type ity, TBase model)
-        {
-            if (!_injections.TryGetValue(ity, out var prep))
-                throw new Exception($"No preparer for type {ity}");
-            
-            return prep.Inject(model);
-        }
-
         public string Print()
         {
             var sb = new StringBuilder();
@@ -441,7 +414,7 @@ namespace Dekuple.Registry
                 sb.Append($"\t{s.Key} -> {s.Value}\n");
 
             sb.Append($"{NumInstances} Instances:\n");
-            foreach (var kv in _models)
+            foreach (var kv in _instances)
                 sb.Append($"\t{kv.Value}\n");
 
             return sb.ToString();
