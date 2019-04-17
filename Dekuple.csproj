@@ -5,9 +5,10 @@
     <ProjectGuid>{E13BF154-2E94-4EA7-9441-4B64830FDCB0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
-    <AssemblyName>ClassLibrary</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AssemblyName>Dekuple</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -17,6 +18,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -25,6 +27,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <RootNamespace>Dekuple</RootNamespace>
@@ -194,7 +197,6 @@
     <None Include="ExtentionMethods\TransformExtentions.cs.meta" />
     <None Include="Impl.meta" />
     <None Include="Impl\Assert.cs.meta" />
-    <None Include="Impl\Detail\Detail.cs.meta" />
     <None Include="Impl\IEntity.cs.meta" />
     <None Include="Impl\IHasDestroyHandler.cs.meta" />
     <None Include="Impl\IHasId.cs.meta" />
@@ -205,8 +207,6 @@
     <None Include="Impl\IPrintable.cs.meta" />
     <None Include="Impl\LoggingBehavior.cs.meta" />
     <None Include="Impl\Turnaround.cs.meta" />
-    <None Include="Logger\Readme.md" />
-    <None Include="Logger\vscoloroutput.json" />
     <None Include="Model.meta" />
     <None Include="Model\IModel.cs.meta" />
     <None Include="Model\Impl.meta" />
@@ -257,31 +257,7 @@
     <Compile Include="ExtentionMethods\CollectionExtensions.cs" />
     <Compile Include="ExtentionMethods\TransformExtentions.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="IBarrier.cs" />
-    <Compile Include="IBreak.cs" />
-    <Compile Include="ICase.cs" />
-    <Compile Include="IChannel.cs" />
-    <Compile Include="ICoroutine.cs" />
-    <Compile Include="IFactory.cs" />
-    <Compile Include="IFuture.cs" />
-    <Compile Include="IGenerator.cs" />
-    <Compile Include="IGroup.cs" />
-    <Compile Include="IKernel.cs" />
-    <Compile Include="ILogger.cs" />
     <Compile Include="Impl\Assert.cs" />
-    <Compile Include="Impl\Barrier.cs" />
-    <Compile Include="Impl\BlockingChannel.cs" />
-    <Compile Include="Impl\Break.cs" />
-    <Compile Include="Impl\Case.cs" />
-    <Compile Include="Impl\Channel.cs" />
-    <Compile Include="Impl\Coroutine.cs" />
-    <Compile Include="Impl\Create.cs" />
-    <Compile Include="Impl\Detail\Detail.cs" />
-    <Compile Include="Impl\Exception.cs" />
-    <Compile Include="Impl\Factory.cs" />
-    <Compile Include="Impl\Future.cs" />
-    <Compile Include="Impl\Generator.cs" />
-    <Compile Include="Impl\Group.cs" />
     <Compile Include="Impl\IEntity.cs" />
     <Compile Include="Impl\IHasDestroyHandler.cs" />
     <Compile Include="Impl\IHasId.cs" />
@@ -290,35 +266,8 @@
     <Compile Include="Impl\IOwned.cs" />
     <Compile Include="Impl\IOwner.cs" />
     <Compile Include="Impl\IPrintable.cs" />
-    <Compile Include="Impl\Kernel.cs" />
     <Compile Include="Impl\LoggingBehavior.cs" />
-    <Compile Include="Impl\Node.cs" />
-    <Compile Include="Impl\Periodic.cs" />
-    <Compile Include="Impl\Sequence.cs" />
-    <Compile Include="Impl\SpinWait.cs" />
-    <Compile Include="Impl\Subroutine.cs" />
-    <Compile Include="Impl\TimedBarrier.cs" />
-    <Compile Include="Impl\TimedFuture.cs" />
-    <Compile Include="Impl\TimedTrigger.cs" />
-    <Compile Include="Impl\TimeFrame.cs" />
-    <Compile Include="Impl\Timer.cs" />
-    <Compile Include="Impl\Transient.cs" />
-    <Compile Include="Impl\Trigger.cs" />
     <Compile Include="Impl\Turnaround.cs" />
-    <Compile Include="INamed.cs" />
-    <Compile Include="INode.cs" />
-    <Compile Include="IPeriodic.cs" />
-    <Compile Include="ISubroutine.cs" />
-    <Compile Include="ITimedFuture.cs" />
-    <Compile Include="ITimeFrame.cs" />
-    <Compile Include="ITimer.cs" />
-    <Compile Include="ITimesOut.cs" />
-    <Compile Include="ITransient.cs" />
-    <Compile Include="ITrigger.cs" />
-    <Compile Include="Logger\ConsoleLogger.cs" />
-    <Compile Include="Logger\Logger.cs" />
-    <Compile Include="Logger\PrettyPrinter.cs" />
-    <Compile Include="Logger\UnityLogger.cs" />
     <Compile Include="Model\ILocalScaledModel.cs" />
     <Compile Include="Model\IModel.cs" />
     <Compile Include="Model\Impl\ModelBase.cs" />
@@ -352,6 +301,14 @@
     <Folder Include=".git\refs\tags\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\colib\CoLib.csproj">
+      <Project>{3644898f-f978-4239-82ec-b2f99a00822d}</Project>
+      <Name>CoLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Flow\Flow.csproj">
+      <Project>{da87a965-0077-4af8-986b-3934f186125e}</Project>
+      <Name>Flow</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UniRx\UniRx.csproj">
       <Project>{fa6b2d94-c4ca-4721-8232-b3148ac1b77c}</Project>
       <Name>UniRx</Name>

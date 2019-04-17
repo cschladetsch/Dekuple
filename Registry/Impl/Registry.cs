@@ -43,7 +43,6 @@ namespace Dekuple.Registry
         private readonly Dictionary<Type, Type> _bindings = new Dictionary<Type, Type>();
         private readonly Dictionary<Type, Injections> _injections = new Dictionary<Type, Injections>();
         private readonly Dictionary<Type, TBase> _singles = new Dictionary<Type, TBase>();
-        private IRegistry<TBase> _registry;
 
         public Registry()
             : base(null)

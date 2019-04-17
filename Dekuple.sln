@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dekuple", "Dekuple.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniRx", "..\UniRx\UniRx.csproj", "{FA6B2D94-C4CA-4721-8232-B3148AC1B77C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flow2", "..\Flow\Flow2.csproj", "{18326C80-2CC4-417D-8FEE-EA608ED85636}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{FA6B2D94-C4CA-4721-8232-B3148AC1B77C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA6B2D94-C4CA-4721-8232-B3148AC1B77C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA6B2D94-C4CA-4721-8232-B3148AC1B77C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18326C80-2CC4-417D-8FEE-EA608ED85636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18326C80-2CC4-417D-8FEE-EA608ED85636}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18326C80-2CC4-417D-8FEE-EA608ED85636}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18326C80-2CC4-417D-8FEE-EA608ED85636}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
