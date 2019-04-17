@@ -160,10 +160,8 @@ namespace Dekuple.View.Impl
         public virtual void Destroy()
         {
             if (_destroyed)
-            {
-                Warn($"Attempt to destroy {this} twice.");
                 return;
-            }
+
             _destroyed = true;
 
             AgentBase?.Destroy();
