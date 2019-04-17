@@ -112,6 +112,11 @@ namespace Dekuple.View.Impl
 
         }
 
+        /// <remarks>
+        /// Unity initialisation methods are called via reflection.
+        /// Dekuple overrides them so they can be used more consistently using
+        /// virtual functions and overrides.
+        /// </remarks>
         protected virtual void Begin()
         {
 

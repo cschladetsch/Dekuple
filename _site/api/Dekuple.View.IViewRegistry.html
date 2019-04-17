@@ -1,0 +1,581 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IViewRegistry
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IViewRegistry
+   ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dekuple.View.IViewRegistry">
+  
+  
+  <h1 id="Dekuple_View_IViewRegistry" data-uid="Dekuple.View.IViewRegistry" class="text-break">Interface IViewRegistry
+  </h1>
+  <div class="markdown level0 summary"><p>Common registry for all objects that are in the Unity3d scene (or canvas)</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Instances">IRegistry&lt;IViewBase&gt;.Instances</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Has__0_">IRegistry&lt;IViewBase&gt;.Has(IViewBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Get_System_Guid_">IRegistry&lt;IViewBase&gt;.Get(Guid)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Bind__2">IRegistry&lt;IViewBase&gt;.Bind&lt;TInterface, TImpl&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Bind__2___1_">IRegistry&lt;IViewBase&gt;.Bind&lt;TInterface, TImpl&gt;(TImpl)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Get__1_System_Object___">IRegistry&lt;IViewBase&gt;.Get&lt;TIBase&gt;(Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Inject__1__0_">IRegistry&lt;IViewBase&gt;.Inject&lt;TIFace&gt;(IViewBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Inject_System_Type__0_">IRegistry&lt;IViewBase&gt;.Inject(Type, IViewBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Prepare__0_">IRegistry&lt;IViewBase&gt;.Prepare(IViewBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Inject__0_Dekuple_Inject_System_Type__0_">IRegistry&lt;IViewBase&gt;.Inject(IViewBase, Inject, Type, IViewBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_NumInstances">IRegistry.NumInstances</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_Has_System_Guid_">IRegistry.Has(Guid)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_Resolve">IRegistry.Resolve()</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_HasInjector_System_Type_">IRegistry.HasInjector(Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_HasInjector__1">IRegistry.HasInjector&lt;T&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_AddAllSubscriptions">IRegistry.AddAllSubscriptions()</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.IPrintable.html#Dekuple_IPrintable_Print">IPrintable.Print()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dekuple.View.html">Dekuple.View</a></h6>
+  <h6><strong>Assembly</strong>: Dekuple.dll</h6>
+  <h5 id="Dekuple_View_IViewRegistry_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IViewRegistry : IRegistry&lt;IViewBase&gt;, IRegistry, IPrintable</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_View_IViewRegistry_FromPrefab__1_UnityEngine_Object_.md&amp;value=---%0Auid%3A%20Dekuple.View.IViewRegistry.FromPrefab%60%601(UnityEngine.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/View/IViewRegistry.cs/#L16">View Source</a>
+  </span>
+  <a id="Dekuple_View_IViewRegistry_FromPrefab_" data-uid="Dekuple.View.IViewRegistry.FromPrefab*"></a>
+  <h4 id="Dekuple_View_IViewRegistry_FromPrefab__1_UnityEngine_Object_" data-uid="Dekuple.View.IViewRegistry.FromPrefab``1(UnityEngine.Object)">FromPrefab&lt;TIView&gt;(Object)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TIView FromPrefab&lt;TIView&gt;(Object prefab)
+    where TIView : class, IViewBase</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Object</span></td>
+        <td><span class="parametername">prefab</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TIView</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TIView</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_View_IViewRegistry_FromPrefab__1_UnityEngine_Object_Dekuple_Agent_IAgent_.md&amp;value=---%0Auid%3A%20Dekuple.View.IViewRegistry.FromPrefab%60%601(UnityEngine.Object%2CDekuple.Agent.IAgent)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/View/IViewRegistry.cs/#L40">View Source</a>
+  </span>
+  <a id="Dekuple_View_IViewRegistry_FromPrefab_" data-uid="Dekuple.View.IViewRegistry.FromPrefab*"></a>
+  <h4 id="Dekuple_View_IViewRegistry_FromPrefab__1_UnityEngine_Object_Dekuple_Agent_IAgent_" data-uid="Dekuple.View.IViewRegistry.FromPrefab``1(UnityEngine.Object,Dekuple.Agent.IAgent)">FromPrefab&lt;TIView&gt;(Object, IAgent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TIView FromPrefab&lt;TIView&gt;(Object prefab, IAgent agent)
+    where TIView : class, IViewBase</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Object</span></td>
+        <td><span class="parametername">prefab</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dekuple.Agent.IAgent.html">IAgent</a></td>
+        <td><span class="parametername">agent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TIView</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TIView</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_View_IViewRegistry_FromPrefab__1_UnityEngine_Object_UnityEngine_Transform_.md&amp;value=---%0Auid%3A%20Dekuple.View.IViewRegistry.FromPrefab%60%601(UnityEngine.Object%2CUnityEngine.Transform)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/View/IViewRegistry.cs/#L19">View Source</a>
+  </span>
+  <a id="Dekuple_View_IViewRegistry_FromPrefab_" data-uid="Dekuple.View.IViewRegistry.FromPrefab*"></a>
+  <h4 id="Dekuple_View_IViewRegistry_FromPrefab__1_UnityEngine_Object_UnityEngine_Transform_" data-uid="Dekuple.View.IViewRegistry.FromPrefab``1(UnityEngine.Object,UnityEngine.Transform)">FromPrefab&lt;TIView&gt;(Object, Transform)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TIView FromPrefab&lt;TIView&gt;(Object prefab, Transform parent)
+    where TIView : class, IViewBase</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Object</span></td>
+        <td><span class="parametername">prefab</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">UnityEngine.Transform</span></td>
+        <td><span class="parametername">parent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TIView</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TIView</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_View_IViewRegistry_FromPrefab__2_UnityEngine_Object_Dekuple_Registry_IRegistry___1__.md&amp;value=---%0Auid%3A%20Dekuple.View.IViewRegistry.FromPrefab%60%602(UnityEngine.Object%2CDekuple.Registry.IRegistry%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/View/IViewRegistry.cs/#L22">View Source</a>
+  </span>
+  <a id="Dekuple_View_IViewRegistry_FromPrefab_" data-uid="Dekuple.View.IViewRegistry.FromPrefab*"></a>
+  <h4 id="Dekuple_View_IViewRegistry_FromPrefab__2_UnityEngine_Object_Dekuple_Registry_IRegistry___1__" data-uid="Dekuple.View.IViewRegistry.FromPrefab``2(UnityEngine.Object,Dekuple.Registry.IRegistry{``1})">FromPrefab&lt;TIView, TIAgent&gt;(Object, IRegistry&lt;TIAgent&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TIView FromPrefab&lt;TIView, TIAgent&gt;(Object prefab, IRegistry&lt;TIAgent&gt; agents)
+    where TIView : class, IViewBase where TIAgent : class, IAgent, IHasDestroyHandler&lt;TIAgent&gt;, IHasRegistry&lt;TIAgent&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Object</span></td>
+        <td><span class="parametername">prefab</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dekuple.Registry.IRegistry-1.html">IRegistry</a>&lt;TIAgent&gt;</td>
+        <td><span class="parametername">agents</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TIView</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TIView</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TIAgent</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_View_IViewRegistry_FromPrefab__3_UnityEngine_Object_Dekuple_Registry_IRegistry___2__Dekuple_Registry_IRegistry___1__.md&amp;value=---%0Auid%3A%20Dekuple.View.IViewRegistry.FromPrefab%60%603(UnityEngine.Object%2CDekuple.Registry.IRegistry%7B%60%602%7D%2CDekuple.Registry.IRegistry%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/View/IViewRegistry.cs/#L43">View Source</a>
+  </span>
+  <a id="Dekuple_View_IViewRegistry_FromPrefab_" data-uid="Dekuple.View.IViewRegistry.FromPrefab*"></a>
+  <h4 id="Dekuple_View_IViewRegistry_FromPrefab__3_UnityEngine_Object_Dekuple_Registry_IRegistry___2__Dekuple_Registry_IRegistry___1__" data-uid="Dekuple.View.IViewRegistry.FromPrefab``3(UnityEngine.Object,Dekuple.Registry.IRegistry{``2},Dekuple.Registry.IRegistry{``1})">FromPrefab&lt;TIView, TIAgent, TIModel&gt;(Object, IRegistry&lt;TIModel&gt;, IRegistry&lt;TIAgent&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TIView FromPrefab&lt;TIView, TIAgent, TIModel&gt;(Object prefab, IRegistry&lt;TIModel&gt; models, IRegistry&lt;TIAgent&gt; agents = null)
+    where TIView : class, IViewBase where TIAgent : class, IAgent, IHasDestroyHandler&lt;TIAgent&gt;, IHasRegistry&lt;TIAgent&gt; where TIModel : class, IModel, IHasDestroyHandler&lt;TIModel&gt;, IHasRegistry&lt;TIModel&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Object</span></td>
+        <td><span class="parametername">prefab</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dekuple.Registry.IRegistry-1.html">IRegistry</a>&lt;TIModel&gt;</td>
+        <td><span class="parametername">models</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dekuple.Registry.IRegistry-1.html">IRegistry</a>&lt;TIAgent&gt;</td>
+        <td><span class="parametername">agents</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TIView</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TIView</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TIAgent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TIModel</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_View_IViewRegistry_InjectAllGameObjects.md&amp;value=---%0Auid%3A%20Dekuple.View.IViewRegistry.InjectAllGameObjects%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/View/IViewRegistry.cs/#L38">View Source</a>
+  </span>
+  <a id="Dekuple_View_IViewRegistry_InjectAllGameObjects_" data-uid="Dekuple.View.IViewRegistry.InjectAllGameObjects*"></a>
+  <h4 id="Dekuple_View_IViewRegistry_InjectAllGameObjects" data-uid="Dekuple.View.IViewRegistry.InjectAllGameObjects">InjectAllGameObjects()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InjectAllGameObjects()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_View_IViewRegistry_InjectGameObject_Dekuple_View_IViewBase_.md&amp;value=---%0Auid%3A%20Dekuple.View.IViewRegistry.InjectGameObject(Dekuple.View.IViewBase)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/View/IViewRegistry.cs/#L37">View Source</a>
+  </span>
+  <a id="Dekuple_View_IViewRegistry_InjectGameObject_" data-uid="Dekuple.View.IViewRegistry.InjectGameObject*"></a>
+  <h4 id="Dekuple_View_IViewRegistry_InjectGameObject_Dekuple_View_IViewBase_" data-uid="Dekuple.View.IViewRegistry.InjectGameObject(Dekuple.View.IViewBase)">InjectGameObject(IViewBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InjectGameObject(IViewBase view)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Dekuple.View.IViewBase.html">IViewBase</a></td>
+        <td><span class="parametername">view</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_View_IViewRegistry.md&amp;value=---%0Auid%3A%20Dekuple.View.IViewRegistry%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/View/IViewRegistry.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

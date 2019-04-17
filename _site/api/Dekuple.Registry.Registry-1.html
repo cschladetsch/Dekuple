@@ -1,0 +1,1518 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Registry&lt;TBase&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Registry&lt;TBase&gt;
+   ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dekuple.Registry.Registry`1">
+  
+  
+  <h1 id="Dekuple_Registry_Registry_1" data-uid="Dekuple.Registry.Registry`1" class="text-break">Class Registry&lt;TBase&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>A mapping of Guid to Instance, and Guid to Type.
+Able to make a new instance given construction arguments
+that are called either on the ctor itself, or a method
+named &apos;Construct&apos; that matches the passed creation method call.</p>
+<p><strong>NOTE</strong> a Registry is a <code>Model</code> entirely so it has its own logging stream.
+It doesn&apos;t make much sense to use a Registry as an actual Model.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Flow.Impl.Logger</span></div>
+    <div class="level2"><a class="xref" href="Dekuple.Model.ModelBase.html">ModelBase</a></div>
+    <div class="level3"><span class="xref">Registry&lt;TBase&gt;</span></div>
+      <div class="level4"><a class="xref" href="Dekuple.Agent.AgentRegistry.html">AgentRegistry</a></div>
+      <div class="level4"><a class="xref" href="Dekuple.Model.ModelRegistry.html">ModelRegistry</a></div>
+      <div class="level4"><a class="xref" href="Dekuple.View.Impl.ViewRegistry.html">ViewRegistry</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Dekuple.Model.IModel.html">IModel</a></div>
+    <div><span class="xref">Flow.ILogger</span></div>
+    <div><a class="xref" href="Dekuple.IEntity.html">IEntity</a></div>
+    <div><a class="xref" href="Dekuple.IHasId.html">IHasId</a></div>
+    <div><a class="xref" href="Dekuple.IOwned.html">IOwned</a></div>
+    <div><a class="xref" href="Dekuple.IHasDestroyHandler-1.html">IHasDestroyHandler</a>&lt;<a class="xref" href="Dekuple.Model.IModel.html">IModel</a>&gt;</div>
+    <div><a class="xref" href="Dekuple.IHasDestroyHandler.html">IHasDestroyHandler</a></div>
+    <div><a class="xref" href="Dekuple.Registry.IHasRegistry-1.html">IHasRegistry</a>&lt;<a class="xref" href="Dekuple.Model.IModel.html">IModel</a>&gt;</div>
+    <div><a class="xref" href="Dekuple.Registry.IRegistry-1.html">IRegistry</a>&lt;TBase&gt;</div>
+    <div><a class="xref" href="Dekuple.Registry.IRegistry.html">IRegistry</a></div>
+    <div><a class="xref" href="Dekuple.IPrintable.html">IPrintable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_OnDestroyed">ModelBase.OnDestroyed</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Prepared">ModelBase.Prepared</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Registry">ModelBase.Registry</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Name">ModelBase.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Id">ModelBase.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Owner">ModelBase.Owner</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_IsValid">ModelBase.IsValid</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_SameOwner_Dekuple_IEntity_">ModelBase.SameOwner(IEntity)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_SameOwner_Dekuple_IOwned_">ModelBase.SameOwner(IOwned)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Create">ModelBase.Create()</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Begin">ModelBase.Begin()</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_AddSubscriptions">ModelBase.AddSubscriptions()</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Destroy">ModelBase.Destroy()</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_SetOwner_Dekuple_IOwner_">ModelBase.SetOwner(IOwner)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_NotImplemented_System_String_">ModelBase.NotImplemented(String)</a>
+    </div>
+    <div>
+      <span class="xref">Flow.Impl.Logger.LogPrefix</span>
+    </div>
+    <div>
+      <span class="xref">Flow.Impl.Logger.LogSubject</span>
+    </div>
+    <div>
+      <span class="xref">Flow.Impl.Logger.Verbosity</span>
+    </div>
+    <div>
+      <span class="xref">Flow.Impl.Logger.ShowSource</span>
+    </div>
+    <div>
+      <span class="xref">Flow.Impl.Logger.ShowStack</span>
+    </div>
+    <div>
+      <span class="xref">Flow.Impl.Logger.LogFileName</span>
+    </div>
+    <div>
+      <span class="xref">Flow.Impl.Logger.MaxLevel</span>
+    </div>
+    <div>
+      <span class="xref">Flow.Impl.Logger.Initialise()</span>
+    </div>
+    <div>
+      <span class="xref">Flow.Impl.Logger.Info(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">Flow.Impl.Logger.Warn(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">Flow.Impl.Logger.Error(System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">Flow.Impl.Logger.Verbose(System.Int32, System.String, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">Flow.Impl.Logger._logLevel</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dekuple.Registry.html">Dekuple.Registry</a></h6>
+  <h6><strong>Assembly</strong>: Dekuple.dll</h6>
+  <h5 id="Dekuple_Registry_Registry_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Registry&lt;TBase&gt; : ModelBase, IModel, ILogger, IEntity, IHasId, IOwned, IHasDestroyHandler&lt;IModel&gt;, IHasDestroyHandler, IHasRegistry&lt;IModel&gt;, IRegistry&lt;TBase&gt;, IRegistry, IPrintable where TBase : class, IHasId, IHasRegistry&lt;TBase&gt;, IHasDestroyHandler&lt;TBase&gt;</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TBase</span></td>
+        <td><p>The common interface for each instance stored in the registry</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1__ctor.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L47">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1__ctor_" data-uid="Dekuple.Registry.Registry`1.#ctor*"></a>
+  <h4 id="Dekuple_Registry_Registry_1__ctor" data-uid="Dekuple.Registry.Registry`1.#ctor">Registry()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Registry()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Instances.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Instances%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L33">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Instances_" data-uid="Dekuple.Registry.Registry`1.Instances*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Instances" data-uid="Dekuple.Registry.Registry`1.Instances">Instances</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;TBase&gt; Instances { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TBase&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_NumInstances.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.NumInstances%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L36">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_NumInstances_" data-uid="Dekuple.Registry.Registry`1.NumInstances*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_NumInstances" data-uid="Dekuple.Registry.Registry`1.NumInstances">NumInstances</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NumInstances { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_AddAllSubscriptions.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.AddAllSubscriptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L58">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_AddAllSubscriptions_" data-uid="Dekuple.Registry.Registry`1.AddAllSubscriptions*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_AddAllSubscriptions" data-uid="Dekuple.Registry.Registry`1.AddAllSubscriptions">AddAllSubscriptions()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddAllSubscriptions()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Bind__2.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Bind%60%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L84">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Bind_" data-uid="Dekuple.Registry.Registry`1.Bind*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Bind__2" data-uid="Dekuple.Registry.Registry`1.Bind``2">Bind&lt;TInterface, TImpl&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Bind&lt;TInterface, TImpl&gt;()
+    where TInterface : TBase where TImpl : TInterface</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TInterface</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TImpl</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Bind__2___1_.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Bind%60%602(%60%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L183">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Bind_" data-uid="Dekuple.Registry.Registry`1.Bind*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Bind__2___1_" data-uid="Dekuple.Registry.Registry`1.Bind``2(``1)">Bind&lt;TInterface, TImpl&gt;(TImpl)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool Bind&lt;TInterface, TImpl&gt;(TImpl single)
+    where TInterface : TBase where TImpl : TInterface</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TImpl</span></td>
+        <td><span class="parametername">single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TInterface</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TImpl</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Bind__2_System_Func___1__.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Bind%60%602(System.Func%7B%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L156">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Bind_" data-uid="Dekuple.Registry.Registry`1.Bind*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Bind__2_System_Func___1__" data-uid="Dekuple.Registry.Registry`1.Bind``2(System.Func{``1})">Bind&lt;TInterface, TImpl&gt;(Func&lt;TImpl&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Bind&lt;TInterface, TImpl&gt;(Func&lt;TImpl&gt; creator)
+    where TInterface : TBase where TImpl : TInterface</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;TImpl&gt;</td>
+        <td><span class="parametername">creator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TInterface</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TImpl</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Bind__3_System_Func___2___1__.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Bind%60%603(System.Func%7B%60%602%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L165">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Bind_" data-uid="Dekuple.Registry.Registry`1.Bind*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Bind__3_System_Func___2___1__" data-uid="Dekuple.Registry.Registry`1.Bind``3(System.Func{``2,``1})">Bind&lt;TInterface, TImpl, T0&gt;(Func&lt;T0, TImpl&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Bind&lt;TInterface, TImpl, T0&gt;(Func&lt;T0, TImpl&gt; creator)
+    where TInterface : TBase where TImpl : TInterface</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T0, TImpl&gt;</td>
+        <td><span class="parametername">creator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TInterface</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TImpl</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Bind__4_System_Func___2___3___1__.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Bind%60%604(System.Func%7B%60%602%2C%60%603%2C%60%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L174">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Bind_" data-uid="Dekuple.Registry.Registry`1.Bind*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Bind__4_System_Func___2___3___1__" data-uid="Dekuple.Registry.Registry`1.Bind``4(System.Func{``2,``3,``1})">Bind&lt;TInterface, TImpl, T0, T1&gt;(Func&lt;T0, T1, TImpl&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Bind&lt;TInterface, TImpl, T0, T1&gt;(Func&lt;T0, T1, TImpl&gt; creator)
+    where TInterface : TBase where TImpl : TInterface</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T0, T1, TImpl&gt;</td>
+        <td><span class="parametername">creator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TInterface</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TImpl</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Get_System_Guid_.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Get(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L76">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Get_" data-uid="Dekuple.Registry.Registry`1.Get*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Get_System_Guid_" data-uid="Dekuple.Registry.Registry`1.Get(System.Guid)">Get(Guid)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TBase Get(Guid id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Guid</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TBase</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Get__1_System_Object___.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Get%60%601(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L105">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Get_" data-uid="Dekuple.Registry.Registry`1.Get*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Get__1_System_Object___" data-uid="Dekuple.Registry.Registry`1.Get``1(System.Object[])">Get&lt;TIBase&gt;(Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TIBase Get&lt;TIBase&gt;(params object[] args)
+    where TIBase : class, TBase, IHasRegistry&lt;TBase&gt;, IHasDestroyHandler&lt;TBase&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TIBase</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TIBase</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Has__0_.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Has(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L66">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Has_" data-uid="Dekuple.Registry.Registry`1.Has*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Has__0_" data-uid="Dekuple.Registry.Registry`1.Has(`0)">Has(TBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Has(TBase instance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TBase</span></td>
+        <td><span class="parametername">instance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Has_System_Guid_.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Has(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L71">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Has_" data-uid="Dekuple.Registry.Registry`1.Has*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Has_System_Guid_" data-uid="Dekuple.Registry.Registry`1.Has(System.Guid)">Has(Guid)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Has(Guid id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Guid</span></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_HasInjector_System_Type_.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.HasInjector(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L245">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_HasInjector_" data-uid="Dekuple.Registry.Registry`1.HasInjector*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_HasInjector_System_Type_" data-uid="Dekuple.Registry.Registry`1.HasInjector(System.Type)">HasInjector(Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasInjector(Type type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_HasInjector__1.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.HasInjector%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L250">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_HasInjector_" data-uid="Dekuple.Registry.Registry`1.HasInjector*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_HasInjector__1" data-uid="Dekuple.Registry.Registry`1.HasInjector``1">HasInjector&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasInjector&lt;T&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Inject__0_Dekuple_Inject_System_Type__0_.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Inject(%600%2CDekuple.Inject%2CSystem.Type%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.Injection.cs/#L94">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Inject_" data-uid="Dekuple.Registry.Registry`1.Inject*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Inject__0_Dekuple_Inject_System_Type__0_" data-uid="Dekuple.Registry.Registry`1.Inject(`0,Dekuple.Inject,System.Type,`0)">Inject(TBase, Inject, Type, TBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TBase Inject(TBase model, Inject inject, Type iface, TBase single)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TBase</span></td>
+        <td><span class="parametername">model</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Dekuple.Inject.html">Inject</a></td>
+        <td><span class="parametername">inject</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">iface</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TBase</span></td>
+        <td><span class="parametername">single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TBase</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Inject_System_Type__0_.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Inject(System.Type%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L238">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Inject_" data-uid="Dekuple.Registry.Registry`1.Inject*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Inject_System_Type__0_" data-uid="Dekuple.Registry.Registry`1.Inject(System.Type,`0)">Inject(Type, TBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TBase Inject(Type ity, TBase model)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">ity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TBase</span></td>
+        <td><span class="parametername">model</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TBase</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Inject__1__0_.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Inject%60%601(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L236">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Inject_" data-uid="Dekuple.Registry.Registry`1.Inject*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Inject__1__0_" data-uid="Dekuple.Registry.Registry`1.Inject``1(`0)">Inject&lt;TIFace&gt;(TBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TBase Inject&lt;TIFace&gt;(TBase model)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TBase</span></td>
+        <td><span class="parametername">model</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TBase</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TIFace</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Load_System_String_.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Load(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.Peristence.cs/#L22">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Load_" data-uid="Dekuple.Registry.Registry`1.Load*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Load_System_String_" data-uid="Dekuple.Registry.Registry`1.Load(System.String)">Load(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Load(string text)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">text</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Prepare__0_.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Prepare(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L222">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Prepare_" data-uid="Dekuple.Registry.Registry`1.Prepare*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Prepare__0_" data-uid="Dekuple.Registry.Registry`1.Prepare(`0)">Prepare(TBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual TBase Prepare(TBase instance)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TBase</span></td>
+        <td><span class="parametername">instance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TBase</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Print.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Print%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L408">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Print_" data-uid="Dekuple.Registry.Registry`1.Print*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Print" data-uid="Dekuple.Registry.Registry`1.Print">Print()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Print()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Read_System_Byte___.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Read(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.Peristence.cs/#L12">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Read_" data-uid="Dekuple.Registry.Registry`1.Read*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Read_System_Byte___" data-uid="Dekuple.Registry.Registry`1.Read(System.Byte[])">Read(Byte[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Read(byte[] data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">data</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Resolve.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Resolve%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L204">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Resolve_" data-uid="Dekuple.Registry.Registry`1.Resolve*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Resolve" data-uid="Dekuple.Registry.Registry`1.Resolve">Resolve()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Resolve()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Save.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Save%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.Peristence.cs/#L17">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Save_" data-uid="Dekuple.Registry.Registry`1.Save*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Save" data-uid="Dekuple.Registry.Registry`1.Save">Save()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Save()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_ToString.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L320">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_ToString_" data-uid="Dekuple.Registry.Registry`1.ToString*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_ToString" data-uid="Dekuple.Registry.Registry`1.ToString">ToString()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Write.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Write%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.Peristence.cs/#L7">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Write_" data-uid="Dekuple.Registry.Registry`1.Write*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Write" data-uid="Dekuple.Registry.Registry`1.Write">Write()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte[] Write()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1_Dekuple_Registry_IRegistry_Instances.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601.Dekuple%23Registry%23IRegistry%23Instances%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.cs/#L34">View Source</a>
+  </span>
+  <a id="Dekuple_Registry_Registry_1_Dekuple_Registry_IRegistry_Instances_" data-uid="Dekuple.Registry.Registry`1.Dekuple#Registry#IRegistry#Instances*"></a>
+  <h4 id="Dekuple_Registry_Registry_1_Dekuple_Registry_IRegistry_Instances" data-uid="Dekuple.Registry.Registry`1.Dekuple#Registry#IRegistry#Instances">IRegistry.Instances</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;IHasDestroyHandler&gt; IRegistry.Instances { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Dekuple.IHasDestroyHandler.html">IHasDestroyHandler</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Dekuple.Model.IModel.html">IModel</a>
+  </div>
+  <div>
+      <span class="xref">Flow.ILogger</span>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.IEntity.html">IEntity</a>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.IHasId.html">IHasId</a>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.IOwned.html">IOwned</a>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.IHasDestroyHandler-1.html">IHasDestroyHandler&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.IHasDestroyHandler.html">IHasDestroyHandler</a>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.Registry.IHasRegistry-1.html">IHasRegistry&lt;TBase&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry-1.html">IRegistry&lt;TBase&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.Registry.IRegistry.html">IRegistry</a>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.IPrintable.html">IPrintable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Registry_Registry_1.md&amp;value=---%0Auid%3A%20Dekuple.Registry.Registry%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Registry/Impl/Registry.Peristence.cs/#L5" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

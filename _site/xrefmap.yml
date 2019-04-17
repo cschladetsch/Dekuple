@@ -1,0 +1,3592 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Dekuple
+  name: Dekuple
+  href: api/Dekuple.html
+  commentId: N:Dekuple
+  fullName: Dekuple
+  nameWithType: Dekuple
+- uid: Dekuple.Agent
+  name: Dekuple.Agent
+  href: api/Dekuple.Agent.html
+  commentId: N:Dekuple.Agent
+  fullName: Dekuple.Agent
+  nameWithType: Dekuple.Agent
+- uid: Dekuple.Agent.AgentBase`1
+  name: AgentBase<TModel>
+  href: api/Dekuple.Agent.AgentBase-1.html
+  commentId: T:Dekuple.Agent.AgentBase`1
+  name.vb: AgentBase(Of TModel)
+  fullName: Dekuple.Agent.AgentBase<TModel>
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel)
+  nameWithType: AgentBase<TModel>
+  nameWithType.vb: AgentBase(Of TModel)
+- uid: Dekuple.Agent.AgentBase`1.#ctor(`0)
+  name: AgentBase(TModel)
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1__ctor__0_
+  commentId: M:Dekuple.Agent.AgentBase`1.#ctor(`0)
+  fullName: Dekuple.Agent.AgentBase<TModel>.AgentBase(TModel)
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).AgentBase(TModel)
+  nameWithType: AgentBase<TModel>.AgentBase(TModel)
+  nameWithType.vb: AgentBase(Of TModel).AgentBase(TModel)
+- uid: Dekuple.Agent.AgentBase`1.#ctor*
+  name: AgentBase
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1__ctor_
+  commentId: Overload:Dekuple.Agent.AgentBase`1.#ctor
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentBase<TModel>.AgentBase
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).AgentBase
+  nameWithType: AgentBase<TModel>.AgentBase
+  nameWithType.vb: AgentBase(Of TModel).AgentBase
+- uid: Dekuple.Agent.AgentBase`1.AddSubscriptions
+  name: AddSubscriptions()
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_AddSubscriptions
+  commentId: M:Dekuple.Agent.AgentBase`1.AddSubscriptions
+  fullName: Dekuple.Agent.AgentBase<TModel>.AddSubscriptions()
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).AddSubscriptions()
+  nameWithType: AgentBase<TModel>.AddSubscriptions()
+  nameWithType.vb: AgentBase(Of TModel).AddSubscriptions()
+- uid: Dekuple.Agent.AgentBase`1.AddSubscriptions*
+  name: AddSubscriptions
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_AddSubscriptions_
+  commentId: Overload:Dekuple.Agent.AgentBase`1.AddSubscriptions
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentBase<TModel>.AddSubscriptions
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).AddSubscriptions
+  nameWithType: AgentBase<TModel>.AddSubscriptions
+  nameWithType.vb: AgentBase(Of TModel).AddSubscriptions
+- uid: Dekuple.Agent.AgentBase`1.BaseModel
+  name: BaseModel
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_BaseModel
+  commentId: P:Dekuple.Agent.AgentBase`1.BaseModel
+  fullName: Dekuple.Agent.AgentBase<TModel>.BaseModel
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).BaseModel
+  nameWithType: AgentBase<TModel>.BaseModel
+  nameWithType.vb: AgentBase(Of TModel).BaseModel
+- uid: Dekuple.Agent.AgentBase`1.BaseModel*
+  name: BaseModel
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_BaseModel_
+  commentId: Overload:Dekuple.Agent.AgentBase`1.BaseModel
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentBase<TModel>.BaseModel
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).BaseModel
+  nameWithType: AgentBase<TModel>.BaseModel
+  nameWithType.vb: AgentBase(Of TModel).BaseModel
+- uid: Dekuple.Agent.AgentBase`1.Create
+  name: Create()
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Create
+  commentId: M:Dekuple.Agent.AgentBase`1.Create
+  fullName: Dekuple.Agent.AgentBase<TModel>.Create()
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).Create()
+  nameWithType: AgentBase<TModel>.Create()
+  nameWithType.vb: AgentBase(Of TModel).Create()
+- uid: Dekuple.Agent.AgentBase`1.Create*
+  name: Create
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Create_
+  commentId: Overload:Dekuple.Agent.AgentBase`1.Create
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentBase<TModel>.Create
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).Create
+  nameWithType: AgentBase<TModel>.Create
+  nameWithType.vb: AgentBase(Of TModel).Create
+- uid: Dekuple.Agent.AgentBase`1.Destroy
+  name: Destroy()
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Destroy
+  commentId: M:Dekuple.Agent.AgentBase`1.Destroy
+  fullName: Dekuple.Agent.AgentBase<TModel>.Destroy()
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).Destroy()
+  nameWithType: AgentBase<TModel>.Destroy()
+  nameWithType.vb: AgentBase(Of TModel).Destroy()
+- uid: Dekuple.Agent.AgentBase`1.Destroy*
+  name: Destroy
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Destroy_
+  commentId: Overload:Dekuple.Agent.AgentBase`1.Destroy
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentBase<TModel>.Destroy
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).Destroy
+  nameWithType: AgentBase<TModel>.Destroy
+  nameWithType.vb: AgentBase(Of TModel).Destroy
+- uid: Dekuple.Agent.AgentBase`1.Id
+  name: Id
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Id
+  commentId: P:Dekuple.Agent.AgentBase`1.Id
+  fullName: Dekuple.Agent.AgentBase<TModel>.Id
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).Id
+  nameWithType: AgentBase<TModel>.Id
+  nameWithType.vb: AgentBase(Of TModel).Id
+- uid: Dekuple.Agent.AgentBase`1.Id*
+  name: Id
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Id_
+  commentId: Overload:Dekuple.Agent.AgentBase`1.Id
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentBase<TModel>.Id
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).Id
+  nameWithType: AgentBase<TModel>.Id
+  nameWithType.vb: AgentBase(Of TModel).Id
+- uid: Dekuple.Agent.AgentBase`1.IsValid
+  name: IsValid
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_IsValid
+  commentId: P:Dekuple.Agent.AgentBase`1.IsValid
+  fullName: Dekuple.Agent.AgentBase<TModel>.IsValid
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).IsValid
+  nameWithType: AgentBase<TModel>.IsValid
+  nameWithType.vb: AgentBase(Of TModel).IsValid
+- uid: Dekuple.Agent.AgentBase`1.IsValid*
+  name: IsValid
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_IsValid_
+  commentId: Overload:Dekuple.Agent.AgentBase`1.IsValid
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentBase<TModel>.IsValid
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).IsValid
+  nameWithType: AgentBase<TModel>.IsValid
+  nameWithType.vb: AgentBase(Of TModel).IsValid
+- uid: Dekuple.Agent.AgentBase`1.Model
+  name: Model
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Model
+  commentId: P:Dekuple.Agent.AgentBase`1.Model
+  fullName: Dekuple.Agent.AgentBase<TModel>.Model
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).Model
+  nameWithType: AgentBase<TModel>.Model
+  nameWithType.vb: AgentBase(Of TModel).Model
+- uid: Dekuple.Agent.AgentBase`1.Model*
+  name: Model
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Model_
+  commentId: Overload:Dekuple.Agent.AgentBase`1.Model
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentBase<TModel>.Model
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).Model
+  nameWithType: AgentBase<TModel>.Model
+  nameWithType.vb: AgentBase(Of TModel).Model
+- uid: Dekuple.Agent.AgentBase`1.OnDestroyed
+  name: OnDestroyed
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_OnDestroyed
+  commentId: E:Dekuple.Agent.AgentBase`1.OnDestroyed
+  fullName: Dekuple.Agent.AgentBase<TModel>.OnDestroyed
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).OnDestroyed
+  nameWithType: AgentBase<TModel>.OnDestroyed
+  nameWithType.vb: AgentBase(Of TModel).OnDestroyed
+- uid: Dekuple.Agent.AgentBase`1.Owner
+  name: Owner
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Owner
+  commentId: P:Dekuple.Agent.AgentBase`1.Owner
+  fullName: Dekuple.Agent.AgentBase<TModel>.Owner
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).Owner
+  nameWithType: AgentBase<TModel>.Owner
+  nameWithType.vb: AgentBase(Of TModel).Owner
+- uid: Dekuple.Agent.AgentBase`1.Owner*
+  name: Owner
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Owner_
+  commentId: Overload:Dekuple.Agent.AgentBase`1.Owner
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentBase<TModel>.Owner
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).Owner
+  nameWithType: AgentBase<TModel>.Owner
+  nameWithType.vb: AgentBase(Of TModel).Owner
+- uid: Dekuple.Agent.AgentBase`1.Registry
+  name: Registry
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Registry
+  commentId: P:Dekuple.Agent.AgentBase`1.Registry
+  fullName: Dekuple.Agent.AgentBase<TModel>.Registry
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).Registry
+  nameWithType: AgentBase<TModel>.Registry
+  nameWithType.vb: AgentBase(Of TModel).Registry
+- uid: Dekuple.Agent.AgentBase`1.Registry*
+  name: Registry
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Registry_
+  commentId: Overload:Dekuple.Agent.AgentBase`1.Registry
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentBase<TModel>.Registry
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).Registry
+  nameWithType: AgentBase<TModel>.Registry
+  nameWithType.vb: AgentBase(Of TModel).Registry
+- uid: Dekuple.Agent.AgentBase`1.SameOwner(Dekuple.IEntity)
+  name: SameOwner(IEntity)
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_SameOwner_Dekuple_IEntity_
+  commentId: M:Dekuple.Agent.AgentBase`1.SameOwner(Dekuple.IEntity)
+  fullName: Dekuple.Agent.AgentBase<TModel>.SameOwner(Dekuple.IEntity)
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).SameOwner(Dekuple.IEntity)
+  nameWithType: AgentBase<TModel>.SameOwner(IEntity)
+  nameWithType.vb: AgentBase(Of TModel).SameOwner(IEntity)
+- uid: Dekuple.Agent.AgentBase`1.SameOwner(Dekuple.IOwned)
+  name: SameOwner(IOwned)
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_SameOwner_Dekuple_IOwned_
+  commentId: M:Dekuple.Agent.AgentBase`1.SameOwner(Dekuple.IOwned)
+  fullName: Dekuple.Agent.AgentBase<TModel>.SameOwner(Dekuple.IOwned)
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).SameOwner(Dekuple.IOwned)
+  nameWithType: AgentBase<TModel>.SameOwner(IOwned)
+  nameWithType.vb: AgentBase(Of TModel).SameOwner(IOwned)
+- uid: Dekuple.Agent.AgentBase`1.SameOwner*
+  name: SameOwner
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_SameOwner_
+  commentId: Overload:Dekuple.Agent.AgentBase`1.SameOwner
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentBase<TModel>.SameOwner
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).SameOwner
+  nameWithType: AgentBase<TModel>.SameOwner
+  nameWithType.vb: AgentBase(Of TModel).SameOwner
+- uid: Dekuple.Agent.AgentBase`1.SetOwner(Dekuple.IOwner)
+  name: SetOwner(IOwner)
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_SetOwner_Dekuple_IOwner_
+  commentId: M:Dekuple.Agent.AgentBase`1.SetOwner(Dekuple.IOwner)
+  fullName: Dekuple.Agent.AgentBase<TModel>.SetOwner(Dekuple.IOwner)
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).SetOwner(Dekuple.IOwner)
+  nameWithType: AgentBase<TModel>.SetOwner(IOwner)
+  nameWithType.vb: AgentBase(Of TModel).SetOwner(IOwner)
+- uid: Dekuple.Agent.AgentBase`1.SetOwner*
+  name: SetOwner
+  href: api/Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_SetOwner_
+  commentId: Overload:Dekuple.Agent.AgentBase`1.SetOwner
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentBase<TModel>.SetOwner
+  fullName.vb: Dekuple.Agent.AgentBase(Of TModel).SetOwner
+  nameWithType: AgentBase<TModel>.SetOwner
+  nameWithType.vb: AgentBase(Of TModel).SetOwner
+- uid: Dekuple.Agent.AgentBaseCoro`1
+  name: AgentBaseCoro<TModel>
+  href: api/Dekuple.Agent.AgentBaseCoro-1.html
+  commentId: T:Dekuple.Agent.AgentBaseCoro`1
+  name.vb: AgentBaseCoro(Of TModel)
+  fullName: Dekuple.Agent.AgentBaseCoro<TModel>
+  fullName.vb: Dekuple.Agent.AgentBaseCoro(Of TModel)
+  nameWithType: AgentBaseCoro<TModel>
+  nameWithType.vb: AgentBaseCoro(Of TModel)
+- uid: Dekuple.Agent.AgentBaseCoro`1.#ctor(`0)
+  name: AgentBaseCoro(TModel)
+  href: api/Dekuple.Agent.AgentBaseCoro-1.html#Dekuple_Agent_AgentBaseCoro_1__ctor__0_
+  commentId: M:Dekuple.Agent.AgentBaseCoro`1.#ctor(`0)
+  fullName: Dekuple.Agent.AgentBaseCoro<TModel>.AgentBaseCoro(TModel)
+  fullName.vb: Dekuple.Agent.AgentBaseCoro(Of TModel).AgentBaseCoro(TModel)
+  nameWithType: AgentBaseCoro<TModel>.AgentBaseCoro(TModel)
+  nameWithType.vb: AgentBaseCoro(Of TModel).AgentBaseCoro(TModel)
+- uid: Dekuple.Agent.AgentBaseCoro`1.#ctor*
+  name: AgentBaseCoro
+  href: api/Dekuple.Agent.AgentBaseCoro-1.html#Dekuple_Agent_AgentBaseCoro_1__ctor_
+  commentId: Overload:Dekuple.Agent.AgentBaseCoro`1.#ctor
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentBaseCoro<TModel>.AgentBaseCoro
+  fullName.vb: Dekuple.Agent.AgentBaseCoro(Of TModel).AgentBaseCoro
+  nameWithType: AgentBaseCoro<TModel>.AgentBaseCoro
+  nameWithType.vb: AgentBaseCoro(Of TModel).AgentBaseCoro
+- uid: Dekuple.Agent.AgentBaseCoro`1._Node
+  name: _Node
+  href: api/Dekuple.Agent.AgentBaseCoro-1.html#Dekuple_Agent_AgentBaseCoro_1__Node
+  commentId: P:Dekuple.Agent.AgentBaseCoro`1._Node
+  fullName: Dekuple.Agent.AgentBaseCoro<TModel>._Node
+  fullName.vb: Dekuple.Agent.AgentBaseCoro(Of TModel)._Node
+  nameWithType: AgentBaseCoro<TModel>._Node
+  nameWithType.vb: AgentBaseCoro(Of TModel)._Node
+- uid: Dekuple.Agent.AgentBaseCoro`1._Node*
+  name: _Node
+  href: api/Dekuple.Agent.AgentBaseCoro-1.html#Dekuple_Agent_AgentBaseCoro_1__Node_
+  commentId: Overload:Dekuple.Agent.AgentBaseCoro`1._Node
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentBaseCoro<TModel>._Node
+  fullName.vb: Dekuple.Agent.AgentBaseCoro(Of TModel)._Node
+  nameWithType: AgentBaseCoro<TModel>._Node
+  nameWithType.vb: AgentBaseCoro(Of TModel)._Node
+- uid: Dekuple.Agent.AgentBaseCoro`1.NewCoro(System.Func{Flow.IGenerator,System.Collections.IEnumerator})
+  name: NewCoro(Func<IGenerator, IEnumerator>)
+  href: api/Dekuple.Agent.AgentBaseCoro-1.html#Dekuple_Agent_AgentBaseCoro_1_NewCoro_System_Func_Flow_IGenerator_System_Collections_IEnumerator__
+  commentId: M:Dekuple.Agent.AgentBaseCoro`1.NewCoro(System.Func{Flow.IGenerator,System.Collections.IEnumerator})
+  name.vb: NewCoro(Func(Of IGenerator, IEnumerator))
+  fullName: Dekuple.Agent.AgentBaseCoro<TModel>.NewCoro(System.Func<Flow.IGenerator, System.Collections.IEnumerator>)
+  fullName.vb: Dekuple.Agent.AgentBaseCoro(Of TModel).NewCoro(System.Func(Of Flow.IGenerator, System.Collections.IEnumerator))
+  nameWithType: AgentBaseCoro<TModel>.NewCoro(Func<IGenerator, IEnumerator>)
+  nameWithType.vb: AgentBaseCoro(Of TModel).NewCoro(Func(Of IGenerator, IEnumerator))
+- uid: Dekuple.Agent.AgentBaseCoro`1.NewCoro*
+  name: NewCoro
+  href: api/Dekuple.Agent.AgentBaseCoro-1.html#Dekuple_Agent_AgentBaseCoro_1_NewCoro_
+  commentId: Overload:Dekuple.Agent.AgentBaseCoro`1.NewCoro
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentBaseCoro<TModel>.NewCoro
+  fullName.vb: Dekuple.Agent.AgentBaseCoro(Of TModel).NewCoro
+  nameWithType: AgentBaseCoro<TModel>.NewCoro
+  nameWithType.vb: AgentBaseCoro(Of TModel).NewCoro
+- uid: Dekuple.Agent.AgentBaseCoro`1.NewCoro``1(System.Func{Flow.IGenerator,``0,System.Collections.IEnumerator},``0)
+  name: NewCoro<T0>(Func<IGenerator, T0, IEnumerator>, T0)
+  href: api/Dekuple.Agent.AgentBaseCoro-1.html#Dekuple_Agent_AgentBaseCoro_1_NewCoro__1_System_Func_Flow_IGenerator___0_System_Collections_IEnumerator____0_
+  commentId: M:Dekuple.Agent.AgentBaseCoro`1.NewCoro``1(System.Func{Flow.IGenerator,``0,System.Collections.IEnumerator},``0)
+  name.vb: NewCoro(Of T0)(Func(Of IGenerator, T0, IEnumerator), T0)
+  fullName: Dekuple.Agent.AgentBaseCoro<TModel>.NewCoro<T0>(System.Func<Flow.IGenerator, T0, System.Collections.IEnumerator>, T0)
+  fullName.vb: Dekuple.Agent.AgentBaseCoro(Of TModel).NewCoro(Of T0)(System.Func(Of Flow.IGenerator, T0, System.Collections.IEnumerator), T0)
+  nameWithType: AgentBaseCoro<TModel>.NewCoro<T0>(Func<IGenerator, T0, IEnumerator>, T0)
+  nameWithType.vb: AgentBaseCoro(Of TModel).NewCoro(Of T0)(Func(Of IGenerator, T0, IEnumerator), T0)
+- uid: Dekuple.Agent.AgentBaseCoro`1.NewCoro``2(System.Func{Flow.IGenerator,``0,``1,System.Collections.IEnumerator},``0,``1)
+  name: NewCoro<T0, T1>(Func<IGenerator, T0, T1, IEnumerator>, T0, T1)
+  href: api/Dekuple.Agent.AgentBaseCoro-1.html#Dekuple_Agent_AgentBaseCoro_1_NewCoro__2_System_Func_Flow_IGenerator___0___1_System_Collections_IEnumerator____0___1_
+  commentId: M:Dekuple.Agent.AgentBaseCoro`1.NewCoro``2(System.Func{Flow.IGenerator,``0,``1,System.Collections.IEnumerator},``0,``1)
+  name.vb: NewCoro(Of T0, T1)(Func(Of IGenerator, T0, T1, IEnumerator), T0, T1)
+  fullName: Dekuple.Agent.AgentBaseCoro<TModel>.NewCoro<T0, T1>(System.Func<Flow.IGenerator, T0, T1, System.Collections.IEnumerator>, T0, T1)
+  fullName.vb: Dekuple.Agent.AgentBaseCoro(Of TModel).NewCoro(Of T0, T1)(System.Func(Of Flow.IGenerator, T0, T1, System.Collections.IEnumerator), T0, T1)
+  nameWithType: AgentBaseCoro<TModel>.NewCoro<T0, T1>(Func<IGenerator, T0, T1, IEnumerator>, T0, T1)
+  nameWithType.vb: AgentBaseCoro(Of TModel).NewCoro(Of T0, T1)(Func(Of IGenerator, T0, T1, IEnumerator), T0, T1)
+- uid: Dekuple.Agent.AgentLogger
+  name: AgentLogger
+  href: api/Dekuple.Agent.AgentLogger.html
+  commentId: T:Dekuple.Agent.AgentLogger
+  fullName: Dekuple.Agent.AgentLogger
+  nameWithType: AgentLogger
+- uid: Dekuple.Agent.AgentLogger.#ctor
+  name: AgentLogger()
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger__ctor
+  commentId: M:Dekuple.Agent.AgentLogger.#ctor
+  fullName: Dekuple.Agent.AgentLogger.AgentLogger()
+  nameWithType: AgentLogger.AgentLogger()
+- uid: Dekuple.Agent.AgentLogger.#ctor*
+  name: AgentLogger
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger__ctor_
+  commentId: Overload:Dekuple.Agent.AgentLogger.#ctor
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.AgentLogger
+  nameWithType: AgentLogger.AgentLogger
+- uid: Dekuple.Agent.AgentLogger._log
+  name: _log
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger__log
+  commentId: F:Dekuple.Agent.AgentLogger._log
+  fullName: Dekuple.Agent.AgentLogger._log
+  nameWithType: AgentLogger._log
+- uid: Dekuple.Agent.AgentLogger.Active
+  name: Active
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Active
+  commentId: P:Dekuple.Agent.AgentLogger.Active
+  fullName: Dekuple.Agent.AgentLogger.Active
+  nameWithType: AgentLogger.Active
+- uid: Dekuple.Agent.AgentLogger.Active*
+  name: Active
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Active_
+  commentId: Overload:Dekuple.Agent.AgentLogger.Active
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.Active
+  nameWithType: AgentLogger.Active
+- uid: Dekuple.Agent.AgentLogger.Complete
+  name: Complete()
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Complete
+  commentId: M:Dekuple.Agent.AgentLogger.Complete
+  fullName: Dekuple.Agent.AgentLogger.Complete()
+  nameWithType: AgentLogger.Complete()
+- uid: Dekuple.Agent.AgentLogger.Complete*
+  name: Complete
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Complete_
+  commentId: Overload:Dekuple.Agent.AgentLogger.Complete
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.Complete
+  nameWithType: AgentLogger.Complete
+- uid: Dekuple.Agent.AgentLogger.Completed
+  name: Completed
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Completed
+  commentId: E:Dekuple.Agent.AgentLogger.Completed
+  fullName: Dekuple.Agent.AgentLogger.Completed
+  nameWithType: AgentLogger.Completed
+- uid: Dekuple.Agent.AgentLogger.Error(System.String,System.Object[])
+  name: Error(String, Object[])
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Error_System_String_System_Object___
+  commentId: M:Dekuple.Agent.AgentLogger.Error(System.String,System.Object[])
+  name.vb: Error(String, Object())
+  fullName: Dekuple.Agent.AgentLogger.Error(System.String, System.Object[])
+  fullName.vb: Dekuple.Agent.AgentLogger.Error(System.String, System.Object())
+  nameWithType: AgentLogger.Error(String, Object[])
+  nameWithType.vb: AgentLogger.Error(String, Object())
+- uid: Dekuple.Agent.AgentLogger.Error*
+  name: Error
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Error_
+  commentId: Overload:Dekuple.Agent.AgentLogger.Error
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.Error
+  nameWithType: AgentLogger.Error
+- uid: Dekuple.Agent.AgentLogger.Factory
+  name: Factory
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Factory
+  commentId: P:Dekuple.Agent.AgentLogger.Factory
+  fullName: Dekuple.Agent.AgentLogger.Factory
+  nameWithType: AgentLogger.Factory
+- uid: Dekuple.Agent.AgentLogger.Factory*
+  name: Factory
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Factory_
+  commentId: Overload:Dekuple.Agent.AgentLogger.Factory
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.Factory
+  nameWithType: AgentLogger.Factory
+- uid: Dekuple.Agent.AgentLogger.Info(System.String,System.Object[])
+  name: Info(String, Object[])
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Info_System_String_System_Object___
+  commentId: M:Dekuple.Agent.AgentLogger.Info(System.String,System.Object[])
+  name.vb: Info(String, Object())
+  fullName: Dekuple.Agent.AgentLogger.Info(System.String, System.Object[])
+  fullName.vb: Dekuple.Agent.AgentLogger.Info(System.String, System.Object())
+  nameWithType: AgentLogger.Info(String, Object[])
+  nameWithType.vb: AgentLogger.Info(String, Object())
+- uid: Dekuple.Agent.AgentLogger.Info*
+  name: Info
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Info_
+  commentId: Overload:Dekuple.Agent.AgentLogger.Info
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.Info
+  nameWithType: AgentLogger.Info
+- uid: Dekuple.Agent.AgentLogger.Kernel
+  name: Kernel
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Kernel
+  commentId: P:Dekuple.Agent.AgentLogger.Kernel
+  fullName: Dekuple.Agent.AgentLogger.Kernel
+  nameWithType: AgentLogger.Kernel
+- uid: Dekuple.Agent.AgentLogger.Kernel*
+  name: Kernel
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Kernel_
+  commentId: Overload:Dekuple.Agent.AgentLogger.Kernel
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.Kernel
+  nameWithType: AgentLogger.Kernel
+- uid: Dekuple.Agent.AgentLogger.LogPrefix
+  name: LogPrefix
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_LogPrefix
+  commentId: P:Dekuple.Agent.AgentLogger.LogPrefix
+  fullName: Dekuple.Agent.AgentLogger.LogPrefix
+  nameWithType: AgentLogger.LogPrefix
+- uid: Dekuple.Agent.AgentLogger.LogPrefix*
+  name: LogPrefix
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_LogPrefix_
+  commentId: Overload:Dekuple.Agent.AgentLogger.LogPrefix
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.LogPrefix
+  nameWithType: AgentLogger.LogPrefix
+- uid: Dekuple.Agent.AgentLogger.LogSubject
+  name: LogSubject
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_LogSubject
+  commentId: P:Dekuple.Agent.AgentLogger.LogSubject
+  fullName: Dekuple.Agent.AgentLogger.LogSubject
+  nameWithType: AgentLogger.LogSubject
+- uid: Dekuple.Agent.AgentLogger.LogSubject*
+  name: LogSubject
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_LogSubject_
+  commentId: Overload:Dekuple.Agent.AgentLogger.LogSubject
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.LogSubject
+  nameWithType: AgentLogger.LogSubject
+- uid: Dekuple.Agent.AgentLogger.Name
+  name: Name
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Name
+  commentId: P:Dekuple.Agent.AgentLogger.Name
+  fullName: Dekuple.Agent.AgentLogger.Name
+  nameWithType: AgentLogger.Name
+- uid: Dekuple.Agent.AgentLogger.Name*
+  name: Name
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Name_
+  commentId: Overload:Dekuple.Agent.AgentLogger.Name
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.Name
+  nameWithType: AgentLogger.Name
+- uid: Dekuple.Agent.AgentLogger.Named(System.String)
+  name: Named(String)
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Named_System_String_
+  commentId: M:Dekuple.Agent.AgentLogger.Named(System.String)
+  fullName: Dekuple.Agent.AgentLogger.Named(System.String)
+  nameWithType: AgentLogger.Named(String)
+- uid: Dekuple.Agent.AgentLogger.Named*
+  name: Named
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Named_
+  commentId: Overload:Dekuple.Agent.AgentLogger.Named
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.Named
+  nameWithType: AgentLogger.Named
+- uid: Dekuple.Agent.AgentLogger.Root
+  name: Root
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Root
+  commentId: P:Dekuple.Agent.AgentLogger.Root
+  fullName: Dekuple.Agent.AgentLogger.Root
+  nameWithType: AgentLogger.Root
+- uid: Dekuple.Agent.AgentLogger.Root*
+  name: Root
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Root_
+  commentId: Overload:Dekuple.Agent.AgentLogger.Root
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.Root
+  nameWithType: AgentLogger.Root
+- uid: Dekuple.Agent.AgentLogger.ShowSource
+  name: ShowSource
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_ShowSource
+  commentId: P:Dekuple.Agent.AgentLogger.ShowSource
+  fullName: Dekuple.Agent.AgentLogger.ShowSource
+  nameWithType: AgentLogger.ShowSource
+- uid: Dekuple.Agent.AgentLogger.ShowSource*
+  name: ShowSource
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_ShowSource_
+  commentId: Overload:Dekuple.Agent.AgentLogger.ShowSource
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.ShowSource
+  nameWithType: AgentLogger.ShowSource
+- uid: Dekuple.Agent.AgentLogger.ShowStack
+  name: ShowStack
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_ShowStack
+  commentId: P:Dekuple.Agent.AgentLogger.ShowStack
+  fullName: Dekuple.Agent.AgentLogger.ShowStack
+  nameWithType: AgentLogger.ShowStack
+- uid: Dekuple.Agent.AgentLogger.ShowStack*
+  name: ShowStack
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_ShowStack_
+  commentId: Overload:Dekuple.Agent.AgentLogger.ShowStack
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.ShowStack
+  nameWithType: AgentLogger.ShowStack
+- uid: Dekuple.Agent.AgentLogger.TransientCompleted
+  name: TransientCompleted()
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_TransientCompleted
+  commentId: M:Dekuple.Agent.AgentLogger.TransientCompleted
+  fullName: Dekuple.Agent.AgentLogger.TransientCompleted()
+  nameWithType: AgentLogger.TransientCompleted()
+- uid: Dekuple.Agent.AgentLogger.TransientCompleted*
+  name: TransientCompleted
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_TransientCompleted_
+  commentId: Overload:Dekuple.Agent.AgentLogger.TransientCompleted
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.TransientCompleted
+  nameWithType: AgentLogger.TransientCompleted
+- uid: Dekuple.Agent.AgentLogger.Verbose(System.Int32,System.String,System.Object[])
+  name: Verbose(Int32, String, Object[])
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Verbose_System_Int32_System_String_System_Object___
+  commentId: M:Dekuple.Agent.AgentLogger.Verbose(System.Int32,System.String,System.Object[])
+  name.vb: Verbose(Int32, String, Object())
+  fullName: Dekuple.Agent.AgentLogger.Verbose(System.Int32, System.String, System.Object[])
+  fullName.vb: Dekuple.Agent.AgentLogger.Verbose(System.Int32, System.String, System.Object())
+  nameWithType: AgentLogger.Verbose(Int32, String, Object[])
+  nameWithType.vb: AgentLogger.Verbose(Int32, String, Object())
+- uid: Dekuple.Agent.AgentLogger.Verbose*
+  name: Verbose
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Verbose_
+  commentId: Overload:Dekuple.Agent.AgentLogger.Verbose
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.Verbose
+  nameWithType: AgentLogger.Verbose
+- uid: Dekuple.Agent.AgentLogger.Verbosity
+  name: Verbosity
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Verbosity
+  commentId: P:Dekuple.Agent.AgentLogger.Verbosity
+  fullName: Dekuple.Agent.AgentLogger.Verbosity
+  nameWithType: AgentLogger.Verbosity
+- uid: Dekuple.Agent.AgentLogger.Verbosity*
+  name: Verbosity
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Verbosity_
+  commentId: Overload:Dekuple.Agent.AgentLogger.Verbosity
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.Verbosity
+  nameWithType: AgentLogger.Verbosity
+- uid: Dekuple.Agent.AgentLogger.Warn(System.String,System.Object[])
+  name: Warn(String, Object[])
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Warn_System_String_System_Object___
+  commentId: M:Dekuple.Agent.AgentLogger.Warn(System.String,System.Object[])
+  name.vb: Warn(String, Object())
+  fullName: Dekuple.Agent.AgentLogger.Warn(System.String, System.Object[])
+  fullName.vb: Dekuple.Agent.AgentLogger.Warn(System.String, System.Object())
+  nameWithType: AgentLogger.Warn(String, Object[])
+  nameWithType.vb: AgentLogger.Warn(String, Object())
+- uid: Dekuple.Agent.AgentLogger.Warn*
+  name: Warn
+  href: api/Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Warn_
+  commentId: Overload:Dekuple.Agent.AgentLogger.Warn
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger.Warn
+  nameWithType: AgentLogger.Warn
+- uid: Dekuple.Agent.AgentLogger`1
+  name: AgentLogger<TModel>
+  href: api/Dekuple.Agent.AgentLogger-1.html
+  commentId: T:Dekuple.Agent.AgentLogger`1
+  name.vb: AgentLogger(Of TModel)
+  fullName: Dekuple.Agent.AgentLogger<TModel>
+  fullName.vb: Dekuple.Agent.AgentLogger(Of TModel)
+  nameWithType: AgentLogger<TModel>
+  nameWithType.vb: AgentLogger(Of TModel)
+- uid: Dekuple.Agent.AgentLogger`1.BaseModel
+  name: BaseModel
+  href: api/Dekuple.Agent.AgentLogger-1.html#Dekuple_Agent_AgentLogger_1_BaseModel
+  commentId: P:Dekuple.Agent.AgentLogger`1.BaseModel
+  fullName: Dekuple.Agent.AgentLogger<TModel>.BaseModel
+  fullName.vb: Dekuple.Agent.AgentLogger(Of TModel).BaseModel
+  nameWithType: AgentLogger<TModel>.BaseModel
+  nameWithType.vb: AgentLogger(Of TModel).BaseModel
+- uid: Dekuple.Agent.AgentLogger`1.BaseModel*
+  name: BaseModel
+  href: api/Dekuple.Agent.AgentLogger-1.html#Dekuple_Agent_AgentLogger_1_BaseModel_
+  commentId: Overload:Dekuple.Agent.AgentLogger`1.BaseModel
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger<TModel>.BaseModel
+  fullName.vb: Dekuple.Agent.AgentLogger(Of TModel).BaseModel
+  nameWithType: AgentLogger<TModel>.BaseModel
+  nameWithType.vb: AgentLogger(Of TModel).BaseModel
+- uid: Dekuple.Agent.AgentLogger`1.Model
+  name: Model
+  href: api/Dekuple.Agent.AgentLogger-1.html#Dekuple_Agent_AgentLogger_1_Model
+  commentId: P:Dekuple.Agent.AgentLogger`1.Model
+  fullName: Dekuple.Agent.AgentLogger<TModel>.Model
+  fullName.vb: Dekuple.Agent.AgentLogger(Of TModel).Model
+  nameWithType: AgentLogger<TModel>.Model
+  nameWithType.vb: AgentLogger(Of TModel).Model
+- uid: Dekuple.Agent.AgentLogger`1.Model*
+  name: Model
+  href: api/Dekuple.Agent.AgentLogger-1.html#Dekuple_Agent_AgentLogger_1_Model_
+  commentId: Overload:Dekuple.Agent.AgentLogger`1.Model
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentLogger<TModel>.Model
+  fullName.vb: Dekuple.Agent.AgentLogger(Of TModel).Model
+  nameWithType: AgentLogger<TModel>.Model
+  nameWithType.vb: AgentLogger(Of TModel).Model
+- uid: Dekuple.Agent.AgentRegistry
+  name: AgentRegistry
+  href: api/Dekuple.Agent.AgentRegistry.html
+  commentId: T:Dekuple.Agent.AgentRegistry
+  fullName: Dekuple.Agent.AgentRegistry
+  nameWithType: AgentRegistry
+- uid: Dekuple.Agent.AgentRegistry.#ctor
+  name: AgentRegistry()
+  href: api/Dekuple.Agent.AgentRegistry.html#Dekuple_Agent_AgentRegistry__ctor
+  commentId: M:Dekuple.Agent.AgentRegistry.#ctor
+  fullName: Dekuple.Agent.AgentRegistry.AgentRegistry()
+  nameWithType: AgentRegistry.AgentRegistry()
+- uid: Dekuple.Agent.AgentRegistry.#ctor*
+  name: AgentRegistry
+  href: api/Dekuple.Agent.AgentRegistry.html#Dekuple_Agent_AgentRegistry__ctor_
+  commentId: Overload:Dekuple.Agent.AgentRegistry.#ctor
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentRegistry.AgentRegistry
+  nameWithType: AgentRegistry.AgentRegistry
+- uid: Dekuple.Agent.AgentRegistry.Factory
+  name: Factory
+  href: api/Dekuple.Agent.AgentRegistry.html#Dekuple_Agent_AgentRegistry_Factory
+  commentId: P:Dekuple.Agent.AgentRegistry.Factory
+  fullName: Dekuple.Agent.AgentRegistry.Factory
+  nameWithType: AgentRegistry.Factory
+- uid: Dekuple.Agent.AgentRegistry.Factory*
+  name: Factory
+  href: api/Dekuple.Agent.AgentRegistry.html#Dekuple_Agent_AgentRegistry_Factory_
+  commentId: Overload:Dekuple.Agent.AgentRegistry.Factory
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentRegistry.Factory
+  nameWithType: AgentRegistry.Factory
+- uid: Dekuple.Agent.AgentRegistry.Kernel
+  name: Kernel
+  href: api/Dekuple.Agent.AgentRegistry.html#Dekuple_Agent_AgentRegistry_Kernel
+  commentId: P:Dekuple.Agent.AgentRegistry.Kernel
+  fullName: Dekuple.Agent.AgentRegistry.Kernel
+  nameWithType: AgentRegistry.Kernel
+- uid: Dekuple.Agent.AgentRegistry.Kernel*
+  name: Kernel
+  href: api/Dekuple.Agent.AgentRegistry.html#Dekuple_Agent_AgentRegistry_Kernel_
+  commentId: Overload:Dekuple.Agent.AgentRegistry.Kernel
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentRegistry.Kernel
+  nameWithType: AgentRegistry.Kernel
+- uid: Dekuple.Agent.AgentRegistry.Prepare(Dekuple.Agent.IAgent)
+  name: Prepare(IAgent)
+  href: api/Dekuple.Agent.AgentRegistry.html#Dekuple_Agent_AgentRegistry_Prepare_Dekuple_Agent_IAgent_
+  commentId: M:Dekuple.Agent.AgentRegistry.Prepare(Dekuple.Agent.IAgent)
+  fullName: Dekuple.Agent.AgentRegistry.Prepare(Dekuple.Agent.IAgent)
+  nameWithType: AgentRegistry.Prepare(IAgent)
+- uid: Dekuple.Agent.AgentRegistry.Prepare*
+  name: Prepare
+  href: api/Dekuple.Agent.AgentRegistry.html#Dekuple_Agent_AgentRegistry_Prepare_
+  commentId: Overload:Dekuple.Agent.AgentRegistry.Prepare
+  isSpec: "True"
+  fullName: Dekuple.Agent.AgentRegistry.Prepare
+  nameWithType: AgentRegistry.Prepare
+- uid: Dekuple.Agent.IAgent
+  name: IAgent
+  href: api/Dekuple.Agent.IAgent.html
+  commentId: T:Dekuple.Agent.IAgent
+  fullName: Dekuple.Agent.IAgent
+  nameWithType: IAgent
+- uid: Dekuple.Agent.IAgent.BaseModel
+  name: BaseModel
+  href: api/Dekuple.Agent.IAgent.html#Dekuple_Agent_IAgent_BaseModel
+  commentId: P:Dekuple.Agent.IAgent.BaseModel
+  fullName: Dekuple.Agent.IAgent.BaseModel
+  nameWithType: IAgent.BaseModel
+- uid: Dekuple.Agent.IAgent.BaseModel*
+  name: BaseModel
+  href: api/Dekuple.Agent.IAgent.html#Dekuple_Agent_IAgent_BaseModel_
+  commentId: Overload:Dekuple.Agent.IAgent.BaseModel
+  isSpec: "True"
+  fullName: Dekuple.Agent.IAgent.BaseModel
+  nameWithType: IAgent.BaseModel
+- uid: Dekuple.Agent.IAgent`1
+  name: IAgent<TModel>
+  href: api/Dekuple.Agent.IAgent-1.html
+  commentId: T:Dekuple.Agent.IAgent`1
+  name.vb: IAgent(Of TModel)
+  fullName: Dekuple.Agent.IAgent<TModel>
+  fullName.vb: Dekuple.Agent.IAgent(Of TModel)
+  nameWithType: IAgent<TModel>
+  nameWithType.vb: IAgent(Of TModel)
+- uid: Dekuple.Agent.IAgent`1.Model
+  name: Model
+  href: api/Dekuple.Agent.IAgent-1.html#Dekuple_Agent_IAgent_1_Model
+  commentId: P:Dekuple.Agent.IAgent`1.Model
+  fullName: Dekuple.Agent.IAgent<TModel>.Model
+  fullName.vb: Dekuple.Agent.IAgent(Of TModel).Model
+  nameWithType: IAgent<TModel>.Model
+  nameWithType.vb: IAgent(Of TModel).Model
+- uid: Dekuple.Agent.IAgent`1.Model*
+  name: Model
+  href: api/Dekuple.Agent.IAgent-1.html#Dekuple_Agent_IAgent_1_Model_
+  commentId: Overload:Dekuple.Agent.IAgent`1.Model
+  isSpec: "True"
+  fullName: Dekuple.Agent.IAgent<TModel>.Model
+  fullName.vb: Dekuple.Agent.IAgent(Of TModel).Model
+  nameWithType: IAgent<TModel>.Model
+  nameWithType.vb: IAgent(Of TModel).Model
+- uid: Dekuple.Agent.IAgentRegistry
+  name: IAgentRegistry
+  href: api/Dekuple.Agent.IAgentRegistry.html
+  commentId: T:Dekuple.Agent.IAgentRegistry
+  fullName: Dekuple.Agent.IAgentRegistry
+  nameWithType: IAgentRegistry
+- uid: Dekuple.Agent.IAgentRegistry.Factory
+  name: Factory
+  href: api/Dekuple.Agent.IAgentRegistry.html#Dekuple_Agent_IAgentRegistry_Factory
+  commentId: P:Dekuple.Agent.IAgentRegistry.Factory
+  fullName: Dekuple.Agent.IAgentRegistry.Factory
+  nameWithType: IAgentRegistry.Factory
+- uid: Dekuple.Agent.IAgentRegistry.Factory*
+  name: Factory
+  href: api/Dekuple.Agent.IAgentRegistry.html#Dekuple_Agent_IAgentRegistry_Factory_
+  commentId: Overload:Dekuple.Agent.IAgentRegistry.Factory
+  isSpec: "True"
+  fullName: Dekuple.Agent.IAgentRegistry.Factory
+  nameWithType: IAgentRegistry.Factory
+- uid: Dekuple.Agent.IAgentRegistry.Kernel
+  name: Kernel
+  href: api/Dekuple.Agent.IAgentRegistry.html#Dekuple_Agent_IAgentRegistry_Kernel
+  commentId: P:Dekuple.Agent.IAgentRegistry.Kernel
+  fullName: Dekuple.Agent.IAgentRegistry.Kernel
+  nameWithType: IAgentRegistry.Kernel
+- uid: Dekuple.Agent.IAgentRegistry.Kernel*
+  name: Kernel
+  href: api/Dekuple.Agent.IAgentRegistry.html#Dekuple_Agent_IAgentRegistry_Kernel_
+  commentId: Overload:Dekuple.Agent.IAgentRegistry.Kernel
+  isSpec: "True"
+  fullName: Dekuple.Agent.IAgentRegistry.Kernel
+  nameWithType: IAgentRegistry.Kernel
+- uid: Dekuple.Assert
+  name: Assert
+  href: api/Dekuple.Assert.html
+  commentId: T:Dekuple.Assert
+  fullName: Dekuple.Assert
+  nameWithType: Assert
+- uid: Dekuple.Assert.AreEqual*
+  name: AreEqual
+  href: api/Dekuple.Assert.html#Dekuple_Assert_AreEqual_
+  commentId: Overload:Dekuple.Assert.AreEqual
+  isSpec: "True"
+  fullName: Dekuple.Assert.AreEqual
+  nameWithType: Assert.AreEqual
+- uid: Dekuple.Assert.AreEqual``1(``0,``0)
+  name: AreEqual<T>(T, T)
+  href: api/Dekuple.Assert.html#Dekuple_Assert_AreEqual__1___0___0_
+  commentId: M:Dekuple.Assert.AreEqual``1(``0,``0)
+  name.vb: AreEqual(Of T)(T, T)
+  fullName: Dekuple.Assert.AreEqual<T>(T, T)
+  fullName.vb: Dekuple.Assert.AreEqual(Of T)(T, T)
+  nameWithType: Assert.AreEqual<T>(T, T)
+  nameWithType.vb: Assert.AreEqual(Of T)(T, T)
+- uid: Dekuple.Assert.AreNotEqual*
+  name: AreNotEqual
+  href: api/Dekuple.Assert.html#Dekuple_Assert_AreNotEqual_
+  commentId: Overload:Dekuple.Assert.AreNotEqual
+  isSpec: "True"
+  fullName: Dekuple.Assert.AreNotEqual
+  nameWithType: Assert.AreNotEqual
+- uid: Dekuple.Assert.AreNotEqual``1(``0,``0)
+  name: AreNotEqual<T>(T, T)
+  href: api/Dekuple.Assert.html#Dekuple_Assert_AreNotEqual__1___0___0_
+  commentId: M:Dekuple.Assert.AreNotEqual``1(``0,``0)
+  name.vb: AreNotEqual(Of T)(T, T)
+  fullName: Dekuple.Assert.AreNotEqual<T>(T, T)
+  fullName.vb: Dekuple.Assert.AreNotEqual(Of T)(T, T)
+  nameWithType: Assert.AreNotEqual<T>(T, T)
+  nameWithType.vb: Assert.AreNotEqual(Of T)(T, T)
+- uid: Dekuple.Assert.AreNotSame(System.Object,System.Object)
+  name: AreNotSame(Object, Object)
+  href: api/Dekuple.Assert.html#Dekuple_Assert_AreNotSame_System_Object_System_Object_
+  commentId: M:Dekuple.Assert.AreNotSame(System.Object,System.Object)
+  fullName: Dekuple.Assert.AreNotSame(System.Object, System.Object)
+  nameWithType: Assert.AreNotSame(Object, Object)
+- uid: Dekuple.Assert.AreNotSame*
+  name: AreNotSame
+  href: api/Dekuple.Assert.html#Dekuple_Assert_AreNotSame_
+  commentId: Overload:Dekuple.Assert.AreNotSame
+  isSpec: "True"
+  fullName: Dekuple.Assert.AreNotSame
+  nameWithType: Assert.AreNotSame
+- uid: Dekuple.Assert.AreSame(System.Object,System.Object)
+  name: AreSame(Object, Object)
+  href: api/Dekuple.Assert.html#Dekuple_Assert_AreSame_System_Object_System_Object_
+  commentId: M:Dekuple.Assert.AreSame(System.Object,System.Object)
+  fullName: Dekuple.Assert.AreSame(System.Object, System.Object)
+  nameWithType: Assert.AreSame(Object, Object)
+- uid: Dekuple.Assert.AreSame*
+  name: AreSame
+  href: api/Dekuple.Assert.html#Dekuple_Assert_AreSame_
+  commentId: Overload:Dekuple.Assert.AreSame
+  isSpec: "True"
+  fullName: Dekuple.Assert.AreSame
+  nameWithType: Assert.AreSame
+- uid: Dekuple.Assert.AssertionsThrow
+  name: AssertionsThrow
+  href: api/Dekuple.Assert.html#Dekuple_Assert_AssertionsThrow
+  commentId: F:Dekuple.Assert.AssertionsThrow
+  fullName: Dekuple.Assert.AssertionsThrow
+  nameWithType: Assert.AssertionsThrow
+- uid: Dekuple.Assert.Error(System.String)
+  name: Error(String)
+  href: api/Dekuple.Assert.html#Dekuple_Assert_Error_System_String_
+  commentId: M:Dekuple.Assert.Error(System.String)
+  fullName: Dekuple.Assert.Error(System.String)
+  nameWithType: Assert.Error(String)
+- uid: Dekuple.Assert.Error*
+  name: Error
+  href: api/Dekuple.Assert.html#Dekuple_Assert_Error_
+  commentId: Overload:Dekuple.Assert.Error
+  isSpec: "True"
+  fullName: Dekuple.Assert.Error
+  nameWithType: Assert.Error
+- uid: Dekuple.Assert.IsEmpty*
+  name: IsEmpty
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsEmpty_
+  commentId: Overload:Dekuple.Assert.IsEmpty
+  isSpec: "True"
+  fullName: Dekuple.Assert.IsEmpty
+  nameWithType: Assert.IsEmpty
+- uid: Dekuple.Assert.IsEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  name: IsEmpty<T>(IEnumerable<T>)
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsEmpty__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:Dekuple.Assert.IsEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: IsEmpty(Of T)(IEnumerable(Of T))
+  fullName: Dekuple.Assert.IsEmpty<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Dekuple.Assert.IsEmpty(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: Assert.IsEmpty<T>(IEnumerable<T>)
+  nameWithType.vb: Assert.IsEmpty(Of T)(IEnumerable(Of T))
+- uid: Dekuple.Assert.IsFalse(System.Boolean)
+  name: IsFalse(Boolean)
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsFalse_System_Boolean_
+  commentId: M:Dekuple.Assert.IsFalse(System.Boolean)
+  fullName: Dekuple.Assert.IsFalse(System.Boolean)
+  nameWithType: Assert.IsFalse(Boolean)
+- uid: Dekuple.Assert.IsFalse*
+  name: IsFalse
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsFalse_
+  commentId: Overload:Dekuple.Assert.IsFalse
+  isSpec: "True"
+  fullName: Dekuple.Assert.IsFalse
+  nameWithType: Assert.IsFalse
+- uid: Dekuple.Assert.IsGreater(System.Int32,System.Int32)
+  name: IsGreater(Int32, Int32)
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsGreater_System_Int32_System_Int32_
+  commentId: M:Dekuple.Assert.IsGreater(System.Int32,System.Int32)
+  fullName: Dekuple.Assert.IsGreater(System.Int32, System.Int32)
+  nameWithType: Assert.IsGreater(Int32, Int32)
+- uid: Dekuple.Assert.IsGreater*
+  name: IsGreater
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsGreater_
+  commentId: Overload:Dekuple.Assert.IsGreater
+  isSpec: "True"
+  fullName: Dekuple.Assert.IsGreater
+  nameWithType: Assert.IsGreater
+- uid: Dekuple.Assert.IsLess(System.Int32,System.Int32)
+  name: IsLess(Int32, Int32)
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsLess_System_Int32_System_Int32_
+  commentId: M:Dekuple.Assert.IsLess(System.Int32,System.Int32)
+  fullName: Dekuple.Assert.IsLess(System.Int32, System.Int32)
+  nameWithType: Assert.IsLess(Int32, Int32)
+- uid: Dekuple.Assert.IsLess*
+  name: IsLess
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsLess_
+  commentId: Overload:Dekuple.Assert.IsLess
+  isSpec: "True"
+  fullName: Dekuple.Assert.IsLess
+  nameWithType: Assert.IsLess
+- uid: Dekuple.Assert.IsNotEmpty*
+  name: IsNotEmpty
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsNotEmpty_
+  commentId: Overload:Dekuple.Assert.IsNotEmpty
+  isSpec: "True"
+  fullName: Dekuple.Assert.IsNotEmpty
+  nameWithType: Assert.IsNotEmpty
+- uid: Dekuple.Assert.IsNotEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  name: IsNotEmpty<T>(IEnumerable<T>)
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsNotEmpty__1_System_Collections_Generic_IEnumerable___0__
+  commentId: M:Dekuple.Assert.IsNotEmpty``1(System.Collections.Generic.IEnumerable{``0})
+  name.vb: IsNotEmpty(Of T)(IEnumerable(Of T))
+  fullName: Dekuple.Assert.IsNotEmpty<T>(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Dekuple.Assert.IsNotEmpty(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: Assert.IsNotEmpty<T>(IEnumerable<T>)
+  nameWithType.vb: Assert.IsNotEmpty(Of T)(IEnumerable(Of T))
+- uid: Dekuple.Assert.IsNotNull(System.Object)
+  name: IsNotNull(Object)
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsNotNull_System_Object_
+  commentId: M:Dekuple.Assert.IsNotNull(System.Object)
+  fullName: Dekuple.Assert.IsNotNull(System.Object)
+  nameWithType: Assert.IsNotNull(Object)
+- uid: Dekuple.Assert.IsNotNull*
+  name: IsNotNull
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsNotNull_
+  commentId: Overload:Dekuple.Assert.IsNotNull
+  isSpec: "True"
+  fullName: Dekuple.Assert.IsNotNull
+  nameWithType: Assert.IsNotNull
+- uid: Dekuple.Assert.IsNull(System.Object)
+  name: IsNull(Object)
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsNull_System_Object_
+  commentId: M:Dekuple.Assert.IsNull(System.Object)
+  fullName: Dekuple.Assert.IsNull(System.Object)
+  nameWithType: Assert.IsNull(Object)
+- uid: Dekuple.Assert.IsNull*
+  name: IsNull
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsNull_
+  commentId: Overload:Dekuple.Assert.IsNull
+  isSpec: "True"
+  fullName: Dekuple.Assert.IsNull
+  nameWithType: Assert.IsNull
+- uid: Dekuple.Assert.IsTrue(System.Boolean)
+  name: IsTrue(Boolean)
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsTrue_System_Boolean_
+  commentId: M:Dekuple.Assert.IsTrue(System.Boolean)
+  fullName: Dekuple.Assert.IsTrue(System.Boolean)
+  nameWithType: Assert.IsTrue(Boolean)
+- uid: Dekuple.Assert.IsTrue*
+  name: IsTrue
+  href: api/Dekuple.Assert.html#Dekuple_Assert_IsTrue_
+  commentId: Overload:Dekuple.Assert.IsTrue
+  isSpec: "True"
+  fullName: Dekuple.Assert.IsTrue
+  nameWithType: Assert.IsTrue
+- uid: Dekuple.Assert.Log
+  name: Log
+  href: api/Dekuple.Assert.html#Dekuple_Assert_Log
+  commentId: F:Dekuple.Assert.Log
+  fullName: Dekuple.Assert.Log
+  nameWithType: Assert.Log
+- uid: Dekuple.Assert.Throw(System.String)
+  name: Throw(String)
+  href: api/Dekuple.Assert.html#Dekuple_Assert_Throw_System_String_
+  commentId: M:Dekuple.Assert.Throw(System.String)
+  fullName: Dekuple.Assert.Throw(System.String)
+  nameWithType: Assert.Throw(String)
+- uid: Dekuple.Assert.Throw*
+  name: Throw
+  href: api/Dekuple.Assert.html#Dekuple_Assert_Throw_
+  commentId: Overload:Dekuple.Assert.Throw
+  isSpec: "True"
+  fullName: Dekuple.Assert.Throw
+  nameWithType: Assert.Throw
+- uid: Dekuple.AssertionException
+  name: AssertionException
+  href: api/Dekuple.AssertionException.html
+  commentId: T:Dekuple.AssertionException
+  fullName: Dekuple.AssertionException
+  nameWithType: AssertionException
+- uid: Dekuple.AssertionException.#ctor(System.String)
+  name: AssertionException(String)
+  href: api/Dekuple.AssertionException.html#Dekuple_AssertionException__ctor_System_String_
+  commentId: M:Dekuple.AssertionException.#ctor(System.String)
+  fullName: Dekuple.AssertionException.AssertionException(System.String)
+  nameWithType: AssertionException.AssertionException(String)
+- uid: Dekuple.AssertionException.#ctor*
+  name: AssertionException
+  href: api/Dekuple.AssertionException.html#Dekuple_AssertionException__ctor_
+  commentId: Overload:Dekuple.AssertionException.#ctor
+  isSpec: "True"
+  fullName: Dekuple.AssertionException.AssertionException
+  nameWithType: AssertionException.AssertionException
+- uid: Dekuple.CollectionExtensions
+  name: CollectionExtensions
+  href: api/Dekuple.CollectionExtensions.html
+  commentId: T:Dekuple.CollectionExtensions
+  fullName: Dekuple.CollectionExtensions
+  nameWithType: CollectionExtensions
+- uid: Dekuple.CollectionExtensions.AddReactive*
+  name: AddReactive
+  href: api/Dekuple.CollectionExtensions.html#Dekuple_CollectionExtensions_AddReactive_
+  commentId: Overload:Dekuple.CollectionExtensions.AddReactive
+  isSpec: "True"
+  fullName: Dekuple.CollectionExtensions.AddReactive
+  nameWithType: CollectionExtensions.AddReactive
+- uid: Dekuple.CollectionExtensions.AddReactive``1(System.Collections.Generic.ICollection{``0},``0)
+  name: AddReactive<T>(ICollection<T>, T)
+  href: api/Dekuple.CollectionExtensions.html#Dekuple_CollectionExtensions_AddReactive__1_System_Collections_Generic_ICollection___0____0_
+  commentId: M:Dekuple.CollectionExtensions.AddReactive``1(System.Collections.Generic.ICollection{``0},``0)
+  name.vb: AddReactive(Of T)(ICollection(Of T), T)
+  fullName: Dekuple.CollectionExtensions.AddReactive<T>(System.Collections.Generic.ICollection<T>, T)
+  fullName.vb: Dekuple.CollectionExtensions.AddReactive(Of T)(System.Collections.Generic.ICollection(Of T), T)
+  nameWithType: CollectionExtensions.AddReactive<T>(ICollection<T>, T)
+  nameWithType.vb: CollectionExtensions.AddReactive(Of T)(ICollection(Of T), T)
+- uid: Dekuple.CollectionExtensions.Connect*
+  name: Connect
+  href: api/Dekuple.CollectionExtensions.html#Dekuple_CollectionExtensions_Connect_
+  commentId: Overload:Dekuple.CollectionExtensions.Connect
+  isSpec: "True"
+  fullName: Dekuple.CollectionExtensions.Connect
+  nameWithType: CollectionExtensions.Connect
+- uid: Dekuple.CollectionExtensions.Connect``1(UniRx.IReadOnlyReactiveCollection{``0},System.Action{UniRx.CollectionAddEvent{``0}},System.Action{UniRx.CollectionRemoveEvent{``0}})
+  name: Connect<TTarget>(IReadOnlyReactiveCollection<TTarget>, Action<CollectionAddEvent<TTarget>>, Action<CollectionRemoveEvent<TTarget>>)
+  href: api/Dekuple.CollectionExtensions.html#Dekuple_CollectionExtensions_Connect__1_UniRx_IReadOnlyReactiveCollection___0__System_Action_UniRx_CollectionAddEvent___0___System_Action_UniRx_CollectionRemoveEvent___0___
+  commentId: M:Dekuple.CollectionExtensions.Connect``1(UniRx.IReadOnlyReactiveCollection{``0},System.Action{UniRx.CollectionAddEvent{``0}},System.Action{UniRx.CollectionRemoveEvent{``0}})
+  name.vb: Connect(Of TTarget)(IReadOnlyReactiveCollection(Of TTarget), Action(Of CollectionAddEvent(Of TTarget)), Action(Of CollectionRemoveEvent(Of TTarget)))
+  fullName: Dekuple.CollectionExtensions.Connect<TTarget>(UniRx.IReadOnlyReactiveCollection<TTarget>, System.Action<UniRx.CollectionAddEvent<TTarget>>, System.Action<UniRx.CollectionRemoveEvent<TTarget>>)
+  fullName.vb: Dekuple.CollectionExtensions.Connect(Of TTarget)(UniRx.IReadOnlyReactiveCollection(Of TTarget), System.Action(Of UniRx.CollectionAddEvent(Of TTarget)), System.Action(Of UniRx.CollectionRemoveEvent(Of TTarget)))
+  nameWithType: CollectionExtensions.Connect<TTarget>(IReadOnlyReactiveCollection<TTarget>, Action<CollectionAddEvent<TTarget>>, Action<CollectionRemoveEvent<TTarget>>)
+  nameWithType.vb: CollectionExtensions.Connect(Of TTarget)(IReadOnlyReactiveCollection(Of TTarget), Action(Of CollectionAddEvent(Of TTarget)), Action(Of CollectionRemoveEvent(Of TTarget)))
+- uid: Dekuple.CollectionExtensions.Shuffle*
+  name: Shuffle
+  href: api/Dekuple.CollectionExtensions.html#Dekuple_CollectionExtensions_Shuffle_
+  commentId: Overload:Dekuple.CollectionExtensions.Shuffle
+  isSpec: "True"
+  fullName: Dekuple.CollectionExtensions.Shuffle
+  nameWithType: CollectionExtensions.Shuffle
+- uid: Dekuple.CollectionExtensions.Shuffle``1(System.Collections.Generic.IList{``0})
+  name: Shuffle<T>(IList<T>)
+  href: api/Dekuple.CollectionExtensions.html#Dekuple_CollectionExtensions_Shuffle__1_System_Collections_Generic_IList___0__
+  commentId: M:Dekuple.CollectionExtensions.Shuffle``1(System.Collections.Generic.IList{``0})
+  name.vb: Shuffle(Of T)(IList(Of T))
+  fullName: Dekuple.CollectionExtensions.Shuffle<T>(System.Collections.Generic.IList<T>)
+  fullName.vb: Dekuple.CollectionExtensions.Shuffle(Of T)(System.Collections.Generic.IList(Of T))
+  nameWithType: CollectionExtensions.Shuffle<T>(IList<T>)
+  nameWithType.vb: CollectionExtensions.Shuffle(Of T)(IList(Of T))
+- uid: Dekuple.CollectionExtensions.Shuffle``1(System.Collections.Generic.IList{``0},System.Random)
+  name: Shuffle<T>(IList<T>, Random)
+  href: api/Dekuple.CollectionExtensions.html#Dekuple_CollectionExtensions_Shuffle__1_System_Collections_Generic_IList___0__System_Random_
+  commentId: M:Dekuple.CollectionExtensions.Shuffle``1(System.Collections.Generic.IList{``0},System.Random)
+  name.vb: Shuffle(Of T)(IList(Of T), Random)
+  fullName: Dekuple.CollectionExtensions.Shuffle<T>(System.Collections.Generic.IList<T>, System.Random)
+  fullName.vb: Dekuple.CollectionExtensions.Shuffle(Of T)(System.Collections.Generic.IList(Of T), System.Random)
+  nameWithType: CollectionExtensions.Shuffle<T>(IList<T>, Random)
+  nameWithType.vb: CollectionExtensions.Shuffle(Of T)(IList(Of T), Random)
+- uid: Dekuple.CollectionExtensions.Swap*
+  name: Swap
+  href: api/Dekuple.CollectionExtensions.html#Dekuple_CollectionExtensions_Swap_
+  commentId: Overload:Dekuple.CollectionExtensions.Swap
+  isSpec: "True"
+  fullName: Dekuple.CollectionExtensions.Swap
+  nameWithType: CollectionExtensions.Swap
+- uid: Dekuple.CollectionExtensions.Swap``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)
+  name: Swap<T>(IList<T>, Int32, Int32)
+  href: api/Dekuple.CollectionExtensions.html#Dekuple_CollectionExtensions_Swap__1_System_Collections_Generic_IList___0__System_Int32_System_Int32_
+  commentId: M:Dekuple.CollectionExtensions.Swap``1(System.Collections.Generic.IList{``0},System.Int32,System.Int32)
+  name.vb: Swap(Of T)(IList(Of T), Int32, Int32)
+  fullName: Dekuple.CollectionExtensions.Swap<T>(System.Collections.Generic.IList<T>, System.Int32, System.Int32)
+  fullName.vb: Dekuple.CollectionExtensions.Swap(Of T)(System.Collections.Generic.IList(Of T), System.Int32, System.Int32)
+  nameWithType: CollectionExtensions.Swap<T>(IList<T>, Int32, Int32)
+  nameWithType.vb: CollectionExtensions.Swap(Of T)(IList(Of T), Int32, Int32)
+- uid: Dekuple.EError
+  name: EError
+  href: api/Dekuple.EError.html
+  commentId: T:Dekuple.EError
+  fullName: Dekuple.EError
+  nameWithType: EError
+- uid: Dekuple.EError.Error
+  name: Error
+  href: api/Dekuple.EError.html#Dekuple_EError_Error
+  commentId: F:Dekuple.EError.Error
+  fullName: Dekuple.EError.Error
+  nameWithType: EError.Error
+- uid: Dekuple.EError.InvalidArgs
+  name: InvalidArgs
+  href: api/Dekuple.EError.html#Dekuple_EError_InvalidArgs
+  commentId: F:Dekuple.EError.InvalidArgs
+  fullName: Dekuple.EError.InvalidArgs
+  nameWithType: EError.InvalidArgs
+- uid: Dekuple.EError.InvalidSource
+  name: InvalidSource
+  href: api/Dekuple.EError.html#Dekuple_EError_InvalidSource
+  commentId: F:Dekuple.EError.InvalidSource
+  fullName: Dekuple.EError.InvalidSource
+  nameWithType: EError.InvalidSource
+- uid: Dekuple.EError.InvalidTarget
+  name: InvalidTarget
+  href: api/Dekuple.EError.html#Dekuple_EError_InvalidTarget
+  commentId: F:Dekuple.EError.InvalidTarget
+  fullName: Dekuple.EError.InvalidTarget
+  nameWithType: EError.InvalidTarget
+- uid: Dekuple.EError.NoChange
+  name: NoChange
+  href: api/Dekuple.EError.html#Dekuple_EError_NoChange
+  commentId: F:Dekuple.EError.NoChange
+  fullName: Dekuple.EError.NoChange
+  nameWithType: EError.NoChange
+- uid: Dekuple.EError.None
+  name: None
+  href: api/Dekuple.EError.html#Dekuple_EError_None
+  commentId: F:Dekuple.EError.None
+  fullName: Dekuple.EError.None
+  nameWithType: EError.None
+- uid: Dekuple.EError.NotEnoughMana
+  name: NotEnoughMana
+  href: api/Dekuple.EError.html#Dekuple_EError_NotEnoughMana
+  commentId: F:Dekuple.EError.NotEnoughMana
+  fullName: Dekuple.EError.NotEnoughMana
+  nameWithType: EError.NotEnoughMana
+- uid: Dekuple.EError.NotImplemented
+  name: NotImplemented
+  href: api/Dekuple.EError.html#Dekuple_EError_NotImplemented
+  commentId: F:Dekuple.EError.NotImplemented
+  fullName: Dekuple.EError.NotImplemented
+  nameWithType: EError.NotImplemented
+- uid: Dekuple.EError.OutOfSequence
+  name: OutOfSequence
+  href: api/Dekuple.EError.html#Dekuple_EError_OutOfSequence
+  commentId: F:Dekuple.EError.OutOfSequence
+  fullName: Dekuple.EError.OutOfSequence
+  nameWithType: EError.OutOfSequence
+- uid: Dekuple.EError.TooClose
+  name: TooClose
+  href: api/Dekuple.EError.html#Dekuple_EError_TooClose
+  commentId: F:Dekuple.EError.TooClose
+  fullName: Dekuple.EError.TooClose
+  nameWithType: EError.TooClose
+- uid: Dekuple.EResponse
+  name: EResponse
+  href: api/Dekuple.EResponse.html
+  commentId: T:Dekuple.EResponse
+  fullName: Dekuple.EResponse
+  nameWithType: EResponse
+- uid: Dekuple.EResponse.BadContext
+  name: BadContext
+  href: api/Dekuple.EResponse.html#Dekuple_EResponse_BadContext
+  commentId: F:Dekuple.EResponse.BadContext
+  fullName: Dekuple.EResponse.BadContext
+  nameWithType: EResponse.BadContext
+- uid: Dekuple.EResponse.BadOrder
+  name: BadOrder
+  href: api/Dekuple.EResponse.html#Dekuple_EResponse_BadOrder
+  commentId: F:Dekuple.EResponse.BadOrder
+  fullName: Dekuple.EResponse.BadOrder
+  nameWithType: EResponse.BadOrder
+- uid: Dekuple.EResponse.Fail
+  name: Fail
+  href: api/Dekuple.EResponse.html#Dekuple_EResponse_Fail
+  commentId: F:Dekuple.EResponse.Fail
+  fullName: Dekuple.EResponse.Fail
+  nameWithType: EResponse.Fail
+- uid: Dekuple.EResponse.NotImplemented
+  name: NotImplemented
+  href: api/Dekuple.EResponse.html#Dekuple_EResponse_NotImplemented
+  commentId: F:Dekuple.EResponse.NotImplemented
+  fullName: Dekuple.EResponse.NotImplemented
+  nameWithType: EResponse.NotImplemented
+- uid: Dekuple.EResponse.Ok
+  name: Ok
+  href: api/Dekuple.EResponse.html#Dekuple_EResponse_Ok
+  commentId: F:Dekuple.EResponse.Ok
+  fullName: Dekuple.EResponse.Ok
+  nameWithType: EResponse.Ok
+- uid: Dekuple.EResponse.TimedOut
+  name: TimedOut
+  href: api/Dekuple.EResponse.html#Dekuple_EResponse_TimedOut
+  commentId: F:Dekuple.EResponse.TimedOut
+  fullName: Dekuple.EResponse.TimedOut
+  nameWithType: EResponse.TimedOut
+- uid: Dekuple.IEntity
+  name: IEntity
+  href: api/Dekuple.IEntity.html
+  commentId: T:Dekuple.IEntity
+  fullName: Dekuple.IEntity
+  nameWithType: IEntity
+- uid: Dekuple.IEntity.IsValid
+  name: IsValid
+  href: api/Dekuple.IEntity.html#Dekuple_IEntity_IsValid
+  commentId: P:Dekuple.IEntity.IsValid
+  fullName: Dekuple.IEntity.IsValid
+  nameWithType: IEntity.IsValid
+- uid: Dekuple.IEntity.IsValid*
+  name: IsValid
+  href: api/Dekuple.IEntity.html#Dekuple_IEntity_IsValid_
+  commentId: Overload:Dekuple.IEntity.IsValid
+  isSpec: "True"
+  fullName: Dekuple.IEntity.IsValid
+  nameWithType: IEntity.IsValid
+- uid: Dekuple.IHasDestroyHandler
+  name: IHasDestroyHandler
+  href: api/Dekuple.IHasDestroyHandler.html
+  commentId: T:Dekuple.IHasDestroyHandler
+  fullName: Dekuple.IHasDestroyHandler
+  nameWithType: IHasDestroyHandler
+- uid: Dekuple.IHasDestroyHandler.AddSubscriptions
+  name: AddSubscriptions()
+  href: api/Dekuple.IHasDestroyHandler.html#Dekuple_IHasDestroyHandler_AddSubscriptions
+  commentId: M:Dekuple.IHasDestroyHandler.AddSubscriptions
+  fullName: Dekuple.IHasDestroyHandler.AddSubscriptions()
+  nameWithType: IHasDestroyHandler.AddSubscriptions()
+- uid: Dekuple.IHasDestroyHandler.AddSubscriptions*
+  name: AddSubscriptions
+  href: api/Dekuple.IHasDestroyHandler.html#Dekuple_IHasDestroyHandler_AddSubscriptions_
+  commentId: Overload:Dekuple.IHasDestroyHandler.AddSubscriptions
+  isSpec: "True"
+  fullName: Dekuple.IHasDestroyHandler.AddSubscriptions
+  nameWithType: IHasDestroyHandler.AddSubscriptions
+- uid: Dekuple.IHasDestroyHandler.Destroy
+  name: Destroy()
+  href: api/Dekuple.IHasDestroyHandler.html#Dekuple_IHasDestroyHandler_Destroy
+  commentId: M:Dekuple.IHasDestroyHandler.Destroy
+  fullName: Dekuple.IHasDestroyHandler.Destroy()
+  nameWithType: IHasDestroyHandler.Destroy()
+- uid: Dekuple.IHasDestroyHandler.Destroy*
+  name: Destroy
+  href: api/Dekuple.IHasDestroyHandler.html#Dekuple_IHasDestroyHandler_Destroy_
+  commentId: Overload:Dekuple.IHasDestroyHandler.Destroy
+  isSpec: "True"
+  fullName: Dekuple.IHasDestroyHandler.Destroy
+  nameWithType: IHasDestroyHandler.Destroy
+- uid: Dekuple.IHasDestroyHandler`1
+  name: IHasDestroyHandler<T>
+  href: api/Dekuple.IHasDestroyHandler-1.html
+  commentId: T:Dekuple.IHasDestroyHandler`1
+  name.vb: IHasDestroyHandler(Of T)
+  fullName: Dekuple.IHasDestroyHandler<T>
+  fullName.vb: Dekuple.IHasDestroyHandler(Of T)
+  nameWithType: IHasDestroyHandler<T>
+  nameWithType.vb: IHasDestroyHandler(Of T)
+- uid: Dekuple.IHasDestroyHandler`1.OnDestroyed
+  name: OnDestroyed
+  href: api/Dekuple.IHasDestroyHandler-1.html#Dekuple_IHasDestroyHandler_1_OnDestroyed
+  commentId: E:Dekuple.IHasDestroyHandler`1.OnDestroyed
+  fullName: Dekuple.IHasDestroyHandler<T>.OnDestroyed
+  fullName.vb: Dekuple.IHasDestroyHandler(Of T).OnDestroyed
+  nameWithType: IHasDestroyHandler<T>.OnDestroyed
+  nameWithType.vb: IHasDestroyHandler(Of T).OnDestroyed
+- uid: Dekuple.IHasId
+  name: IHasId
+  href: api/Dekuple.IHasId.html
+  commentId: T:Dekuple.IHasId
+  fullName: Dekuple.IHasId
+  nameWithType: IHasId
+- uid: Dekuple.IHasId.Id
+  name: Id
+  href: api/Dekuple.IHasId.html#Dekuple_IHasId_Id
+  commentId: P:Dekuple.IHasId.Id
+  fullName: Dekuple.IHasId.Id
+  nameWithType: IHasId.Id
+- uid: Dekuple.IHasId.Id*
+  name: Id
+  href: api/Dekuple.IHasId.html#Dekuple_IHasId_Id_
+  commentId: Overload:Dekuple.IHasId.Id
+  isSpec: "True"
+  fullName: Dekuple.IHasId.Id
+  nameWithType: IHasId.Id
+- uid: Dekuple.IHasName
+  name: IHasName
+  href: api/Dekuple.IHasName.html
+  commentId: T:Dekuple.IHasName
+  fullName: Dekuple.IHasName
+  nameWithType: IHasName
+- uid: Dekuple.Inject
+  name: Inject
+  href: api/Dekuple.Inject.html
+  commentId: T:Dekuple.Inject
+  fullName: Dekuple.Inject
+  nameWithType: Inject
+- uid: Dekuple.Inject.#ctor(System.Object[])
+  name: Inject(Object[])
+  href: api/Dekuple.Inject.html#Dekuple_Inject__ctor_System_Object___
+  commentId: M:Dekuple.Inject.#ctor(System.Object[])
+  name.vb: Inject(Object())
+  fullName: Dekuple.Inject.Inject(System.Object[])
+  fullName.vb: Dekuple.Inject.Inject(System.Object())
+  nameWithType: Inject.Inject(Object[])
+  nameWithType.vb: Inject.Inject(Object())
+- uid: Dekuple.Inject.#ctor*
+  name: Inject
+  href: api/Dekuple.Inject.html#Dekuple_Inject__ctor_
+  commentId: Overload:Dekuple.Inject.#ctor
+  isSpec: "True"
+  fullName: Dekuple.Inject.Inject
+  nameWithType: Inject.Inject
+- uid: Dekuple.Inject.Args
+  name: Args
+  href: api/Dekuple.Inject.html#Dekuple_Inject_Args
+  commentId: F:Dekuple.Inject.Args
+  fullName: Dekuple.Inject.Args
+  nameWithType: Inject.Args
+- uid: Dekuple.Inject.FieldInfo
+  name: FieldInfo
+  href: api/Dekuple.Inject.html#Dekuple_Inject_FieldInfo
+  commentId: F:Dekuple.Inject.FieldInfo
+  fullName: Dekuple.Inject.FieldInfo
+  nameWithType: Inject.FieldInfo
+- uid: Dekuple.Inject.PropertyInfo
+  name: PropertyInfo
+  href: api/Dekuple.Inject.html#Dekuple_Inject_PropertyInfo
+  commentId: F:Dekuple.Inject.PropertyInfo
+  fullName: Dekuple.Inject.PropertyInfo
+  nameWithType: Inject.PropertyInfo
+- uid: Dekuple.Inject.ValueType
+  name: ValueType
+  href: api/Dekuple.Inject.html#Dekuple_Inject_ValueType
+  commentId: F:Dekuple.Inject.ValueType
+  fullName: Dekuple.Inject.ValueType
+  nameWithType: Inject.ValueType
+- uid: Dekuple.IOwned
+  name: IOwned
+  href: api/Dekuple.IOwned.html
+  commentId: T:Dekuple.IOwned
+  fullName: Dekuple.IOwned
+  nameWithType: IOwned
+- uid: Dekuple.IOwned.Owner
+  name: Owner
+  href: api/Dekuple.IOwned.html#Dekuple_IOwned_Owner
+  commentId: P:Dekuple.IOwned.Owner
+  fullName: Dekuple.IOwned.Owner
+  nameWithType: IOwned.Owner
+- uid: Dekuple.IOwned.Owner*
+  name: Owner
+  href: api/Dekuple.IOwned.html#Dekuple_IOwned_Owner_
+  commentId: Overload:Dekuple.IOwned.Owner
+  isSpec: "True"
+  fullName: Dekuple.IOwned.Owner
+  nameWithType: IOwned.Owner
+- uid: Dekuple.IOwned.SameOwner(Dekuple.IOwned)
+  name: SameOwner(IOwned)
+  href: api/Dekuple.IOwned.html#Dekuple_IOwned_SameOwner_Dekuple_IOwned_
+  commentId: M:Dekuple.IOwned.SameOwner(Dekuple.IOwned)
+  fullName: Dekuple.IOwned.SameOwner(Dekuple.IOwned)
+  nameWithType: IOwned.SameOwner(IOwned)
+- uid: Dekuple.IOwned.SameOwner*
+  name: SameOwner
+  href: api/Dekuple.IOwned.html#Dekuple_IOwned_SameOwner_
+  commentId: Overload:Dekuple.IOwned.SameOwner
+  isSpec: "True"
+  fullName: Dekuple.IOwned.SameOwner
+  nameWithType: IOwned.SameOwner
+- uid: Dekuple.IOwned.SetOwner(Dekuple.IOwner)
+  name: SetOwner(IOwner)
+  href: api/Dekuple.IOwned.html#Dekuple_IOwned_SetOwner_Dekuple_IOwner_
+  commentId: M:Dekuple.IOwned.SetOwner(Dekuple.IOwner)
+  fullName: Dekuple.IOwned.SetOwner(Dekuple.IOwner)
+  nameWithType: IOwned.SetOwner(IOwner)
+- uid: Dekuple.IOwned.SetOwner*
+  name: SetOwner
+  href: api/Dekuple.IOwned.html#Dekuple_IOwned_SetOwner_
+  commentId: Overload:Dekuple.IOwned.SetOwner
+  isSpec: "True"
+  fullName: Dekuple.IOwned.SetOwner
+  nameWithType: IOwned.SetOwner
+- uid: Dekuple.IOwner
+  name: IOwner
+  href: api/Dekuple.IOwner.html
+  commentId: T:Dekuple.IOwner
+  fullName: Dekuple.IOwner
+  nameWithType: IOwner
+- uid: Dekuple.IPrintable
+  name: IPrintable
+  href: api/Dekuple.IPrintable.html
+  commentId: T:Dekuple.IPrintable
+  fullName: Dekuple.IPrintable
+  nameWithType: IPrintable
+- uid: Dekuple.IPrintable.Print
+  name: Print()
+  href: api/Dekuple.IPrintable.html#Dekuple_IPrintable_Print
+  commentId: M:Dekuple.IPrintable.Print
+  fullName: Dekuple.IPrintable.Print()
+  nameWithType: IPrintable.Print()
+- uid: Dekuple.IPrintable.Print*
+  name: Print
+  href: api/Dekuple.IPrintable.html#Dekuple_IPrintable_Print_
+  commentId: Overload:Dekuple.IPrintable.Print
+  isSpec: "True"
+  fullName: Dekuple.IPrintable.Print
+  nameWithType: IPrintable.Print
+- uid: Dekuple.IRequest
+  name: IRequest
+  href: api/Dekuple.IRequest.html
+  commentId: T:Dekuple.IRequest
+  fullName: Dekuple.IRequest
+  nameWithType: IRequest
+- uid: Dekuple.IRequest.Owner
+  name: Owner
+  href: api/Dekuple.IRequest.html#Dekuple_IRequest_Owner
+  commentId: P:Dekuple.IRequest.Owner
+  fullName: Dekuple.IRequest.Owner
+  nameWithType: IRequest.Owner
+- uid: Dekuple.IRequest.Owner*
+  name: Owner
+  href: api/Dekuple.IRequest.html#Dekuple_IRequest_Owner_
+  commentId: Overload:Dekuple.IRequest.Owner
+  isSpec: "True"
+  fullName: Dekuple.IRequest.Owner
+  nameWithType: IRequest.Owner
+- uid: Dekuple.IResponse
+  name: IResponse
+  href: api/Dekuple.IResponse.html
+  commentId: T:Dekuple.IResponse
+  fullName: Dekuple.IResponse
+  nameWithType: IResponse
+- uid: Dekuple.IResponse.Error
+  name: Error
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_Error
+  commentId: P:Dekuple.IResponse.Error
+  fullName: Dekuple.IResponse.Error
+  nameWithType: IResponse.Error
+- uid: Dekuple.IResponse.Error*
+  name: Error
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_Error_
+  commentId: Overload:Dekuple.IResponse.Error
+  isSpec: "True"
+  fullName: Dekuple.IResponse.Error
+  nameWithType: IResponse.Error
+- uid: Dekuple.IResponse.Failed
+  name: Failed
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_Failed
+  commentId: P:Dekuple.IResponse.Failed
+  fullName: Dekuple.IResponse.Failed
+  nameWithType: IResponse.Failed
+- uid: Dekuple.IResponse.Failed*
+  name: Failed
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_Failed_
+  commentId: Overload:Dekuple.IResponse.Failed
+  isSpec: "True"
+  fullName: Dekuple.IResponse.Failed
+  nameWithType: IResponse.Failed
+- uid: Dekuple.IResponse.PayloadObject
+  name: PayloadObject
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_PayloadObject
+  commentId: P:Dekuple.IResponse.PayloadObject
+  fullName: Dekuple.IResponse.PayloadObject
+  nameWithType: IResponse.PayloadObject
+- uid: Dekuple.IResponse.PayloadObject*
+  name: PayloadObject
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_PayloadObject_
+  commentId: Overload:Dekuple.IResponse.PayloadObject
+  isSpec: "True"
+  fullName: Dekuple.IResponse.PayloadObject
+  nameWithType: IResponse.PayloadObject
+- uid: Dekuple.IResponse.Request
+  name: Request
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_Request
+  commentId: P:Dekuple.IResponse.Request
+  fullName: Dekuple.IResponse.Request
+  nameWithType: IResponse.Request
+- uid: Dekuple.IResponse.Request*
+  name: Request
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_Request_
+  commentId: Overload:Dekuple.IResponse.Request
+  isSpec: "True"
+  fullName: Dekuple.IResponse.Request
+  nameWithType: IResponse.Request
+- uid: Dekuple.IResponse.RequestId
+  name: RequestId
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_RequestId
+  commentId: P:Dekuple.IResponse.RequestId
+  fullName: Dekuple.IResponse.RequestId
+  nameWithType: IResponse.RequestId
+- uid: Dekuple.IResponse.RequestId*
+  name: RequestId
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_RequestId_
+  commentId: Overload:Dekuple.IResponse.RequestId
+  isSpec: "True"
+  fullName: Dekuple.IResponse.RequestId
+  nameWithType: IResponse.RequestId
+- uid: Dekuple.IResponse.Success
+  name: Success
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_Success
+  commentId: P:Dekuple.IResponse.Success
+  fullName: Dekuple.IResponse.Success
+  nameWithType: IResponse.Success
+- uid: Dekuple.IResponse.Success*
+  name: Success
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_Success_
+  commentId: Overload:Dekuple.IResponse.Success
+  isSpec: "True"
+  fullName: Dekuple.IResponse.Success
+  nameWithType: IResponse.Success
+- uid: Dekuple.IResponse.Text
+  name: Text
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_Text
+  commentId: P:Dekuple.IResponse.Text
+  fullName: Dekuple.IResponse.Text
+  nameWithType: IResponse.Text
+- uid: Dekuple.IResponse.Text*
+  name: Text
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_Text_
+  commentId: Overload:Dekuple.IResponse.Text
+  isSpec: "True"
+  fullName: Dekuple.IResponse.Text
+  nameWithType: IResponse.Text
+- uid: Dekuple.IResponse.Type
+  name: Type
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_Type
+  commentId: P:Dekuple.IResponse.Type
+  fullName: Dekuple.IResponse.Type
+  nameWithType: IResponse.Type
+- uid: Dekuple.IResponse.Type*
+  name: Type
+  href: api/Dekuple.IResponse.html#Dekuple_IResponse_Type_
+  commentId: Overload:Dekuple.IResponse.Type
+  isSpec: "True"
+  fullName: Dekuple.IResponse.Type
+  nameWithType: IResponse.Type
+- uid: Dekuple.IResponse`1
+  name: IResponse<TPayload>
+  href: api/Dekuple.IResponse-1.html
+  commentId: T:Dekuple.IResponse`1
+  name.vb: IResponse(Of TPayload)
+  fullName: Dekuple.IResponse<TPayload>
+  fullName.vb: Dekuple.IResponse(Of TPayload)
+  nameWithType: IResponse<TPayload>
+  nameWithType.vb: IResponse(Of TPayload)
+- uid: Dekuple.IResponse`1.Payload
+  name: Payload
+  href: api/Dekuple.IResponse-1.html#Dekuple_IResponse_1_Payload
+  commentId: P:Dekuple.IResponse`1.Payload
+  fullName: Dekuple.IResponse<TPayload>.Payload
+  fullName.vb: Dekuple.IResponse(Of TPayload).Payload
+  nameWithType: IResponse<TPayload>.Payload
+  nameWithType.vb: IResponse(Of TPayload).Payload
+- uid: Dekuple.IResponse`1.Payload*
+  name: Payload
+  href: api/Dekuple.IResponse-1.html#Dekuple_IResponse_1_Payload_
+  commentId: Overload:Dekuple.IResponse`1.Payload
+  isSpec: "True"
+  fullName: Dekuple.IResponse<TPayload>.Payload
+  fullName.vb: Dekuple.IResponse(Of TPayload).Payload
+  nameWithType: IResponse<TPayload>.Payload
+  nameWithType.vb: IResponse(Of TPayload).Payload
+- uid: Dekuple.LoggingBehavior
+  name: LoggingBehavior
+  href: api/Dekuple.LoggingBehavior.html
+  commentId: T:Dekuple.LoggingBehavior
+  fullName: Dekuple.LoggingBehavior
+  nameWithType: LoggingBehavior
+- uid: Dekuple.LoggingBehavior.#ctor
+  name: LoggingBehavior()
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior__ctor
+  commentId: M:Dekuple.LoggingBehavior.#ctor
+  fullName: Dekuple.LoggingBehavior.LoggingBehavior()
+  nameWithType: LoggingBehavior.LoggingBehavior()
+- uid: Dekuple.LoggingBehavior.#ctor*
+  name: LoggingBehavior
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior__ctor_
+  commentId: Overload:Dekuple.LoggingBehavior.#ctor
+  isSpec: "True"
+  fullName: Dekuple.LoggingBehavior.LoggingBehavior
+  nameWithType: LoggingBehavior.LoggingBehavior
+- uid: Dekuple.LoggingBehavior.Error(System.String,System.Object[])
+  name: Error(String, Object[])
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_Error_System_String_System_Object___
+  commentId: M:Dekuple.LoggingBehavior.Error(System.String,System.Object[])
+  name.vb: Error(String, Object())
+  fullName: Dekuple.LoggingBehavior.Error(System.String, System.Object[])
+  fullName.vb: Dekuple.LoggingBehavior.Error(System.String, System.Object())
+  nameWithType: LoggingBehavior.Error(String, Object[])
+  nameWithType.vb: LoggingBehavior.Error(String, Object())
+- uid: Dekuple.LoggingBehavior.Error*
+  name: Error
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_Error_
+  commentId: Overload:Dekuple.LoggingBehavior.Error
+  isSpec: "True"
+  fullName: Dekuple.LoggingBehavior.Error
+  nameWithType: LoggingBehavior.Error
+- uid: Dekuple.LoggingBehavior.Info(System.String,System.Object[])
+  name: Info(String, Object[])
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_Info_System_String_System_Object___
+  commentId: M:Dekuple.LoggingBehavior.Info(System.String,System.Object[])
+  name.vb: Info(String, Object())
+  fullName: Dekuple.LoggingBehavior.Info(System.String, System.Object[])
+  fullName.vb: Dekuple.LoggingBehavior.Info(System.String, System.Object())
+  nameWithType: LoggingBehavior.Info(String, Object[])
+  nameWithType.vb: LoggingBehavior.Info(String, Object())
+- uid: Dekuple.LoggingBehavior.Info*
+  name: Info
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_Info_
+  commentId: Overload:Dekuple.LoggingBehavior.Info
+  isSpec: "True"
+  fullName: Dekuple.LoggingBehavior.Info
+  nameWithType: LoggingBehavior.Info
+- uid: Dekuple.LoggingBehavior.LogPrefix
+  name: LogPrefix
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_LogPrefix
+  commentId: P:Dekuple.LoggingBehavior.LogPrefix
+  fullName: Dekuple.LoggingBehavior.LogPrefix
+  nameWithType: LoggingBehavior.LogPrefix
+- uid: Dekuple.LoggingBehavior.LogPrefix*
+  name: LogPrefix
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_LogPrefix_
+  commentId: Overload:Dekuple.LoggingBehavior.LogPrefix
+  isSpec: "True"
+  fullName: Dekuple.LoggingBehavior.LogPrefix
+  nameWithType: LoggingBehavior.LogPrefix
+- uid: Dekuple.LoggingBehavior.LogSubject
+  name: LogSubject
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_LogSubject
+  commentId: P:Dekuple.LoggingBehavior.LogSubject
+  fullName: Dekuple.LoggingBehavior.LogSubject
+  nameWithType: LoggingBehavior.LogSubject
+- uid: Dekuple.LoggingBehavior.LogSubject*
+  name: LogSubject
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_LogSubject_
+  commentId: Overload:Dekuple.LoggingBehavior.LogSubject
+  isSpec: "True"
+  fullName: Dekuple.LoggingBehavior.LogSubject
+  nameWithType: LoggingBehavior.LogSubject
+- uid: Dekuple.LoggingBehavior.ShowSource
+  name: ShowSource
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_ShowSource
+  commentId: P:Dekuple.LoggingBehavior.ShowSource
+  fullName: Dekuple.LoggingBehavior.ShowSource
+  nameWithType: LoggingBehavior.ShowSource
+- uid: Dekuple.LoggingBehavior.ShowSource*
+  name: ShowSource
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_ShowSource_
+  commentId: Overload:Dekuple.LoggingBehavior.ShowSource
+  isSpec: "True"
+  fullName: Dekuple.LoggingBehavior.ShowSource
+  nameWithType: LoggingBehavior.ShowSource
+- uid: Dekuple.LoggingBehavior.ShowStack
+  name: ShowStack
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_ShowStack
+  commentId: P:Dekuple.LoggingBehavior.ShowStack
+  fullName: Dekuple.LoggingBehavior.ShowStack
+  nameWithType: LoggingBehavior.ShowStack
+- uid: Dekuple.LoggingBehavior.ShowStack*
+  name: ShowStack
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_ShowStack_
+  commentId: Overload:Dekuple.LoggingBehavior.ShowStack
+  isSpec: "True"
+  fullName: Dekuple.LoggingBehavior.ShowStack
+  nameWithType: LoggingBehavior.ShowStack
+- uid: Dekuple.LoggingBehavior.Verbose(System.Int32,System.String,System.Object[])
+  name: Verbose(Int32, String, Object[])
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_Verbose_System_Int32_System_String_System_Object___
+  commentId: M:Dekuple.LoggingBehavior.Verbose(System.Int32,System.String,System.Object[])
+  name.vb: Verbose(Int32, String, Object())
+  fullName: Dekuple.LoggingBehavior.Verbose(System.Int32, System.String, System.Object[])
+  fullName.vb: Dekuple.LoggingBehavior.Verbose(System.Int32, System.String, System.Object())
+  nameWithType: LoggingBehavior.Verbose(Int32, String, Object[])
+  nameWithType.vb: LoggingBehavior.Verbose(Int32, String, Object())
+- uid: Dekuple.LoggingBehavior.Verbose*
+  name: Verbose
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_Verbose_
+  commentId: Overload:Dekuple.LoggingBehavior.Verbose
+  isSpec: "True"
+  fullName: Dekuple.LoggingBehavior.Verbose
+  nameWithType: LoggingBehavior.Verbose
+- uid: Dekuple.LoggingBehavior.Verbosity
+  name: Verbosity
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_Verbosity
+  commentId: P:Dekuple.LoggingBehavior.Verbosity
+  fullName: Dekuple.LoggingBehavior.Verbosity
+  nameWithType: LoggingBehavior.Verbosity
+- uid: Dekuple.LoggingBehavior.Verbosity*
+  name: Verbosity
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_Verbosity_
+  commentId: Overload:Dekuple.LoggingBehavior.Verbosity
+  isSpec: "True"
+  fullName: Dekuple.LoggingBehavior.Verbosity
+  nameWithType: LoggingBehavior.Verbosity
+- uid: Dekuple.LoggingBehavior.Warn(System.String,System.Object[])
+  name: Warn(String, Object[])
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_Warn_System_String_System_Object___
+  commentId: M:Dekuple.LoggingBehavior.Warn(System.String,System.Object[])
+  name.vb: Warn(String, Object())
+  fullName: Dekuple.LoggingBehavior.Warn(System.String, System.Object[])
+  fullName.vb: Dekuple.LoggingBehavior.Warn(System.String, System.Object())
+  nameWithType: LoggingBehavior.Warn(String, Object[])
+  nameWithType.vb: LoggingBehavior.Warn(String, Object())
+- uid: Dekuple.LoggingBehavior.Warn*
+  name: Warn
+  href: api/Dekuple.LoggingBehavior.html#Dekuple_LoggingBehavior_Warn_
+  commentId: Overload:Dekuple.LoggingBehavior.Warn
+  isSpec: "True"
+  fullName: Dekuple.LoggingBehavior.Warn
+  nameWithType: LoggingBehavior.Warn
+- uid: Dekuple.Model
+  name: Dekuple.Model
+  href: api/Dekuple.Model.html
+  commentId: N:Dekuple.Model
+  fullName: Dekuple.Model
+  nameWithType: Dekuple.Model
+- uid: Dekuple.Model.ILocalScaledModel
+  name: ILocalScaledModel
+  href: api/Dekuple.Model.ILocalScaledModel.html
+  commentId: T:Dekuple.Model.ILocalScaledModel
+  fullName: Dekuple.Model.ILocalScaledModel
+  nameWithType: ILocalScaledModel
+- uid: Dekuple.Model.ILocalScaledModel.LocalScale
+  name: LocalScale
+  href: api/Dekuple.Model.ILocalScaledModel.html#Dekuple_Model_ILocalScaledModel_LocalScale
+  commentId: P:Dekuple.Model.ILocalScaledModel.LocalScale
+  fullName: Dekuple.Model.ILocalScaledModel.LocalScale
+  nameWithType: ILocalScaledModel.LocalScale
+- uid: Dekuple.Model.ILocalScaledModel.LocalScale*
+  name: LocalScale
+  href: api/Dekuple.Model.ILocalScaledModel.html#Dekuple_Model_ILocalScaledModel_LocalScale_
+  commentId: Overload:Dekuple.Model.ILocalScaledModel.LocalScale
+  isSpec: "True"
+  fullName: Dekuple.Model.ILocalScaledModel.LocalScale
+  nameWithType: ILocalScaledModel.LocalScale
+- uid: Dekuple.Model.IModel
+  name: IModel
+  href: api/Dekuple.Model.IModel.html
+  commentId: T:Dekuple.Model.IModel
+  fullName: Dekuple.Model.IModel
+  nameWithType: IModel
+- uid: Dekuple.Model.IModel.Prepared
+  name: Prepared
+  href: api/Dekuple.Model.IModel.html#Dekuple_Model_IModel_Prepared
+  commentId: P:Dekuple.Model.IModel.Prepared
+  fullName: Dekuple.Model.IModel.Prepared
+  nameWithType: IModel.Prepared
+- uid: Dekuple.Model.IModel.Prepared*
+  name: Prepared
+  href: api/Dekuple.Model.IModel.html#Dekuple_Model_IModel_Prepared_
+  commentId: Overload:Dekuple.Model.IModel.Prepared
+  isSpec: "True"
+  fullName: Dekuple.Model.IModel.Prepared
+  nameWithType: IModel.Prepared
+- uid: Dekuple.Model.IModelRegistry
+  name: IModelRegistry
+  href: api/Dekuple.Model.IModelRegistry.html
+  commentId: T:Dekuple.Model.IModelRegistry
+  fullName: Dekuple.Model.IModelRegistry
+  nameWithType: IModelRegistry
+- uid: Dekuple.Model.IPositionedModel
+  name: IPositionedModel
+  href: api/Dekuple.Model.IPositionedModel.html
+  commentId: T:Dekuple.Model.IPositionedModel
+  fullName: Dekuple.Model.IPositionedModel
+  nameWithType: IPositionedModel
+- uid: Dekuple.Model.IPositionedModel.Position
+  name: Position
+  href: api/Dekuple.Model.IPositionedModel.html#Dekuple_Model_IPositionedModel_Position
+  commentId: P:Dekuple.Model.IPositionedModel.Position
+  fullName: Dekuple.Model.IPositionedModel.Position
+  nameWithType: IPositionedModel.Position
+- uid: Dekuple.Model.IPositionedModel.Position*
+  name: Position
+  href: api/Dekuple.Model.IPositionedModel.html#Dekuple_Model_IPositionedModel_Position_
+  commentId: Overload:Dekuple.Model.IPositionedModel.Position
+  isSpec: "True"
+  fullName: Dekuple.Model.IPositionedModel.Position
+  nameWithType: IPositionedModel.Position
+- uid: Dekuple.Model.IRotatedModel
+  name: IRotatedModel
+  href: api/Dekuple.Model.IRotatedModel.html
+  commentId: T:Dekuple.Model.IRotatedModel
+  fullName: Dekuple.Model.IRotatedModel
+  nameWithType: IRotatedModel
+- uid: Dekuple.Model.IRotatedModel.Rotation
+  name: Rotation
+  href: api/Dekuple.Model.IRotatedModel.html#Dekuple_Model_IRotatedModel_Rotation
+  commentId: P:Dekuple.Model.IRotatedModel.Rotation
+  fullName: Dekuple.Model.IRotatedModel.Rotation
+  nameWithType: IRotatedModel.Rotation
+- uid: Dekuple.Model.IRotatedModel.Rotation*
+  name: Rotation
+  href: api/Dekuple.Model.IRotatedModel.html#Dekuple_Model_IRotatedModel_Rotation_
+  commentId: Overload:Dekuple.Model.IRotatedModel.Rotation
+  isSpec: "True"
+  fullName: Dekuple.Model.IRotatedModel.Rotation
+  nameWithType: IRotatedModel.Rotation
+- uid: Dekuple.Model.ITransformModel
+  name: ITransformModel
+  href: api/Dekuple.Model.ITransformModel.html
+  commentId: T:Dekuple.Model.ITransformModel
+  fullName: Dekuple.Model.ITransformModel
+  nameWithType: ITransformModel
+- uid: Dekuple.Model.IWorldScaledModel
+  name: IWorldScaledModel
+  href: api/Dekuple.Model.IWorldScaledModel.html
+  commentId: T:Dekuple.Model.IWorldScaledModel
+  fullName: Dekuple.Model.IWorldScaledModel
+  nameWithType: IWorldScaledModel
+- uid: Dekuple.Model.IWorldScaledModel.Scale
+  name: Scale
+  href: api/Dekuple.Model.IWorldScaledModel.html#Dekuple_Model_IWorldScaledModel_Scale
+  commentId: P:Dekuple.Model.IWorldScaledModel.Scale
+  fullName: Dekuple.Model.IWorldScaledModel.Scale
+  nameWithType: IWorldScaledModel.Scale
+- uid: Dekuple.Model.IWorldScaledModel.Scale*
+  name: Scale
+  href: api/Dekuple.Model.IWorldScaledModel.html#Dekuple_Model_IWorldScaledModel_Scale_
+  commentId: Overload:Dekuple.Model.IWorldScaledModel.Scale
+  isSpec: "True"
+  fullName: Dekuple.Model.IWorldScaledModel.Scale
+  nameWithType: IWorldScaledModel.Scale
+- uid: Dekuple.Model.ModelBase
+  name: ModelBase
+  href: api/Dekuple.Model.ModelBase.html
+  commentId: T:Dekuple.Model.ModelBase
+  fullName: Dekuple.Model.ModelBase
+  nameWithType: ModelBase
+- uid: Dekuple.Model.ModelBase.#ctor
+  name: ModelBase()
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase__ctor
+  commentId: M:Dekuple.Model.ModelBase.#ctor
+  fullName: Dekuple.Model.ModelBase.ModelBase()
+  nameWithType: ModelBase.ModelBase()
+- uid: Dekuple.Model.ModelBase.#ctor(Dekuple.IOwner)
+  name: ModelBase(IOwner)
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase__ctor_Dekuple_IOwner_
+  commentId: M:Dekuple.Model.ModelBase.#ctor(Dekuple.IOwner)
+  fullName: Dekuple.Model.ModelBase.ModelBase(Dekuple.IOwner)
+  nameWithType: ModelBase.ModelBase(IOwner)
+- uid: Dekuple.Model.ModelBase.#ctor*
+  name: ModelBase
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase__ctor_
+  commentId: Overload:Dekuple.Model.ModelBase.#ctor
+  isSpec: "True"
+  fullName: Dekuple.Model.ModelBase.ModelBase
+  nameWithType: ModelBase.ModelBase
+- uid: Dekuple.Model.ModelBase.AddSubscriptions
+  name: AddSubscriptions()
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_AddSubscriptions
+  commentId: M:Dekuple.Model.ModelBase.AddSubscriptions
+  fullName: Dekuple.Model.ModelBase.AddSubscriptions()
+  nameWithType: ModelBase.AddSubscriptions()
+- uid: Dekuple.Model.ModelBase.AddSubscriptions*
+  name: AddSubscriptions
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_AddSubscriptions_
+  commentId: Overload:Dekuple.Model.ModelBase.AddSubscriptions
+  isSpec: "True"
+  fullName: Dekuple.Model.ModelBase.AddSubscriptions
+  nameWithType: ModelBase.AddSubscriptions
+- uid: Dekuple.Model.ModelBase.Begin
+  name: Begin()
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Begin
+  commentId: M:Dekuple.Model.ModelBase.Begin
+  fullName: Dekuple.Model.ModelBase.Begin()
+  nameWithType: ModelBase.Begin()
+- uid: Dekuple.Model.ModelBase.Begin*
+  name: Begin
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Begin_
+  commentId: Overload:Dekuple.Model.ModelBase.Begin
+  isSpec: "True"
+  fullName: Dekuple.Model.ModelBase.Begin
+  nameWithType: ModelBase.Begin
+- uid: Dekuple.Model.ModelBase.Create
+  name: Create()
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Create
+  commentId: M:Dekuple.Model.ModelBase.Create
+  fullName: Dekuple.Model.ModelBase.Create()
+  nameWithType: ModelBase.Create()
+- uid: Dekuple.Model.ModelBase.Create*
+  name: Create
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Create_
+  commentId: Overload:Dekuple.Model.ModelBase.Create
+  isSpec: "True"
+  fullName: Dekuple.Model.ModelBase.Create
+  nameWithType: ModelBase.Create
+- uid: Dekuple.Model.ModelBase.Destroy
+  name: Destroy()
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Destroy
+  commentId: M:Dekuple.Model.ModelBase.Destroy
+  fullName: Dekuple.Model.ModelBase.Destroy()
+  nameWithType: ModelBase.Destroy()
+- uid: Dekuple.Model.ModelBase.Destroy*
+  name: Destroy
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Destroy_
+  commentId: Overload:Dekuple.Model.ModelBase.Destroy
+  isSpec: "True"
+  fullName: Dekuple.Model.ModelBase.Destroy
+  nameWithType: ModelBase.Destroy
+- uid: Dekuple.Model.ModelBase.Id
+  name: Id
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Id
+  commentId: P:Dekuple.Model.ModelBase.Id
+  fullName: Dekuple.Model.ModelBase.Id
+  nameWithType: ModelBase.Id
+- uid: Dekuple.Model.ModelBase.Id*
+  name: Id
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Id_
+  commentId: Overload:Dekuple.Model.ModelBase.Id
+  isSpec: "True"
+  fullName: Dekuple.Model.ModelBase.Id
+  nameWithType: ModelBase.Id
+- uid: Dekuple.Model.ModelBase.IsValid
+  name: IsValid
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_IsValid
+  commentId: P:Dekuple.Model.ModelBase.IsValid
+  fullName: Dekuple.Model.ModelBase.IsValid
+  nameWithType: ModelBase.IsValid
+- uid: Dekuple.Model.ModelBase.IsValid*
+  name: IsValid
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_IsValid_
+  commentId: Overload:Dekuple.Model.ModelBase.IsValid
+  isSpec: "True"
+  fullName: Dekuple.Model.ModelBase.IsValid
+  nameWithType: ModelBase.IsValid
+- uid: Dekuple.Model.ModelBase.Name
+  name: Name
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Name
+  commentId: P:Dekuple.Model.ModelBase.Name
+  fullName: Dekuple.Model.ModelBase.Name
+  nameWithType: ModelBase.Name
+- uid: Dekuple.Model.ModelBase.Name*
+  name: Name
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Name_
+  commentId: Overload:Dekuple.Model.ModelBase.Name
+  isSpec: "True"
+  fullName: Dekuple.Model.ModelBase.Name
+  nameWithType: ModelBase.Name
+- uid: Dekuple.Model.ModelBase.NotImplemented(System.String)
+  name: NotImplemented(String)
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_NotImplemented_System_String_
+  commentId: M:Dekuple.Model.ModelBase.NotImplemented(System.String)
+  fullName: Dekuple.Model.ModelBase.NotImplemented(System.String)
+  nameWithType: ModelBase.NotImplemented(String)
+- uid: Dekuple.Model.ModelBase.NotImplemented*
+  name: NotImplemented
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_NotImplemented_
+  commentId: Overload:Dekuple.Model.ModelBase.NotImplemented
+  isSpec: "True"
+  fullName: Dekuple.Model.ModelBase.NotImplemented
+  nameWithType: ModelBase.NotImplemented
+- uid: Dekuple.Model.ModelBase.OnDestroyed
+  name: OnDestroyed
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_OnDestroyed
+  commentId: E:Dekuple.Model.ModelBase.OnDestroyed
+  fullName: Dekuple.Model.ModelBase.OnDestroyed
+  nameWithType: ModelBase.OnDestroyed
+- uid: Dekuple.Model.ModelBase.Owner
+  name: Owner
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Owner
+  commentId: P:Dekuple.Model.ModelBase.Owner
+  fullName: Dekuple.Model.ModelBase.Owner
+  nameWithType: ModelBase.Owner
+- uid: Dekuple.Model.ModelBase.Owner*
+  name: Owner
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Owner_
+  commentId: Overload:Dekuple.Model.ModelBase.Owner
+  isSpec: "True"
+  fullName: Dekuple.Model.ModelBase.Owner
+  nameWithType: ModelBase.Owner
+- uid: Dekuple.Model.ModelBase.Prepared
+  name: Prepared
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Prepared
+  commentId: P:Dekuple.Model.ModelBase.Prepared
+  fullName: Dekuple.Model.ModelBase.Prepared
+  nameWithType: ModelBase.Prepared
+- uid: Dekuple.Model.ModelBase.Prepared*
+  name: Prepared
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Prepared_
+  commentId: Overload:Dekuple.Model.ModelBase.Prepared
+  isSpec: "True"
+  fullName: Dekuple.Model.ModelBase.Prepared
+  nameWithType: ModelBase.Prepared
+- uid: Dekuple.Model.ModelBase.Registry
+  name: Registry
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Registry
+  commentId: P:Dekuple.Model.ModelBase.Registry
+  fullName: Dekuple.Model.ModelBase.Registry
+  nameWithType: ModelBase.Registry
+- uid: Dekuple.Model.ModelBase.Registry*
+  name: Registry
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_Registry_
+  commentId: Overload:Dekuple.Model.ModelBase.Registry
+  isSpec: "True"
+  fullName: Dekuple.Model.ModelBase.Registry
+  nameWithType: ModelBase.Registry
+- uid: Dekuple.Model.ModelBase.SameOwner(Dekuple.IEntity)
+  name: SameOwner(IEntity)
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_SameOwner_Dekuple_IEntity_
+  commentId: M:Dekuple.Model.ModelBase.SameOwner(Dekuple.IEntity)
+  fullName: Dekuple.Model.ModelBase.SameOwner(Dekuple.IEntity)
+  nameWithType: ModelBase.SameOwner(IEntity)
+- uid: Dekuple.Model.ModelBase.SameOwner(Dekuple.IOwned)
+  name: SameOwner(IOwned)
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_SameOwner_Dekuple_IOwned_
+  commentId: M:Dekuple.Model.ModelBase.SameOwner(Dekuple.IOwned)
+  fullName: Dekuple.Model.ModelBase.SameOwner(Dekuple.IOwned)
+  nameWithType: ModelBase.SameOwner(IOwned)
+- uid: Dekuple.Model.ModelBase.SameOwner*
+  name: SameOwner
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_SameOwner_
+  commentId: Overload:Dekuple.Model.ModelBase.SameOwner
+  isSpec: "True"
+  fullName: Dekuple.Model.ModelBase.SameOwner
+  nameWithType: ModelBase.SameOwner
+- uid: Dekuple.Model.ModelBase.SetOwner(Dekuple.IOwner)
+  name: SetOwner(IOwner)
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_SetOwner_Dekuple_IOwner_
+  commentId: M:Dekuple.Model.ModelBase.SetOwner(Dekuple.IOwner)
+  fullName: Dekuple.Model.ModelBase.SetOwner(Dekuple.IOwner)
+  nameWithType: ModelBase.SetOwner(IOwner)
+- uid: Dekuple.Model.ModelBase.SetOwner*
+  name: SetOwner
+  href: api/Dekuple.Model.ModelBase.html#Dekuple_Model_ModelBase_SetOwner_
+  commentId: Overload:Dekuple.Model.ModelBase.SetOwner
+  isSpec: "True"
+  fullName: Dekuple.Model.ModelBase.SetOwner
+  nameWithType: ModelBase.SetOwner
+- uid: Dekuple.Model.ModelRegistry
+  name: ModelRegistry
+  href: api/Dekuple.Model.ModelRegistry.html
+  commentId: T:Dekuple.Model.ModelRegistry
+  fullName: Dekuple.Model.ModelRegistry
+  nameWithType: ModelRegistry
+- uid: Dekuple.Model.PositionedModelBase
+  name: PositionedModelBase
+  href: api/Dekuple.Model.PositionedModelBase.html
+  commentId: T:Dekuple.Model.PositionedModelBase
+  fullName: Dekuple.Model.PositionedModelBase
+  nameWithType: PositionedModelBase
+- uid: Dekuple.Model.PositionedModelBase.#ctor
+  name: PositionedModelBase()
+  href: api/Dekuple.Model.PositionedModelBase.html#Dekuple_Model_PositionedModelBase__ctor
+  commentId: M:Dekuple.Model.PositionedModelBase.#ctor
+  fullName: Dekuple.Model.PositionedModelBase.PositionedModelBase()
+  nameWithType: PositionedModelBase.PositionedModelBase()
+- uid: Dekuple.Model.PositionedModelBase.#ctor(Dekuple.IOwner)
+  name: PositionedModelBase(IOwner)
+  href: api/Dekuple.Model.PositionedModelBase.html#Dekuple_Model_PositionedModelBase__ctor_Dekuple_IOwner_
+  commentId: M:Dekuple.Model.PositionedModelBase.#ctor(Dekuple.IOwner)
+  fullName: Dekuple.Model.PositionedModelBase.PositionedModelBase(Dekuple.IOwner)
+  nameWithType: PositionedModelBase.PositionedModelBase(IOwner)
+- uid: Dekuple.Model.PositionedModelBase.#ctor*
+  name: PositionedModelBase
+  href: api/Dekuple.Model.PositionedModelBase.html#Dekuple_Model_PositionedModelBase__ctor_
+  commentId: Overload:Dekuple.Model.PositionedModelBase.#ctor
+  isSpec: "True"
+  fullName: Dekuple.Model.PositionedModelBase.PositionedModelBase
+  nameWithType: PositionedModelBase.PositionedModelBase
+- uid: Dekuple.Model.PositionedModelBase.Position
+  name: Position
+  href: api/Dekuple.Model.PositionedModelBase.html#Dekuple_Model_PositionedModelBase_Position
+  commentId: P:Dekuple.Model.PositionedModelBase.Position
+  fullName: Dekuple.Model.PositionedModelBase.Position
+  nameWithType: PositionedModelBase.Position
+- uid: Dekuple.Model.PositionedModelBase.Position*
+  name: Position
+  href: api/Dekuple.Model.PositionedModelBase.html#Dekuple_Model_PositionedModelBase_Position_
+  commentId: Overload:Dekuple.Model.PositionedModelBase.Position
+  isSpec: "True"
+  fullName: Dekuple.Model.PositionedModelBase.Position
+  nameWithType: PositionedModelBase.Position
+- uid: Dekuple.Parameters
+  name: Parameters
+  href: api/Dekuple.Parameters.html
+  commentId: T:Dekuple.Parameters
+  fullName: Dekuple.Parameters
+  nameWithType: Parameters
+- uid: Dekuple.Parameters.DefaultLogVerbosity
+  name: DefaultLogVerbosity
+  href: api/Dekuple.Parameters.html#Dekuple_Parameters_DefaultLogVerbosity
+  commentId: F:Dekuple.Parameters.DefaultLogVerbosity
+  fullName: Dekuple.Parameters.DefaultLogVerbosity
+  nameWithType: Parameters.DefaultLogVerbosity
+- uid: Dekuple.Parameters.DefaultShowTraceSource
+  name: DefaultShowTraceSource
+  href: api/Dekuple.Parameters.html#Dekuple_Parameters_DefaultShowTraceSource
+  commentId: F:Dekuple.Parameters.DefaultShowTraceSource
+  fullName: Dekuple.Parameters.DefaultShowTraceSource
+  nameWithType: Parameters.DefaultShowTraceSource
+- uid: Dekuple.Parameters.DefaultShowTraceStack
+  name: DefaultShowTraceStack
+  href: api/Dekuple.Parameters.html#Dekuple_Parameters_DefaultShowTraceStack
+  commentId: F:Dekuple.Parameters.DefaultShowTraceStack
+  fullName: Dekuple.Parameters.DefaultShowTraceStack
+  nameWithType: Parameters.DefaultShowTraceStack
+- uid: Dekuple.Registry
+  name: Dekuple.Registry
+  href: api/Dekuple.Registry.html
+  commentId: N:Dekuple.Registry
+  fullName: Dekuple.Registry
+  nameWithType: Dekuple.Registry
+- uid: Dekuple.Registry.IHasRegistry`1
+  name: IHasRegistry<TBase>
+  href: api/Dekuple.Registry.IHasRegistry-1.html
+  commentId: T:Dekuple.Registry.IHasRegistry`1
+  name.vb: IHasRegistry(Of TBase)
+  fullName: Dekuple.Registry.IHasRegistry<TBase>
+  fullName.vb: Dekuple.Registry.IHasRegistry(Of TBase)
+  nameWithType: IHasRegistry<TBase>
+  nameWithType.vb: IHasRegistry(Of TBase)
+- uid: Dekuple.Registry.IHasRegistry`1.Registry
+  name: Registry
+  href: api/Dekuple.Registry.IHasRegistry-1.html#Dekuple_Registry_IHasRegistry_1_Registry
+  commentId: P:Dekuple.Registry.IHasRegistry`1.Registry
+  fullName: Dekuple.Registry.IHasRegistry<TBase>.Registry
+  fullName.vb: Dekuple.Registry.IHasRegistry(Of TBase).Registry
+  nameWithType: IHasRegistry<TBase>.Registry
+  nameWithType.vb: IHasRegistry(Of TBase).Registry
+- uid: Dekuple.Registry.IHasRegistry`1.Registry*
+  name: Registry
+  href: api/Dekuple.Registry.IHasRegistry-1.html#Dekuple_Registry_IHasRegistry_1_Registry_
+  commentId: Overload:Dekuple.Registry.IHasRegistry`1.Registry
+  isSpec: "True"
+  fullName: Dekuple.Registry.IHasRegistry<TBase>.Registry
+  fullName.vb: Dekuple.Registry.IHasRegistry(Of TBase).Registry
+  nameWithType: IHasRegistry<TBase>.Registry
+  nameWithType.vb: IHasRegistry(Of TBase).Registry
+- uid: Dekuple.Registry.IRegistry
+  name: IRegistry
+  href: api/Dekuple.Registry.IRegistry.html
+  commentId: T:Dekuple.Registry.IRegistry
+  fullName: Dekuple.Registry.IRegistry
+  nameWithType: IRegistry
+- uid: Dekuple.Registry.IRegistry.AddAllSubscriptions
+  name: AddAllSubscriptions()
+  href: api/Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_AddAllSubscriptions
+  commentId: M:Dekuple.Registry.IRegistry.AddAllSubscriptions
+  fullName: Dekuple.Registry.IRegistry.AddAllSubscriptions()
+  nameWithType: IRegistry.AddAllSubscriptions()
+- uid: Dekuple.Registry.IRegistry.AddAllSubscriptions*
+  name: AddAllSubscriptions
+  href: api/Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_AddAllSubscriptions_
+  commentId: Overload:Dekuple.Registry.IRegistry.AddAllSubscriptions
+  isSpec: "True"
+  fullName: Dekuple.Registry.IRegistry.AddAllSubscriptions
+  nameWithType: IRegistry.AddAllSubscriptions
+- uid: Dekuple.Registry.IRegistry.Has(System.Guid)
+  name: Has(Guid)
+  href: api/Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_Has_System_Guid_
+  commentId: M:Dekuple.Registry.IRegistry.Has(System.Guid)
+  fullName: Dekuple.Registry.IRegistry.Has(System.Guid)
+  nameWithType: IRegistry.Has(Guid)
+- uid: Dekuple.Registry.IRegistry.Has*
+  name: Has
+  href: api/Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_Has_
+  commentId: Overload:Dekuple.Registry.IRegistry.Has
+  isSpec: "True"
+  fullName: Dekuple.Registry.IRegistry.Has
+  nameWithType: IRegistry.Has
+- uid: Dekuple.Registry.IRegistry.HasInjector(System.Type)
+  name: HasInjector(Type)
+  href: api/Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_HasInjector_System_Type_
+  commentId: M:Dekuple.Registry.IRegistry.HasInjector(System.Type)
+  fullName: Dekuple.Registry.IRegistry.HasInjector(System.Type)
+  nameWithType: IRegistry.HasInjector(Type)
+- uid: Dekuple.Registry.IRegistry.HasInjector*
+  name: HasInjector
+  href: api/Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_HasInjector_
+  commentId: Overload:Dekuple.Registry.IRegistry.HasInjector
+  isSpec: "True"
+  fullName: Dekuple.Registry.IRegistry.HasInjector
+  nameWithType: IRegistry.HasInjector
+- uid: Dekuple.Registry.IRegistry.HasInjector``1
+  name: HasInjector<T>()
+  href: api/Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_HasInjector__1
+  commentId: M:Dekuple.Registry.IRegistry.HasInjector``1
+  name.vb: HasInjector(Of T)()
+  fullName: Dekuple.Registry.IRegistry.HasInjector<T>()
+  fullName.vb: Dekuple.Registry.IRegistry.HasInjector(Of T)()
+  nameWithType: IRegistry.HasInjector<T>()
+  nameWithType.vb: IRegistry.HasInjector(Of T)()
+- uid: Dekuple.Registry.IRegistry.Instances
+  name: Instances
+  href: api/Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_Instances
+  commentId: P:Dekuple.Registry.IRegistry.Instances
+  fullName: Dekuple.Registry.IRegistry.Instances
+  nameWithType: IRegistry.Instances
+- uid: Dekuple.Registry.IRegistry.Instances*
+  name: Instances
+  href: api/Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_Instances_
+  commentId: Overload:Dekuple.Registry.IRegistry.Instances
+  isSpec: "True"
+  fullName: Dekuple.Registry.IRegistry.Instances
+  nameWithType: IRegistry.Instances
+- uid: Dekuple.Registry.IRegistry.NumInstances
+  name: NumInstances
+  href: api/Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_NumInstances
+  commentId: P:Dekuple.Registry.IRegistry.NumInstances
+  fullName: Dekuple.Registry.IRegistry.NumInstances
+  nameWithType: IRegistry.NumInstances
+- uid: Dekuple.Registry.IRegistry.NumInstances*
+  name: NumInstances
+  href: api/Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_NumInstances_
+  commentId: Overload:Dekuple.Registry.IRegistry.NumInstances
+  isSpec: "True"
+  fullName: Dekuple.Registry.IRegistry.NumInstances
+  nameWithType: IRegistry.NumInstances
+- uid: Dekuple.Registry.IRegistry.Resolve
+  name: Resolve()
+  href: api/Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_Resolve
+  commentId: M:Dekuple.Registry.IRegistry.Resolve
+  fullName: Dekuple.Registry.IRegistry.Resolve()
+  nameWithType: IRegistry.Resolve()
+- uid: Dekuple.Registry.IRegistry.Resolve*
+  name: Resolve
+  href: api/Dekuple.Registry.IRegistry.html#Dekuple_Registry_IRegistry_Resolve_
+  commentId: Overload:Dekuple.Registry.IRegistry.Resolve
+  isSpec: "True"
+  fullName: Dekuple.Registry.IRegistry.Resolve
+  nameWithType: IRegistry.Resolve
+- uid: Dekuple.Registry.IRegistry`1
+  name: IRegistry<TBase>
+  href: api/Dekuple.Registry.IRegistry-1.html
+  commentId: T:Dekuple.Registry.IRegistry`1
+  name.vb: IRegistry(Of TBase)
+  fullName: Dekuple.Registry.IRegistry<TBase>
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase)
+  nameWithType: IRegistry<TBase>
+  nameWithType.vb: IRegistry(Of TBase)
+- uid: Dekuple.Registry.IRegistry`1.Bind*
+  name: Bind
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Bind_
+  commentId: Overload:Dekuple.Registry.IRegistry`1.Bind
+  isSpec: "True"
+  fullName: Dekuple.Registry.IRegistry<TBase>.Bind
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Bind
+  nameWithType: IRegistry<TBase>.Bind
+  nameWithType.vb: IRegistry(Of TBase).Bind
+- uid: Dekuple.Registry.IRegistry`1.Bind``2
+  name: Bind<TInterface, TImpl>()
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Bind__2
+  commentId: M:Dekuple.Registry.IRegistry`1.Bind``2
+  name.vb: Bind(Of TInterface, TImpl)()
+  fullName: Dekuple.Registry.IRegistry<TBase>.Bind<TInterface, TImpl>()
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Bind(Of TInterface, TImpl)()
+  nameWithType: IRegistry<TBase>.Bind<TInterface, TImpl>()
+  nameWithType.vb: IRegistry(Of TBase).Bind(Of TInterface, TImpl)()
+- uid: Dekuple.Registry.IRegistry`1.Bind``2(``1)
+  name: Bind<TInterface, TImpl>(TImpl)
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Bind__2___1_
+  commentId: M:Dekuple.Registry.IRegistry`1.Bind``2(``1)
+  name.vb: Bind(Of TInterface, TImpl)(TImpl)
+  fullName: Dekuple.Registry.IRegistry<TBase>.Bind<TInterface, TImpl>(TImpl)
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Bind(Of TInterface, TImpl)(TImpl)
+  nameWithType: IRegistry<TBase>.Bind<TInterface, TImpl>(TImpl)
+  nameWithType.vb: IRegistry(Of TBase).Bind(Of TInterface, TImpl)(TImpl)
+- uid: Dekuple.Registry.IRegistry`1.Get(System.Guid)
+  name: Get(Guid)
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Get_System_Guid_
+  commentId: M:Dekuple.Registry.IRegistry`1.Get(System.Guid)
+  fullName: Dekuple.Registry.IRegistry<TBase>.Get(System.Guid)
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Get(System.Guid)
+  nameWithType: IRegistry<TBase>.Get(Guid)
+  nameWithType.vb: IRegistry(Of TBase).Get(Guid)
+- uid: Dekuple.Registry.IRegistry`1.Get*
+  name: Get
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Get_
+  commentId: Overload:Dekuple.Registry.IRegistry`1.Get
+  isSpec: "True"
+  fullName: Dekuple.Registry.IRegistry<TBase>.Get
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Get
+  nameWithType: IRegistry<TBase>.Get
+  nameWithType.vb: IRegistry(Of TBase).Get
+- uid: Dekuple.Registry.IRegistry`1.Get``1(System.Object[])
+  name: Get<TIBase>(Object[])
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Get__1_System_Object___
+  commentId: M:Dekuple.Registry.IRegistry`1.Get``1(System.Object[])
+  name.vb: Get(Of TIBase)(Object())
+  fullName: Dekuple.Registry.IRegistry<TBase>.Get<TIBase>(System.Object[])
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Get(Of TIBase)(System.Object())
+  nameWithType: IRegistry<TBase>.Get<TIBase>(Object[])
+  nameWithType.vb: IRegistry(Of TBase).Get(Of TIBase)(Object())
+- uid: Dekuple.Registry.IRegistry`1.Has(`0)
+  name: Has(TBase)
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Has__0_
+  commentId: M:Dekuple.Registry.IRegistry`1.Has(`0)
+  fullName: Dekuple.Registry.IRegistry<TBase>.Has(TBase)
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Has(TBase)
+  nameWithType: IRegistry<TBase>.Has(TBase)
+  nameWithType.vb: IRegistry(Of TBase).Has(TBase)
+- uid: Dekuple.Registry.IRegistry`1.Has*
+  name: Has
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Has_
+  commentId: Overload:Dekuple.Registry.IRegistry`1.Has
+  isSpec: "True"
+  fullName: Dekuple.Registry.IRegistry<TBase>.Has
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Has
+  nameWithType: IRegistry<TBase>.Has
+  nameWithType.vb: IRegistry(Of TBase).Has
+- uid: Dekuple.Registry.IRegistry`1.Inject(`0,Dekuple.Inject,System.Type,`0)
+  name: Inject(TBase, Inject, Type, TBase)
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Inject__0_Dekuple_Inject_System_Type__0_
+  commentId: M:Dekuple.Registry.IRegistry`1.Inject(`0,Dekuple.Inject,System.Type,`0)
+  fullName: Dekuple.Registry.IRegistry<TBase>.Inject(TBase, Dekuple.Inject, System.Type, TBase)
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Inject(TBase, Dekuple.Inject, System.Type, TBase)
+  nameWithType: IRegistry<TBase>.Inject(TBase, Inject, Type, TBase)
+  nameWithType.vb: IRegistry(Of TBase).Inject(TBase, Inject, Type, TBase)
+- uid: Dekuple.Registry.IRegistry`1.Inject(System.Type,`0)
+  name: Inject(Type, TBase)
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Inject_System_Type__0_
+  commentId: M:Dekuple.Registry.IRegistry`1.Inject(System.Type,`0)
+  fullName: Dekuple.Registry.IRegistry<TBase>.Inject(System.Type, TBase)
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Inject(System.Type, TBase)
+  nameWithType: IRegistry<TBase>.Inject(Type, TBase)
+  nameWithType.vb: IRegistry(Of TBase).Inject(Type, TBase)
+- uid: Dekuple.Registry.IRegistry`1.Inject*
+  name: Inject
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Inject_
+  commentId: Overload:Dekuple.Registry.IRegistry`1.Inject
+  isSpec: "True"
+  fullName: Dekuple.Registry.IRegistry<TBase>.Inject
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Inject
+  nameWithType: IRegistry<TBase>.Inject
+  nameWithType.vb: IRegistry(Of TBase).Inject
+- uid: Dekuple.Registry.IRegistry`1.Inject``1(`0)
+  name: Inject<TIFace>(TBase)
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Inject__1__0_
+  commentId: M:Dekuple.Registry.IRegistry`1.Inject``1(`0)
+  name.vb: Inject(Of TIFace)(TBase)
+  fullName: Dekuple.Registry.IRegistry<TBase>.Inject<TIFace>(TBase)
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Inject(Of TIFace)(TBase)
+  nameWithType: IRegistry<TBase>.Inject<TIFace>(TBase)
+  nameWithType.vb: IRegistry(Of TBase).Inject(Of TIFace)(TBase)
+- uid: Dekuple.Registry.IRegistry`1.Instances
+  name: Instances
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Instances
+  commentId: P:Dekuple.Registry.IRegistry`1.Instances
+  fullName: Dekuple.Registry.IRegistry<TBase>.Instances
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Instances
+  nameWithType: IRegistry<TBase>.Instances
+  nameWithType.vb: IRegistry(Of TBase).Instances
+- uid: Dekuple.Registry.IRegistry`1.Instances*
+  name: Instances
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Instances_
+  commentId: Overload:Dekuple.Registry.IRegistry`1.Instances
+  isSpec: "True"
+  fullName: Dekuple.Registry.IRegistry<TBase>.Instances
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Instances
+  nameWithType: IRegistry<TBase>.Instances
+  nameWithType.vb: IRegistry(Of TBase).Instances
+- uid: Dekuple.Registry.IRegistry`1.Prepare(`0)
+  name: Prepare(TBase)
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Prepare__0_
+  commentId: M:Dekuple.Registry.IRegistry`1.Prepare(`0)
+  fullName: Dekuple.Registry.IRegistry<TBase>.Prepare(TBase)
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Prepare(TBase)
+  nameWithType: IRegistry<TBase>.Prepare(TBase)
+  nameWithType.vb: IRegistry(Of TBase).Prepare(TBase)
+- uid: Dekuple.Registry.IRegistry`1.Prepare*
+  name: Prepare
+  href: api/Dekuple.Registry.IRegistry-1.html#Dekuple_Registry_IRegistry_1_Prepare_
+  commentId: Overload:Dekuple.Registry.IRegistry`1.Prepare
+  isSpec: "True"
+  fullName: Dekuple.Registry.IRegistry<TBase>.Prepare
+  fullName.vb: Dekuple.Registry.IRegistry(Of TBase).Prepare
+  nameWithType: IRegistry<TBase>.Prepare
+  nameWithType.vb: IRegistry(Of TBase).Prepare
+- uid: Dekuple.Registry.Registry`1
+  name: Registry<TBase>
+  href: api/Dekuple.Registry.Registry-1.html
+  commentId: T:Dekuple.Registry.Registry`1
+  name.vb: Registry(Of TBase)
+  fullName: Dekuple.Registry.Registry<TBase>
+  fullName.vb: Dekuple.Registry.Registry(Of TBase)
+  nameWithType: Registry<TBase>
+  nameWithType.vb: Registry(Of TBase)
+- uid: Dekuple.Registry.Registry`1.#ctor
+  name: Registry()
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1__ctor
+  commentId: M:Dekuple.Registry.Registry`1.#ctor
+  fullName: Dekuple.Registry.Registry<TBase>.Registry()
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Registry()
+  nameWithType: Registry<TBase>.Registry()
+  nameWithType.vb: Registry(Of TBase).Registry()
+- uid: Dekuple.Registry.Registry`1.#ctor*
+  name: Registry
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1__ctor_
+  commentId: Overload:Dekuple.Registry.Registry`1.#ctor
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.Registry
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Registry
+  nameWithType: Registry<TBase>.Registry
+  nameWithType.vb: Registry(Of TBase).Registry
+- uid: Dekuple.Registry.Registry`1.AddAllSubscriptions
+  name: AddAllSubscriptions()
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_AddAllSubscriptions
+  commentId: M:Dekuple.Registry.Registry`1.AddAllSubscriptions
+  fullName: Dekuple.Registry.Registry<TBase>.AddAllSubscriptions()
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).AddAllSubscriptions()
+  nameWithType: Registry<TBase>.AddAllSubscriptions()
+  nameWithType.vb: Registry(Of TBase).AddAllSubscriptions()
+- uid: Dekuple.Registry.Registry`1.AddAllSubscriptions*
+  name: AddAllSubscriptions
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_AddAllSubscriptions_
+  commentId: Overload:Dekuple.Registry.Registry`1.AddAllSubscriptions
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.AddAllSubscriptions
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).AddAllSubscriptions
+  nameWithType: Registry<TBase>.AddAllSubscriptions
+  nameWithType.vb: Registry(Of TBase).AddAllSubscriptions
+- uid: Dekuple.Registry.Registry`1.Bind*
+  name: Bind
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Bind_
+  commentId: Overload:Dekuple.Registry.Registry`1.Bind
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.Bind
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Bind
+  nameWithType: Registry<TBase>.Bind
+  nameWithType.vb: Registry(Of TBase).Bind
+- uid: Dekuple.Registry.Registry`1.Bind``2
+  name: Bind<TInterface, TImpl>()
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Bind__2
+  commentId: M:Dekuple.Registry.Registry`1.Bind``2
+  name.vb: Bind(Of TInterface, TImpl)()
+  fullName: Dekuple.Registry.Registry<TBase>.Bind<TInterface, TImpl>()
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Bind(Of TInterface, TImpl)()
+  nameWithType: Registry<TBase>.Bind<TInterface, TImpl>()
+  nameWithType.vb: Registry(Of TBase).Bind(Of TInterface, TImpl)()
+- uid: Dekuple.Registry.Registry`1.Bind``2(``1)
+  name: Bind<TInterface, TImpl>(TImpl)
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Bind__2___1_
+  commentId: M:Dekuple.Registry.Registry`1.Bind``2(``1)
+  name.vb: Bind(Of TInterface, TImpl)(TImpl)
+  fullName: Dekuple.Registry.Registry<TBase>.Bind<TInterface, TImpl>(TImpl)
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Bind(Of TInterface, TImpl)(TImpl)
+  nameWithType: Registry<TBase>.Bind<TInterface, TImpl>(TImpl)
+  nameWithType.vb: Registry(Of TBase).Bind(Of TInterface, TImpl)(TImpl)
+- uid: Dekuple.Registry.Registry`1.Bind``2(System.Func{``1})
+  name: Bind<TInterface, TImpl>(Func<TImpl>)
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Bind__2_System_Func___1__
+  commentId: M:Dekuple.Registry.Registry`1.Bind``2(System.Func{``1})
+  name.vb: Bind(Of TInterface, TImpl)(Func(Of TImpl))
+  fullName: Dekuple.Registry.Registry<TBase>.Bind<TInterface, TImpl>(System.Func<TImpl>)
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Bind(Of TInterface, TImpl)(System.Func(Of TImpl))
+  nameWithType: Registry<TBase>.Bind<TInterface, TImpl>(Func<TImpl>)
+  nameWithType.vb: Registry(Of TBase).Bind(Of TInterface, TImpl)(Func(Of TImpl))
+- uid: Dekuple.Registry.Registry`1.Bind``3(System.Func{``2,``1})
+  name: Bind<TInterface, TImpl, T0>(Func<T0, TImpl>)
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Bind__3_System_Func___2___1__
+  commentId: M:Dekuple.Registry.Registry`1.Bind``3(System.Func{``2,``1})
+  name.vb: Bind(Of TInterface, TImpl, T0)(Func(Of T0, TImpl))
+  fullName: Dekuple.Registry.Registry<TBase>.Bind<TInterface, TImpl, T0>(System.Func<T0, TImpl>)
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Bind(Of TInterface, TImpl, T0)(System.Func(Of T0, TImpl))
+  nameWithType: Registry<TBase>.Bind<TInterface, TImpl, T0>(Func<T0, TImpl>)
+  nameWithType.vb: Registry(Of TBase).Bind(Of TInterface, TImpl, T0)(Func(Of T0, TImpl))
+- uid: Dekuple.Registry.Registry`1.Bind``4(System.Func{``2,``3,``1})
+  name: Bind<TInterface, TImpl, T0, T1>(Func<T0, T1, TImpl>)
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Bind__4_System_Func___2___3___1__
+  commentId: M:Dekuple.Registry.Registry`1.Bind``4(System.Func{``2,``3,``1})
+  name.vb: Bind(Of TInterface, TImpl, T0, T1)(Func(Of T0, T1, TImpl))
+  fullName: Dekuple.Registry.Registry<TBase>.Bind<TInterface, TImpl, T0, T1>(System.Func<T0, T1, TImpl>)
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Bind(Of TInterface, TImpl, T0, T1)(System.Func(Of T0, T1, TImpl))
+  nameWithType: Registry<TBase>.Bind<TInterface, TImpl, T0, T1>(Func<T0, T1, TImpl>)
+  nameWithType.vb: Registry(Of TBase).Bind(Of TInterface, TImpl, T0, T1)(Func(Of T0, T1, TImpl))
+- uid: Dekuple.Registry.Registry`1.Dekuple#Registry#IRegistry#Instances
+  name: IRegistry.Instances
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Dekuple_Registry_IRegistry_Instances
+  commentId: P:Dekuple.Registry.Registry`1.Dekuple#Registry#IRegistry#Instances
+  name.vb: Dekuple.Registry.IRegistry.Instances
+  fullName: Dekuple.Registry.Registry<TBase>.Dekuple.Registry.IRegistry.Instances
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Dekuple.Registry.IRegistry.Instances
+  nameWithType: Registry<TBase>.IRegistry.Instances
+  nameWithType.vb: Registry(Of TBase).Dekuple.Registry.IRegistry.Instances
+- uid: Dekuple.Registry.Registry`1.Dekuple#Registry#IRegistry#Instances*
+  name: IRegistry.Instances
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Dekuple_Registry_IRegistry_Instances_
+  commentId: Overload:Dekuple.Registry.Registry`1.Dekuple#Registry#IRegistry#Instances
+  isSpec: "True"
+  name.vb: Dekuple.Registry.IRegistry.Instances
+  fullName: Dekuple.Registry.Registry<TBase>.Dekuple.Registry.IRegistry.Instances
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Dekuple.Registry.IRegistry.Instances
+  nameWithType: Registry<TBase>.IRegistry.Instances
+  nameWithType.vb: Registry(Of TBase).Dekuple.Registry.IRegistry.Instances
+- uid: Dekuple.Registry.Registry`1.Get(System.Guid)
+  name: Get(Guid)
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Get_System_Guid_
+  commentId: M:Dekuple.Registry.Registry`1.Get(System.Guid)
+  fullName: Dekuple.Registry.Registry<TBase>.Get(System.Guid)
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Get(System.Guid)
+  nameWithType: Registry<TBase>.Get(Guid)
+  nameWithType.vb: Registry(Of TBase).Get(Guid)
+- uid: Dekuple.Registry.Registry`1.Get*
+  name: Get
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Get_
+  commentId: Overload:Dekuple.Registry.Registry`1.Get
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.Get
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Get
+  nameWithType: Registry<TBase>.Get
+  nameWithType.vb: Registry(Of TBase).Get
+- uid: Dekuple.Registry.Registry`1.Get``1(System.Object[])
+  name: Get<TIBase>(Object[])
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Get__1_System_Object___
+  commentId: M:Dekuple.Registry.Registry`1.Get``1(System.Object[])
+  name.vb: Get(Of TIBase)(Object())
+  fullName: Dekuple.Registry.Registry<TBase>.Get<TIBase>(System.Object[])
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Get(Of TIBase)(System.Object())
+  nameWithType: Registry<TBase>.Get<TIBase>(Object[])
+  nameWithType.vb: Registry(Of TBase).Get(Of TIBase)(Object())
+- uid: Dekuple.Registry.Registry`1.Has(`0)
+  name: Has(TBase)
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Has__0_
+  commentId: M:Dekuple.Registry.Registry`1.Has(`0)
+  fullName: Dekuple.Registry.Registry<TBase>.Has(TBase)
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Has(TBase)
+  nameWithType: Registry<TBase>.Has(TBase)
+  nameWithType.vb: Registry(Of TBase).Has(TBase)
+- uid: Dekuple.Registry.Registry`1.Has(System.Guid)
+  name: Has(Guid)
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Has_System_Guid_
+  commentId: M:Dekuple.Registry.Registry`1.Has(System.Guid)
+  fullName: Dekuple.Registry.Registry<TBase>.Has(System.Guid)
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Has(System.Guid)
+  nameWithType: Registry<TBase>.Has(Guid)
+  nameWithType.vb: Registry(Of TBase).Has(Guid)
+- uid: Dekuple.Registry.Registry`1.Has*
+  name: Has
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Has_
+  commentId: Overload:Dekuple.Registry.Registry`1.Has
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.Has
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Has
+  nameWithType: Registry<TBase>.Has
+  nameWithType.vb: Registry(Of TBase).Has
+- uid: Dekuple.Registry.Registry`1.HasInjector(System.Type)
+  name: HasInjector(Type)
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_HasInjector_System_Type_
+  commentId: M:Dekuple.Registry.Registry`1.HasInjector(System.Type)
+  fullName: Dekuple.Registry.Registry<TBase>.HasInjector(System.Type)
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).HasInjector(System.Type)
+  nameWithType: Registry<TBase>.HasInjector(Type)
+  nameWithType.vb: Registry(Of TBase).HasInjector(Type)
+- uid: Dekuple.Registry.Registry`1.HasInjector*
+  name: HasInjector
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_HasInjector_
+  commentId: Overload:Dekuple.Registry.Registry`1.HasInjector
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.HasInjector
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).HasInjector
+  nameWithType: Registry<TBase>.HasInjector
+  nameWithType.vb: Registry(Of TBase).HasInjector
+- uid: Dekuple.Registry.Registry`1.HasInjector``1
+  name: HasInjector<T>()
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_HasInjector__1
+  commentId: M:Dekuple.Registry.Registry`1.HasInjector``1
+  name.vb: HasInjector(Of T)()
+  fullName: Dekuple.Registry.Registry<TBase>.HasInjector<T>()
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).HasInjector(Of T)()
+  nameWithType: Registry<TBase>.HasInjector<T>()
+  nameWithType.vb: Registry(Of TBase).HasInjector(Of T)()
+- uid: Dekuple.Registry.Registry`1.Inject(`0,Dekuple.Inject,System.Type,`0)
+  name: Inject(TBase, Inject, Type, TBase)
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Inject__0_Dekuple_Inject_System_Type__0_
+  commentId: M:Dekuple.Registry.Registry`1.Inject(`0,Dekuple.Inject,System.Type,`0)
+  fullName: Dekuple.Registry.Registry<TBase>.Inject(TBase, Dekuple.Inject, System.Type, TBase)
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Inject(TBase, Dekuple.Inject, System.Type, TBase)
+  nameWithType: Registry<TBase>.Inject(TBase, Inject, Type, TBase)
+  nameWithType.vb: Registry(Of TBase).Inject(TBase, Inject, Type, TBase)
+- uid: Dekuple.Registry.Registry`1.Inject(System.Type,`0)
+  name: Inject(Type, TBase)
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Inject_System_Type__0_
+  commentId: M:Dekuple.Registry.Registry`1.Inject(System.Type,`0)
+  fullName: Dekuple.Registry.Registry<TBase>.Inject(System.Type, TBase)
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Inject(System.Type, TBase)
+  nameWithType: Registry<TBase>.Inject(Type, TBase)
+  nameWithType.vb: Registry(Of TBase).Inject(Type, TBase)
+- uid: Dekuple.Registry.Registry`1.Inject*
+  name: Inject
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Inject_
+  commentId: Overload:Dekuple.Registry.Registry`1.Inject
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.Inject
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Inject
+  nameWithType: Registry<TBase>.Inject
+  nameWithType.vb: Registry(Of TBase).Inject
+- uid: Dekuple.Registry.Registry`1.Inject``1(`0)
+  name: Inject<TIFace>(TBase)
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Inject__1__0_
+  commentId: M:Dekuple.Registry.Registry`1.Inject``1(`0)
+  name.vb: Inject(Of TIFace)(TBase)
+  fullName: Dekuple.Registry.Registry<TBase>.Inject<TIFace>(TBase)
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Inject(Of TIFace)(TBase)
+  nameWithType: Registry<TBase>.Inject<TIFace>(TBase)
+  nameWithType.vb: Registry(Of TBase).Inject(Of TIFace)(TBase)
+- uid: Dekuple.Registry.Registry`1.Injections
+  name: Registry<TBase>.Injections
+  href: api/Dekuple.Registry.Registry-1.Injections.html
+  commentId: T:Dekuple.Registry.Registry`1.Injections
+  name.vb: Registry(Of TBase).Injections
+  fullName: Dekuple.Registry.Registry<TBase>.Injections
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Injections
+  nameWithType: Registry<TBase>.Injections
+  nameWithType.vb: Registry(Of TBase).Injections
+- uid: Dekuple.Registry.Registry`1.Injections.Flags
+  name: Flags
+  href: api/Dekuple.Registry.Registry-1.Injections.html#Dekuple_Registry_Registry_1_Injections_Flags
+  commentId: P:Dekuple.Registry.Registry`1.Injections.Flags
+  fullName: Dekuple.Registry.Registry<TBase>.Injections.Flags
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Injections.Flags
+  nameWithType: Registry<TBase>.Injections.Flags
+  nameWithType.vb: Registry(Of TBase).Injections.Flags
+- uid: Dekuple.Registry.Registry`1.Injections.Flags*
+  name: Flags
+  href: api/Dekuple.Registry.Registry-1.Injections.html#Dekuple_Registry_Registry_1_Injections_Flags_
+  commentId: Overload:Dekuple.Registry.Registry`1.Injections.Flags
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.Injections.Flags
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Injections.Flags
+  nameWithType: Registry<TBase>.Injections.Flags
+  nameWithType.vb: Registry(Of TBase).Injections.Flags
+- uid: Dekuple.Registry.Registry`1.Injections.Inject(`0,System.Type,`0)
+  name: Inject(TBase, Type, TBase)
+  href: api/Dekuple.Registry.Registry-1.Injections.html#Dekuple_Registry_Registry_1_Injections_Inject__0_System_Type__0_
+  commentId: M:Dekuple.Registry.Registry`1.Injections.Inject(`0,System.Type,`0)
+  fullName: Dekuple.Registry.Registry<TBase>.Injections.Inject(TBase, System.Type, TBase)
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Injections.Inject(TBase, System.Type, TBase)
+  nameWithType: Registry<TBase>.Injections.Inject(TBase, Type, TBase)
+  nameWithType.vb: Registry(Of TBase).Injections.Inject(TBase, Type, TBase)
+- uid: Dekuple.Registry.Registry`1.Injections.Inject*
+  name: Inject
+  href: api/Dekuple.Registry.Registry-1.Injections.html#Dekuple_Registry_Registry_1_Injections_Inject_
+  commentId: Overload:Dekuple.Registry.Registry`1.Injections.Inject
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.Injections.Inject
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Injections.Inject
+  nameWithType: Registry<TBase>.Injections.Inject
+  nameWithType.vb: Registry(Of TBase).Injections.Inject
+- uid: Dekuple.Registry.Registry`1.Instances
+  name: Instances
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Instances
+  commentId: P:Dekuple.Registry.Registry`1.Instances
+  fullName: Dekuple.Registry.Registry<TBase>.Instances
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Instances
+  nameWithType: Registry<TBase>.Instances
+  nameWithType.vb: Registry(Of TBase).Instances
+- uid: Dekuple.Registry.Registry`1.Instances*
+  name: Instances
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Instances_
+  commentId: Overload:Dekuple.Registry.Registry`1.Instances
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.Instances
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Instances
+  nameWithType: Registry<TBase>.Instances
+  nameWithType.vb: Registry(Of TBase).Instances
+- uid: Dekuple.Registry.Registry`1.Load(System.String)
+  name: Load(String)
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Load_System_String_
+  commentId: M:Dekuple.Registry.Registry`1.Load(System.String)
+  fullName: Dekuple.Registry.Registry<TBase>.Load(System.String)
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Load(System.String)
+  nameWithType: Registry<TBase>.Load(String)
+  nameWithType.vb: Registry(Of TBase).Load(String)
+- uid: Dekuple.Registry.Registry`1.Load*
+  name: Load
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Load_
+  commentId: Overload:Dekuple.Registry.Registry`1.Load
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.Load
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Load
+  nameWithType: Registry<TBase>.Load
+  nameWithType.vb: Registry(Of TBase).Load
+- uid: Dekuple.Registry.Registry`1.NumInstances
+  name: NumInstances
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_NumInstances
+  commentId: P:Dekuple.Registry.Registry`1.NumInstances
+  fullName: Dekuple.Registry.Registry<TBase>.NumInstances
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).NumInstances
+  nameWithType: Registry<TBase>.NumInstances
+  nameWithType.vb: Registry(Of TBase).NumInstances
+- uid: Dekuple.Registry.Registry`1.NumInstances*
+  name: NumInstances
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_NumInstances_
+  commentId: Overload:Dekuple.Registry.Registry`1.NumInstances
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.NumInstances
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).NumInstances
+  nameWithType: Registry<TBase>.NumInstances
+  nameWithType.vb: Registry(Of TBase).NumInstances
+- uid: Dekuple.Registry.Registry`1.Prepare(`0)
+  name: Prepare(TBase)
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Prepare__0_
+  commentId: M:Dekuple.Registry.Registry`1.Prepare(`0)
+  fullName: Dekuple.Registry.Registry<TBase>.Prepare(TBase)
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Prepare(TBase)
+  nameWithType: Registry<TBase>.Prepare(TBase)
+  nameWithType.vb: Registry(Of TBase).Prepare(TBase)
+- uid: Dekuple.Registry.Registry`1.Prepare*
+  name: Prepare
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Prepare_
+  commentId: Overload:Dekuple.Registry.Registry`1.Prepare
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.Prepare
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Prepare
+  nameWithType: Registry<TBase>.Prepare
+  nameWithType.vb: Registry(Of TBase).Prepare
+- uid: Dekuple.Registry.Registry`1.Print
+  name: Print()
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Print
+  commentId: M:Dekuple.Registry.Registry`1.Print
+  fullName: Dekuple.Registry.Registry<TBase>.Print()
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Print()
+  nameWithType: Registry<TBase>.Print()
+  nameWithType.vb: Registry(Of TBase).Print()
+- uid: Dekuple.Registry.Registry`1.Print*
+  name: Print
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Print_
+  commentId: Overload:Dekuple.Registry.Registry`1.Print
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.Print
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Print
+  nameWithType: Registry<TBase>.Print
+  nameWithType.vb: Registry(Of TBase).Print
+- uid: Dekuple.Registry.Registry`1.Read(System.Byte[])
+  name: Read(Byte[])
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Read_System_Byte___
+  commentId: M:Dekuple.Registry.Registry`1.Read(System.Byte[])
+  name.vb: Read(Byte())
+  fullName: Dekuple.Registry.Registry<TBase>.Read(System.Byte[])
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Read(System.Byte())
+  nameWithType: Registry<TBase>.Read(Byte[])
+  nameWithType.vb: Registry(Of TBase).Read(Byte())
+- uid: Dekuple.Registry.Registry`1.Read*
+  name: Read
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Read_
+  commentId: Overload:Dekuple.Registry.Registry`1.Read
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.Read
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Read
+  nameWithType: Registry<TBase>.Read
+  nameWithType.vb: Registry(Of TBase).Read
+- uid: Dekuple.Registry.Registry`1.Resolve
+  name: Resolve()
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Resolve
+  commentId: M:Dekuple.Registry.Registry`1.Resolve
+  fullName: Dekuple.Registry.Registry<TBase>.Resolve()
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Resolve()
+  nameWithType: Registry<TBase>.Resolve()
+  nameWithType.vb: Registry(Of TBase).Resolve()
+- uid: Dekuple.Registry.Registry`1.Resolve*
+  name: Resolve
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Resolve_
+  commentId: Overload:Dekuple.Registry.Registry`1.Resolve
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.Resolve
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Resolve
+  nameWithType: Registry<TBase>.Resolve
+  nameWithType.vb: Registry(Of TBase).Resolve
+- uid: Dekuple.Registry.Registry`1.Save
+  name: Save()
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Save
+  commentId: M:Dekuple.Registry.Registry`1.Save
+  fullName: Dekuple.Registry.Registry<TBase>.Save()
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Save()
+  nameWithType: Registry<TBase>.Save()
+  nameWithType.vb: Registry(Of TBase).Save()
+- uid: Dekuple.Registry.Registry`1.Save*
+  name: Save
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Save_
+  commentId: Overload:Dekuple.Registry.Registry`1.Save
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.Save
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Save
+  nameWithType: Registry<TBase>.Save
+  nameWithType.vb: Registry(Of TBase).Save
+- uid: Dekuple.Registry.Registry`1.ToString
+  name: ToString()
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_ToString
+  commentId: M:Dekuple.Registry.Registry`1.ToString
+  fullName: Dekuple.Registry.Registry<TBase>.ToString()
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).ToString()
+  nameWithType: Registry<TBase>.ToString()
+  nameWithType.vb: Registry(Of TBase).ToString()
+- uid: Dekuple.Registry.Registry`1.ToString*
+  name: ToString
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_ToString_
+  commentId: Overload:Dekuple.Registry.Registry`1.ToString
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.ToString
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).ToString
+  nameWithType: Registry<TBase>.ToString
+  nameWithType.vb: Registry(Of TBase).ToString
+- uid: Dekuple.Registry.Registry`1.Write
+  name: Write()
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Write
+  commentId: M:Dekuple.Registry.Registry`1.Write
+  fullName: Dekuple.Registry.Registry<TBase>.Write()
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Write()
+  nameWithType: Registry<TBase>.Write()
+  nameWithType.vb: Registry(Of TBase).Write()
+- uid: Dekuple.Registry.Registry`1.Write*
+  name: Write
+  href: api/Dekuple.Registry.Registry-1.html#Dekuple_Registry_Registry_1_Write_
+  commentId: Overload:Dekuple.Registry.Registry`1.Write
+  isSpec: "True"
+  fullName: Dekuple.Registry.Registry<TBase>.Write
+  fullName.vb: Dekuple.Registry.Registry(Of TBase).Write
+  nameWithType: Registry<TBase>.Write
+  nameWithType.vb: Registry(Of TBase).Write
+- uid: Dekuple.TransformExt
+  name: TransformExt
+  href: api/Dekuple.TransformExt.html
+  commentId: T:Dekuple.TransformExt
+  fullName: Dekuple.TransformExt
+  nameWithType: TransformExt
+- uid: Dekuple.TransformExt.FindChild*
+  name: FindChild
+  href: api/Dekuple.TransformExt.html#Dekuple_TransformExt_FindChild_
+  commentId: Overload:Dekuple.TransformExt.FindChild
+  isSpec: "True"
+  fullName: Dekuple.TransformExt.FindChild
+  nameWithType: TransformExt.FindChild
+- uid: Dekuple.TransformExt.FindChild``1(UnityEngine.Transform)
+  name: FindChild<T>(Transform)
+  href: api/Dekuple.TransformExt.html#Dekuple_TransformExt_FindChild__1_UnityEngine_Transform_
+  commentId: M:Dekuple.TransformExt.FindChild``1(UnityEngine.Transform)
+  name.vb: FindChild(Of T)(Transform)
+  fullName: Dekuple.TransformExt.FindChild<T>(UnityEngine.Transform)
+  fullName.vb: Dekuple.TransformExt.FindChild(Of T)(UnityEngine.Transform)
+  nameWithType: TransformExt.FindChild<T>(Transform)
+  nameWithType.vb: TransformExt.FindChild(Of T)(Transform)
+- uid: Dekuple.TransformExt.FindChildNamed*
+  name: FindChildNamed
+  href: api/Dekuple.TransformExt.html#Dekuple_TransformExt_FindChildNamed_
+  commentId: Overload:Dekuple.TransformExt.FindChildNamed
+  isSpec: "True"
+  fullName: Dekuple.TransformExt.FindChildNamed
+  nameWithType: TransformExt.FindChildNamed
+- uid: Dekuple.TransformExt.FindChildNamed``1(UnityEngine.GameObject,System.String)
+  name: FindChildNamed<T>(GameObject, String)
+  href: api/Dekuple.TransformExt.html#Dekuple_TransformExt_FindChildNamed__1_UnityEngine_GameObject_System_String_
+  commentId: M:Dekuple.TransformExt.FindChildNamed``1(UnityEngine.GameObject,System.String)
+  name.vb: FindChildNamed(Of T)(GameObject, String)
+  fullName: Dekuple.TransformExt.FindChildNamed<T>(UnityEngine.GameObject, System.String)
+  fullName.vb: Dekuple.TransformExt.FindChildNamed(Of T)(UnityEngine.GameObject, System.String)
+  nameWithType: TransformExt.FindChildNamed<T>(GameObject, String)
+  nameWithType.vb: TransformExt.FindChildNamed(Of T)(GameObject, String)
+- uid: Dekuple.TransformExt.FindChildNamed``1(UnityEngine.Transform,System.String)
+  name: FindChildNamed<T>(Transform, String)
+  href: api/Dekuple.TransformExt.html#Dekuple_TransformExt_FindChildNamed__1_UnityEngine_Transform_System_String_
+  commentId: M:Dekuple.TransformExt.FindChildNamed``1(UnityEngine.Transform,System.String)
+  name.vb: FindChildNamed(Of T)(Transform, String)
+  fullName: Dekuple.TransformExt.FindChildNamed<T>(UnityEngine.Transform, System.String)
+  fullName.vb: Dekuple.TransformExt.FindChildNamed(Of T)(UnityEngine.Transform, System.String)
+  nameWithType: TransformExt.FindChildNamed<T>(Transform, String)
+  nameWithType.vb: TransformExt.FindChildNamed(Of T)(Transform, String)
+- uid: Dekuple.TransformExt.ForEach*
+  name: ForEach
+  href: api/Dekuple.TransformExt.html#Dekuple_TransformExt_ForEach_
+  commentId: Overload:Dekuple.TransformExt.ForEach
+  isSpec: "True"
+  fullName: Dekuple.TransformExt.ForEach
+  nameWithType: TransformExt.ForEach
+- uid: Dekuple.TransformExt.ForEach``1(UnityEngine.Transform,System.Action{``0})
+  name: ForEach<T>(Transform, Action<T>)
+  href: api/Dekuple.TransformExt.html#Dekuple_TransformExt_ForEach__1_UnityEngine_Transform_System_Action___0__
+  commentId: M:Dekuple.TransformExt.ForEach``1(UnityEngine.Transform,System.Action{``0})
+  name.vb: ForEach(Of T)(Transform, Action(Of T))
+  fullName: Dekuple.TransformExt.ForEach<T>(UnityEngine.Transform, System.Action<T>)
+  fullName.vb: Dekuple.TransformExt.ForEach(Of T)(UnityEngine.Transform, System.Action(Of T))
+  nameWithType: TransformExt.ForEach<T>(Transform, Action<T>)
+  nameWithType.vb: TransformExt.ForEach(Of T)(Transform, Action(Of T))
+- uid: Dekuple.TransformExt.Get*
+  name: Get
+  href: api/Dekuple.TransformExt.html#Dekuple_TransformExt_Get_
+  commentId: Overload:Dekuple.TransformExt.Get
+  isSpec: "True"
+  fullName: Dekuple.TransformExt.Get
+  nameWithType: TransformExt.Get
+- uid: Dekuple.TransformExt.Get``1(UnityEngine.Transform)
+  name: Get<T>(Transform)
+  href: api/Dekuple.TransformExt.html#Dekuple_TransformExt_Get__1_UnityEngine_Transform_
+  commentId: M:Dekuple.TransformExt.Get``1(UnityEngine.Transform)
+  name.vb: Get(Of T)(Transform)
+  fullName: Dekuple.TransformExt.Get<T>(UnityEngine.Transform)
+  fullName.vb: Dekuple.TransformExt.Get(Of T)(UnityEngine.Transform)
+  nameWithType: TransformExt.Get<T>(Transform)
+  nameWithType.vb: TransformExt.Get(Of T)(Transform)
+- uid: Dekuple.Turnaround
+  name: Turnaround
+  href: api/Dekuple.Turnaround.html
+  commentId: T:Dekuple.Turnaround
+  fullName: Dekuple.Turnaround
+  nameWithType: Turnaround
+- uid: Dekuple.Turnaround.#ctor(Dekuple.IRequest,System.Action{Dekuple.IResponse})
+  name: Turnaround(IRequest, Action<IResponse>)
+  href: api/Dekuple.Turnaround.html#Dekuple_Turnaround__ctor_Dekuple_IRequest_System_Action_Dekuple_IResponse__
+  commentId: M:Dekuple.Turnaround.#ctor(Dekuple.IRequest,System.Action{Dekuple.IResponse})
+  name.vb: Turnaround(IRequest, Action(Of IResponse))
+  fullName: Dekuple.Turnaround.Turnaround(Dekuple.IRequest, System.Action<Dekuple.IResponse>)
+  fullName.vb: Dekuple.Turnaround.Turnaround(Dekuple.IRequest, System.Action(Of Dekuple.IResponse))
+  nameWithType: Turnaround.Turnaround(IRequest, Action<IResponse>)
+  nameWithType.vb: Turnaround.Turnaround(IRequest, Action(Of IResponse))
+- uid: Dekuple.Turnaround.#ctor*
+  name: Turnaround
+  href: api/Dekuple.Turnaround.html#Dekuple_Turnaround__ctor_
+  commentId: Overload:Dekuple.Turnaround.#ctor
+  isSpec: "True"
+  fullName: Dekuple.Turnaround.Turnaround
+  nameWithType: Turnaround.Turnaround
+- uid: Dekuple.Turnaround.Request
+  name: Request
+  href: api/Dekuple.Turnaround.html#Dekuple_Turnaround_Request
+  commentId: F:Dekuple.Turnaround.Request
+  fullName: Dekuple.Turnaround.Request
+  nameWithType: Turnaround.Request
+- uid: Dekuple.Turnaround.Responder
+  name: Responder
+  href: api/Dekuple.Turnaround.html#Dekuple_Turnaround_Responder
+  commentId: F:Dekuple.Turnaround.Responder
+  fullName: Dekuple.Turnaround.Responder
+  nameWithType: Turnaround.Responder
+- uid: Dekuple.View
+  name: Dekuple.View
+  href: api/Dekuple.View.html
+  commentId: N:Dekuple.View
+  fullName: Dekuple.View
+  nameWithType: Dekuple.View
+- uid: Dekuple.View.Impl
+  name: Dekuple.View.Impl
+  href: api/Dekuple.View.Impl.html
+  commentId: N:Dekuple.View.Impl
+  fullName: Dekuple.View.Impl
+  nameWithType: Dekuple.View.Impl
+- uid: Dekuple.View.Impl.ViewBase
+  name: ViewBase
+  href: api/Dekuple.View.Impl.ViewBase.html
+  commentId: T:Dekuple.View.Impl.ViewBase
+  fullName: Dekuple.View.Impl.ViewBase
+  nameWithType: ViewBase
+- uid: Dekuple.View.Impl.ViewBase._AudioSource
+  name: _AudioSource
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase__AudioSource
+  commentId: P:Dekuple.View.Impl.ViewBase._AudioSource
+  fullName: Dekuple.View.Impl.ViewBase._AudioSource
+  nameWithType: ViewBase._AudioSource
+- uid: Dekuple.View.Impl.ViewBase._AudioSource*
+  name: _AudioSource
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase__AudioSource_
+  commentId: Overload:Dekuple.View.Impl.ViewBase._AudioSource
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase._AudioSource
+  nameWithType: ViewBase._AudioSource
+- uid: Dekuple.View.Impl.ViewBase._Queue
+  name: _Queue
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase__Queue
+  commentId: P:Dekuple.View.Impl.ViewBase._Queue
+  fullName: Dekuple.View.Impl.ViewBase._Queue
+  nameWithType: ViewBase._Queue
+- uid: Dekuple.View.Impl.ViewBase._Queue*
+  name: _Queue
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase__Queue_
+  commentId: Overload:Dekuple.View.Impl.ViewBase._Queue
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase._Queue
+  nameWithType: ViewBase._Queue
+- uid: Dekuple.View.Impl.ViewBase.AddSubscriptions
+  name: AddSubscriptions()
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_AddSubscriptions
+  commentId: M:Dekuple.View.Impl.ViewBase.AddSubscriptions
+  fullName: Dekuple.View.Impl.ViewBase.AddSubscriptions()
+  nameWithType: ViewBase.AddSubscriptions()
+- uid: Dekuple.View.Impl.ViewBase.AddSubscriptions*
+  name: AddSubscriptions
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_AddSubscriptions_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.AddSubscriptions
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.AddSubscriptions
+  nameWithType: ViewBase.AddSubscriptions
+- uid: Dekuple.View.Impl.ViewBase.AgentBase
+  name: AgentBase
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_AgentBase
+  commentId: P:Dekuple.View.Impl.ViewBase.AgentBase
+  fullName: Dekuple.View.Impl.ViewBase.AgentBase
+  nameWithType: ViewBase.AgentBase
+- uid: Dekuple.View.Impl.ViewBase.AgentBase*
+  name: AgentBase
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_AgentBase_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.AgentBase
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.AgentBase
+  nameWithType: ViewBase.AgentBase
+- uid: Dekuple.View.Impl.ViewBase.Begin
+  name: Begin()
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Begin
+  commentId: M:Dekuple.View.Impl.ViewBase.Begin
+  fullName: Dekuple.View.Impl.ViewBase.Begin()
+  nameWithType: ViewBase.Begin()
+- uid: Dekuple.View.Impl.ViewBase.Begin*
+  name: Begin
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Begin_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.Begin
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.Begin
+  nameWithType: ViewBase.Begin
+- uid: Dekuple.View.Impl.ViewBase.Create
+  name: Create()
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Create
+  commentId: M:Dekuple.View.Impl.ViewBase.Create
+  fullName: Dekuple.View.Impl.ViewBase.Create()
+  nameWithType: ViewBase.Create()
+- uid: Dekuple.View.Impl.ViewBase.Create*
+  name: Create
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Create_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.Create
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.Create
+  nameWithType: ViewBase.Create
+- uid: Dekuple.View.Impl.ViewBase.Destroy
+  name: Destroy()
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Destroy
+  commentId: M:Dekuple.View.Impl.ViewBase.Destroy
+  fullName: Dekuple.View.Impl.ViewBase.Destroy()
+  nameWithType: ViewBase.Destroy()
+- uid: Dekuple.View.Impl.ViewBase.Destroy*
+  name: Destroy
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Destroy_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.Destroy
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.Destroy
+  nameWithType: ViewBase.Destroy
+- uid: Dekuple.View.Impl.ViewBase.GameObject
+  name: GameObject
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_GameObject
+  commentId: P:Dekuple.View.Impl.ViewBase.GameObject
+  fullName: Dekuple.View.Impl.ViewBase.GameObject
+  nameWithType: ViewBase.GameObject
+- uid: Dekuple.View.Impl.ViewBase.GameObject*
+  name: GameObject
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_GameObject_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.GameObject
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.GameObject
+  nameWithType: ViewBase.GameObject
+- uid: Dekuple.View.Impl.ViewBase.Id
+  name: Id
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Id
+  commentId: P:Dekuple.View.Impl.ViewBase.Id
+  fullName: Dekuple.View.Impl.ViewBase.Id
+  nameWithType: ViewBase.Id
+- uid: Dekuple.View.Impl.ViewBase.Id*
+  name: Id
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Id_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.Id
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.Id
+  nameWithType: ViewBase.Id
+- uid: Dekuple.View.Impl.ViewBase.IsValid
+  name: IsValid
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_IsValid
+  commentId: P:Dekuple.View.Impl.ViewBase.IsValid
+  fullName: Dekuple.View.Impl.ViewBase.IsValid
+  nameWithType: ViewBase.IsValid
+- uid: Dekuple.View.Impl.ViewBase.IsValid*
+  name: IsValid
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_IsValid_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.IsValid
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.IsValid
+  nameWithType: ViewBase.IsValid
+- uid: Dekuple.View.Impl.ViewBase.LifeTime
+  name: LifeTime()
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_LifeTime
+  commentId: M:Dekuple.View.Impl.ViewBase.LifeTime
+  fullName: Dekuple.View.Impl.ViewBase.LifeTime()
+  nameWithType: ViewBase.LifeTime()
+- uid: Dekuple.View.Impl.ViewBase.LifeTime*
+  name: LifeTime
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_LifeTime_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.LifeTime
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.LifeTime
+  nameWithType: ViewBase.LifeTime
+- uid: Dekuple.View.Impl.ViewBase.Model
+  name: Model
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Model
+  commentId: P:Dekuple.View.Impl.ViewBase.Model
+  fullName: Dekuple.View.Impl.ViewBase.Model
+  nameWithType: ViewBase.Model
+- uid: Dekuple.View.Impl.ViewBase.Model*
+  name: Model
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Model_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.Model
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.Model
+  nameWithType: ViewBase.Model
+- uid: Dekuple.View.Impl.ViewBase.OnDestroyed
+  name: OnDestroyed
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_OnDestroyed
+  commentId: E:Dekuple.View.Impl.ViewBase.OnDestroyed
+  fullName: Dekuple.View.Impl.ViewBase.OnDestroyed
+  nameWithType: ViewBase.OnDestroyed
+- uid: Dekuple.View.Impl.ViewBase.Owner
+  name: Owner
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Owner
+  commentId: P:Dekuple.View.Impl.ViewBase.Owner
+  fullName: Dekuple.View.Impl.ViewBase.Owner
+  nameWithType: ViewBase.Owner
+- uid: Dekuple.View.Impl.ViewBase.Owner*
+  name: Owner
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Owner_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.Owner
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.Owner
+  nameWithType: ViewBase.Owner
+- uid: Dekuple.View.Impl.ViewBase.OwnerModel
+  name: OwnerModel
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_OwnerModel
+  commentId: P:Dekuple.View.Impl.ViewBase.OwnerModel
+  fullName: Dekuple.View.Impl.ViewBase.OwnerModel
+  nameWithType: ViewBase.OwnerModel
+- uid: Dekuple.View.Impl.ViewBase.OwnerModel*
+  name: OwnerModel
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_OwnerModel_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.OwnerModel
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.OwnerModel
+  nameWithType: ViewBase.OwnerModel
+- uid: Dekuple.View.Impl.ViewBase.OwnerView
+  name: OwnerView
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_OwnerView
+  commentId: P:Dekuple.View.Impl.ViewBase.OwnerView
+  fullName: Dekuple.View.Impl.ViewBase.OwnerView
+  nameWithType: ViewBase.OwnerView
+- uid: Dekuple.View.Impl.ViewBase.OwnerView*
+  name: OwnerView
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_OwnerView_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.OwnerView
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.OwnerView
+  nameWithType: ViewBase.OwnerView
+- uid: Dekuple.View.Impl.ViewBase.Pause(System.Boolean)
+  name: Pause(Boolean)
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Pause_System_Boolean_
+  commentId: M:Dekuple.View.Impl.ViewBase.Pause(System.Boolean)
+  fullName: Dekuple.View.Impl.ViewBase.Pause(System.Boolean)
+  nameWithType: ViewBase.Pause(Boolean)
+- uid: Dekuple.View.Impl.ViewBase.Pause*
+  name: Pause
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Pause_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.Pause
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.Pause
+  nameWithType: ViewBase.Pause
+- uid: Dekuple.View.Impl.ViewBase.Registry
+  name: Registry
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Registry
+  commentId: P:Dekuple.View.Impl.ViewBase.Registry
+  fullName: Dekuple.View.Impl.ViewBase.Registry
+  nameWithType: ViewBase.Registry
+- uid: Dekuple.View.Impl.ViewBase.Registry*
+  name: Registry
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Registry_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.Registry
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.Registry
+  nameWithType: ViewBase.Registry
+- uid: Dekuple.View.Impl.ViewBase.SameOwner(Dekuple.IEntity)
+  name: SameOwner(IEntity)
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_SameOwner_Dekuple_IEntity_
+  commentId: M:Dekuple.View.Impl.ViewBase.SameOwner(Dekuple.IEntity)
+  fullName: Dekuple.View.Impl.ViewBase.SameOwner(Dekuple.IEntity)
+  nameWithType: ViewBase.SameOwner(IEntity)
+- uid: Dekuple.View.Impl.ViewBase.SameOwner(Dekuple.IOwned)
+  name: SameOwner(IOwned)
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_SameOwner_Dekuple_IOwned_
+  commentId: M:Dekuple.View.Impl.ViewBase.SameOwner(Dekuple.IOwned)
+  fullName: Dekuple.View.Impl.ViewBase.SameOwner(Dekuple.IOwned)
+  nameWithType: ViewBase.SameOwner(IOwned)
+- uid: Dekuple.View.Impl.ViewBase.SameOwner*
+  name: SameOwner
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_SameOwner_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.SameOwner
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.SameOwner
+  nameWithType: ViewBase.SameOwner
+- uid: Dekuple.View.Impl.ViewBase.SetAgent(Dekuple.Agent.IAgent)
+  name: SetAgent(IAgent)
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_SetAgent_Dekuple_Agent_IAgent_
+  commentId: M:Dekuple.View.Impl.ViewBase.SetAgent(Dekuple.Agent.IAgent)
+  fullName: Dekuple.View.Impl.ViewBase.SetAgent(Dekuple.Agent.IAgent)
+  nameWithType: ViewBase.SetAgent(IAgent)
+- uid: Dekuple.View.Impl.ViewBase.SetAgent*
+  name: SetAgent
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_SetAgent_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.SetAgent
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.SetAgent
+  nameWithType: ViewBase.SetAgent
+- uid: Dekuple.View.Impl.ViewBase.SetModel(Dekuple.Model.IModel)
+  name: SetModel(IModel)
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_SetModel_Dekuple_Model_IModel_
+  commentId: M:Dekuple.View.Impl.ViewBase.SetModel(Dekuple.Model.IModel)
+  fullName: Dekuple.View.Impl.ViewBase.SetModel(Dekuple.Model.IModel)
+  nameWithType: ViewBase.SetModel(IModel)
+- uid: Dekuple.View.Impl.ViewBase.SetModel*
+  name: SetModel
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_SetModel_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.SetModel
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.SetModel
+  nameWithType: ViewBase.SetModel
+- uid: Dekuple.View.Impl.ViewBase.SetOwner(Dekuple.IOwner)
+  name: SetOwner(IOwner)
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_SetOwner_Dekuple_IOwner_
+  commentId: M:Dekuple.View.Impl.ViewBase.SetOwner(Dekuple.IOwner)
+  fullName: Dekuple.View.Impl.ViewBase.SetOwner(Dekuple.IOwner)
+  nameWithType: ViewBase.SetOwner(IOwner)
+- uid: Dekuple.View.Impl.ViewBase.SetOwner*
+  name: SetOwner
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_SetOwner_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.SetOwner
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.SetOwner
+  nameWithType: ViewBase.SetOwner
+- uid: Dekuple.View.Impl.ViewBase.Step
+  name: Step()
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Step
+  commentId: M:Dekuple.View.Impl.ViewBase.Step
+  fullName: Dekuple.View.Impl.ViewBase.Step()
+  nameWithType: ViewBase.Step()
+- uid: Dekuple.View.Impl.ViewBase.Step*
+  name: Step
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Step_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.Step
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.Step
+  nameWithType: ViewBase.Step
+- uid: Dekuple.View.Impl.ViewBase.ToString
+  name: ToString()
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_ToString
+  commentId: M:Dekuple.View.Impl.ViewBase.ToString
+  fullName: Dekuple.View.Impl.ViewBase.ToString()
+  nameWithType: ViewBase.ToString()
+- uid: Dekuple.View.Impl.ViewBase.ToString*
+  name: ToString
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_ToString_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.ToString
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.ToString
+  nameWithType: ViewBase.ToString
+- uid: Dekuple.View.Impl.ViewBase.Transform
+  name: Transform
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Transform
+  commentId: P:Dekuple.View.Impl.ViewBase.Transform
+  fullName: Dekuple.View.Impl.ViewBase.Transform
+  nameWithType: ViewBase.Transform
+- uid: Dekuple.View.Impl.ViewBase.Transform*
+  name: Transform
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_Transform_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.Transform
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.Transform
+  nameWithType: ViewBase.Transform
+- uid: Dekuple.View.Impl.ViewBase.ViewRegistry
+  name: ViewRegistry
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_ViewRegistry
+  commentId: P:Dekuple.View.Impl.ViewBase.ViewRegistry
+  fullName: Dekuple.View.Impl.ViewBase.ViewRegistry
+  nameWithType: ViewBase.ViewRegistry
+- uid: Dekuple.View.Impl.ViewBase.ViewRegistry*
+  name: ViewRegistry
+  href: api/Dekuple.View.Impl.ViewBase.html#Dekuple_View_Impl_ViewBase_ViewRegistry_
+  commentId: Overload:Dekuple.View.Impl.ViewBase.ViewRegistry
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase.ViewRegistry
+  nameWithType: ViewBase.ViewRegistry
+- uid: Dekuple.View.Impl.ViewBase`1
+  name: ViewBase<TIAgent>
+  href: api/Dekuple.View.Impl.ViewBase-1.html
+  commentId: T:Dekuple.View.Impl.ViewBase`1
+  name.vb: ViewBase(Of TIAgent)
+  fullName: Dekuple.View.Impl.ViewBase<TIAgent>
+  fullName.vb: Dekuple.View.Impl.ViewBase(Of TIAgent)
+  nameWithType: ViewBase<TIAgent>
+  nameWithType.vb: ViewBase(Of TIAgent)
+- uid: Dekuple.View.Impl.ViewBase`1.Agent
+  name: Agent
+  href: api/Dekuple.View.Impl.ViewBase-1.html#Dekuple_View_Impl_ViewBase_1_Agent
+  commentId: P:Dekuple.View.Impl.ViewBase`1.Agent
+  fullName: Dekuple.View.Impl.ViewBase<TIAgent>.Agent
+  fullName.vb: Dekuple.View.Impl.ViewBase(Of TIAgent).Agent
+  nameWithType: ViewBase<TIAgent>.Agent
+  nameWithType.vb: ViewBase(Of TIAgent).Agent
+- uid: Dekuple.View.Impl.ViewBase`1.Agent*
+  name: Agent
+  href: api/Dekuple.View.Impl.ViewBase-1.html#Dekuple_View_Impl_ViewBase_1_Agent_
+  commentId: Overload:Dekuple.View.Impl.ViewBase`1.Agent
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewBase<TIAgent>.Agent
+  fullName.vb: Dekuple.View.Impl.ViewBase(Of TIAgent).Agent
+  nameWithType: ViewBase<TIAgent>.Agent
+  nameWithType.vb: ViewBase(Of TIAgent).Agent
+- uid: Dekuple.View.Impl.ViewRegistry
+  name: ViewRegistry
+  href: api/Dekuple.View.Impl.ViewRegistry.html
+  commentId: T:Dekuple.View.Impl.ViewRegistry
+  fullName: Dekuple.View.Impl.ViewRegistry
+  nameWithType: ViewRegistry
+- uid: Dekuple.View.Impl.ViewRegistry.Bind*
+  name: Bind
+  href: api/Dekuple.View.Impl.ViewRegistry.html#Dekuple_View_Impl_ViewRegistry_Bind_
+  commentId: Overload:Dekuple.View.Impl.ViewRegistry.Bind
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewRegistry.Bind
+  nameWithType: ViewRegistry.Bind
+- uid: Dekuple.View.Impl.ViewRegistry.Bind``2(``1)
+  name: Bind<TInterface, TImpl>(TImpl)
+  href: api/Dekuple.View.Impl.ViewRegistry.html#Dekuple_View_Impl_ViewRegistry_Bind__2___1_
+  commentId: M:Dekuple.View.Impl.ViewRegistry.Bind``2(``1)
+  name.vb: Bind(Of TInterface, TImpl)(TImpl)
+  fullName: Dekuple.View.Impl.ViewRegistry.Bind<TInterface, TImpl>(TImpl)
+  fullName.vb: Dekuple.View.Impl.ViewRegistry.Bind(Of TInterface, TImpl)(TImpl)
+  nameWithType: ViewRegistry.Bind<TInterface, TImpl>(TImpl)
+  nameWithType.vb: ViewRegistry.Bind(Of TInterface, TImpl)(TImpl)
+- uid: Dekuple.View.Impl.ViewRegistry.FromPrefab*
+  name: FromPrefab
+  href: api/Dekuple.View.Impl.ViewRegistry.html#Dekuple_View_Impl_ViewRegistry_FromPrefab_
+  commentId: Overload:Dekuple.View.Impl.ViewRegistry.FromPrefab
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewRegistry.FromPrefab
+  nameWithType: ViewRegistry.FromPrefab
+- uid: Dekuple.View.Impl.ViewRegistry.FromPrefab``1(UnityEngine.Object)
+  name: FromPrefab<TIView>(Object)
+  href: api/Dekuple.View.Impl.ViewRegistry.html#Dekuple_View_Impl_ViewRegistry_FromPrefab__1_UnityEngine_Object_
+  commentId: M:Dekuple.View.Impl.ViewRegistry.FromPrefab``1(UnityEngine.Object)
+  name.vb: FromPrefab(Of TIView)(Object)
+  fullName: Dekuple.View.Impl.ViewRegistry.FromPrefab<TIView>(UnityEngine.Object)
+  fullName.vb: Dekuple.View.Impl.ViewRegistry.FromPrefab(Of TIView)(UnityEngine.Object)
+  nameWithType: ViewRegistry.FromPrefab<TIView>(Object)
+  nameWithType.vb: ViewRegistry.FromPrefab(Of TIView)(Object)
+- uid: Dekuple.View.Impl.ViewRegistry.FromPrefab``1(UnityEngine.Object,Dekuple.Agent.IAgent)
+  name: FromPrefab<TIView>(Object, IAgent)
+  href: api/Dekuple.View.Impl.ViewRegistry.html#Dekuple_View_Impl_ViewRegistry_FromPrefab__1_UnityEngine_Object_Dekuple_Agent_IAgent_
+  commentId: M:Dekuple.View.Impl.ViewRegistry.FromPrefab``1(UnityEngine.Object,Dekuple.Agent.IAgent)
+  name.vb: FromPrefab(Of TIView)(Object, IAgent)
+  fullName: Dekuple.View.Impl.ViewRegistry.FromPrefab<TIView>(UnityEngine.Object, Dekuple.Agent.IAgent)
+  fullName.vb: Dekuple.View.Impl.ViewRegistry.FromPrefab(Of TIView)(UnityEngine.Object, Dekuple.Agent.IAgent)
+  nameWithType: ViewRegistry.FromPrefab<TIView>(Object, IAgent)
+  nameWithType.vb: ViewRegistry.FromPrefab(Of TIView)(Object, IAgent)
+- uid: Dekuple.View.Impl.ViewRegistry.FromPrefab``1(UnityEngine.Object,UnityEngine.Transform)
+  name: FromPrefab<TIView>(Object, Transform)
+  href: api/Dekuple.View.Impl.ViewRegistry.html#Dekuple_View_Impl_ViewRegistry_FromPrefab__1_UnityEngine_Object_UnityEngine_Transform_
+  commentId: M:Dekuple.View.Impl.ViewRegistry.FromPrefab``1(UnityEngine.Object,UnityEngine.Transform)
+  name.vb: FromPrefab(Of TIView)(Object, Transform)
+  fullName: Dekuple.View.Impl.ViewRegistry.FromPrefab<TIView>(UnityEngine.Object, UnityEngine.Transform)
+  fullName.vb: Dekuple.View.Impl.ViewRegistry.FromPrefab(Of TIView)(UnityEngine.Object, UnityEngine.Transform)
+  nameWithType: ViewRegistry.FromPrefab<TIView>(Object, Transform)
+  nameWithType.vb: ViewRegistry.FromPrefab(Of TIView)(Object, Transform)
+- uid: Dekuple.View.Impl.ViewRegistry.FromPrefab``2(UnityEngine.Object,Dekuple.Registry.IRegistry{``1})
+  name: FromPrefab<TIView, TIAgent>(Object, IRegistry<TIAgent>)
+  href: api/Dekuple.View.Impl.ViewRegistry.html#Dekuple_View_Impl_ViewRegistry_FromPrefab__2_UnityEngine_Object_Dekuple_Registry_IRegistry___1__
+  commentId: M:Dekuple.View.Impl.ViewRegistry.FromPrefab``2(UnityEngine.Object,Dekuple.Registry.IRegistry{``1})
+  name.vb: FromPrefab(Of TIView, TIAgent)(Object, IRegistry(Of TIAgent))
+  fullName: Dekuple.View.Impl.ViewRegistry.FromPrefab<TIView, TIAgent>(UnityEngine.Object, Dekuple.Registry.IRegistry<TIAgent>)
+  fullName.vb: Dekuple.View.Impl.ViewRegistry.FromPrefab(Of TIView, TIAgent)(UnityEngine.Object, Dekuple.Registry.IRegistry(Of TIAgent))
+  nameWithType: ViewRegistry.FromPrefab<TIView, TIAgent>(Object, IRegistry<TIAgent>)
+  nameWithType.vb: ViewRegistry.FromPrefab(Of TIView, TIAgent)(Object, IRegistry(Of TIAgent))
+- uid: Dekuple.View.Impl.ViewRegistry.FromPrefab``3(Dekuple.View.IViewBase,UnityEngine.Object,``2)
+  name: FromPrefab<TIView, TIAgent, TModel>(IViewBase, Object, TModel)
+  href: api/Dekuple.View.Impl.ViewRegistry.html#Dekuple_View_Impl_ViewRegistry_FromPrefab__3_Dekuple_View_IViewBase_UnityEngine_Object___2_
+  commentId: M:Dekuple.View.Impl.ViewRegistry.FromPrefab``3(Dekuple.View.IViewBase,UnityEngine.Object,``2)
+  name.vb: FromPrefab(Of TIView, TIAgent, TModel)(IViewBase, Object, TModel)
+  fullName: Dekuple.View.Impl.ViewRegistry.FromPrefab<TIView, TIAgent, TModel>(Dekuple.View.IViewBase, UnityEngine.Object, TModel)
+  fullName.vb: Dekuple.View.Impl.ViewRegistry.FromPrefab(Of TIView, TIAgent, TModel)(Dekuple.View.IViewBase, UnityEngine.Object, TModel)
+  nameWithType: ViewRegistry.FromPrefab<TIView, TIAgent, TModel>(IViewBase, Object, TModel)
+  nameWithType.vb: ViewRegistry.FromPrefab(Of TIView, TIAgent, TModel)(IViewBase, Object, TModel)
+- uid: Dekuple.View.Impl.ViewRegistry.FromPrefab``3(UnityEngine.Object,Dekuple.Registry.IRegistry{``2},Dekuple.Registry.IRegistry{``1})
+  name: FromPrefab<TIView, TIAgent, TIModel>(Object, IRegistry<TIModel>, IRegistry<TIAgent>)
+  href: api/Dekuple.View.Impl.ViewRegistry.html#Dekuple_View_Impl_ViewRegistry_FromPrefab__3_UnityEngine_Object_Dekuple_Registry_IRegistry___2__Dekuple_Registry_IRegistry___1__
+  commentId: M:Dekuple.View.Impl.ViewRegistry.FromPrefab``3(UnityEngine.Object,Dekuple.Registry.IRegistry{``2},Dekuple.Registry.IRegistry{``1})
+  name.vb: FromPrefab(Of TIView, TIAgent, TIModel)(Object, IRegistry(Of TIModel), IRegistry(Of TIAgent))
+  fullName: Dekuple.View.Impl.ViewRegistry.FromPrefab<TIView, TIAgent, TIModel>(UnityEngine.Object, Dekuple.Registry.IRegistry<TIModel>, Dekuple.Registry.IRegistry<TIAgent>)
+  fullName.vb: Dekuple.View.Impl.ViewRegistry.FromPrefab(Of TIView, TIAgent, TIModel)(UnityEngine.Object, Dekuple.Registry.IRegistry(Of TIModel), Dekuple.Registry.IRegistry(Of TIAgent))
+  nameWithType: ViewRegistry.FromPrefab<TIView, TIAgent, TIModel>(Object, IRegistry<TIModel>, IRegistry<TIAgent>)
+  nameWithType.vb: ViewRegistry.FromPrefab(Of TIView, TIAgent, TIModel)(Object, IRegistry(Of TIModel), IRegistry(Of TIAgent))
+- uid: Dekuple.View.Impl.ViewRegistry.InjectAllGameObjects
+  name: InjectAllGameObjects()
+  href: api/Dekuple.View.Impl.ViewRegistry.html#Dekuple_View_Impl_ViewRegistry_InjectAllGameObjects
+  commentId: M:Dekuple.View.Impl.ViewRegistry.InjectAllGameObjects
+  fullName: Dekuple.View.Impl.ViewRegistry.InjectAllGameObjects()
+  nameWithType: ViewRegistry.InjectAllGameObjects()
+- uid: Dekuple.View.Impl.ViewRegistry.InjectAllGameObjects*
+  name: InjectAllGameObjects
+  href: api/Dekuple.View.Impl.ViewRegistry.html#Dekuple_View_Impl_ViewRegistry_InjectAllGameObjects_
+  commentId: Overload:Dekuple.View.Impl.ViewRegistry.InjectAllGameObjects
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewRegistry.InjectAllGameObjects
+  nameWithType: ViewRegistry.InjectAllGameObjects
+- uid: Dekuple.View.Impl.ViewRegistry.InjectGameObject(Dekuple.View.IViewBase)
+  name: InjectGameObject(IViewBase)
+  href: api/Dekuple.View.Impl.ViewRegistry.html#Dekuple_View_Impl_ViewRegistry_InjectGameObject_Dekuple_View_IViewBase_
+  commentId: M:Dekuple.View.Impl.ViewRegistry.InjectGameObject(Dekuple.View.IViewBase)
+  fullName: Dekuple.View.Impl.ViewRegistry.InjectGameObject(Dekuple.View.IViewBase)
+  nameWithType: ViewRegistry.InjectGameObject(IViewBase)
+- uid: Dekuple.View.Impl.ViewRegistry.InjectGameObject*
+  name: InjectGameObject
+  href: api/Dekuple.View.Impl.ViewRegistry.html#Dekuple_View_Impl_ViewRegistry_InjectGameObject_
+  commentId: Overload:Dekuple.View.Impl.ViewRegistry.InjectGameObject
+  isSpec: "True"
+  fullName: Dekuple.View.Impl.ViewRegistry.InjectGameObject
+  nameWithType: ViewRegistry.InjectGameObject
+- uid: Dekuple.View.IView`1
+  name: IView<TIAgent>
+  href: api/Dekuple.View.IView-1.html
+  commentId: T:Dekuple.View.IView`1
+  name.vb: IView(Of TIAgent)
+  fullName: Dekuple.View.IView<TIAgent>
+  fullName.vb: Dekuple.View.IView(Of TIAgent)
+  nameWithType: IView<TIAgent>
+  nameWithType.vb: IView(Of TIAgent)
+- uid: Dekuple.View.IView`1.Agent
+  name: Agent
+  href: api/Dekuple.View.IView-1.html#Dekuple_View_IView_1_Agent
+  commentId: P:Dekuple.View.IView`1.Agent
+  fullName: Dekuple.View.IView<TIAgent>.Agent
+  fullName.vb: Dekuple.View.IView(Of TIAgent).Agent
+  nameWithType: IView<TIAgent>.Agent
+  nameWithType.vb: IView(Of TIAgent).Agent
+- uid: Dekuple.View.IView`1.Agent*
+  name: Agent
+  href: api/Dekuple.View.IView-1.html#Dekuple_View_IView_1_Agent_
+  commentId: Overload:Dekuple.View.IView`1.Agent
+  isSpec: "True"
+  fullName: Dekuple.View.IView<TIAgent>.Agent
+  fullName.vb: Dekuple.View.IView(Of TIAgent).Agent
+  nameWithType: IView<TIAgent>.Agent
+  nameWithType.vb: IView(Of TIAgent).Agent
+- uid: Dekuple.View.IViewBase
+  name: IViewBase
+  href: api/Dekuple.View.IViewBase.html
+  commentId: T:Dekuple.View.IViewBase
+  fullName: Dekuple.View.IViewBase
+  nameWithType: IViewBase
+- uid: Dekuple.View.IViewBase.AgentBase
+  name: AgentBase
+  href: api/Dekuple.View.IViewBase.html#Dekuple_View_IViewBase_AgentBase
+  commentId: P:Dekuple.View.IViewBase.AgentBase
+  fullName: Dekuple.View.IViewBase.AgentBase
+  nameWithType: IViewBase.AgentBase
+- uid: Dekuple.View.IViewBase.AgentBase*
+  name: AgentBase
+  href: api/Dekuple.View.IViewBase.html#Dekuple_View_IViewBase_AgentBase_
+  commentId: Overload:Dekuple.View.IViewBase.AgentBase
+  isSpec: "True"
+  fullName: Dekuple.View.IViewBase.AgentBase
+  nameWithType: IViewBase.AgentBase
+- uid: Dekuple.View.IViewBase.GameObject
+  name: GameObject
+  href: api/Dekuple.View.IViewBase.html#Dekuple_View_IViewBase_GameObject
+  commentId: P:Dekuple.View.IViewBase.GameObject
+  fullName: Dekuple.View.IViewBase.GameObject
+  nameWithType: IViewBase.GameObject
+- uid: Dekuple.View.IViewBase.GameObject*
+  name: GameObject
+  href: api/Dekuple.View.IViewBase.html#Dekuple_View_IViewBase_GameObject_
+  commentId: Overload:Dekuple.View.IViewBase.GameObject
+  isSpec: "True"
+  fullName: Dekuple.View.IViewBase.GameObject
+  nameWithType: IViewBase.GameObject
+- uid: Dekuple.View.IViewBase.Model
+  name: Model
+  href: api/Dekuple.View.IViewBase.html#Dekuple_View_IViewBase_Model
+  commentId: P:Dekuple.View.IViewBase.Model
+  fullName: Dekuple.View.IViewBase.Model
+  nameWithType: IViewBase.Model
+- uid: Dekuple.View.IViewBase.Model*
+  name: Model
+  href: api/Dekuple.View.IViewBase.html#Dekuple_View_IViewBase_Model_
+  commentId: Overload:Dekuple.View.IViewBase.Model
+  isSpec: "True"
+  fullName: Dekuple.View.IViewBase.Model
+  nameWithType: IViewBase.Model
+- uid: Dekuple.View.IViewBase.SetAgent(Dekuple.Agent.IAgent)
+  name: SetAgent(IAgent)
+  href: api/Dekuple.View.IViewBase.html#Dekuple_View_IViewBase_SetAgent_Dekuple_Agent_IAgent_
+  commentId: M:Dekuple.View.IViewBase.SetAgent(Dekuple.Agent.IAgent)
+  fullName: Dekuple.View.IViewBase.SetAgent(Dekuple.Agent.IAgent)
+  nameWithType: IViewBase.SetAgent(IAgent)
+- uid: Dekuple.View.IViewBase.SetAgent*
+  name: SetAgent
+  href: api/Dekuple.View.IViewBase.html#Dekuple_View_IViewBase_SetAgent_
+  commentId: Overload:Dekuple.View.IViewBase.SetAgent
+  isSpec: "True"
+  fullName: Dekuple.View.IViewBase.SetAgent
+  nameWithType: IViewBase.SetAgent
+- uid: Dekuple.View.IViewBase.SetModel(Dekuple.Model.IModel)
+  name: SetModel(IModel)
+  href: api/Dekuple.View.IViewBase.html#Dekuple_View_IViewBase_SetModel_Dekuple_Model_IModel_
+  commentId: M:Dekuple.View.IViewBase.SetModel(Dekuple.Model.IModel)
+  fullName: Dekuple.View.IViewBase.SetModel(Dekuple.Model.IModel)
+  nameWithType: IViewBase.SetModel(IModel)
+- uid: Dekuple.View.IViewBase.SetModel*
+  name: SetModel
+  href: api/Dekuple.View.IViewBase.html#Dekuple_View_IViewBase_SetModel_
+  commentId: Overload:Dekuple.View.IViewBase.SetModel
+  isSpec: "True"
+  fullName: Dekuple.View.IViewBase.SetModel
+  nameWithType: IViewBase.SetModel
+- uid: Dekuple.View.IViewBase.Transform
+  name: Transform
+  href: api/Dekuple.View.IViewBase.html#Dekuple_View_IViewBase_Transform
+  commentId: P:Dekuple.View.IViewBase.Transform
+  fullName: Dekuple.View.IViewBase.Transform
+  nameWithType: IViewBase.Transform
+- uid: Dekuple.View.IViewBase.Transform*
+  name: Transform
+  href: api/Dekuple.View.IViewBase.html#Dekuple_View_IViewBase_Transform_
+  commentId: Overload:Dekuple.View.IViewBase.Transform
+  isSpec: "True"
+  fullName: Dekuple.View.IViewBase.Transform
+  nameWithType: IViewBase.Transform
+- uid: Dekuple.View.IViewRegistry
+  name: IViewRegistry
+  href: api/Dekuple.View.IViewRegistry.html
+  commentId: T:Dekuple.View.IViewRegistry
+  fullName: Dekuple.View.IViewRegistry
+  nameWithType: IViewRegistry
+- uid: Dekuple.View.IViewRegistry.FromPrefab*
+  name: FromPrefab
+  href: api/Dekuple.View.IViewRegistry.html#Dekuple_View_IViewRegistry_FromPrefab_
+  commentId: Overload:Dekuple.View.IViewRegistry.FromPrefab
+  isSpec: "True"
+  fullName: Dekuple.View.IViewRegistry.FromPrefab
+  nameWithType: IViewRegistry.FromPrefab
+- uid: Dekuple.View.IViewRegistry.FromPrefab``1(UnityEngine.Object)
+  name: FromPrefab<TIView>(Object)
+  href: api/Dekuple.View.IViewRegistry.html#Dekuple_View_IViewRegistry_FromPrefab__1_UnityEngine_Object_
+  commentId: M:Dekuple.View.IViewRegistry.FromPrefab``1(UnityEngine.Object)
+  name.vb: FromPrefab(Of TIView)(Object)
+  fullName: Dekuple.View.IViewRegistry.FromPrefab<TIView>(UnityEngine.Object)
+  fullName.vb: Dekuple.View.IViewRegistry.FromPrefab(Of TIView)(UnityEngine.Object)
+  nameWithType: IViewRegistry.FromPrefab<TIView>(Object)
+  nameWithType.vb: IViewRegistry.FromPrefab(Of TIView)(Object)
+- uid: Dekuple.View.IViewRegistry.FromPrefab``1(UnityEngine.Object,Dekuple.Agent.IAgent)
+  name: FromPrefab<TIView>(Object, IAgent)
+  href: api/Dekuple.View.IViewRegistry.html#Dekuple_View_IViewRegistry_FromPrefab__1_UnityEngine_Object_Dekuple_Agent_IAgent_
+  commentId: M:Dekuple.View.IViewRegistry.FromPrefab``1(UnityEngine.Object,Dekuple.Agent.IAgent)
+  name.vb: FromPrefab(Of TIView)(Object, IAgent)
+  fullName: Dekuple.View.IViewRegistry.FromPrefab<TIView>(UnityEngine.Object, Dekuple.Agent.IAgent)
+  fullName.vb: Dekuple.View.IViewRegistry.FromPrefab(Of TIView)(UnityEngine.Object, Dekuple.Agent.IAgent)
+  nameWithType: IViewRegistry.FromPrefab<TIView>(Object, IAgent)
+  nameWithType.vb: IViewRegistry.FromPrefab(Of TIView)(Object, IAgent)
+- uid: Dekuple.View.IViewRegistry.FromPrefab``1(UnityEngine.Object,UnityEngine.Transform)
+  name: FromPrefab<TIView>(Object, Transform)
+  href: api/Dekuple.View.IViewRegistry.html#Dekuple_View_IViewRegistry_FromPrefab__1_UnityEngine_Object_UnityEngine_Transform_
+  commentId: M:Dekuple.View.IViewRegistry.FromPrefab``1(UnityEngine.Object,UnityEngine.Transform)
+  name.vb: FromPrefab(Of TIView)(Object, Transform)
+  fullName: Dekuple.View.IViewRegistry.FromPrefab<TIView>(UnityEngine.Object, UnityEngine.Transform)
+  fullName.vb: Dekuple.View.IViewRegistry.FromPrefab(Of TIView)(UnityEngine.Object, UnityEngine.Transform)
+  nameWithType: IViewRegistry.FromPrefab<TIView>(Object, Transform)
+  nameWithType.vb: IViewRegistry.FromPrefab(Of TIView)(Object, Transform)
+- uid: Dekuple.View.IViewRegistry.FromPrefab``2(UnityEngine.Object,Dekuple.Registry.IRegistry{``1})
+  name: FromPrefab<TIView, TIAgent>(Object, IRegistry<TIAgent>)
+  href: api/Dekuple.View.IViewRegistry.html#Dekuple_View_IViewRegistry_FromPrefab__2_UnityEngine_Object_Dekuple_Registry_IRegistry___1__
+  commentId: M:Dekuple.View.IViewRegistry.FromPrefab``2(UnityEngine.Object,Dekuple.Registry.IRegistry{``1})
+  name.vb: FromPrefab(Of TIView, TIAgent)(Object, IRegistry(Of TIAgent))
+  fullName: Dekuple.View.IViewRegistry.FromPrefab<TIView, TIAgent>(UnityEngine.Object, Dekuple.Registry.IRegistry<TIAgent>)
+  fullName.vb: Dekuple.View.IViewRegistry.FromPrefab(Of TIView, TIAgent)(UnityEngine.Object, Dekuple.Registry.IRegistry(Of TIAgent))
+  nameWithType: IViewRegistry.FromPrefab<TIView, TIAgent>(Object, IRegistry<TIAgent>)
+  nameWithType.vb: IViewRegistry.FromPrefab(Of TIView, TIAgent)(Object, IRegistry(Of TIAgent))
+- uid: Dekuple.View.IViewRegistry.FromPrefab``3(UnityEngine.Object,Dekuple.Registry.IRegistry{``2},Dekuple.Registry.IRegistry{``1})
+  name: FromPrefab<TIView, TIAgent, TIModel>(Object, IRegistry<TIModel>, IRegistry<TIAgent>)
+  href: api/Dekuple.View.IViewRegistry.html#Dekuple_View_IViewRegistry_FromPrefab__3_UnityEngine_Object_Dekuple_Registry_IRegistry___2__Dekuple_Registry_IRegistry___1__
+  commentId: M:Dekuple.View.IViewRegistry.FromPrefab``3(UnityEngine.Object,Dekuple.Registry.IRegistry{``2},Dekuple.Registry.IRegistry{``1})
+  name.vb: FromPrefab(Of TIView, TIAgent, TIModel)(Object, IRegistry(Of TIModel), IRegistry(Of TIAgent))
+  fullName: Dekuple.View.IViewRegistry.FromPrefab<TIView, TIAgent, TIModel>(UnityEngine.Object, Dekuple.Registry.IRegistry<TIModel>, Dekuple.Registry.IRegistry<TIAgent>)
+  fullName.vb: Dekuple.View.IViewRegistry.FromPrefab(Of TIView, TIAgent, TIModel)(UnityEngine.Object, Dekuple.Registry.IRegistry(Of TIModel), Dekuple.Registry.IRegistry(Of TIAgent))
+  nameWithType: IViewRegistry.FromPrefab<TIView, TIAgent, TIModel>(Object, IRegistry<TIModel>, IRegistry<TIAgent>)
+  nameWithType.vb: IViewRegistry.FromPrefab(Of TIView, TIAgent, TIModel)(Object, IRegistry(Of TIModel), IRegistry(Of TIAgent))
+- uid: Dekuple.View.IViewRegistry.InjectAllGameObjects
+  name: InjectAllGameObjects()
+  href: api/Dekuple.View.IViewRegistry.html#Dekuple_View_IViewRegistry_InjectAllGameObjects
+  commentId: M:Dekuple.View.IViewRegistry.InjectAllGameObjects
+  fullName: Dekuple.View.IViewRegistry.InjectAllGameObjects()
+  nameWithType: IViewRegistry.InjectAllGameObjects()
+- uid: Dekuple.View.IViewRegistry.InjectAllGameObjects*
+  name: InjectAllGameObjects
+  href: api/Dekuple.View.IViewRegistry.html#Dekuple_View_IViewRegistry_InjectAllGameObjects_
+  commentId: Overload:Dekuple.View.IViewRegistry.InjectAllGameObjects
+  isSpec: "True"
+  fullName: Dekuple.View.IViewRegistry.InjectAllGameObjects
+  nameWithType: IViewRegistry.InjectAllGameObjects
+- uid: Dekuple.View.IViewRegistry.InjectGameObject(Dekuple.View.IViewBase)
+  name: InjectGameObject(IViewBase)
+  href: api/Dekuple.View.IViewRegistry.html#Dekuple_View_IViewRegistry_InjectGameObject_Dekuple_View_IViewBase_
+  commentId: M:Dekuple.View.IViewRegistry.InjectGameObject(Dekuple.View.IViewBase)
+  fullName: Dekuple.View.IViewRegistry.InjectGameObject(Dekuple.View.IViewBase)
+  nameWithType: IViewRegistry.InjectGameObject(IViewBase)
+- uid: Dekuple.View.IViewRegistry.InjectGameObject*
+  name: InjectGameObject
+  href: api/Dekuple.View.IViewRegistry.html#Dekuple_View_IViewRegistry_InjectGameObject_
+  commentId: Overload:Dekuple.View.IViewRegistry.InjectGameObject
+  isSpec: "True"
+  fullName: Dekuple.View.IViewRegistry.InjectGameObject
+  nameWithType: IViewRegistry.InjectGameObject

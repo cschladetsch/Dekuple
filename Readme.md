@@ -95,6 +95,7 @@ public TIView FromPrefab<TIView>(Object prefab, IRegistry<TIModel> models, IRegi
 |prefab         | The prefab to make an instance of.
 |parent         | Parent that will be assigned to the new object.      |
 |agent          | The agent to type to give to the newly created object.      |
+|agents| The agent registry to find an appropriate agent from|
 
 Create a new View from the given prefab. Its model and agent will need to be added seperately if required. Equivalent to [UnityEngine.Object.Instantiate](https://docs.unity3d.com/ScriptReference/Object.Instantiate.html).
 

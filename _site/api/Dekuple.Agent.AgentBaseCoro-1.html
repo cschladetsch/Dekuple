@@ -1,0 +1,575 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AgentBaseCoro&lt;TModel&gt;
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AgentBaseCoro&lt;TModel&gt;
+   ">
+    <meta name="generator" content="docfx 2.41.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Dekuple.Agent.AgentBaseCoro`1">
+  
+  
+  <h1 id="Dekuple_Agent_AgentBaseCoro_1" data-uid="Dekuple.Agent.AgentBaseCoro`1" class="text-break">Class AgentBaseCoro&lt;TModel&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>Base for agents that perform actions over time.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Dekuple.Agent.AgentLogger.html">AgentLogger</a></div>
+    <div class="level2"><a class="xref" href="Dekuple.Agent.AgentBase-1.html">AgentBase</a>&lt;TModel&gt;</div>
+    <div class="level3"><span class="xref">AgentBaseCoro&lt;TModel&gt;</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Dekuple.Agent.IAgent-1.html">IAgent</a>&lt;TModel&gt;</div>
+    <div><a class="xref" href="Dekuple.Agent.IAgent.html">IAgent</a></div>
+    <div><span class="xref">Flow.ILogger</span></div>
+    <div><span class="xref">Flow.ITransient</span></div>
+    <div><span class="xref">Flow.INamed</span></div>
+    <div><a class="xref" href="Dekuple.IEntity.html">IEntity</a></div>
+    <div><a class="xref" href="Dekuple.IHasId.html">IHasId</a></div>
+    <div><a class="xref" href="Dekuple.IOwned.html">IOwned</a></div>
+    <div><a class="xref" href="Dekuple.Registry.IHasRegistry-1.html">IHasRegistry</a>&lt;<a class="xref" href="Dekuple.Agent.IAgent.html">IAgent</a>&gt;</div>
+    <div><a class="xref" href="Dekuple.IHasDestroyHandler-1.html">IHasDestroyHandler</a>&lt;<a class="xref" href="Dekuple.Agent.IAgent.html">IAgent</a>&gt;</div>
+    <div><a class="xref" href="Dekuple.IHasDestroyHandler.html">IHasDestroyHandler</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_OnDestroyed">AgentBase&lt;TModel&gt;.OnDestroyed</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Registry">AgentBase&lt;TModel&gt;.Registry</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Id">AgentBase&lt;TModel&gt;.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_BaseModel">AgentBase&lt;TModel&gt;.BaseModel</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Model">AgentBase&lt;TModel&gt;.Model</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Owner">AgentBase&lt;TModel&gt;.Owner</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_IsValid">AgentBase&lt;TModel&gt;.IsValid</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_SameOwner_Dekuple_IEntity_">AgentBase&lt;TModel&gt;.SameOwner(IEntity)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_SetOwner_Dekuple_IOwner_">AgentBase&lt;TModel&gt;.SetOwner(IOwner)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_SameOwner_Dekuple_IOwned_">AgentBase&lt;TModel&gt;.SameOwner(IOwned)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Create">AgentBase&lt;TModel&gt;.Create()</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_AddSubscriptions">AgentBase&lt;TModel&gt;.AddSubscriptions()</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentBase-1.html#Dekuple_Agent_AgentBase_1_Destroy">AgentBase&lt;TModel&gt;.Destroy()</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Completed">AgentLogger.Completed</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Active">AgentLogger.Active</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Kernel">AgentLogger.Kernel</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Factory">AgentLogger.Factory</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Root">AgentLogger.Root</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Name">AgentLogger.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_LogPrefix">AgentLogger.LogPrefix</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_LogSubject">AgentLogger.LogSubject</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_ShowSource">AgentLogger.ShowSource</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_ShowStack">AgentLogger.ShowStack</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Verbosity">AgentLogger.Verbosity</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger__log">AgentLogger._log</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Named_System_String_">AgentLogger.Named(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Complete">AgentLogger.Complete()</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Info_System_String_System_Object___">AgentLogger.Info(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Warn_System_String_System_Object___">AgentLogger.Warn(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Error_System_String_System_Object___">AgentLogger.Error(String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_Verbose_System_Int32_System_String_System_Object___">AgentLogger.Verbose(Int32, String, Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Dekuple.Agent.AgentLogger.html#Dekuple_Agent_AgentLogger_TransientCompleted">AgentLogger.TransientCompleted()</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Dekuple.Agent.html">Dekuple.Agent</a></h6>
+  <h6><strong>Assembly</strong>: Dekuple.dll</h6>
+  <h5 id="Dekuple_Agent_AgentBaseCoro_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class AgentBaseCoro&lt;TModel&gt; : AgentBase&lt;TModel&gt;, IAgent&lt;TModel&gt;, IAgent, ILogger, ITransient, INamed, IEntity, IHasId, IOwned, IHasRegistry&lt;IAgent&gt;, IHasDestroyHandler&lt;IAgent&gt;, IHasDestroyHandler where TModel : class, IModel</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TModel</span></td>
+        <td><p>The model that this Agent represents</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Agent_AgentBaseCoro_1__ctor__0_.md&amp;value=---%0Auid%3A%20Dekuple.Agent.AgentBaseCoro%601.%23ctor(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Agent/Impl/AgentBaseCoro.cs/#L34">View Source</a>
+  </span>
+  <a id="Dekuple_Agent_AgentBaseCoro_1__ctor_" data-uid="Dekuple.Agent.AgentBaseCoro`1.#ctor*"></a>
+  <h4 id="Dekuple_Agent_AgentBaseCoro_1__ctor__0_" data-uid="Dekuple.Agent.AgentBaseCoro`1.#ctor(`0)">AgentBaseCoro(TModel)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected AgentBaseCoro(TModel model)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TModel</span></td>
+        <td><span class="parametername">model</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Agent_AgentBaseCoro_1__Node.md&amp;value=---%0Auid%3A%20Dekuple.Agent.AgentBaseCoro%601._Node%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Agent/Impl/AgentBaseCoro.cs/#L21">View Source</a>
+  </span>
+  <a id="Dekuple_Agent_AgentBaseCoro_1__Node_" data-uid="Dekuple.Agent.AgentBaseCoro`1._Node*"></a>
+  <h4 id="Dekuple_Agent_AgentBaseCoro_1__Node" data-uid="Dekuple.Agent.AgentBaseCoro`1._Node">_Node</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected INode _Node { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Flow.INode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Agent_AgentBaseCoro_1_NewCoro_System_Func_Flow_IGenerator_System_Collections_IEnumerator__.md&amp;value=---%0Auid%3A%20Dekuple.Agent.AgentBaseCoro%601.NewCoro(System.Func%7BFlow.IGenerator%2CSystem.Collections.IEnumerator%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Agent/Impl/AgentBaseCoro.cs/#L39">View Source</a>
+  </span>
+  <a id="Dekuple_Agent_AgentBaseCoro_1_NewCoro_" data-uid="Dekuple.Agent.AgentBaseCoro`1.NewCoro*"></a>
+  <h4 id="Dekuple_Agent_AgentBaseCoro_1_NewCoro_System_Func_Flow_IGenerator_System_Collections_IEnumerator__" data-uid="Dekuple.Agent.AgentBaseCoro`1.NewCoro(System.Func{Flow.IGenerator,System.Collections.IEnumerator})">NewCoro(Func&lt;IGenerator, IEnumerator&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IGenerator NewCoro(Func&lt;IGenerator, IEnumerator&gt; fun)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">Flow.IGenerator</span>, <span class="xref">System.Collections.IEnumerator</span>&gt;</td>
+        <td><span class="parametername">fun</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Flow.IGenerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Agent_AgentBaseCoro_1_NewCoro__1_System_Func_Flow_IGenerator___0_System_Collections_IEnumerator____0_.md&amp;value=---%0Auid%3A%20Dekuple.Agent.AgentBaseCoro%601.NewCoro%60%601(System.Func%7BFlow.IGenerator%2C%60%600%2CSystem.Collections.IEnumerator%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Agent/Impl/AgentBaseCoro.cs/#L46">View Source</a>
+  </span>
+  <a id="Dekuple_Agent_AgentBaseCoro_1_NewCoro_" data-uid="Dekuple.Agent.AgentBaseCoro`1.NewCoro*"></a>
+  <h4 id="Dekuple_Agent_AgentBaseCoro_1_NewCoro__1_System_Func_Flow_IGenerator___0_System_Collections_IEnumerator____0_" data-uid="Dekuple.Agent.AgentBaseCoro`1.NewCoro``1(System.Func{Flow.IGenerator,``0,System.Collections.IEnumerator},``0)">NewCoro&lt;T0&gt;(Func&lt;IGenerator, T0, IEnumerator&gt;, T0)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IGenerator NewCoro&lt;T0&gt;(Func&lt;IGenerator, T0, IEnumerator&gt; fun, T0 t0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">Flow.IGenerator</span>, T0, <span class="xref">System.Collections.IEnumerator</span>&gt;</td>
+        <td><span class="parametername">fun</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">t0</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Flow.IGenerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Agent_AgentBaseCoro_1_NewCoro__2_System_Func_Flow_IGenerator___0___1_System_Collections_IEnumerator____0___1_.md&amp;value=---%0Auid%3A%20Dekuple.Agent.AgentBaseCoro%601.NewCoro%60%602(System.Func%7BFlow.IGenerator%2C%60%600%2C%60%601%2CSystem.Collections.IEnumerator%7D%2C%60%600%2C%60%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Agent/Impl/AgentBaseCoro.cs/#L53">View Source</a>
+  </span>
+  <a id="Dekuple_Agent_AgentBaseCoro_1_NewCoro_" data-uid="Dekuple.Agent.AgentBaseCoro`1.NewCoro*"></a>
+  <h4 id="Dekuple_Agent_AgentBaseCoro_1_NewCoro__2_System_Func_Flow_IGenerator___0___1_System_Collections_IEnumerator____0___1_" data-uid="Dekuple.Agent.AgentBaseCoro`1.NewCoro``2(System.Func{Flow.IGenerator,``0,``1,System.Collections.IEnumerator},``0,``1)">NewCoro&lt;T0, T1&gt;(Func&lt;IGenerator, T0, T1, IEnumerator&gt;, T0, T1)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IGenerator NewCoro&lt;T0, T1&gt;(Func&lt;IGenerator, T0, T1, IEnumerator&gt; fun, T0 t0, T1 t1)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">Flow.IGenerator</span>, T0, T1, <span class="xref">System.Collections.IEnumerator</span>&gt;</td>
+        <td><span class="parametername">fun</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T0</span></td>
+        <td><span class="parametername">t0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">t1</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Flow.IGenerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T0</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Dekuple.Agent.IAgent-1.html">IAgent&lt;TModel&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.Agent.IAgent.html">IAgent</a>
+  </div>
+  <div>
+      <span class="xref">Flow.ILogger</span>
+  </div>
+  <div>
+      <span class="xref">Flow.ITransient</span>
+  </div>
+  <div>
+      <span class="xref">Flow.INamed</span>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.IEntity.html">IEntity</a>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.IHasId.html">IHasId</a>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.IOwned.html">IOwned</a>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.Registry.IHasRegistry-1.html">IHasRegistry&lt;TBase&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.IHasDestroyHandler-1.html">IHasDestroyHandler&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="Dekuple.IHasDestroyHandler.html">IHasDestroyHandler</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/LiminalVR/Dekuple/new/develop/apiSpec/new?filename=Dekuple_Agent_AgentBaseCoro_1.md&amp;value=---%0Auid%3A%20Dekuple.Agent.AgentBaseCoro%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/LiminalVR/Dekuple/blob/develop/Agent/Impl/AgentBaseCoro.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
