@@ -22,10 +22,9 @@ namespace Dekuple.Model
         public IRegistry<IModel> Registry { get; set; }
         public string Name { get; set; }
         public Guid Id { get; /*private*/ set; }
-        public IReadOnlyReactiveProperty<bool> Destroyed => _destroyed;
         public IReadOnlyReactiveProperty<IOwner> Owner => _owner;
 
-        private readonly BoolReactiveProperty _destroyed;
+        private bool _destroyed;
         private readonly ReactiveProperty<IOwner> _owner;
         private bool _prepared;
 
@@ -45,15 +44,19 @@ namespace Dekuple.Model
             return other.Owner.Value == Owner.Value;
         }
 
-        protected ModelBase(IOwner owner)
+        protected ModelBase()
         {
             LogSubject = this;
             LogPrefix = GetType().Name;
-            _owner = new ReactiveProperty<IOwner>(owner);
-            _destroyed = new BoolReactiveProperty(false);
             Verbosity = Parameters.DefaultLogVerbosity;
             ShowStack = Parameters.DefaultShowTraceStack;
             ShowSource = Parameters.DefaultShowTraceSource;
+        }
+
+        protected ModelBase(IOwner owner)
+            : this()
+        {
+            _owner = new ReactiveProperty<IOwner>(owner);
         }
 
         public bool SameOwner(IOwned other)
@@ -63,7 +66,11 @@ namespace Dekuple.Model
             return ReferenceEquals(other.Owner.Value, Owner.Value);
         }
 
-        public virtual void PrepareModels()
+        public virtual void Create()
+        {
+        }
+
+        public virtual void Begin()
         {
             Assert.IsFalse(_prepared);
             if (_prepared)
@@ -74,17 +81,19 @@ namespace Dekuple.Model
             _prepared = true;
         }
 
+        public virtual void AddSubscriptions()
+        {
+        }
+
         public virtual void Destroy()
         {
             Verbose(40, $"Destroy {this}");
-            if (Destroyed.Value)
-            {
-                Warn($"Attempt to destroy {this} twice");
+            if (_destroyed)
                 return;
-            }
+
+            _destroyed = true;
 
             OnDestroyed?.Invoke(this);
-            _destroyed.Value = true;
             Id = Guid.Empty;
         }
 
@@ -101,28 +110,15 @@ namespace Dekuple.Model
         {
             Error($"Not {text} implemented");
         }
-
-        public virtual void StartGame()
-        {
-            Assert.IsFalse(_started);
-            _started = true;
-        }
-
-        public virtual void EndGame()
-        {
-            _started = false;
-        }
-
-        private bool _started;
     }
 }
 
-static class ModelExt
-{
-    public static T AddTo<T>(this T disposable, Dekuple.Model.IModel model)
-        where T : IDisposable
-    {
-        model.Destroyed.Subscribe(m => disposable.Dispose());
-        return disposable;
-    }
-}
+//static class ModelExt
+//{
+//    public static T AddTo<T>(this T disposable, Dekuple.Model.IModel model)
+//        where T : IDisposable
+//    {
+//        model.Destroyed.Subscribe(m => disposable.Dispose());
+//        return disposable;
+//    }
+//}
