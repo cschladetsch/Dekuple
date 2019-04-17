@@ -84,7 +84,6 @@ namespace Dekuple.View.Impl
 
         private void Awake()
         {
-            // Awake can be called twice for an unknown reason (DontDestroyOnLoad?)
             if (_created)
             {
                 Warn($"{this} has already been Awoken. Aborting.");
