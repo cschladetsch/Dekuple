@@ -253,7 +253,6 @@
     <Compile Include="Agent\Impl\AgentBaseCoro.cs" />
     <Compile Include="Agent\Impl\AgentLogger.cs" />
     <Compile Include="Agent\Impl\AgentRegistry.cs" />
-    <Compile Include="EDebugLevel.cs" />
     <Compile Include="ExtentionMethods\CollectionExtensions.cs" />
     <Compile Include="ExtentionMethods\TransformExtentions.cs" />
     <Compile Include="GlobalSuppressions.cs" />
