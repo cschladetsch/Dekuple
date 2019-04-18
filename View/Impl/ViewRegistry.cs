@@ -52,24 +52,21 @@ namespace Dekuple.View.Impl
             return base.Bind<TInterface, TImpl>(single);
         }
 
-        public TIView FromPrefab<TIView>(Object prefab, IAgent agent)
-            where TIView : class, IViewBase
-        {
-            var view = FromPrefab<TIView>(prefab);
-            view.SetAgent(agent);
-            view.SetModel(agent.BaseModel);
-            view.AddSubscriptions();
-            agent.AddSubscriptions();
-            agent.BaseModel.AddSubscriptions();
-            return view;
-        }
-
+        /// <summary>
+        /// Create a new View from the given prefab. Its model and agent will need to be added separately if required.
+        /// Equivalent to [UnityEngine.Object.Instantiate](https://docs.unity3d.com/ScriptReference/Object.Instantiate.html).
+        /// </summary>
+        /// <remarks> Unity's instantiate method cannot be used as it will not create an entire entity. </remarks>
+        /// <typeparam name="TIView"></typeparam>
+        /// <param name="prefab"> The object to create an instance of</param>
+        /// <returns> The object instance</returns>
         public TIView FromPrefab<TIView>(Object prefab)
             where TIView : class, IViewBase
         {
             return FromPrefab<TIView>(prefab, (Transform) null);
         }
 
+        ///<inheritdoc cref="FromPrefab{TIView}(UnityEngine.Object)"/>
         public TIView FromPrefab<TIView>(Object prefab, Transform parent) where TIView : class, IViewBase
         {
             Assert.IsNotNull(prefab);
@@ -78,6 +75,7 @@ namespace Dekuple.View.Impl
             return Prepare(Inject(typeof(TIView), view)) as TIView;
         }
 
+        ///<inheritdoc cref="FromPrefab{TIView}(UnityEngine.Object)"/>
         public TIView FromPrefab<TIView, TIAgent>(Object prefab, IRegistry<TIAgent> agents)
             where TIView : class, IViewBase
             where TIAgent : class, IAgent, IHasDestroyHandler<TIAgent>, IHasRegistry<TIAgent>
@@ -90,6 +88,20 @@ namespace Dekuple.View.Impl
             return view;
         }
 
+        ///<inheritdoc cref="FromPrefab{TIView}(UnityEngine.Object)"/>
+        public TIView FromPrefab<TIView>(Object prefab, IAgent agent)
+            where TIView : class, IViewBase
+        {
+            var view = FromPrefab<TIView>(prefab);
+            view.SetAgent(agent);
+            view.SetModel(agent.BaseModel);
+            view.AddSubscriptions();
+            agent.AddSubscriptions();
+            agent.BaseModel.AddSubscriptions();
+            return view;
+        }
+
+        ///<inheritdoc cref="FromPrefab{TIView}(UnityEngine.Object)"/>
         public TIView FromPrefab<TIView, TIAgent, TIModel>(Object prefab, IRegistry<TIModel> models, IRegistry<TIAgent> agents = null)
             where TIView : class, IViewBase
             where TIAgent : class, IAgent, IHasDestroyHandler<TIAgent>, IHasRegistry<TIAgent>

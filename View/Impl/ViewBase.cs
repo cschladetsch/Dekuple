@@ -107,6 +107,11 @@ namespace Dekuple.View.Impl
             _localTime += Time.deltaTime;
         }
 
+        /// <remarks>
+        /// Unity initialisation methods are called via reflection.
+        /// Dekuple overrides them so they can be used more consistently using
+        /// virtual functions and overrides.
+        /// </remarks>
         protected virtual void Create()
         {
 
@@ -134,6 +139,11 @@ namespace Dekuple.View.Impl
                 rotatedModel.Rotation.DistinctUntilChanged().Subscribe(rot => Transform.rotation = rot);
         }
 
+        /// <remarks>
+        /// Unity initialisation methods are called via reflection.
+        /// Dekuple overrides them so they can be used more consistently using
+        /// virtual functions and overrides.
+        /// </remarks>
         protected virtual void Step()
         {
             _queue?.Update(Time.deltaTime);
