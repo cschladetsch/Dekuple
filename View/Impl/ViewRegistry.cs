@@ -74,7 +74,7 @@ namespace Dekuple.View.Impl
             Assert.IsNotNull(view);
             return Prepare(Inject(typeof(TIView), view)) as TIView;
         }
-
+        
         ///<inheritdoc cref="FromPrefab{TIView}(UnityEngine.Object)"/>
         public TIView FromPrefab<TIView, TIAgent>(Object prefab, IRegistry<TIAgent> agents)
             where TIView : class, IViewBase

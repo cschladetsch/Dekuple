@@ -1,6 +1,6 @@
 - name: Model
-  href: Model.md
+  href: docs/Model.md
 - name: Agent
-  href: Agent.md
+  href: docs/Agent.md
 - name: View
-  href: View.md
+  href: docs/View.md

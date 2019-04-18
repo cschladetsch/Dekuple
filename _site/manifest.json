@@ -15,7 +15,7 @@
           "hash": "Np+vhkN8dv9/iDgMlgsevQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -63,7 +63,7 @@
           "hash": "v+KfrntdKHgbd/6bUWw+ww=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -387,7 +387,7 @@
           "hash": "/3qCo2zufjIrgs5/GeJdkA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -672,10 +672,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Dekuple.View.Impl.ViewBase-1.html",
-          "hash": "X3Uq76DUxtEtHwzEHjtLrA=="
+          "hash": "j7OulPVdyDSFzGU92Ct53g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -684,10 +684,10 @@
       "output": {
         ".html": {
           "relative_path": "api/Dekuple.View.Impl.ViewBase.html",
-          "hash": "ugcGsq9M5KqAYhEWt44Tzg=="
+          "hash": "7OQOpeOrUsf3TBwNUYbHeg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -696,7 +696,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Dekuple.View.Impl.ViewRegistry.html",
-          "hash": "dxo9WQZ23YkHx4HKlbjcDw=="
+          "hash": "VMlzjUY9XUJMi1rxoV6wlA=="
         }
       },
       "is_incremental": true,
@@ -711,7 +711,7 @@
           "hash": "IThzMoHiy1CWeYLPOyGzOQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -735,7 +735,7 @@
           "hash": "Leo5N7tvW810rIy3HnuVeA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -759,7 +759,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "qCYBAGbIZAq0A5C17wP5Zg=="
+          "hash": "zq4BKACp8wb6zIZZq8eLQQ=="
         }
       },
       "is_incremental": false,
@@ -775,11 +775,12 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 56,
-          "skipped_file_count": 54
+          "total_file_count": 0,
+          "skipped_file_count": 0
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
@@ -787,12 +788,11 @@
           "total_file_count": 4,
           "skipped_file_count": 4
         },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
+          "total_file_count": 56,
+          "skipped_file_count": 56
         }
       }
     },
