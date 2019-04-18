@@ -19,6 +19,13 @@ One key understanding required is that one Registry\<T\> class is used for each 
 
 There are Readme's in each substantial sub-folder that describes each component in more detail.
 
+
+## Unity Package
+
+This repo is designed to be used as a Untiy3d `Package`. However, there are also `Dekuple.{sln,proj}` available so it can be opened in *VisualStudio* independantly. This results in these files being in the Unity3d package, even though they are unused. They hence also have .meta files. 
+
+Do not delete these or their .meta files.
+
 ### Dependancies
 
 This library uses the external [CoLib](http://www.github.com) and [Flow](https://www.github.com/cschladetsch/Flow) libraries. These are added as git sub-modules.
