@@ -1,14 +1,13 @@
 ﻿using System.Linq;
 using Dekuple.Agent;
 using Dekuple.Model;
-using Dekuple.View;
 using Dekuple.View.Impl;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace App
+namespace Dekuple.View
 {
-    public class MainBase
+    public abstract class MainBase
         : ViewBase
     {
         public IModelRegistry Models { get; } = new ModelRegistry();
@@ -29,9 +28,9 @@ namespace App
             }
             transform.SetParent(null);
             DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += (x, y) => OnSceneLoaded();
             CreateBindings();
             ResolveBindings();
+            SceneManager.sceneLoaded += (x, y) => OnSceneLoaded();
             Agents.Kernel.Root.Resume();
         }
 
@@ -49,7 +48,7 @@ namespace App
 
         protected virtual void OnSceneLoaded()
         {
-            Views.InjectAllGameObjects();
+            Views.InjectViewsInScene();
             Models.AddAllSubscriptions();
             Agents.AddAllSubscriptions();
             Views.AddAllSubscriptions();
@@ -70,7 +69,7 @@ namespace App
         /// <summary>
         /// Find all Views of type TIView that exist in the scene and give them a model and agent.
         /// </summary>
-        protected TView[] SetupEntities<TView, TIAgent, TIModel>(params object[] args)
+        protected TView[] BuildEntitiesOfType<TView, TIAgent, TIModel>(params object[] args)
             where TView : Component, IViewBase
             where TIModel : class, IModel
             where TIAgent : class, IAgent
@@ -89,8 +88,6 @@ namespace App
         /// <summary>
         /// Add registry bindings in here using Registry.Bind
         /// </summary>
-        protected virtual void CreateBindings()
-        {
-        }
+        protected abstract void CreateBindings();
     }
 }

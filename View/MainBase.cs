@@ -28,9 +28,13 @@ namespace Dekuple.View.Impl
             }
             transform.SetParent(null);
             DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += (x, y) => OnSceneLoaded();
             CreateBindings();
             ResolveBindings();
+            SceneManager.sceneLoaded += (x, y) =>
+            {
+                OnSceneLoaded();
+                ResolveScene();
+            };
             Agents.Kernel.Root.Resume();
         }
 
@@ -47,12 +51,16 @@ namespace Dekuple.View.Impl
             Agents.Kernel.Step();
         }
 
-        protected virtual void OnSceneLoaded()
-        {
-            Views.InjectAllGameObjects();
+        private void ResolveScene()
+        { 
+            Views.InjectViewsInScene();
             Models.AddAllSubscriptions();
             Agents.AddAllSubscriptions();
             Views.AddAllSubscriptions();
+        }
+
+        protected virtual void OnSceneLoaded()
+        {
         }
 
         public TIView NewEntity<TIView, TIModel>(Object prefab)

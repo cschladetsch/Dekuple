@@ -23,10 +23,10 @@ namespace Dekuple.View.Impl
         : Registry<IViewBase>
         , IViewRegistry
     {
-        public void InjectAllGameObjects()
+        public void InjectViewsInScene()
         {
             foreach (var view in Object.FindObjectsOfType<ViewBase>())
-                InjectGameObject(view);
+                InjectView(view);
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace Dekuple.View.Impl
         /// that have not been previously bound using Bind&lt;T&gt;
         /// </summary>
         /// <param name="view"></param>
-        public void InjectGameObject(IViewBase view)
+        public void InjectView(IViewBase view)
         {
             var injections = new Injections(this, view.GetType());
             injections.Inject(view);
