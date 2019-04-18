@@ -17,22 +17,19 @@ namespace Dekuple.View.Impl
     /// </summary>
     public abstract class ViewBase
         : LoggingBehavior
-        , IHasName
         , IViewBase
     {
         public Guid Id { get; set; }
-        public string Name { get; set; }
         public IRegistry<IViewBase> Registry { get; set; }
         public IViewRegistry ViewRegistry => Registry as IViewRegistry;
         public IReadOnlyReactiveProperty<IOwner> Owner => AgentBase?.Owner ?? Model?.Owner;
-        public IReadOnlyReactiveProperty<bool> Destroyed => _destroyed;
         public event Action<IViewBase> OnDestroyed;
         public IAgent AgentBase { get; set; }
         public IViewBase OwnerView { get; set; }
         public IModel OwnerModel => Owner?.Value as IModel;
         public GameObject GameObject => gameObject;
         public Transform Transform => gameObject.transform;
-        public IModel Model => AgentBase?.BaseModel ?? _model;
+        public IModel Model => AgentBase?.BaseModel ?? _localModel;
 
         // lazy create because most views won't need a queue or audio source
         protected CommandQueue _Queue => _queue ?? (_queue = new CommandQueue());
@@ -40,11 +37,11 @@ namespace Dekuple.View.Impl
 
         private bool _paused;
         private bool _created;
+        private bool _destroyed;
         private float _localTime;
         private CommandQueue _queue;
         private AudioSource _audioSource;
-        private readonly BoolReactiveProperty _destroyed = new BoolReactiveProperty(false);
-        private IModel _model;
+        private IModel _localModel;
 
         public virtual bool IsValid
         {
@@ -67,13 +64,13 @@ namespace Dekuple.View.Impl
             return other.Owner.Value == Owner.Value;
         }
 
-        public virtual void SetModel(IModel model)
+        public void SetModel(IModel model)
         {
-            _model = model;
-            model.OnDestroyed += obj => Destroy();
+            _localModel = model;
+            model.OnDestroyed += o => Destroy();
         }
 
-        public virtual void SetAgent(IAgent agent)
+        public void SetAgent(IAgent agent)
         {
             AgentBase = agent;
         }
@@ -85,13 +82,14 @@ namespace Dekuple.View.Impl
             Model?.SetOwner(owner);
         }
 
-        private bool Is<T>()
-        {
-            return typeof(T).IsAssignableFrom(GetType());
-        }
-
         private void Awake()
         {
+            if (_created)
+            {
+                Warn($"{this} has already been Awoken. Aborting.");
+                return;
+            }
+            _created = true;
             Create();
         }
 
@@ -109,15 +107,14 @@ namespace Dekuple.View.Impl
             _localTime += Time.deltaTime;
         }
 
-        public virtual void Create()
+        protected virtual void Create()
         {
-            Assert.IsFalse(_created);
-            _created = true;
+
         }
 
         protected virtual void Begin()
         {
-            BindTransformComponents();
+
         }
 
         private void BindTransformComponents()
@@ -126,7 +123,7 @@ namespace Dekuple.View.Impl
                 positionedModel.Position.DistinctUntilChanged().Subscribe(pos => Transform.position = pos);
             if (Model is ILocalScaledModel localScaledModel)
                 localScaledModel.LocalScale.DistinctUntilChanged().Subscribe(scale => Transform.localScale = scale);
-            if (Model is IWorldScaledModel worldScaledModel) //DK TODO there is no way to access a transforms local scale directly - do we need a world scale interface?
+            if (Model is IWorldScaledModel worldScaledModel)
                 worldScaledModel.Scale.DistinctUntilChanged().Subscribe(_ => throw new NotImplementedException());
             if (Model is IRotatedModel rotatedModel)
                 rotatedModel.Rotation.DistinctUntilChanged().Subscribe(rot => Transform.rotation = rot);
@@ -152,32 +149,37 @@ namespace Dekuple.View.Impl
             return ReferenceEquals(Owner.Value, other);
         }
 
+        public virtual void AddSubscriptions()
+        {
+            BindTransformComponents();
+        }
+
+        private void OnDestroy() => Destroy();
+
         public virtual void Destroy()
         {
-            Verbose(10, $"Destroy {this}");
-            if (Destroyed.Value)
-            {
-                Warn($"Object {Id} of type {GetType()} already destoyed");
+            if (_destroyed)
                 return;
-            }
 
+            _destroyed = true;
+
+            AgentBase?.Destroy();
+            if (AgentBase == null)
+                _localModel?.Destroy();
             OnDestroyed?.Invoke(this);
-            GameObject.transform.SetParent(null);
-            _destroyed.Value = true;
-
-            Destroy(GameObject);
+            UnityEngine.Object.Destroy(GameObject);
         }
 
         public override string ToString()
         {
-            return $"View {name} of type {GetType()}, Id={Id}";
+            return $"View {name} of type {GetType().Name}, Id={Id}";
         }
     }
 
     public class ViewBase<TIAgent>
         : ViewBase
         , IView<TIAgent>
-        where TIAgent 
+        where TIAgent
             : class, IAgent
     {
         public TIAgent Agent => AgentBase as TIAgent;

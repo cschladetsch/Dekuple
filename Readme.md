@@ -1,4 +1,4 @@
-# Dekuple
+﻿# Dekuple
 
 A dependancy-injection and entity system designed from the ground up to support both rapid prototyping and long-term development and support of `Unity3d` based applications.
 
@@ -41,6 +41,74 @@ This system is intended to be used with the new Unity3d ECS system.
 Currently, only the View system has any reference to Unity3d.
 
 It would be nice to separate that into a separate Assembly, so the system could be used outside the context of `Unity3d`.
+
+## Docs
+
+---
+
+### Obsolete Unity Methods
+
+#### [Awake](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Awake.html)
+Unity's Awake function, do not use within Dekuple entities - see Create.
+
+#### [Start](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Start.html)
+Unity's Start function, do not use within Dekuple entities - see Begin.
+
+#### [OnDestroy](https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnDestroy.html)
+Unity's OnDestroy function, do not use within Dekuple entities - instead subscribe to the OnDestroyed event.
+
+___
+
+### Dekuple Documentation
+
+#### Create
+Alternative to `Awake` within Dekuple entities, called before Begin. Ensure that `base.Create()` is called.
+
+#### Begin
+Alternative to `Start` within Dekuple entities. Ensure that `base.Begin()` is called.
+
+#### AddSubscriptions
+Called after the object has been prepared, all dependencies have been resolved and all injections completed. Use this for initialising things that depend on injections. 
+
+#### Main.NewEntity
+```csharp
+public TIView Main.NewEntity<TIView, TIAgent, TIModel>(Object prefab)
+```
+Create a new, complete entity from the given prefab. The simplest way to create a new entity.
+
+#### Main.SetupEntities
+```csharp
+private TIView[] Main.SetupEntities<TIView, TIAgent, TIModel>(params object[] args)
+```
+Create and prepare models and agents for objects of type `TIView` that exist in the scene.
+
+#### ViewRegistry.FromPrefab
+```csharp
+public TIView FromPrefab<TIView>(Object prefab);
+public TIView FromPrefab<TIView>(Object prefab, Transform parent);
+public TIView FromPrefab<TIView>(Object prefab,  IRegistry<TIAgent> agents);
+public TIView FromPrefab<TIView>(Object prefab,  IAgent agent);
+public TIView FromPrefab<TIView>(Object prefab, IRegistry<TIModel> models, IRegistry<TIAgent> agents = null);
+```
+| Parameters     ||
+|-|-|
+|prefab         | The prefab to make an instance of.
+|parent         | Parent that will be assigned to the new object.      |
+|agent          | The agent to type to give to the newly created object.      |
+
+Create a new View from the given prefab. Its model and agent will need to be added seperately if required. Equivalent to [UnityEngine.Object.Instantiate](https://docs.unity3d.com/ScriptReference/Object.Instantiate.html).
+
+#### Registry.Bind<TInterface, TImpl>()
+Connect the given interface and concrete type together in the registry.
+
+#### ViewRegistry.Bind<TInterface, TImpl>(T single)
+Connect the given interface and concrete together as a singleton instance. Will create a `GameObject` given a prefab or connect to an existing `GameObject` within the scene.
+
+#### ViewRegistry.InjectAllGameObjects()
+Resolve all injections for `GameObjects` of type `ViewBase` that exist within the scene.
+
+#### Registry.AddAllSubscriptions()
+Invoke `AddSubscriptions()` for all instances in the given registry.
 
 ### TODO
 

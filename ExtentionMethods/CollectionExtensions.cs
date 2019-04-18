@@ -22,7 +22,6 @@ namespace Dekuple
             {
                 val.OnDestroyed -= Remove;  // remove dangling reference
                 coll.Remove(val);
-                UnityEngine.Debug.Log($"Destroyed {val}. {coll.Count} items remain");
             }
 
             val.OnDestroyed += Remove;

@@ -1,6 +1,6 @@
 ﻿using System;
 using UniRx;
-using Flow;
+using UnityEngine.AI;
 
 namespace Dekuple.Agent
 {
@@ -19,13 +19,11 @@ namespace Dekuple.Agent
         public event Action<IAgent> OnDestroyed;
         public IRegistry<IAgent> Registry { get; set; }
         public Guid Id { get; /*private*/ set; }
-        public IModel BaseModel { get; }
-        public TModel Model => BaseModel as TModel;
-        public IReadOnlyReactiveProperty<bool> Destroyed => _destroyed;
-        public IReadOnlyReactiveProperty<IOwner> Owner => Model.Owner;
 
-        private readonly BoolReactiveProperty _destroyed = new BoolReactiveProperty(false);
-        private bool _started = false;
+        public IModel BaseModel { get; }
+
+        public TModel Model => BaseModel as TModel;
+        public IReadOnlyReactiveProperty<IOwner> Owner => Model?.Owner;
 
         public virtual bool IsValid
         {
@@ -51,8 +49,7 @@ namespace Dekuple.Agent
 
         public bool SameOwner(IEntity other)
         {
-            if (other == null)
-                return Owner.Value == null;
+            if (other == null)return Owner.Value == null;
 
             return other.Owner.Value == Owner.Value;
         }
@@ -70,6 +67,10 @@ namespace Dekuple.Agent
             return other.Owner.Value == Owner.Value;
         }
 
+        public virtual void Create()
+        {
+        }
+
         // DK TODO Move to Chess2
         //public virtual void StartGame()
         //{
@@ -82,15 +83,15 @@ namespace Dekuple.Agent
         //    _started = false;
         //}
 
+        public virtual void AddSubscriptions()
+        {
+        }
+
         public virtual void Destroy()
         {
             TransientCompleted();
-
-            if (!_destroyed.Value)
-                _destroyed.Value = true;
-
-            OnDestroyed?.Invoke(this);
+            Model?.Destroy();
+            this.OnDestroyed?.Invoke(this);
         }
-
     }
 }
