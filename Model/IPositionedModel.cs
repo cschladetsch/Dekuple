@@ -9,6 +9,9 @@ namespace Dekuple.Model
     public interface IPositionedModel
         : IModel
     {
+        /// <summary>
+        /// Always in world space.
+        /// </summary>
         IReactiveProperty<Vector3> Position { get; }
     }
 }

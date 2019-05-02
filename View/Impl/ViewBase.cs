@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using UnityEngine;
 
 using UniRx;
@@ -131,10 +132,8 @@ namespace Dekuple.View.Impl
         {
             if (Model is IPositionedModel positionedModel)
                 positionedModel.Position.DistinctUntilChanged().Subscribe(pos => Transform.position = pos);
-            if (Model is ILocalScaledModel localScaledModel)
+            if (Model is IScaledModel localScaledModel)
                 localScaledModel.LocalScale.DistinctUntilChanged().Subscribe(scale => Transform.localScale = scale);
-            if (Model is IWorldScaledModel worldScaledModel)
-                worldScaledModel.Scale.DistinctUntilChanged().Subscribe(_ => throw new NotImplementedException());
             if (Model is IRotatedModel rotatedModel)
                 rotatedModel.Rotation.DistinctUntilChanged().Subscribe(rot => Transform.rotation = rot);
         }
