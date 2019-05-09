@@ -72,8 +72,9 @@ namespace Dekuple.View.Impl
             Assert.IsNotNull(prefab);
             var view = Object.Instantiate(prefab, parent) as TIView;
             Assert.IsNotNull(view);
+            view = Prepare(Inject(typeof(TIView), view)) as TIView;
             view.AddSubscriptions();
-            return Prepare(Inject(typeof(TIView), view)) as TIView;
+            return view;
         }
 
         public TIView FromPrefab<TIView>(Object prefab, Transform parent, bool instantiateInWorldSpace) where TIView : class, IViewBase
@@ -81,8 +82,9 @@ namespace Dekuple.View.Impl
             Assert.IsNotNull(prefab);
             var view = Object.Instantiate(prefab, parent, instantiateInWorldSpace) as TIView;
             Assert.IsNotNull(view);
+            view = Prepare(Inject(typeof(TIView), view)) as TIView;
             view.AddSubscriptions();
-            return Prepare(Inject(typeof(TIView), view)) as TIView;
+            return view;
         }
 
         public TIView FromPrefab<TIView>(Object prefab, Transform parent, bool instantiateInWorldSpace, IAgent agent) where TIView : class, IViewBase

@@ -78,7 +78,7 @@ namespace Dekuple.View.Impl
 
         public void SetOwner(IOwner owner)
         {
-            Verbose(20, $"New owner of {this} is {owner}");
+            //Verbose(20, $"New owner of {this} is {owner}");
 
             Model?.SetOwner(owner);
         }

@@ -3,6 +3,7 @@ using System.Linq;
 using System.Text;
 using System.Reflection;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Formatters;
 using UnityEngine;
 
 namespace Dekuple.Registry
@@ -57,10 +58,10 @@ namespace Dekuple.Registry
 
         public void AddAllSubscriptions()
         {
-            foreach (var obj in Instances)
-            {
+            // Copy instances enumerable so that if it is modified the loop will not break.
+            var instances = Instances.ToArray();
+            foreach (var obj in instances)
                 obj.AddSubscriptions();
-            }
         }
 
         public bool Has(TBase instance)
@@ -149,7 +150,7 @@ namespace Dekuple.Registry
                 _typeToGuid[type] = iBase.Id;
             }
 
-            Verbose(10, $"Made a {typeof(TIBase)}");
+            //Verbose(10, $"Made a {typeof(TIBase)}");
             return iBase;
         }
 
@@ -282,7 +283,7 @@ namespace Dekuple.Registry
             {
                 if (pi.Single != null)
                 {
-                    Verbose(50, $"Setting delayed singleton for {pi.Interface}");
+                    //Verbose(50, $"Setting delayed singleton for {pi.Interface}");
                     _singles[pi.Interface] = pi.Single;
                 }
                 else
@@ -339,7 +340,7 @@ namespace Dekuple.Registry
         {
             if (model == null)
             {
-                Verbose(10, "Attempt to destroy null model");
+                //Verbose(10, "Attempt to destroy null model");
                 return;
             }
 

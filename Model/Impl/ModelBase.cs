@@ -102,7 +102,7 @@ namespace Dekuple.Model
             if (Owner.Value == owner)
                 return;
 
-            Verbose(30, $"{this} changes ownership from {Owner.Value} to {owner}");
+            //Verbose(30, $"{this} changes ownership from {Owner.Value} to {owner}"); TODO calculates string interpolation even when not used?
             _owner.Value = owner;
         }
 
