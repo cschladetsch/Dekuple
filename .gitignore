@@ -3,6 +3,10 @@ obj/
 packages/
 /bin/
 
+/bin.meta
+/obj
+/obj.meta
+
 *.user
 
 
