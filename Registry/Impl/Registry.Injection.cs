@@ -104,7 +104,7 @@ namespace Dekuple.Registry
                         return null;
                     case null:
                         var pi = new PendingInjection(model, inject, model.GetType(), iface, single);
-                        Verbose(30, $"Adding {pi}");
+                        //Verbose(30, $"Adding {pi}");
                         _pendingInjections.Add(pi);
                         break;
                 }

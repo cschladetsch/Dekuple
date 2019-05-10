@@ -1,11 +1,10 @@
 ﻿using System.Linq;
 using Dekuple.Agent;
 using Dekuple.Model;
-using Dekuple.View.Impl;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Dekuple.View
+namespace Dekuple.View.Impl
 {
     public abstract class MainBase
         : ViewBase
