@@ -5,6 +5,7 @@ using Dekuple.View.Impl;
 using UnityEditor;
 using System.Text;
 using UnityEngine;
+#if UNITY_EDITOR
 using Object = UnityEngine.Object;
 
 namespace Dekuple
@@ -55,3 +56,4 @@ namespace Dekuple
         }
     }
 }
+#endif
