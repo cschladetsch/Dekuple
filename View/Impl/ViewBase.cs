@@ -34,7 +34,14 @@ namespace Dekuple.View.Impl
 
         // lazy create because most views won't need a queue or audio source
         protected CommandQueue _Queue => _queue ?? (_queue = new CommandQueue());
-        protected AudioSource _AudioSource => _audioSource ? _audioSource : (_audioSource = GameObject.AddComponent<AudioSource>());
+        protected AudioSource _AudioSource
+        {
+            get
+            {
+                _audioSource = GetComponent<AudioSource>();
+                return _audioSource ? _audioSource : (_audioSource = GameObject.AddComponent<AudioSource>());
+            }
+        }
 
         private bool _paused;
         private bool _created;
