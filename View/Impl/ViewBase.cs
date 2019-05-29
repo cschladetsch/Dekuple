@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
@@ -34,6 +35,7 @@ namespace Dekuple.View.Impl
 
         // lazy create because most views won't need a queue or audio source
         protected CommandQueue _Queue => _queue ?? (_queue = new CommandQueue());
+        protected List<IDisposable> _Subscriptions { get; } = new List<IDisposable>();
         protected AudioSource _AudioSource
         {
             get
@@ -183,6 +185,10 @@ namespace Dekuple.View.Impl
                 return;
 
             _destroyed = true;
+
+            foreach (var disposable in _Subscriptions)
+                disposable.Dispose();
+            _Subscriptions.Clear();
 
             AgentBase?.Destroy();
             if (AgentBase == null)
