@@ -40,6 +40,7 @@ public class PreferencesWindow
 
         Preferences.Prefs.UseViewBaseInspector = GUILayout.Toggle(Preferences.Prefs.UseViewBaseInspector, "Use Custom View Inspector");
         Preferences.Prefs.UseViewBaseHierarchy = GUILayout.Toggle(Preferences.Prefs.UseViewBaseHierarchy, "Enable Hierarchy Labels");
+
         GUILayout.Space(2);
         GUILayout.Label("Logging Level");
         Preferences.Prefs.LogLevel = (ELogLevel)GUILayout.Toolbar((int)Preferences.Prefs.LogLevel, typeof(ELogLevel).GetEnumNames());
@@ -50,6 +51,7 @@ public class PreferencesWindow
 
         if (EditorGUI.EndChangeCheck())
             _changes = true;
+
         if (GUILayout.Button("Apply", GUILayout.MinWidth(100), GUILayout.Height(22)))
         {
             SaveChanges();
@@ -87,11 +89,18 @@ public class PreferencesWindow
 
     private static void DrawLogo()
     {
-        GUILayout.BeginHorizontal();
-        GUILayout.FlexibleSpace();
-        GUILayout.Label(_liminalLogo, GUILayout.Width(200), GUILayout.Height(44));
-        GUILayout.FlexibleSpace();
-        GUILayout.EndHorizontal();
+        if (_liminalLogo != null)
+        {
+            GUILayout.BeginHorizontal();
+            GUILayout.FlexibleSpace();
+            GUILayout.Label(_liminalLogo, GUILayout.Width(200), GUILayout.Height(44));
+            GUILayout.FlexibleSpace();
+            GUILayout.EndHorizontal();
+        }
+        else
+        {
+            GUILayout.Space(4);
+        }
     }
 }
 
