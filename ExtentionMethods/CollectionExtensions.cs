@@ -54,7 +54,7 @@ namespace Dekuple
         /// <param name="self">The collection to connect to and watch.</param>
         /// <param name="add">Called when an element is added to the connected collection.</param>
         /// <param name="remove">Called when an element is removed from the connected collection.</param>
-        public static void Connect<TTarget>(
+        public static void ObserveChanges<TTarget>(
             this IReadOnlyReactiveCollection<TTarget> self,
             Action<CollectionAddEvent<TTarget>> add,
             Action<CollectionRemoveEvent<TTarget>> remove)

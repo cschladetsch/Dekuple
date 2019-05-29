@@ -15,6 +15,7 @@ namespace Dekuple.Agent
         public bool Active { get; private set; }
         public IKernel Kernel { get; set; }
         public IFactory New => Kernel.Factory;
+        public IFactory Factory => New;
         public INode Root => Kernel.Root;
         public string Name { get; set; }
         public string LogPrefix { get => _log.LogPrefix; set => _log.LogPrefix = value; }
@@ -30,13 +31,7 @@ namespace Dekuple.Agent
             Name = name;
             return this;
         }
-
-        public ITransient AddTo(IGroup @group)
-        {
-            @group.Add(this);
-            return this;
-        }
-
+        
         public void Complete()
         {
             if (!Active)
