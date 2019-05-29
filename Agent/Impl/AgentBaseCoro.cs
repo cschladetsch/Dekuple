@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
-using DG.Tweening;
 using Flow;
+using Flow.Impl;
 
 namespace Dekuple.Agent
 {
