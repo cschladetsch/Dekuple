@@ -2,7 +2,7 @@
 using Flow;
 using UnityEditor;
 using UnityEngine;
-using Newtonsoft.Json;
+using Valve.Newtonsoft.Json;
 
 public class PreferencesWindow
     : EditorWindow
@@ -15,16 +15,22 @@ public class PreferencesWindow
     [MenuItem("Liminal/Dekuple/Preferences")]
     static void Init()
     {
-        if (File.Exists(_preferencesPath))
-        {
-            var jsonString = File.ReadAllText(_preferencesPath);
-            Preferences.Prefs = JsonConvert.DeserializeObject<Preferences>(jsonString);
-        }
+        LoadPreferences();
 
         _liminalLogo = (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/Dekuple/Editor/Textures/LiminalLogo.png", typeof(Texture2D));
         PreferencesWindow window = (PreferencesWindow)GetWindow(typeof(PreferencesWindow), true, "Liminal Preferences", true);
         window.minSize = new Vector2(400, 200);
         window.Show();
+    }
+
+    [InitializeOnLoadMethod]
+    private static void LoadPreferences()
+    {
+        if (File.Exists(_preferencesPath))
+        {
+            var jsonString = File.ReadAllText(_preferencesPath);
+            Preferences.Prefs = JsonConvert.DeserializeObject<Preferences>(jsonString);
+        }
     }
 
     private void OnGUI()

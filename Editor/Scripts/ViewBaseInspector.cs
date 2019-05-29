@@ -5,9 +5,12 @@ using System.Reflection;
 using Dekuple.Agent;
 using Dekuple.Model;
 using Dekuple.View.Impl;
+using Flow;
 using UnityEditor;
 using UnityEngine;
+using IFactory = Flow.IFactory;
 
+[CanEditMultipleObjects]
 [CustomEditor(typeof(ViewBase), true)]
 public class ViewBaseInspector
     : Editor
@@ -27,6 +30,7 @@ public class ViewBaseInspector
     private ESelectedInspector _viewSelection = ESelectedInspector.Unity;
 
     private GUIStyle _memberLabelStyle;
+    private GUIStyle _wrappedMemberLabelStyle;
 
     private const BindingFlags Flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly;
 
@@ -87,6 +91,7 @@ public class ViewBaseInspector
     private void InitStyles()
     {
         _memberLabelStyle = new GUIStyle("ObjectPickerResultsEven");
+        _wrappedMemberLabelStyle = new GUIStyle("ObjectPickerResultsEven") {wordWrap = true};
     }
 
     public virtual void DrawModelDetails() => DrawViaReflection(_Model);
@@ -106,6 +111,7 @@ public class ViewBaseInspector
         GUILayout.BeginVertical();
         for (var i = 0; i < members.Length; i++)
         {
+            var style = _memberLabelStyle;
             var member = members[i];
             if (member.IsDefined(typeof(ObsoleteAttribute), true))
                 continue;
@@ -114,16 +120,24 @@ public class ViewBaseInspector
             {
                 object value = null;
                 if (member is FieldInfo field)
+                {
                     value = field.GetValue(reference);
+                    style = field.FieldType == typeof(IGenerator) ? _wrappedMemberLabelStyle : _memberLabelStyle;
+                }
+
                 if (member is PropertyInfo property)
+                {
                     value = property.GetValue(reference);
+                    style = property.PropertyType == typeof(IGenerator) ? _wrappedMemberLabelStyle : _memberLabelStyle;
+                }
+
                 var memberName = member.Name;
 
-                if (i%2 == 0)
-                    GUI.backgroundColor = Color.white*0.95f;
+                if (i % 2 == 0)
+                    GUI.backgroundColor = Color.white * 0.95f;
 
                 GUILayout.BeginHorizontal();
-                EditorGUILayout.LabelField(memberName, value?.ToString(), _memberLabelStyle, GUILayout.ExpandWidth(true));
+                EditorGUILayout.LabelField(memberName, value?.ToString(), style, GUILayout.ExpandWidth(true));
                 GUILayout.EndHorizontal();
                 GUI.backgroundColor = Color.white;
             }
