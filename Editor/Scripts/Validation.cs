@@ -16,7 +16,7 @@ namespace Dekuple
         private const string _methodColor = "#2899e5";
         private const string _eventColor = "#e529c2";
 
-        [MenuItem("Dekuple/Validate Unity Methods", false)]
+        [MenuItem("Liminal/Dekuple/Validate Unity Methods", false)]
         private static void FindUnityMethods()
         {
             var views = Object.FindObjectsOfType<ViewBase>();

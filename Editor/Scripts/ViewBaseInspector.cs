@@ -43,13 +43,9 @@ public class ViewBaseInspector
 
         InitStyles();
 
-        Debug.Log(target);
         _View = (ViewBase)target;
-        Debug.Log(_View);
         _Agent = _View.AgentBase;
-        Debug.Log(_Agent);
         _Model = _View.Model;
-        Debug.Log(_Model);
 
         GUILayout.Space(2);
 
@@ -114,19 +110,29 @@ public class ViewBaseInspector
             if (member.IsDefined(typeof(ObsoleteAttribute), true))
                 continue;
 
-            object value = null;
-            if (member is FieldInfo field)
-                value = field.GetValue(reference);
-            if (member is PropertyInfo property)
-                value = property.GetValue(reference);
-            var memberName = member.Name;
+            try
+            {
+                object value = null;
+                if (member is FieldInfo field)
+                    value = field.GetValue(reference);
+                if (member is PropertyInfo property)
+                    value = property.GetValue(reference);
+                var memberName = member.Name;
 
-            if (i%2 == 0)
-                GUI.backgroundColor = Color.white*0.95f;
-            GUILayout.BeginHorizontal();
-            EditorGUILayout.LabelField(memberName, value?.ToString(), _memberLabelStyle, GUILayout.ExpandWidth(true));
-            GUILayout.EndHorizontal();
-            GUI.backgroundColor = Color.white;
+                if (i%2 == 0)
+                    GUI.backgroundColor = Color.white*0.95f;
+
+                GUILayout.BeginHorizontal();
+                EditorGUILayout.LabelField(memberName, value?.ToString(), _memberLabelStyle, GUILayout.ExpandWidth(true));
+                GUILayout.EndHorizontal();
+                GUI.backgroundColor = Color.white;
+            }
+            catch (Exception)
+            {
+                // ignore problems when accessing field values in editor-time: some fields/properties will only
+                // be valid at runtime.
+            }
+
         }
         GUILayout.EndVertical();
     }

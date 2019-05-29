@@ -2,7 +2,7 @@
 using Flow;
 using UnityEditor;
 using UnityEngine;
-using Valve.Newtonsoft.Json;
+using Newtonsoft.Json;
 
 public class PreferencesWindow
     : EditorWindow
@@ -12,7 +12,7 @@ public class PreferencesWindow
     private const string _preferencesDir = "Preferences/Dekuple/";
     private bool _changes;
 
-    [MenuItem("Dekuple/Preferences")]
+    [MenuItem("Liminal/Dekuple/Preferences")]
     static void Init()
     {
         if (File.Exists(_preferencesPath))

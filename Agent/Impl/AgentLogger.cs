@@ -26,6 +26,12 @@ namespace Dekuple.Agent
 
         protected readonly LoggerFacade<Flow.Impl.Logger> _log = new LoggerFacade<Flow.Impl.Logger>("Agent");
 
+        public ITransient AddTo(IGroup group)
+        {
+            group.Add(this);
+            return this;
+        }
+
         public ITransient Named(string name)
         {
             Name = name;
