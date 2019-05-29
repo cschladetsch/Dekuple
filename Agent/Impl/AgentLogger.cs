@@ -39,6 +39,12 @@ namespace Dekuple.Agent
             Active = false;
         }
 
+        public ITransient AddTo(IGroup group)
+        {
+            group.Add(this);
+            return this;
+        }
+
         public void Info(string fmt, params object[] args)
         {
             _log.Info(fmt, args);
