@@ -3,7 +3,7 @@ using Dekuple.View.Impl;
 
 namespace App.Views
 {
-    using Agent;
+    using Agents;
 
     public interface I$VIEWNAME$
         : IView<I$AGENTNAME$>
@@ -14,6 +14,8 @@ namespace App.Views
 
 namespace App.Views.Impl
 {
+    using Agents;
+
     public class $VIEWNAME$
         : ViewBase<I$AGENTNAME$>
         , I$VIEWNAME$

@@ -2,8 +2,8 @@ using Dekuple.Agent;
 
 namespace App.Agents
 {
-    using Model;
-    using Model.Impl;
+    using Models;
+    using Models.Impl;
 
     public interface I$AGENTNAME$
         : IAgent<I$MODELNAME$>
@@ -14,6 +14,8 @@ namespace App.Agents
 
 namespace App.Agents.Impl
 {
+    using Models;
+
     public class $AGENTNAME$
         : AgentBase<I$MODELNAME$>
         , I$AGENTNAME$
