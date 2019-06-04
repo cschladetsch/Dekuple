@@ -47,13 +47,11 @@ public static class TemplateMenu
         var destinationDir = GetDirectory();
         var path = Path.Combine(Directory.GetParent(Application.dataPath).FullName, destinationDir, fileName);
         path = path.Replace('\\', '/');
-        Debug.Log(path);
         var template = File.ReadAllText(templateText);
 
         var output = template.Replace("$VIEWNAME$", viewName);
         output = output.Replace("$AGENTNAME$", agentName);
         output = output.Replace("$MODELNAME$", modelName);
-        Debug.Log(path);
         File.WriteAllText(path, output);
 
         AssetDatabase.Refresh();
