@@ -1,9 +1,10 @@
-using App.Agent;
 using Dekuple.View;
 using Dekuple.View.Impl;
 
 namespace App.Views
 {
+    using Agent;
+
     public interface I$VIEWNAME$
         : IView<I$AGENTNAME$>
     {
