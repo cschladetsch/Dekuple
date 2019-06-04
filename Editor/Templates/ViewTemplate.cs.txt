@@ -1,0 +1,22 @@
+using App.Agent;
+using Dekuple.View;
+using Dekuple.View.Impl;
+
+namespace App.View
+{
+    public interface I$VIEWNAME$
+        : IView<I$AGENTNAME$>
+    {
+
+    }
+}
+
+namespace App.View.Impl
+{
+    public class $VIEWNAME$
+        : ViewBase<I$AGENTNAME$>
+        , I$VIEWNAME$
+    {
+
+    }
+}

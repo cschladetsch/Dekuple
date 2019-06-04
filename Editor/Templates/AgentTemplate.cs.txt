@@ -1,0 +1,24 @@
+using App.Model;
+using App.Model.Impl;
+using Dekuple.Agent;
+
+namespace App.Agent
+{
+    public interface I$AGENTNAME$
+        : IAgent<I$MODELNAME$>
+    {
+
+    }
+}
+
+namespace App.Agent.Impl
+{
+    public class $AGENTNAME$
+        : AgentBase<I$MODELNAME$>
+        , I$AGENTNAME$
+    {
+        public $AGENTNAME$(I$MODELNAME$ model) : base(model)
+        {
+        }
+    }
+}

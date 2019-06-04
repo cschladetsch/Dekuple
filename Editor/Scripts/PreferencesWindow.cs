@@ -2,7 +2,7 @@
 using Flow;
 using UnityEditor;
 using UnityEngine;
-using Newtonsoft.Json;
+//using Newtonsoft.Json;
 
 public class PreferencesWindow
     : EditorWindow
@@ -29,7 +29,7 @@ public class PreferencesWindow
         if (!File.Exists(_preferencesPath)) 
             return;
 
-        Preferences.Prefs = JsonConvert.DeserializeObject<Preferences>(File.ReadAllText(_preferencesPath));
+        //Preferences.Prefs = JsonConvert.DeserializeObject<Preferences>(File.ReadAllText(_preferencesPath));
     }
 
     private void OnGUI()
@@ -88,8 +88,8 @@ public class PreferencesWindow
         if (!Directory.Exists(_preferencesDir))
             Directory.CreateDirectory(_preferencesDir);
 
-        var jsonString = JsonConvert.SerializeObject(Preferences.Prefs, Formatting.Indented);
-        File.WriteAllText(_preferencesPath, jsonString);
+        //var jsonString = JsonConvert.SerializeObject(Preferences.Prefs, Formatting.Indented);
+        //File.WriteAllText(_preferencesPath, jsonString);
         Debug.Log("Updated preferences for Dekuple.");
     }
 
