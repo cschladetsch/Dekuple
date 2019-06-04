@@ -2,7 +2,7 @@ using App.Model;
 using App.Model.Impl;
 using Dekuple.Agent;
 
-namespace App.Agent
+namespace App.Agents
 {
     public interface I$AGENTNAME$
         : IAgent<I$MODELNAME$>
@@ -11,7 +11,7 @@ namespace App.Agent
     }
 }
 
-namespace App.Agent.Impl
+namespace App.Agents.Impl
 {
     public class $AGENTNAME$
         : AgentBase<I$MODELNAME$>
