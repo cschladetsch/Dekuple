@@ -1,11 +1,13 @@
 ﻿using System.Linq;
-using Dekuple.Agent;
-using Dekuple.Model;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Dekuple.View.Impl
 {
+    using Agent;
+    using Model;
+
     public abstract class MainBase
         : ViewBase
     {
@@ -33,7 +35,6 @@ namespace Dekuple.View.Impl
             SceneManager.sceneLoaded += (x, y) =>
             {
                 OnSceneLoaded();
-                ResolveScene();
             };
             Agents.Kernel.Root.Resume();
         }
@@ -51,8 +52,8 @@ namespace Dekuple.View.Impl
             Agents.Kernel.Step();
         }
 
-        private void ResolveScene()
-        { 
+        protected void ResolveScene()
+        {
             Views.InjectViewsInScene();
             Models.AddAllSubscriptions();
             Agents.AddAllSubscriptions();

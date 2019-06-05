@@ -40,6 +40,9 @@ namespace Dekuple.View
         TIView FromPrefab<TIView>(Object prefab, IAgent agent)
             where TIView : class, IViewBase;
 
+        TIView FromPrefab<TIView>(Object prefab, Transform parent, IAgent agent)
+            where TIView : class, IViewBase;
+
         void InjectView(IViewBase view);
         void InjectViewsInScene();
     }
