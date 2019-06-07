@@ -2,7 +2,7 @@
 using Flow;
 using UnityEditor;
 using UnityEngine;
-using Valve.Newtonsoft.Json;
+//using Newtonsoft.Json;
 
 public class PreferencesWindow
     : EditorWindow
@@ -13,12 +13,12 @@ public class PreferencesWindow
     private bool _changes;
 
     [MenuItem("Liminal/Dekuple/Preferences")]
-    static void Init()
+    private static void Init()
     {
         LoadPreferences();
 
         _liminalLogo = (Texture2D)AssetDatabase.LoadAssetAtPath("Packages/Dekuple/Editor/Textures/LiminalLogo.png", typeof(Texture2D));
-        PreferencesWindow window = (PreferencesWindow)GetWindow(typeof(PreferencesWindow), true, "Liminal Preferences", true);
+        var window = (PreferencesWindow)GetWindow(typeof(PreferencesWindow), true, "Liminal Preferences", true);
         window.minSize = new Vector2(400, 200);
         window.Show();
     }
@@ -26,11 +26,10 @@ public class PreferencesWindow
     [InitializeOnLoadMethod]
     private static void LoadPreferences()
     {
-        if (File.Exists(_preferencesPath))
-        {
-            var jsonString = File.ReadAllText(_preferencesPath);
-            Preferences.Prefs = JsonConvert.DeserializeObject<Preferences>(jsonString);
-        }
+        if (!File.Exists(_preferencesPath)) 
+            return;
+
+        //Preferences.Prefs = JsonConvert.DeserializeObject<Preferences>(File.ReadAllText(_preferencesPath));
     }
 
     private void OnGUI()
@@ -69,6 +68,7 @@ public class PreferencesWindow
             var rect = GUILayoutUtility.GetLastRect();
             GUI.Label(rect, GUIContent.none, "LightmapEditorSelectedHighlight");
         }
+
         GUILayout.Space(2);
         GUILayout.EndHorizontal();
         GUILayout.Space(6);
@@ -83,13 +83,13 @@ public class PreferencesWindow
         GUILayout.EndHorizontal();
     }
 
-    private void SaveChanges()
+    private static void SaveChanges()
     {
-        if(!Directory.Exists(_preferencesDir))
+        if (!Directory.Exists(_preferencesDir))
             Directory.CreateDirectory(_preferencesDir);
 
-        var jsonString = JsonConvert.SerializeObject(Preferences.Prefs, Formatting.Indented);
-        File.WriteAllText(_preferencesPath, jsonString);
+        //var jsonString = JsonConvert.SerializeObject(Preferences.Prefs, Formatting.Indented);
+        //File.WriteAllText(_preferencesPath, jsonString);
         Debug.Log("Updated preferences for Dekuple.");
     }
 

@@ -77,6 +77,18 @@ namespace Dekuple.View.Impl
             return view;
         }
 
+        ///<inheritdoc cref="FromPrefab{TIView}(UnityEngine.Object)"/>
+        public TIView FromPrefab<TIView>(Object prefab, Transform parent, IAgent agent) where TIView : class, IViewBase
+        {
+            Assert.IsNotNull(prefab);
+            var view = Object.Instantiate(prefab, parent) as TIView;
+            Assert.IsNotNull(view);
+            view = Prepare(Inject(typeof(TIView), view)) as TIView;
+            view.SetAgent(agent);
+            view.AddSubscriptions();
+            return view;
+        }
+
         public TIView FromPrefab<TIView>(Object prefab, Transform parent, bool instantiateInWorldSpace) where TIView : class, IViewBase
         {
             Assert.IsNotNull(prefab);
