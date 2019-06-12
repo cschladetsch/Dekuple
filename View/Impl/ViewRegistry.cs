@@ -25,9 +25,9 @@ namespace Dekuple.View.Impl
         : Registry<IViewBase>
         , IViewRegistry
     {
-        public void InjectViewsInScene(Scene scene)
+        public void InjectAllViews()
         {
-            foreach (var view in Object.FindObjectsOfType<ViewBase>().Where(obj => obj.GameObject.scene == scene))
+            foreach (var view in Object.FindObjectsOfType<ViewBase>())
                 InjectView(view);
         }
 

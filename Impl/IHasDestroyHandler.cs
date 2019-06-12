@@ -11,7 +11,7 @@ namespace Dekuple
         ///
         /// Execution order is Create, Begin, AddSubscriptions
         /// </summary>
-        void AddSubscriptions();
+        bool AddSubscriptions(); // TODO Move to a more appropriate spot
 
         void Destroy();
     }

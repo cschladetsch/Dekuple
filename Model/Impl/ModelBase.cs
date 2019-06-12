@@ -1,4 +1,5 @@
 using System;
+using Dekuple.Utility;
 using UniRx;
 using UnityEngine.SceneManagement;
 
@@ -33,6 +34,7 @@ namespace Dekuple.Model
         private bool _destroyed;
         private readonly ReactiveProperty<IOwner> _owner;
         private bool _prepared;
+        private bool _addCalled;
 
         public virtual bool IsValid
         {
@@ -72,23 +74,9 @@ namespace Dekuple.Model
             return ReferenceEquals(other.Owner.Value, Owner.Value);
         }
 
-        public virtual void Create()
+        public virtual bool AddSubscriptions()
         {
-        }
-
-        public virtual void Begin()
-        {
-            Assert.IsFalse(_prepared);
-            if (_prepared)
-            {
-                Error($"{this} has already been prepared");
-                return;
-            }
-            _prepared = true;
-        }
-
-        public virtual void AddSubscriptions()
-        {
+            return !this.EarlyOut(ref _addCalled, $"{this} has already had AddSubscriptions called. Aborting.");
         }
 
         public virtual void Destroy()

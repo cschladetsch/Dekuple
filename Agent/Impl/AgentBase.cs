@@ -1,4 +1,5 @@
 ﻿using System;
+using Dekuple.Utility;
 using UniRx;
 using UnityEngine.AI;
 
@@ -16,6 +17,7 @@ namespace Dekuple.Agent
         , IAgent<TModel>
         where TModel : class, IModel
     {
+        private bool _addCalled;
         public event Action<IAgent> OnDestroyed;
         public IRegistry<IAgent> Registry { get; set; }
         public Guid Id { get; /*private*/ set; }
@@ -67,10 +69,6 @@ namespace Dekuple.Agent
             return other.Owner.Value == Owner.Value;
         }
 
-        public virtual void Create()
-        {
-        }
-
         // DK TODO Move to Chess2
         //public virtual void StartGame()
         //{
@@ -83,8 +81,9 @@ namespace Dekuple.Agent
         //    _started = false;
         //}
 
-        public virtual void AddSubscriptions()
+        public virtual bool AddSubscriptions()
         {
+            return !this.EarlyOut(ref _addCalled, $"{this} has already had AddSubscriptions called. Aborting.");
         }
 
         public virtual void Destroy()
