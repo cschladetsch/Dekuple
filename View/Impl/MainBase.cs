@@ -20,16 +20,18 @@ namespace Dekuple.View.Impl
 
         private static MainBase _instance;
 
-        protected override void Create()
+        protected override bool Create()
         {
-            base.Create();
+            if (!base.Create())
+                return false;
+
             if (_instance == null)
                 _instance = this;
             else
             {
                 Warn($"Duplicate instance of type {GetType().Name}. Destroying new instance.");
                 Destroy(gameObject);
-                return;
+                return false;
             }
             transform.SetParent(null);
             DontDestroyOnLoad(gameObject);
@@ -37,6 +39,7 @@ namespace Dekuple.View.Impl
             ResolveBindings();
             SceneManager.sceneLoaded += OnSceneLoaded;
             Agents.Kernel.Root.Resume();
+            return true;
         }
 
         private void ResolveBindings()
@@ -54,7 +57,7 @@ namespace Dekuple.View.Impl
 
         protected void ResolveScene()
         {
-            Views.InjectViewsInScene();
+            Views.InjectAllViews();
             Models.AddSubscriptionsInScene();
             Agents.AddSubscriptionsInScene();
             Views.AddSubscriptionsInScene();

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
-using UniRx;
 using CoLib;
+using Dekuple.Utility;
+using UniRx;
 
 namespace Dekuple.View.Impl
 {
@@ -46,7 +47,9 @@ namespace Dekuple.View.Impl
         }
 
         private bool _paused;
-        private bool _created;
+        private bool _createCalled;
+        private bool _beginCalled;
+        private bool _addCalled;
         private bool _destroyed;
         private float _localTime;
         private CommandQueue _queue;
@@ -93,20 +96,10 @@ namespace Dekuple.View.Impl
         }
 
         private void Awake()
-        {
-            if (_created)
-            {
-                Warn($"{this} has already been Awoken. Aborting.");
-                return;
-            }
-            _created = true;
-            Create();
-        }
+            => Create();
 
         private void Start()
-        {
-            Begin();
-        }
+            => Begin();
 
         private void Update()
         {
@@ -122,8 +115,9 @@ namespace Dekuple.View.Impl
         /// Dekuple overrides them so they can be used more consistently using
         /// virtual functions and overrides.
         /// </remarks>
-        protected virtual void Create()
+        protected virtual bool Create()
         {
+            return !this.EarlyOut(ref _createCalled, $"{this} has already had AddSubscriptions called. Aborting.");
         }
 
         /// <remarks>
@@ -131,13 +125,18 @@ namespace Dekuple.View.Impl
         /// Dekuple overrides them so they can be used more consistently using
         /// virtual functions and overrides.
         /// </remarks>
-        protected virtual void Begin()
+        protected virtual bool Begin()
         {
+            return !this.EarlyOut(ref _beginCalled, $"{this} has already had Begin called. Aborting.");
         }
 
-        public virtual void AddSubscriptions()
+        public virtual bool AddSubscriptions()
         {
+            if (this.EarlyOut(ref _addCalled, $"{this} has already had AddSubscriptions called. Aborting."))
+                return false;
+
             BindTransformComponents();
+            return true;
         }
 
         private void BindTransformComponents()

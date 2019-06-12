@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Dekuple.View
 {
     using Agent;
-    using Model;
     using Registry;
 
     /// <inheritdoc />
@@ -45,6 +43,6 @@ namespace Dekuple.View
             where TIView : class, IViewBase;
 
         void InjectView(IViewBase view);
-        void InjectViewsInScene();
+        void InjectAllViews();
     }
 }
