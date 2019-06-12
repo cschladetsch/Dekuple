@@ -1,7 +1,10 @@
-﻿using System.Linq;
-
+﻿using System;
+using System.Collections;
+using System.Linq;
+using Flow;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Object = UnityEngine.Object;
 
 namespace Dekuple.View.Impl
 {
@@ -17,26 +20,26 @@ namespace Dekuple.View.Impl
 
         private static MainBase _instance;
 
-        protected override void Create()
+        protected override bool Create()
         {
-            base.Create();
+            if (!base.Create())
+                return false;
+
             if (_instance == null)
                 _instance = this;
             else
             {
                 Warn($"Duplicate instance of type {GetType().Name}. Destroying new instance.");
                 Destroy(gameObject);
-                return;
+                return false;
             }
             transform.SetParent(null);
             DontDestroyOnLoad(gameObject);
             CreateBindings();
             ResolveBindings();
-            SceneManager.sceneLoaded += (x, y) =>
-            {
-                OnSceneLoaded();
-            };
+            SceneManager.sceneLoaded += OnSceneLoaded;
             Agents.Kernel.Root.Resume();
+            return true;
         }
 
         private void ResolveBindings()
@@ -54,14 +57,22 @@ namespace Dekuple.View.Impl
 
         protected void ResolveScene()
         {
-            Views.InjectViewsInScene();
-            Models.AddAllSubscriptions();
-            Agents.AddAllSubscriptions();
-            Views.AddAllSubscriptions();
+            Views.InjectAllViews();
+            Models.AddSubscriptionsInScene();
+            Agents.AddSubscriptionsInScene();
+            Views.AddSubscriptionsInScene();
         }
 
-        protected virtual void OnSceneLoaded()
+        protected virtual void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
         {
+            IEnumerator LateSceneLoad(IGenerator self)
+            {
+                yield return null;
+                ResolveScene();
+            }
+
+            var kernel = Agents.Kernel;
+            kernel.Factory.Coroutine(LateSceneLoad).AddTo(kernel.Root);
         }
 
         public TIView NewEntity<TIView, TIModel>(Object prefab)

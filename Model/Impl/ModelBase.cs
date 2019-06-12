@@ -1,5 +1,7 @@
 using System;
+using Dekuple.Utility;
 using UniRx;
+using UnityEngine.SceneManagement;
 
 // event not used
 #pragma warning disable 67
@@ -16,6 +18,11 @@ namespace Dekuple.Model
         : Flow.Impl.Logger
         , IModel
     {
+        /// <summary>
+        /// When loading a Unity Scene, the AsyncOperation loads the scene by 0.9F, the last .1F is for activation
+        /// </summary>
+        public const float LoadCompletionProgress = 0.9F;
+
         public event Action<IModel> OnDestroyed;
 
         public bool Prepared { get; protected set; }
@@ -27,6 +34,7 @@ namespace Dekuple.Model
         private bool _destroyed;
         private readonly ReactiveProperty<IOwner> _owner;
         private bool _prepared;
+        private bool _addCalled;
 
         public virtual bool IsValid
         {
@@ -66,23 +74,9 @@ namespace Dekuple.Model
             return ReferenceEquals(other.Owner.Value, Owner.Value);
         }
 
-        public virtual void Create()
+        public virtual bool AddSubscriptions()
         {
-        }
-
-        public virtual void Begin()
-        {
-            Assert.IsFalse(_prepared);
-            if (_prepared)
-            {
-                Error($"{this} has already been prepared");
-                return;
-            }
-            _prepared = true;
-        }
-
-        public virtual void AddSubscriptions()
-        {
+            return !this.EarlyOut(ref _addCalled, $"{this} has already had AddSubscriptions called. Aborting.");
         }
 
         public virtual void Destroy()

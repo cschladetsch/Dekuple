@@ -1,5 +1,4 @@
 ﻿using System;
-using UniRx;
 
 namespace Dekuple
 {
@@ -9,8 +8,10 @@ namespace Dekuple
         /// Agents (and other things) can have injected fields or properties.
         /// These cannot be used during construction, so we use `Create` to
         /// be a point of entry that can work with injected and other dependencies.
+        ///
+        /// Execution order is Create, Begin, AddSubscriptions
         /// </summary>
-        void AddSubscriptions();
+        bool AddSubscriptions(); // TODO Move to a more appropriate spot
 
         void Destroy();
     }

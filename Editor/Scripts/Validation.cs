@@ -49,7 +49,10 @@ namespace Dekuple
                 }
 
                 if (isValid)
+                {
+                    Debug.LogFormat($"<color=green>No issues detected in {type}.</color>");
                     continue;
+                }
 
                 Debug.LogFormat(str.ToString());
             }

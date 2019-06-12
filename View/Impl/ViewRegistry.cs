@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Dekuple.View.Impl
 {
@@ -23,7 +25,7 @@ namespace Dekuple.View.Impl
         : Registry<IViewBase>
         , IViewRegistry
     {
-        public void InjectViewsInScene()
+        public void InjectAllViews()
         {
             foreach (var view in Object.FindObjectsOfType<ViewBase>())
                 InjectView(view);

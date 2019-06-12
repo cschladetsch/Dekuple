@@ -122,13 +122,13 @@ public class ViewBaseInspector
                 if (member is FieldInfo field)
                 {
                     value = field.GetValue(reference);
-                    style = field.FieldType == typeof(IGenerator) ? _wrappedMemberLabelStyle : _memberLabelStyle;
+                    style = typeof(IGenerator).IsAssignableFrom(field.FieldType) ? _wrappedMemberLabelStyle : _memberLabelStyle;
                 }
 
                 if (member is PropertyInfo property)
                 {
                     value = property.GetValue(reference);
-                    style = property.PropertyType == typeof(IGenerator) ? _wrappedMemberLabelStyle : _memberLabelStyle;
+                    style = typeof(IGenerator).IsAssignableFrom(property.PropertyType) ? _wrappedMemberLabelStyle : _memberLabelStyle;
                 }
 
                 var memberName = member.Name;

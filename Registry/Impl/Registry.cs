@@ -3,8 +3,7 @@ using System.Linq;
 using System.Text;
 using System.Reflection;
 using System.Collections.Generic;
-using System.Runtime.Serialization.Formatters;
-using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Dekuple.Registry
 {
@@ -56,7 +55,7 @@ namespace Dekuple.Registry
             Id = Guid.NewGuid();
         }
 
-        public void AddAllSubscriptions()
+        public void AddSubscriptionsInScene()
         {
             // Copy instances enumerable so that if it is modified the loop will not break.
             var instances = Instances.ToArray();
