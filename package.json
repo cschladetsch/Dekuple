@@ -13,6 +13,7 @@
     "category": "Unity",
     "dependencies": 
     {
+        "com.liminal.colib": "0.0.1",
         "com.liminal.flow": "0.0.1",
         "com.neuecc.unirx": "0.0.1"
     }

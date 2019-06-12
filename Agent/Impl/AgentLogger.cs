@@ -14,7 +14,8 @@ namespace Dekuple.Agent
 
         public bool Active { get; private set; }
         public IKernel Kernel { get; set; }
-        public IFactory Factory => Kernel.Factory;
+        public IFactory New => Kernel.Factory;
+        public IFactory Factory => New;
         public INode Root => Kernel.Root;
         public string Name { get; set; }
         public string LogPrefix { get => _log.LogPrefix; set => _log.LogPrefix = value; }
@@ -24,6 +25,12 @@ namespace Dekuple.Agent
         public int Verbosity { get => _log.Verbosity; set => _log.Verbosity = value; }
 
         protected readonly LoggerFacade<Flow.Impl.Logger> _log = new LoggerFacade<Flow.Impl.Logger>("Agent");
+
+        public ITransient AddTo(IGroup group)
+        {
+            group.Add(this);
+            return this;
+        }
 
         public ITransient Named(string name)
         {

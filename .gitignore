@@ -5,6 +5,10 @@
 /bin.meta
 /obj.meta
 
+/bin.meta
+/obj
+/obj.meta
+
 *.user
 
 

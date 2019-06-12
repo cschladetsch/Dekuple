@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Dekuple.Model;
-using UniRx;
 
 namespace Dekuple
 {
@@ -25,42 +23,6 @@ namespace Dekuple
             }
 
             val.OnDestroyed += Remove;
-        }
-
-        private static readonly Random Rand = new Random(DateTime.Now.Millisecond);
-
-        public static void Shuffle<T>(this IList<T> list)
-        {
-            Shuffle(list, Rand);
-        }
-
-        public static void Shuffle<T>(this IList<T> list, Random rnd)
-        {
-            for (var i = 0; i < list.Count; i++)
-                list.Swap(i, rnd.Next(i, list.Count));
-        }
-
-        public static void Swap<T>(this IList<T> list, int i, int j)
-        {
-            var temp = list[i];
-            list[i] = list[j];
-            list[j] = temp;
-        }
-
-        /// <summary>
-        /// Connect this collection to another so that it reacts to additions and removals from the connected collection.
-        /// </summary>
-        /// <typeparam name="TTarget">The type of the connected collection.</typeparam>
-        /// <param name="self">The collection to connect to and watch.</param>
-        /// <param name="add">Called when an element is added to the connected collection.</param>
-        /// <param name="remove">Called when an element is removed from the connected collection.</param>
-        public static void Connect<TTarget>(
-            this IReadOnlyReactiveCollection<TTarget> self,
-            Action<CollectionAddEvent<TTarget>> add,
-            Action<CollectionRemoveEvent<TTarget>> remove)
-        {
-            self.ObserveAdd().Subscribe(add);
-            self.ObserveRemove().Subscribe(remove);
         }
     }
 }

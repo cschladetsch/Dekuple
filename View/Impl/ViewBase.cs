@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+
 using UnityEngine;
 
-using UniRx;
 using CoLib;
+using Dekuple.Utility;
+using UniRx;
 
 namespace Dekuple.View.Impl
 {
@@ -33,10 +36,20 @@ namespace Dekuple.View.Impl
 
         // lazy create because most views won't need a queue or audio source
         protected CommandQueue _Queue => _queue ?? (_queue = new CommandQueue());
-        protected AudioSource _AudioSource => _audioSource ? _audioSource : (_audioSource = GameObject.AddComponent<AudioSource>());
+        protected List<IDisposable> _Subscriptions { get; } = new List<IDisposable>();
+        protected AudioSource _AudioSource
+        {
+            get
+            {
+                _audioSource = GetComponent<AudioSource>();
+                return _audioSource ? _audioSource : (_audioSource = GameObject.AddComponent<AudioSource>());
+            }
+        }
 
         private bool _paused;
-        private bool _created;
+        private bool _createCalled;
+        private bool _beginCalled;
+        private bool _addCalled;
         private bool _destroyed;
         private float _localTime;
         private CommandQueue _queue;
@@ -77,26 +90,16 @@ namespace Dekuple.View.Impl
 
         public void SetOwner(IOwner owner)
         {
-            Verbose(20, $"New owner of {this} is {owner}");
+            //Verbose(20, $"New owner of {this} is {owner}");
 
             Model?.SetOwner(owner);
         }
 
         private void Awake()
-        {
-            if (_created)
-            {
-                Warn($"{this} has already been Awoken. Aborting.");
-                return;
-            }
-            _created = true;
-            Create();
-        }
+            => Create();
 
         private void Start()
-        {
-            Begin();
-        }
+            => Begin();
 
         private void Update()
         {
@@ -107,28 +110,50 @@ namespace Dekuple.View.Impl
             _localTime += Time.deltaTime;
         }
 
-        protected virtual void Create()
+        /// <remarks>
+        /// Unity initialisation methods are called via reflection.
+        /// Dekuple overrides them so they can be used more consistently using
+        /// virtual functions and overrides.
+        /// </remarks>
+        protected virtual bool Create()
         {
-
+            return !this.EarlyOut(ref _createCalled, $"{this} has already had AddSubscriptions called. Aborting.");
         }
 
-        protected virtual void Begin()
+        /// <remarks>
+        /// Unity initialisation methods are called via reflection.
+        /// Dekuple overrides them so they can be used more consistently using
+        /// virtual functions and overrides.
+        /// </remarks>
+        protected virtual bool Begin()
         {
+            return !this.EarlyOut(ref _beginCalled, $"{this} has already had Begin called. Aborting.");
+        }
 
+        public virtual bool AddSubscriptions()
+        {
+            if (this.EarlyOut(ref _addCalled, $"{this} has already had AddSubscriptions called. Aborting."))
+                return false;
+
+            BindTransformComponents();
+            return true;
         }
 
         private void BindTransformComponents()
         {
             if (Model is IPositionedModel positionedModel)
                 positionedModel.Position.DistinctUntilChanged().Subscribe(pos => Transform.position = pos);
-            if (Model is ILocalScaledModel localScaledModel)
+            if (Model is IScaledModel localScaledModel)
                 localScaledModel.LocalScale.DistinctUntilChanged().Subscribe(scale => Transform.localScale = scale);
-            if (Model is IWorldScaledModel worldScaledModel)
-                worldScaledModel.Scale.DistinctUntilChanged().Subscribe(_ => throw new NotImplementedException());
             if (Model is IRotatedModel rotatedModel)
                 rotatedModel.Rotation.DistinctUntilChanged().Subscribe(rot => Transform.rotation = rot);
         }
 
+        /// <remarks>
+        /// Unity initialisation methods are called via reflection.
+        /// Dekuple overrides them so they can be used more consistently using
+        /// virtual functions and overrides.
+        /// </remarks>
         protected virtual void Step()
         {
             _queue?.Update(Time.deltaTime);
@@ -149,11 +174,6 @@ namespace Dekuple.View.Impl
             return ReferenceEquals(Owner.Value, other);
         }
 
-        public virtual void AddSubscriptions()
-        {
-            BindTransformComponents();
-        }
-
         private void OnDestroy() => Destroy();
 
         public virtual void Destroy()
@@ -162,6 +182,10 @@ namespace Dekuple.View.Impl
                 return;
 
             _destroyed = true;
+
+            foreach (var disposable in _Subscriptions)
+                disposable.Dispose();
+            _Subscriptions.Clear();
 
             AgentBase?.Destroy();
             if (AgentBase == null)

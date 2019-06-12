@@ -8,7 +8,7 @@ namespace Dekuple
     public interface IOwned
     {
         IReadOnlyReactiveProperty<IOwner> Owner { get; }
-    
+
         bool SameOwner(IOwned other);
         void SetOwner(IOwner owner);
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using Flow;
+using Flow.Impl;
 
 namespace Dekuple.Agent
 {
@@ -24,10 +25,7 @@ namespace Dekuple.Agent
             {
                 if (_node != null)
                     return _node;
-                _node = Factory.Node();
-                _node.Name = Name;
-                Root.Add(_node);
-                return _node;
+                return _node = Factory.Node().Named(Name).AddTo(Root);
             }
         }
 

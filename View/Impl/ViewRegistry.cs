@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Dekuple.View.Impl
 {
@@ -23,10 +25,10 @@ namespace Dekuple.View.Impl
         : Registry<IViewBase>
         , IViewRegistry
     {
-        public void InjectAllGameObjects()
+        public void InjectAllViews()
         {
             foreach (var view in Object.FindObjectsOfType<ViewBase>())
-                InjectGameObject(view);
+                InjectView(view);
         }
 
         /// <summary>
@@ -34,7 +36,7 @@ namespace Dekuple.View.Impl
         /// that have not been previously bound using Bind&lt;T&gt;
         /// </summary>
         /// <param name="view"></param>
-        public void InjectGameObject(IViewBase view)
+        public void InjectView(IViewBase view)
         {
             var injections = new Injections(this, view.GetType());
             injections.Inject(view);
@@ -52,32 +54,70 @@ namespace Dekuple.View.Impl
             return base.Bind<TInterface, TImpl>(single);
         }
 
-        public TIView FromPrefab<TIView>(Object prefab, IAgent agent)
-            where TIView : class, IViewBase
-        {
-            var view = FromPrefab<TIView>(prefab);
-            view.SetAgent(agent);
-            view.SetModel(agent.BaseModel);
-            view.AddSubscriptions();
-            agent.AddSubscriptions();
-            agent.BaseModel.AddSubscriptions();
-            return view;
-        }
-
+        /// <summary>
+        /// Create a new View from the given prefab. Its model and agent will need to be added separately if required.
+        /// Equivalent to [UnityEngine.Object.Instantiate](https://docs.unity3d.com/ScriptReference/Object.Instantiate.html).
+        /// </summary>
+        /// <remarks> Unity's instantiate method cannot be used as it will not create an entire entity. </remarks>
+        /// <typeparam name="TIView"></typeparam>
+        /// <param name="prefab"> The object to create an instance of</param>
+        /// <returns> The object instance</returns>
         public TIView FromPrefab<TIView>(Object prefab)
             where TIView : class, IViewBase
         {
             return FromPrefab<TIView>(prefab, (Transform) null);
         }
 
+        ///<inheritdoc cref="FromPrefab{TIView}(UnityEngine.Object)"/>
         public TIView FromPrefab<TIView>(Object prefab, Transform parent) where TIView : class, IViewBase
         {
             Assert.IsNotNull(prefab);
             var view = Object.Instantiate(prefab, parent) as TIView;
             Assert.IsNotNull(view);
-            return Prepare(Inject(typeof(TIView), view)) as TIView;
+            view = Prepare(Inject(typeof(TIView), view)) as TIView;
+            view.AddSubscriptions();
+            return view;
         }
 
+        ///<inheritdoc cref="FromPrefab{TIView}(UnityEngine.Object)"/>
+        public TIView FromPrefab<TIView>(Object prefab, Transform parent, IAgent agent) where TIView : class, IViewBase
+        {
+            Assert.IsNotNull(prefab);
+            var view = Object.Instantiate(prefab, parent) as TIView;
+            Assert.IsNotNull(view);
+            view = Prepare(Inject(typeof(TIView), view)) as TIView;
+            view.SetAgent(agent);
+            view.AddSubscriptions();
+            return view;
+        }
+
+        public TIView FromPrefab<TIView>(Object prefab, Transform parent, bool instantiateInWorldSpace) where TIView : class, IViewBase
+        {
+            Assert.IsNotNull(prefab);
+            var view = Object.Instantiate(prefab, parent, instantiateInWorldSpace) as TIView;
+            Assert.IsNotNull(view);
+            view = Prepare(Inject(typeof(TIView), view)) as TIView;
+            view.AddSubscriptions();
+            return view;
+        }
+
+        public TIView FromPrefab<TIView>(Object prefab, Transform parent, bool instantiateInWorldSpace, IAgent agent) where TIView : class, IViewBase
+        {
+            Assert.IsNotNull(prefab);
+            var view = Object.Instantiate(prefab, parent, instantiateInWorldSpace) as TIView;
+            Assert.IsNotNull(view);
+
+            view.SetAgent(agent);
+            view.SetModel(agent.BaseModel);
+
+            view = Prepare(Inject(typeof(TIView), view)) as TIView;
+            view.AddSubscriptions();
+            agent.AddSubscriptions();
+            agent.BaseModel.AddSubscriptions();
+            return view;
+        }
+
+        ///<inheritdoc cref="FromPrefab{TIView}(UnityEngine.Object)"/>
         public TIView FromPrefab<TIView, TIAgent>(Object prefab, IRegistry<TIAgent> agents)
             where TIView : class, IViewBase
             where TIAgent : class, IAgent, IHasDestroyHandler<TIAgent>, IHasRegistry<TIAgent>
@@ -86,24 +126,54 @@ namespace Dekuple.View.Impl
             Assert.IsNotNull(view);
             var agent = agents.Get<TIAgent>();
             view.SetAgent(agent);
+            view.SetModel(agent.BaseModel);
+            view.AddSubscriptions();
+            agent.AddSubscriptions();
+            agent.BaseModel.AddSubscriptions();
             Assert.IsTrue(view.IsValid);
             return view;
         }
 
+        ///<inheritdoc cref="FromPrefab{TIView}(UnityEngine.Object)"/>
+        public TIView FromPrefab<TIView>(Object prefab, IAgent agent)
+            where TIView : class, IViewBase
+        {
+            Assert.IsNotNull(prefab);
+            var view = Object.Instantiate(prefab) as TIView;
+            Assert.IsNotNull(view);
+            view = Prepare(Inject(typeof(TIView), view)) as TIView;
+
+            view.SetAgent(agent);
+            view.SetModel(agent.BaseModel);
+
+            view.AddSubscriptions();
+            agent.AddSubscriptions();
+            agent.BaseModel.AddSubscriptions();
+            return view;
+        }
+
+        ///<inheritdoc cref="FromPrefab{TIView}(UnityEngine.Object)"/>
         public TIView FromPrefab<TIView, TIAgent, TIModel>(Object prefab, IRegistry<TIModel> models, IRegistry<TIAgent> agents = null)
             where TIView : class, IViewBase
             where TIAgent : class, IAgent, IHasDestroyHandler<TIAgent>, IHasRegistry<TIAgent>
             where TIModel : class, IModel, IHasDestroyHandler<TIModel>, IHasRegistry<TIModel>
         {
-            var view = FromPrefab<TIView>(prefab);
+            Assert.IsNotNull(prefab);
+            var view = Object.Instantiate(prefab) as TIView;
+            Assert.IsNotNull(view);
+            view = Prepare(Inject(typeof(TIView), view)) as TIView;
             Assert.IsNotNull(view);
             var model = models.Get<TIModel>();
             if (agents != null)
             {
-                var agent = agents.Get<TIAgent>(model);
+                TIAgent agent = agents.Get<TIAgent>(model);
                 view.SetAgent(agent);
+                view.SetModel(model);
+                agent.AddSubscriptions();
+                agent.BaseModel.AddSubscriptions();
+                view.AddSubscriptions();
             }
-            view.SetModel(model);
+
             Assert.IsTrue(view.IsValid);
             return view;
         }

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text;
 using System.Reflection;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Dekuple.Registry
 {
@@ -18,7 +18,7 @@ namespace Dekuple.Registry
     ///
     /// <b>NOTE</b> a Registry is a `Model` entirely so it has its own logging stream.
     /// It doesn't make much sense to use a Registry as an actual Model.
-    /// 
+    ///
     /// </summary>
     /// <typeparam name="TBase">The common interface for each instance stored in the registry</typeparam>
     public partial class Registry<TBase>
@@ -55,12 +55,12 @@ namespace Dekuple.Registry
             Id = Guid.NewGuid();
         }
 
-        public void AddAllSubscriptions()
+        public void AddSubscriptionsInScene()
         {
-            foreach (var obj in Instances)
-            {
+            // Copy instances enumerable so that if it is modified the loop will not break.
+            var instances = Instances.ToArray();
+            foreach (var obj in instances)
                 obj.AddSubscriptions();
-            }
         }
 
         public bool Has(TBase instance)
@@ -84,7 +84,7 @@ namespace Dekuple.Registry
         public bool Bind<TInterface, TImpl>()
             where TInterface
                 : TBase
-            where TImpl 
+            where TImpl
                 : TInterface
         {
             var ity = typeof(TInterface);
@@ -124,7 +124,7 @@ namespace Dekuple.Registry
         {
             singleton = null;
             var single = GetSingle(type);
-            if (single == null) 
+            if (single == null)
                 return false;
 
             if (args.Count != 0)
@@ -149,14 +149,14 @@ namespace Dekuple.Registry
                 _typeToGuid[type] = iBase.Id;
             }
 
-            Verbose(10, $"Made a {typeof(TIBase)}");
+            //Verbose(10, $"Made a {typeof(TIBase)}");
             return iBase;
         }
 
         public bool Bind<TInterface, TImpl>(Func<TImpl> creator)
             where TInterface
-                : TBase 
-            where TImpl 
+                : TBase
+            where TImpl
                 : TInterface
         {
             throw new NotImplementedException();
@@ -164,8 +164,8 @@ namespace Dekuple.Registry
 
         public bool Bind<TInterface, TImpl, T0>(Func<T0, TImpl> creator)
             where TInterface
-                : TBase 
-            where TImpl 
+                : TBase
+            where TImpl
                 : TInterface
         {
             throw new NotImplementedException();
@@ -173,8 +173,8 @@ namespace Dekuple.Registry
 
         public bool Bind<TInterface, TImpl, T0, T1>(Func<T0, T1, TImpl> creator)
             where TInterface
-                : TBase 
-            where TImpl 
+                : TBase
+            where TImpl
                 : TInterface
         {
             throw new NotImplementedException();
@@ -182,8 +182,8 @@ namespace Dekuple.Registry
 
         public virtual bool Bind<TInterface, TImpl>(TImpl single)
             where TInterface
-                : TBase 
-            where TImpl 
+                : TBase
+            where TImpl
                 : TInterface
         {
             var ity = typeof(TInterface);
@@ -227,7 +227,7 @@ namespace Dekuple.Registry
                 instance.Id = Guid.NewGuid();
                 _instances[instance.Id] = instance;
             }
-            
+
             instance.OnDestroyed += ModelDestroyed;
             instance.Registry = this;
             return instance;
@@ -282,7 +282,7 @@ namespace Dekuple.Registry
             {
                 if (pi.Single != null)
                 {
-                    Verbose(50, $"Setting delayed singleton for {pi.Interface}");
+                    //Verbose(50, $"Setting delayed singleton for {pi.Interface}");
                     _singles[pi.Interface] = pi.Single;
                 }
                 else
@@ -339,7 +339,7 @@ namespace Dekuple.Registry
         {
             if (model == null)
             {
-                Verbose(10, "Attempt to destroy null model");
+                //Verbose(10, "Attempt to destroy null model");
                 return;
             }
 
@@ -358,7 +358,7 @@ namespace Dekuple.Registry
             {
                 if (_resolved)
                     Error($"Registry has no binding for {ity}");
-                
+
                 return null;
             }
 
