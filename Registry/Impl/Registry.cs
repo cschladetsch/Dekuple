@@ -19,7 +19,7 @@ namespace Dekuple.Registry
     ///
     /// <b>NOTE</b> a Registry is a `Model` entirely so it has its own logging stream.
     /// It doesn't make much sense to use a Registry as an actual Model.
-    /// 
+    ///
     /// </summary>
     /// <typeparam name="TBase">The common interface for each instance stored in the registry</typeparam>
     public partial class Registry<TBase>
@@ -85,7 +85,7 @@ namespace Dekuple.Registry
         public bool Bind<TInterface, TImpl>()
             where TInterface
                 : TBase
-            where TImpl 
+            where TImpl
                 : TInterface
         {
             var ity = typeof(TInterface);
@@ -125,7 +125,7 @@ namespace Dekuple.Registry
         {
             singleton = null;
             var single = GetSingle(type);
-            if (single == null) 
+            if (single == null)
                 return false;
 
             if (args.Count != 0)
@@ -156,8 +156,8 @@ namespace Dekuple.Registry
 
         public bool Bind<TInterface, TImpl>(Func<TImpl> creator)
             where TInterface
-                : TBase 
-            where TImpl 
+                : TBase
+            where TImpl
                 : TInterface
         {
             throw new NotImplementedException();
@@ -165,8 +165,8 @@ namespace Dekuple.Registry
 
         public bool Bind<TInterface, TImpl, T0>(Func<T0, TImpl> creator)
             where TInterface
-                : TBase 
-            where TImpl 
+                : TBase
+            where TImpl
                 : TInterface
         {
             throw new NotImplementedException();
@@ -174,8 +174,8 @@ namespace Dekuple.Registry
 
         public bool Bind<TInterface, TImpl, T0, T1>(Func<T0, T1, TImpl> creator)
             where TInterface
-                : TBase 
-            where TImpl 
+                : TBase
+            where TImpl
                 : TInterface
         {
             throw new NotImplementedException();
@@ -183,8 +183,8 @@ namespace Dekuple.Registry
 
         public virtual bool Bind<TInterface, TImpl>(TImpl single)
             where TInterface
-                : TBase 
-            where TImpl 
+                : TBase
+            where TImpl
                 : TInterface
         {
             var ity = typeof(TInterface);
@@ -228,7 +228,7 @@ namespace Dekuple.Registry
                 instance.Id = Guid.NewGuid();
                 _instances[instance.Id] = instance;
             }
-            
+
             instance.OnDestroyed += ModelDestroyed;
             instance.Registry = this;
             return instance;
@@ -359,7 +359,7 @@ namespace Dekuple.Registry
             {
                 if (_resolved)
                     Error($"Registry has no binding for {ity}");
-                
+
                 return null;
             }
 

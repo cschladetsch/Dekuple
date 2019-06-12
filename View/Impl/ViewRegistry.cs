@@ -104,7 +104,7 @@ namespace Dekuple.View.Impl
             Assert.IsNotNull(prefab);
             var view = Object.Instantiate(prefab, parent, instantiateInWorldSpace) as TIView;
             Assert.IsNotNull(view);
-            
+
             view.SetAgent(agent);
             view.SetModel(agent.BaseModel);
 

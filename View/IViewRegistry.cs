@@ -23,10 +23,10 @@ namespace Dekuple.View
 
         TIView FromPrefab<TIView>(Object prefab)
             where TIView : class, IViewBase;
-        
+
         TIView FromPrefab<TIView>(Object prefab, Transform parent)
             where TIView : class, IViewBase;
-        
+
         TIView FromPrefab<TIView>(Object prefab, Transform parent, bool instantiateInWorldSpace)
             where TIView : class, IViewBase;
 

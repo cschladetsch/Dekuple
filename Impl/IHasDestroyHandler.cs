@@ -18,6 +18,6 @@ namespace Dekuple
     public interface IHasDestroyHandler<out T>
         : IHasDestroyHandler
     {
-        event Action<T> OnDestroyed; 
+        event Action<T> OnDestroyed;
     }
 }

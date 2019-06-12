@@ -26,7 +26,7 @@ public class PreferencesWindow
     [InitializeOnLoadMethod]
     private static void LoadPreferences()
     {
-        if (!File.Exists(_preferencesPath)) 
+        if (!File.Exists(_preferencesPath))
             return;
 
         //Preferences.Prefs = JsonConvert.DeserializeObject<Preferences>(File.ReadAllText(_preferencesPath));
