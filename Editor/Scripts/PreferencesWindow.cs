@@ -1,6 +1,8 @@
 ﻿using System.IO;
+using Dekuple;
 using Flow;
 using UnityEditor;
+using UnityEditorInternal;
 using UnityEngine;
 //using Newtonsoft.Json;
 
@@ -26,7 +28,7 @@ public class PreferencesWindow
     [InitializeOnLoadMethod]
     private static void LoadPreferences()
     {
-        if (!File.Exists(_preferencesPath)) 
+        if (!File.Exists(_preferencesPath))
             return;
 
         //Preferences.Prefs = JsonConvert.DeserializeObject<Preferences>(File.ReadAllText(_preferencesPath));

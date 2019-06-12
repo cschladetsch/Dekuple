@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Dekuple.View.Impl
 {
@@ -23,9 +25,9 @@ namespace Dekuple.View.Impl
         : Registry<IViewBase>
         , IViewRegistry
     {
-        public void InjectViewsInScene()
+        public void InjectViewsInScene(Scene scene)
         {
-            foreach (var view in Object.FindObjectsOfType<ViewBase>())
+            foreach (var view in Object.FindObjectsOfType<ViewBase>().Where(obj => obj.GameObject.scene == scene))
                 InjectView(view);
         }
 
@@ -104,7 +106,7 @@ namespace Dekuple.View.Impl
             Assert.IsNotNull(prefab);
             var view = Object.Instantiate(prefab, parent, instantiateInWorldSpace) as TIView;
             Assert.IsNotNull(view);
-            
+
             view.SetAgent(agent);
             view.SetModel(agent.BaseModel);
 

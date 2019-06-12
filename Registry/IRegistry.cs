@@ -15,7 +15,7 @@ namespace Dekuple.Registry
         bool Resolve();
         bool HasInjector(Type type);
         bool HasInjector<T>();
-        void AddAllSubscriptions();
+        void AddSubscriptionsInScene();
     }
 
     /// <inheritdoc />

@@ -1,5 +1,6 @@
 using System;
 using UniRx;
+using UnityEngine.SceneManagement;
 
 // event not used
 #pragma warning disable 67
@@ -16,6 +17,11 @@ namespace Dekuple.Model
         : Flow.Impl.Logger
         , IModel
     {
+        /// <summary>
+        /// When loading a Unity Scene, the AsyncOperation loads the scene by 0.9F, the last .1F is for activation
+        /// </summary>
+        public const float LoadCompletionProgress = 0.9F;
+
         public event Action<IModel> OnDestroyed;
 
         public bool Prepared { get; protected set; }

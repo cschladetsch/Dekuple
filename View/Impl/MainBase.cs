@@ -1,7 +1,10 @@
-﻿using System.Linq;
-
+﻿using System;
+using System.Collections;
+using System.Linq;
+using Flow;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Object = UnityEngine.Object;
 
 namespace Dekuple.View.Impl
 {
@@ -32,10 +35,7 @@ namespace Dekuple.View.Impl
             DontDestroyOnLoad(gameObject);
             CreateBindings();
             ResolveBindings();
-            SceneManager.sceneLoaded += (x, y) =>
-            {
-                OnSceneLoaded();
-            };
+            SceneManager.sceneLoaded += OnSceneLoaded;
             Agents.Kernel.Root.Resume();
         }
 
@@ -55,13 +55,21 @@ namespace Dekuple.View.Impl
         protected void ResolveScene()
         {
             Views.InjectViewsInScene();
-            Models.AddAllSubscriptions();
-            Agents.AddAllSubscriptions();
-            Views.AddAllSubscriptions();
+            Models.AddSubscriptionsInScene();
+            Agents.AddSubscriptionsInScene();
+            Views.AddSubscriptionsInScene();
         }
 
-        protected virtual void OnSceneLoaded()
+        protected virtual void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
         {
+            IEnumerator LateSceneLoad(IGenerator self)
+            {
+                yield return null;
+                ResolveScene();
+            }
+
+            var kernel = Agents.Kernel;
+            kernel.Factory.Coroutine(LateSceneLoad).AddTo(kernel.Root);
         }
 
         public TIView NewEntity<TIView, TIModel>(Object prefab)
