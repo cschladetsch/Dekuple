@@ -1,7 +1,9 @@
 .vs/
-obj/
-packages/
+/packages/
+/obj/
 /bin/
+/bin.meta
+/obj.meta
 
 *.user
 
