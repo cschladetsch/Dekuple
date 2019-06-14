@@ -1,6 +1,6 @@
 ﻿namespace Dekuple
 {
-    public interface IOwner 
+    public interface IOwner
         : IHasId
     {
     }

@@ -37,7 +37,7 @@ namespace Dekuple.Agent
             Name = name;
             return this;
         }
-        
+
         public void Complete()
         {
             if (!Active)

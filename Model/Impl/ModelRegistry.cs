@@ -15,7 +15,7 @@
     /// serve well for most applications.
     /// </summary>
     public class ModelRegistry
-        : Registry<IModel>, IModelRegistry 
+        : Registry<IModel>, IModelRegistry
     {
     }
 }
