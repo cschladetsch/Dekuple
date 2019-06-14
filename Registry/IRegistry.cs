@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Dekuple.Agent;
 
 namespace Dekuple.Registry
 {
@@ -41,13 +42,14 @@ namespace Dekuple.Registry
             where TInterface : TBase where TImpl : TInterface;
 
         /// <summary>
-        /// Bind an interface to a singleton
+        /// Bind an interface to a singleton.
         /// </summary>
         /// <typeparam name="TInterface">The query interface</typeparam>
         /// <typeparam name="TImpl">The Concrete type to create</typeparam>
-        /// <param name="single">The prefab OR object instance to bind to</param>
+        /// <param name="impl">The prefab OR object instance to bind to</param>
+        /// <param name="single">Bind as a singleton</param>
         /// <returns>True if bound</returns>
-        bool Bind<TInterface, TImpl>(TImpl single)
+        bool Bind<TInterface, TImpl>(TImpl impl, bool single = true)
             where TInterface : TBase where TImpl : TInterface;
 
         // make a new instance given interface

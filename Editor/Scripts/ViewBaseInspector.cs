@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿#if UNITY_EDITOR
+using System;
 using System.Linq;
 using System.Reflection;
 using Dekuple.Agent;
@@ -8,7 +8,6 @@ using Dekuple.View.Impl;
 using Flow;
 using UnityEditor;
 using UnityEngine;
-using IFactory = Flow.IFactory;
 
 [CanEditMultipleObjects]
 [CustomEditor(typeof(ViewBase), true)]
@@ -151,3 +150,4 @@ public class ViewBaseInspector
         GUILayout.EndVertical();
     }
 }
+#endif

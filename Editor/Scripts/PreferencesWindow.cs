@@ -1,8 +1,7 @@
-﻿using System.IO;
-using Dekuple;
+﻿#if UNITY_EDITOR
+using System.IO;
 using Flow;
 using UnityEditor;
-using UnityEditorInternal;
 using UnityEngine;
 //using Newtonsoft.Json;
 
@@ -120,3 +119,4 @@ public class Preferences
     public ELogLevel LogLevel;
     public bool UseViewBaseHierarchy;
 }
+#endif
