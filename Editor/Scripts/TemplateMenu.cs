@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if UNITY_EDITOR
+using System;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
@@ -64,7 +65,8 @@ public static class TemplateMenu
     }
 }
 
-public class InputPopup : EditorWindow
+public class InputPopup
+    : EditorWindow
 {
     private static string _template;
     private static string _suffix;
@@ -97,3 +99,4 @@ public class InputPopup : EditorWindow
         GUILayout.EndHorizontal();
     }
 }
+#endif

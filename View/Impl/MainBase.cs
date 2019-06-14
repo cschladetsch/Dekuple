@@ -97,20 +97,61 @@ namespace Dekuple.View.Impl
             return view;
         }
 
+        protected TView BuildEntityAsSingle<TView, TIView, TIAgent, TIModel>(params object[] modelArgs)
+            where TView : Component, TIView
+            where TIView : class, IViewBase
+            where TIModel : class, IModel
+            where TIAgent : class, IAgent
+        {
+            var obj = FindObjectOfType<TView>();
+
+            if (obj == null)
+            {
+                Verbose(15, $"Failed to find instance of type {typeof(TView).Name}.");
+                return null;
+            }
+
+            if (obj.AgentBase != null)
+                return obj;
+
+            Views.Bind<TIView, TView>(obj);
+
+            var model = Models.Get<TIModel>(modelArgs);
+            Assert.IsNotNull(model);
+
+            var agent = Agents.Get<TIAgent>(model);
+            Assert.IsNotNull(agent);
+
+            obj.SetAgent(agent);
+            obj.SetModel(model);
+
+            return obj;
+        }
+
         /// <summary>
         /// Find all Views of type TIView that exist in the scene and give them a model and agent.
         /// </summary>
         /// <param name="modelArgs"> Arguments passed to the model's constructor. </param>
-        protected TView[] BuildEntitiesOfType<TView, TIAgent, TIModel>(params object[] modelArgs)
-            where TView : Component, IViewBase
+        protected TView[] BuildEntitiesOfType<TView, TIView, TIAgent, TIModel>(params object[] modelArgs)
+            where TView : Component, TIView
+            where TIView : class, IViewBase
             where TIModel : class, IModel
             where TIAgent : class, IAgent
         {
             var objs = FindObjectsOfType<TView>().OrderBy(o => o.name).ToArray();
             foreach (var obj in objs)
             {
+                if (obj.AgentBase != null)
+                    continue;
+
+                Views.Bind<TIView, TView>(obj, false);
+
                 var model = Models.Get<TIModel>(modelArgs);
+                Assert.IsNotNull(model);
+
                 var agent = Agents.Get<TIAgent>(model);
+                Assert.IsNotNull(agent);
+
                 obj.SetAgent(agent);
                 obj.SetModel(model);
             }

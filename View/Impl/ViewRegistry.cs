@@ -43,15 +43,23 @@ namespace Dekuple.View.Impl
             Prepare(view);
         }
 
-        public override bool Bind<TInterface, TImpl>(TImpl single)
+        public bool Bind<TInterface, TImpl>(TImpl single, IAgent agent)
+            where TInterface : class, IViewBase where TImpl : TInterface
         {
             Assert.IsNotNull(single);
+
             var inScene = single.GameObject.scene.IsValid();
             if (!inScene)
-            {
                 single = Object.Instantiate(single.GameObject).GetComponent<TImpl>();
+
+            if (!Bind<TInterface, TImpl>(single))
+            {
+                Error($"Failed to bind {typeof(TInterface)}.");
+                return false;
             }
-            return base.Bind<TInterface, TImpl>(single);
+
+            Get<TInterface>().SetAgent(agent);
+            return true;
         }
 
         /// <summary>

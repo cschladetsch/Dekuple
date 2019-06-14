@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Dekuple.Model;
+using Dekuple.View.Impl;
+using UnityEngine;
 
 namespace Dekuple.View
 {
@@ -12,6 +14,16 @@ namespace Dekuple.View
     public interface IViewRegistry
         : IRegistry<IViewBase>
     {
+        /// <summary>
+        /// Bind an interface to a singleton and set its agent.
+        /// </summary>
+        /// <typeparam name="TInterface">The query interface</typeparam>
+        /// <typeparam name="TImpl">The Concrete type to create</typeparam>
+        /// <param name="single">The prefab OR object instance to bind to</param>
+        /// <returns>True if bound</returns>
+        bool Bind<TInterface, TImpl>(TImpl single, IAgent agent)
+            where TInterface : class, IViewBase where TImpl : TInterface;
+
         /*
            public static Object Instantiate(Object original);
            public static Object Instantiate(Object original, Transform parent);
@@ -32,7 +44,7 @@ namespace Dekuple.View
         TIView FromPrefab<TIView>(Object prefab, Transform parent, bool instantiateInWorldSpace, IAgent agent)
             where TIView : class, IViewBase;
 
-        TIView FromPrefab<TIView, TIAgent>(Object prefab, IRegistry<TIAgent> agents)
+        TIView FromPrefab<TIView, TIAgent>(Object prefab, IRegistry<TIAgent> agents) // DK TODO should TIAgent be IAgent?
             where TIView : class, IViewBase
             where TIAgent : class, IAgent, IHasDestroyHandler<TIAgent>, IHasRegistry<TIAgent>;
 

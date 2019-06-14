@@ -172,30 +172,27 @@ namespace Dekuple.Registry
         }
 
         public bool Bind<TInterface, TImpl, T0, T1>(Func<T0, T1, TImpl> creator)
-            where TInterface
-                : TBase
-            where TImpl
-                : TInterface
+            where TInterface : TBase
+            where TImpl : TInterface
         {
             throw new NotImplementedException();
         }
 
-        public virtual bool Bind<TInterface, TImpl>(TImpl single)
-            where TInterface
-                : TBase
-            where TImpl
-                : TInterface
+        public virtual bool Bind<TInterface, TImpl>(TImpl impl, bool single = true)
+            where TInterface : TBase
+            where TImpl : TInterface
         {
             var ity = typeof(TInterface);
-            if (_singles.ContainsKey(ity))
+            if (single && _singles.ContainsKey(ity))
             {
                 Warn($"Already have singleton value for {ity}");
                 return false;
             }
 
             var prep = new Injections(this, typeof(TImpl));
-            var obj = Prepare(prep.Inject(single, ity, single));
-            _singles[ity] = obj;
+            var obj = Prepare(prep.Inject(impl, ity, impl));
+            if(single)
+                _singles[ity] = obj;
             _injections[ity] = prep;
 
             return true;
@@ -368,8 +365,17 @@ namespace Dekuple.Registry
             {
                 if (!MatchingConstructor(args, con.GetParameters()))
                     continue;
-                if (con.Invoke(args) is TBase model)
-                    return Prepare(Inject(ity, model));
+
+                try
+                {
+                    if (con.Invoke(args) is TBase model)
+                        return Prepare(Inject(ity, model));
+                }
+                catch (Exception exception)
+                {
+                    Error($"Exception thrown when constructing {ty.Name} with args '{ToArgTypeList(args)}':\n{exception.Message}");
+                    return null;
+                }
             }
 
             Error($"No matching Ctor for {ty} with args '{ToArgTypeList(args)}'");
