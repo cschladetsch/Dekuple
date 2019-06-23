@@ -1,19 +1,7 @@
-using Dekuple.Agent;
-
-namespace App.Agents
-{
-    using Models;
-    using Models.Impl;
-
-    public interface I$AGENTNAME$
-        : IAgent<I$MODELNAME$>
-    {
-
-    }
-}
-
 namespace App.Agents.Impl
 {
+    using Dekuple.Agent;
+
     using Models;
 
     public class $AGENTNAME$
