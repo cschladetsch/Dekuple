@@ -36,7 +36,7 @@ namespace Dekuple.View.Impl
 
         // lazy create because most views won't need a queue or audio source
         protected CommandQueue _Queue => _queue ?? (_queue = new CommandQueue());
-        protected List<IDisposable> _Subscriptions { get; } = new List<IDisposable>();
+        protected List<IDisposable> _Subscriptions => _subscriptions ?? (_subscriptions = new List<IDisposable>());
         protected AudioSource _AudioSource
         {
             get
@@ -55,6 +55,7 @@ namespace Dekuple.View.Impl
         private CommandQueue _queue;
         private AudioSource _audioSource;
         private IModel _localModel;
+        private List<IDisposable> _subscriptions;
 
         public virtual bool IsValid
         {
@@ -185,6 +186,7 @@ namespace Dekuple.View.Impl
 
             foreach (var disposable in _Subscriptions)
                 disposable.Dispose();
+
             _Subscriptions.Clear();
 
             AgentBase?.Destroy();
