@@ -58,7 +58,8 @@ namespace Dekuple.View.Impl
                 return false;
             }
 
-            Get<TInterface>().SetAgent(agent);
+            if (agent != null)
+                Get<TInterface>().SetAgent(agent);
             return true;
         }
 
