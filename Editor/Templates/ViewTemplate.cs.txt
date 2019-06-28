@@ -1,19 +1,7 @@
-using Dekuple.View;
-using Dekuple.View.Impl;
-
-namespace App.Views
-{
-    using Agents;
-
-    public interface I$VIEWNAME$
-        : IView<I$AGENTNAME$>
-    {
-
-    }
-}
-
 namespace App.Views.Impl
 {
+    using Dekuple.View.Impl;
+
     using Agents;
 
     public class $VIEWNAME$

@@ -1,0 +1,12 @@
+namespace App.Views
+{
+    using Dekuple.View;
+
+    using Agents;
+
+    public interface I$VIEWNAME$
+        : IView<I$AGENTNAME$>
+    {
+
+    }
+}

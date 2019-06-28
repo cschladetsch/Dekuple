@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Dekuple.Utility;
 using UniRx;
 using UnityEngine.AI;
@@ -36,6 +37,10 @@ namespace Dekuple.Agent
                 return BaseModel != null && Model.IsValid;
             }
         }
+
+        protected List<IDisposable> _Subscriptions => _subscriptions ?? (_subscriptions = new List<IDisposable>());
+
+        private List<IDisposable> _subscriptions;
 
         protected AgentBase(TModel model)
         {
@@ -89,6 +94,12 @@ namespace Dekuple.Agent
         public virtual void Destroy()
         {
             TransientCompleted();
+
+            foreach (var disposable in _Subscriptions)
+                disposable.Dispose();
+
+            _Subscriptions.Clear();
+
             Model?.Destroy();
             this.OnDestroyed?.Invoke(this);
         }
