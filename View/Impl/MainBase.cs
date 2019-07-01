@@ -90,10 +90,9 @@ namespace Dekuple.View.Impl
             where TIAgent : class, IAgent
             where TIModel : class, IModel
         {
-            var view = Views.FromPrefab<TIView>(prefab);
             var model = Models.Get<TIModel>();
             var agent = Agents.Get<TIAgent>(model);
-            view.SetAgent(agent);
+            var view = Views.FromPrefab<TIView>(prefab, agent);
             return view;
         }
 
