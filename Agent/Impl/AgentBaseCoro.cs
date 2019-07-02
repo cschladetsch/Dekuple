@@ -34,6 +34,11 @@ namespace Dekuple.Agent
         {
         }
 
+        /// <summary>
+        /// Adds a new coroutine to the root and starts it immediately.
+        /// </summary>
+        /// <param name="fun"></param>
+        /// <returns></returns>
         protected IGenerator NewCoro(Func<IGenerator, IEnumerator> fun)
         {
             var coro = Factory.Coroutine(fun);
