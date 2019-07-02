@@ -152,9 +152,10 @@ namespace Dekuple.View.Impl
             view.SetAgent(agent);
             view.SetModel(agent.BaseModel);
 
-            view.AddSubscriptions();
-            agent.AddSubscriptions();
             agent.BaseModel.AddSubscriptions();
+            agent.AddSubscriptions();
+            view.AddSubscriptions();
+
             return view;
         }
 
