@@ -1,0 +1,12 @@
+namespace App.Agents
+{
+    using Dekuple.Agent;
+
+    using Models;
+
+    public interface I$AGENTNAME$
+        : IAgent<I$MODELNAME$>
+    {
+
+    }
+}

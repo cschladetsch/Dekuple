@@ -90,11 +90,7 @@ namespace Dekuple.View.Impl
             where TIAgent : class, IAgent
             where TIModel : class, IModel
         {
-            var view = Views.FromPrefab<TIView>(prefab);
-            var model = Models.Get<TIModel>();
-            var agent = Agents.Get<TIAgent>(model);
-            view.SetAgent(agent);
-            return view;
+            return Views.FromPrefab<TIView>(prefab, Agents.Get<TIAgent>(Models.Get<TIModel>()));
         }
 
         protected TView BuildEntityAsSingle<TView, TIView, TIAgent, TIModel>(params object[] modelArgs)

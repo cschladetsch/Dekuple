@@ -7,9 +7,12 @@ using UnityEngine;
 public static class TemplateMenu
 {
     private const string _templatesPath = @"Packages\Dekuple\Editor\Templates";
-    private static string _viewTemplate;
-    private static string _agentTemplate;
-    private static string _modelTemplate;
+    private static string _viewClass;
+    private static string _viewInterface;
+    private static string _agentClass;
+    private static string _agentInterface;
+    private static string _modelClass;
+    private static string _modelInterface;
 
     [InitializeOnLoadMethod]
     private static void Init()
@@ -22,31 +25,36 @@ public static class TemplateMenu
         }
 
         var templatesPath = Path.Combine(workDir, _templatesPath);
-        _viewTemplate = Path.Combine(templatesPath, "ViewTemplate.cs.txt");
-        _agentTemplate = Path.Combine(templatesPath, "AgentTemplate.cs.txt");
-        _modelTemplate = Path.Combine(templatesPath, "ModelTemplate.cs.txt");
+        _viewClass = Path.Combine(templatesPath, "ViewTemplate.cs.txt");
+        _viewInterface = Path.Combine(templatesPath, "IViewTemplate.cs.txt");
+        _agentClass = Path.Combine(templatesPath, "AgentTemplate.cs.txt");
+        _agentInterface = Path.Combine(templatesPath, "IAgentTemplate.cs.txt");
+        _modelClass = Path.Combine(templatesPath, "ModelTemplate.cs.txt");
+        _modelInterface = Path.Combine(templatesPath, "IModelTemplate.cs.txt");
     }
+
+    [MenuItem("Liminal/Dekuple/Create Entity Scripts", false, 0)]
+    public static void CreateEntity()
+        => CreateEntityPopup.Init(_viewClass, _agentClass, _modelClass, _viewInterface, _agentInterface, _modelInterface);
 
     [MenuItem("Assets/Create/Dekuple/C# View Script", false, 0)]
     public static void CreateView()
-        => InputPopup.Init(_viewTemplate, "View");
+        => ClassNamePopup.Init(_viewClass, "View");
 
     [MenuItem("Assets/Create/Dekuple/C# Agent Script", false, 0)]
     public static void CreateAgent()
-        => InputPopup.Init(_agentTemplate, "Agent");
+        => ClassNamePopup.Init(_agentClass, "Agent");
 
     [MenuItem("Assets/Create/Dekuple/C# Model Script", false, 0)]
     public static void CreateModel()
-        => InputPopup.Init(_modelTemplate, "Model");
+        => ClassNamePopup.Init(_modelClass, "Model");
 
-    public static void CreateFile(string templateText, string name, string fileName)
+    public static void CreateFile(string templateText, string name, string path)
     {
         var viewName = $"{name}View";
         var agentName = $"{name}Agent";
         var modelName = $"{name}Model";
 
-        var destinationDir = GetDirectory();
-        var path = Path.Combine(Directory.GetParent(Application.dataPath).FullName, destinationDir, fileName);
         path = path.Replace('\\', '/');
         var template = File.ReadAllText(templateText);
 
@@ -58,14 +66,120 @@ public static class TemplateMenu
         AssetDatabase.Refresh();
     }
 
-    private static string GetDirectory()
+    public static string GetDirectory()
     {
         var obj = Selection.activeObject;
         return obj == null ? "Assets" : AssetDatabase.GetAssetPath(obj.GetInstanceID());
     }
 }
 
-public class InputPopup
+public class CreateEntityPopup
+    : EditorWindow
+{
+    private static string _viewClass;
+    private static string _viewInterface;
+    private static string _agentClass;
+    private static string _agentInterface;
+    private static string _modelClass;
+    private static string _modelInterface;
+
+    private static string _viewClassPath;
+    private static string _viewInterfacePath;
+    private static string _agentClassPath;
+    private static string _agentInterfacePath;
+    private static string _modelClassPath;
+    private static string _modelInterfacePath;
+
+    private string _input;
+
+    public static void Init(string viewClass, string agentClass, string modelClass, string viewInterface, string agentInterface, string modelInterface)
+    {
+        _viewClass = viewClass;
+        _viewInterface = viewInterface;
+        _agentClass = agentClass;
+        _agentInterface = agentInterface;
+        _modelClass = modelClass;
+        _modelInterface = modelInterface;
+
+        _viewClassPath = Directory.GetParent(Application.dataPath).FullName + "/Assets/App/Views/Impl";
+        _viewInterfacePath = Directory.GetParent(Application.dataPath).FullName + "/Assets/App/Views";
+        _agentClassPath = Directory.GetParent(Application.dataPath).FullName + "/Assets/App/Agents/Impl";
+        _agentInterfacePath = Directory.GetParent(Application.dataPath).FullName + "/Assets/App/Agents";
+        _modelClassPath = Directory.GetParent(Application.dataPath).FullName + "/Assets/App/Models/Impl";
+        _modelInterfacePath = Directory.GetParent(Application.dataPath).FullName + "/Assets/App/Models";
+
+        CreateEntityPopup window = CreateInstance<CreateEntityPopup>();
+        window.name = "Create Entity";
+        window.ShowUtility();
+    }
+
+    void OnGUI()
+    {
+        GUILayout.Label($"Create Dekuple Entity", EditorStyles.boldLabel);
+        EditorGUIUtility.labelWidth = 100;
+
+        _input = EditorGUILayout.TextField("Name", _input);
+
+        GUILayout.Space(6);
+
+        var pathStyle = new GUIStyle("ToolbarTextField") { stretchWidth = true };
+        EditorGUIUtility.labelWidth = 150f;
+        GUILayout.BeginHorizontal();
+        EditorGUILayout.PrefixLabel("View Class Path: ");
+        if (GUILayout.Button(_viewClassPath, pathStyle))
+            _viewClassPath = EditorUtility.OpenFolderPanel("Select folder to create view.", _viewClassPath, "");
+        GUILayout.EndHorizontal();
+
+        GUILayout.BeginHorizontal();
+        EditorGUILayout.PrefixLabel("View Interface Path: ");
+        if (GUILayout.Button(_viewInterfacePath, pathStyle))
+            _viewInterfacePath = EditorUtility.OpenFolderPanel("Select folder to create view.", _viewInterfacePath, "");
+        GUILayout.EndHorizontal();
+
+        GUILayout.BeginHorizontal();
+        EditorGUILayout.PrefixLabel("Agent Class Path: ");
+        if (GUILayout.Button(_agentClassPath, pathStyle))
+            _agentClassPath = EditorUtility.OpenFolderPanel("Select folder to create view.", _agentInterfacePath, "");
+        GUILayout.EndHorizontal();
+
+        GUILayout.BeginHorizontal();
+        EditorGUILayout.PrefixLabel("Agent Interface Path: ");
+        if (GUILayout.Button(_agentInterfacePath, pathStyle))
+            _agentInterfacePath = EditorUtility.OpenFolderPanel("Select folder to create view.", _agentInterfacePath, "");
+        GUILayout.EndHorizontal();
+
+        GUILayout.BeginHorizontal();
+        EditorGUILayout.PrefixLabel("Model Class Path: ");
+        if (GUILayout.Button(_modelClassPath, pathStyle))
+            _modelClassPath = EditorUtility.OpenFolderPanel("Select folder to create view.", _modelClassPath, "");
+        GUILayout.EndHorizontal();
+
+        GUILayout.BeginHorizontal();
+        EditorGUILayout.PrefixLabel("Model Interface Path: ");
+        if (GUILayout.Button(_modelInterfacePath, pathStyle))
+            _modelInterfacePath = EditorUtility.OpenFolderPanel("Select folder to create view.", _modelInterfacePath, "");
+        GUILayout.EndHorizontal();
+        GUILayout.BeginHorizontal();
+
+        if (GUILayout.Button("Save"))
+        {
+            TemplateMenu.CreateFile(_viewInterface, _input, $"{_viewInterfacePath}/I{_input}View.cs");
+            TemplateMenu.CreateFile(_agentInterface, _input, $"{_agentInterfacePath}/I{_input}Agent.cs");
+            TemplateMenu.CreateFile(_modelInterface, _input, $"{_modelInterfacePath}/I{_input}Model.cs");
+            TemplateMenu.CreateFile(_viewClass, _input, $"{_viewClassPath}/{_input}View.cs");
+            TemplateMenu.CreateFile(_agentClass, _input, $"{_agentClassPath}/{_input}Agent.cs");
+            TemplateMenu.CreateFile(_modelClass, _input, $"{_modelClassPath}/{_input}Model.cs");
+            this.Close();
+        }
+        if (GUILayout.Button("Cancel"))
+        {
+            this.Close();
+        }
+        GUILayout.EndHorizontal();
+    }
+}
+
+public class ClassNamePopup
     : EditorWindow
 {
     private static string _template;
@@ -76,9 +190,8 @@ public class InputPopup
     {
         _template = template;
         _suffix = suffix;
-        InputPopup window = CreateInstance<InputPopup>();
-        window.position = new Rect(Screen.width / 2f+ 250, Screen.height / 2f + 50, 300, 67);
-        window.ShowPopup();
+        ClassNamePopup window = CreateInstance<ClassNamePopup>();
+        window.ShowUtility();
     }
 
     void OnGUI()
@@ -89,7 +202,7 @@ public class InputPopup
         GUILayout.BeginHorizontal();
         if (GUILayout.Button("Save"))
         {
-            TemplateMenu.CreateFile(_template, _input, $"{_input}{_suffix}.cs");
+            TemplateMenu.CreateFile(_template, _input, $"{Directory.GetParent(Application.dataPath).FullName}/{TemplateMenu.GetDirectory()}/{_input}{_suffix}.cs");
             this.Close();
         }
         if (GUILayout.Button("Cancel"))

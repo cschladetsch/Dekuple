@@ -1,16 +1,7 @@
-using Dekuple.Model;
-
-namespace App.Models
-{
-    public interface I$MODELNAME$
-        : IModel
-    {
-
-    }
-}
-
 namespace App.Models.Impl
 {
+    using Dekuple.Model;
+    
     public class $MODELNAME$
         : ModelBase
         , I$MODELNAME$

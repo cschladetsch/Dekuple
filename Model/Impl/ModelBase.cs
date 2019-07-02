@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Dekuple.Utility;
 using UniRx;
 using UnityEngine.SceneManagement;
@@ -31,6 +32,9 @@ namespace Dekuple.Model
         public Guid Id { get; /*private*/ set; }
         public IReadOnlyReactiveProperty<IOwner> Owner => _owner;
 
+        protected List<IDisposable> _Subscriptions => _subscriptions ?? (_subscriptions = new List<IDisposable>());
+
+        private List<IDisposable> _subscriptions;
         private bool _destroyed;
         private readonly ReactiveProperty<IOwner> _owner;
         private bool _prepared;
@@ -86,6 +90,11 @@ namespace Dekuple.Model
                 return;
 
             _destroyed = true;
+
+            foreach (var disposable in _Subscriptions)
+                disposable.Dispose();
+
+            _Subscriptions.Clear();
 
             OnDestroyed?.Invoke(this);
             Id = Guid.Empty;
