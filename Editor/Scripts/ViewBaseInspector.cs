@@ -31,7 +31,9 @@ public class ViewBaseInspector
     private GUIStyle _memberLabelStyle;
     private GUIStyle _wrappedMemberLabelStyle;
 
-    private const BindingFlags Flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly;
+    //private const BindingFlags Flags = (BindingFlags) (0xFFFFFF);
+    private BindingFlags Flags
+        = BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public;
 
     public override void OnInspectorGUI()
     {
@@ -76,12 +78,15 @@ public class ViewBaseInspector
                 DrawDefaultInspector();
                 break;
             case ESelectedInspector.View:
+                Flags = (BindingFlags)EditorGUILayout.EnumFlagsField(Flags);
                 DrawViewDetails();
                 break;
             case ESelectedInspector.Agent:
+                Flags = (BindingFlags)EditorGUILayout.EnumFlagsField(Flags);
                 DrawAgentDetails();
                 break;
             case ESelectedInspector.Model:
+                Flags = (BindingFlags)EditorGUILayout.EnumFlagsField(Flags);
                 DrawModelDetails();
                 break;
         }
@@ -90,7 +95,7 @@ public class ViewBaseInspector
     private void InitStyles()
     {
         _memberLabelStyle = new GUIStyle("ObjectPickerResultsEven");
-        _wrappedMemberLabelStyle = new GUIStyle("ObjectPickerResultsEven") {wordWrap = true};
+        _wrappedMemberLabelStyle = new GUIStyle("ObjectPickerResultsEven") { wordWrap = true };
     }
 
     public virtual void DrawModelDetails() => DrawViaReflection(_Model);
