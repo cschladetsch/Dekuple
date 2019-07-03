@@ -4,6 +4,9 @@ namespace App.Views
 
     using Agents;
 
+    /// <summary>
+    /// DOC
+    /// </summary>
     public interface I$VIEWNAME$
         : IView<I$AGENTNAME$>
     {

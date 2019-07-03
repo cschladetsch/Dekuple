@@ -2,6 +2,7 @@ namespace App.Models.Impl
 {
     using Dekuple.Model;
     
+    /// <inheritdoc cref="I$MODELNAME$" />
     public class $MODELNAME$
         : ModelBase
         , I$MODELNAME$

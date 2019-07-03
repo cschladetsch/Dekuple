@@ -4,6 +4,7 @@ namespace App.Views.Impl
 
     using Agents;
 
+    /// <inheritdoc cref="I$VIEWNAME$" />
     public class $VIEWNAME$
         : ViewBase<I$AGENTNAME$>
         , I$VIEWNAME$
