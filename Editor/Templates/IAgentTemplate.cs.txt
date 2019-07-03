@@ -4,6 +4,9 @@ namespace App.Agents
 
     using Models;
 
+    /// <summary>
+    /// DOC
+    /// </summary>
     public interface I$AGENTNAME$
         : IAgent<I$MODELNAME$>
     {

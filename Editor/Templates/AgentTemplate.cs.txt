@@ -4,6 +4,7 @@ namespace App.Agents.Impl
 
     using Models;
 
+    /// <inheritdoc cref="I$AGENTNAME$" />
     public class $AGENTNAME$
         : AgentBase<I$MODELNAME$>
         , I$AGENTNAME$
