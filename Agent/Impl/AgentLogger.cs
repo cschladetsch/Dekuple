@@ -10,7 +10,7 @@ namespace Dekuple.Agent
         : ITransient
         , ILogger
     {
-        public event TransientHandler Completed;
+        public event TransientHandler OnDisposed;
 
         public bool Active { get; private set; }
         public IKernel Kernel { get; set; }
@@ -38,11 +38,11 @@ namespace Dekuple.Agent
             return this;
         }
 
-        public void Complete()
+        public void Dispose()
         {
             if (!Active)
                 return;
-            Completed?.Invoke(this);
+            OnDisposed?.Invoke(this);
             Active = false;
         }
 
@@ -74,7 +74,7 @@ namespace Dekuple.Agent
 
         protected void TransientCompleted()
         {
-            Completed?.Invoke(this);
+            OnDisposed?.Invoke(this);
         }
     }
 
