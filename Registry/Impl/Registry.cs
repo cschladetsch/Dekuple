@@ -322,7 +322,7 @@ namespace Dekuple.Registry
         private void Remove(TBase instance)
         {
             if (!_instances.ContainsKey(instance.Id))
-                Warn($"Attempt to destroy unknown {instance.GetType()} Id={instance.Id}");
+                Verbose(5, $"Attempt to destroy unknown {instance.GetType()} Id={instance.Id}");
             else
                 _instances.Remove(instance.Id);
         }

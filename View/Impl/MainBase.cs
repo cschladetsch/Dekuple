@@ -39,6 +39,7 @@ namespace Dekuple.View.Impl
             ResolveBindings();
             SceneManager.sceneLoaded += OnSceneLoaded;
             Agents.Kernel.Root.Resume();
+
             return true;
         }
 
