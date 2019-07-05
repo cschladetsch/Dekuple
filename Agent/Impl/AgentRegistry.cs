@@ -35,7 +35,7 @@
         public override IAgent Prepare(IAgent agent)
         {
             base.Prepare(agent);
-            agent.OnDestroyed += a => a.Dispose();
+            agent.OnDestroyed += a => a.Complete();
             return Factory.Prepare(agent);
         }
     }
