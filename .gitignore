@@ -10,5 +10,6 @@
 /obj.meta
 
 *.user
+*.user.meta
 
 
