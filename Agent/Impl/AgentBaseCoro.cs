@@ -39,21 +39,21 @@ namespace Dekuple.Agent
         /// </summary>
         /// <param name="fun"></param>
         /// <returns></returns>
-        protected IGenerator NewCoro(Func<IGenerator, IEnumerator> fun)
+        protected IGenerator Run(Func<IGenerator, IEnumerator> fun)
         {
             var coro = Factory.Coroutine(fun);
             _Node.Add(coro);
             return coro;
         }
 
-        protected IGenerator NewCoro<T0>(Func<IGenerator, T0, IEnumerator> fun, T0 t0)
+        protected IGenerator Run<T0>(Func<IGenerator, T0, IEnumerator> fun, T0 t0)
         {
             var coro = Factory.Coroutine(fun, t0);
             _Node.Add(coro);
             return coro;
         }
 
-        protected IGenerator NewCoro<T0, T1>(Func<IGenerator, T0, T1, IEnumerator> fun, T0 t0, T1 t1)
+        protected IGenerator Run<T0, T1>(Func<IGenerator, T0, T1, IEnumerator> fun, T0 t0, T1 t1)
         {
             var coro = Factory.Coroutine(fun, t0, t1);
             _Node.Add(coro);
