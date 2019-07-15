@@ -2,12 +2,15 @@
 using System;
 using System.Linq;
 using System.Reflection;
+
+using UnityEditor;
+using UnityEngine;
+
 using Dekuple.Agent;
 using Dekuple.Model;
 using Dekuple.View.Impl;
+using Dekuple.Editor;
 using Flow;
-using UnityEditor;
-using UnityEngine;
 
 [CanEditMultipleObjects]
 [CustomEditor(typeof(ViewBase), true)]
