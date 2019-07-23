@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using Dekuple.Utility;
-using UniRx;
-using UnityEngine.AI;
-
-namespace Dekuple.Agent
+﻿namespace Dekuple.Agent
 {
+    using System;
+    using System.Collections.Generic;
+    using UniRx;
+    using Utility;
     using Registry;
     using Model;
 
@@ -93,7 +91,7 @@ namespace Dekuple.Agent
 
         public virtual void Destroy()
         {
-            TransientCompleted();
+            Complete();
 
             foreach (var disposable in _Subscriptions)
                 disposable.Dispose();

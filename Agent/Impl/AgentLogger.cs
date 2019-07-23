@@ -1,4 +1,5 @@
-﻿using Flow;
+﻿using System;
+using Flow;
 
 namespace Dekuple.Agent
 {
@@ -30,6 +31,21 @@ namespace Dekuple.Agent
         {
             group.Add(this);
             return this;
+        }
+
+        public ITransient Then(IGenerator next)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ITransient Then(Action action)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ITransient Then(Action<ITransient> action)
+        {
+            throw new NotImplementedException();
         }
 
         public ITransient Named(string name)
@@ -70,11 +86,6 @@ namespace Dekuple.Agent
         {
             _log.LogSubject = this;
             _log.LogPrefix = "Agent";
-        }
-
-        protected void TransientCompleted()
-        {
-            Completed?.Invoke(this);
         }
     }
 
