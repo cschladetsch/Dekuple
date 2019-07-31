@@ -119,5 +119,5 @@ Invoke `AddSubscriptions()` for all instances in the given registry.
 
 ### TODO
 
-Make Error(..) etc log methods return object so they can return null and simplify usage.
+Make Error(..) etc log methods return object so they can return null and simplify usage
 
