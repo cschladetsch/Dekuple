@@ -13,7 +13,7 @@ namespace Dekuple.Agent
     {
         public event TransientHandler Completed;
 
-        public bool Active { get; private set; }
+        public bool Active { get; protected set; }
         public IKernel Kernel { get; set; }
         public IFactory New => Kernel.Factory;
         public IFactory Factory => New;
