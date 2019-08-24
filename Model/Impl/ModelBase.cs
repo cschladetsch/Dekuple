@@ -1,14 +1,12 @@
-using System;
-using System.Collections.Generic;
-using Dekuple.Utility;
-using UniRx;
-using UnityEngine.SceneManagement;
-
 // event not used
 #pragma warning disable 67
 
 namespace Dekuple.Model
 {
+    using System;
+    using System.Collections.Generic;
+    using Utility;
+    using UniRx;
     using Registry;
 
     ///  <summary>
@@ -116,12 +114,3 @@ namespace Dekuple.Model
     }
 }
 
-//static class ModelExt
-//{
-//    public static T AddTo<T>(this T disposable, Dekuple.Model.IModel model)
-//        where T : IDisposable
-//    {
-//        model.Destroyed.Subscribe(m => disposable.Dispose());
-//        return disposable;
-//    }
-//}

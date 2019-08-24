@@ -8,7 +8,6 @@ namespace Dekuple.Utility
         {
             if (field)
             {
-                logger.Verbose(15, message);
                 return true;
             }
             field = true;
