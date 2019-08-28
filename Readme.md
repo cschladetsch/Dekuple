@@ -1,4 +1,9 @@
 # Dekuple ![Icon](icon.png)
+[![Build status](https://ci.appveyor.com/api/projects/status/github/cschladetsch/Dekuple?svg=true)](https://ci.appveyor.com/project/cschladetsch/Dekuple)
+[![CodeFactor](https://www.codefactor.io/repository/github/cschladetsch/Dekuple/badge)](https://www.codefactor.io/repository/github/cschladetsch/Dekuple)
+[![License](https://img.shields.io/github/license/cschladetsch/Dekuple.svg?label=License&maxAge=86400)](./LICENSE.txt)
+[![Release](https://img.shields.io/github/release/cschladetsch/Dekuple.svg?label=Release&maxAge=60)](https://github.com/cschladetsch/pyro/releases/latest)
+
 A dependancy-injection and entity system designed from the ground up to support both rapid prototyping and long-term development and support of `Unity3d` based applications.
 
 The system also adds a `MVC` or `Model-View-Controller` pattern.
