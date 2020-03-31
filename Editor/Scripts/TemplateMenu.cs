@@ -170,11 +170,11 @@ public class CreateEntityPopup
             TemplateMenu.CreateFile(_viewClass, _input, $"{_viewClassPath}/{_input}View.cs");
             TemplateMenu.CreateFile(_agentClass, _input, $"{_agentClassPath}/{_input}Agent.cs");
             TemplateMenu.CreateFile(_modelClass, _input, $"{_modelClassPath}/{_input}Model.cs");
-            this.Close();
+            Close();
         }
         if (GUILayout.Button("Cancel"))
         {
-            this.Close();
+            Close();
         }
         GUILayout.EndHorizontal();
     }
@@ -204,11 +204,11 @@ public class ClassNamePopup
         if (GUILayout.Button("Save"))
         {
             TemplateMenu.CreateFile(_template, _input, $"{Directory.GetParent(Application.dataPath).FullName}/{TemplateMenu.GetDirectory()}/{_input}{_suffix}.cs");
-            this.Close();
+            Close();
         }
         if (GUILayout.Button("Cancel"))
         {
-            this.Close();
+            Close();
         }
         GUILayout.EndHorizontal();
     }

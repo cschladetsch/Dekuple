@@ -15,20 +15,20 @@ namespace Dekuple.Editor
     public class PreferencesWindow
         : EditorWindow
     {
-        private static Texture2D _liminalLogo;
+        private static Texture2D _logo;
         private static string _preferencesPath => Path.Combine(_preferencesDir, "Preferences.dks");
         private static string _preferencesDir => Path.Combine(Application.persistentDataPath, "Preferences/Dekuple/");
-        private static string _logoPath => "Packages/com.liminal.dekuple/Editor/Textures/LiminalLogo.png";
+        private static string _logoPath => "Packages/com.cschladetsch.dekuple/Editor/Textures/Logo.png";
 
         private bool _changes;
 
-        [MenuItem("Liminal/Dekuple/Preferences")]
+        [MenuItem("Dekuple/Preferences")]
         private static void Init()
         {
             Load();
 
-            _liminalLogo = (Texture2D)AssetDatabase.LoadAssetAtPath(_logoPath, typeof(Texture2D));
-            var window = (PreferencesWindow)GetWindow(typeof(PreferencesWindow), true, "Liminal Preferences", true);
+            _logo = (Texture2D)AssetDatabase.LoadAssetAtPath(_logoPath, typeof(Texture2D));
+            var window = (PreferencesWindow)GetWindow(typeof(PreferencesWindow), true, "Dekuple Preferences", true);
             window.minSize = new Vector2(400, 200);
             window.Show();
         }
@@ -113,11 +113,11 @@ namespace Dekuple.Editor
 
         private static void DrawLogo()
         {
-            if (_liminalLogo != null)
+            if (_logo != null)
             {
                 GUILayout.BeginHorizontal();
                 GUILayout.FlexibleSpace();
-                GUILayout.Label(_liminalLogo, GUILayout.Width(200), GUILayout.Height(44));
+                GUILayout.Label(_logo, GUILayout.Width(200), GUILayout.Height(44));
                 GUILayout.FlexibleSpace();
                 GUILayout.EndHorizontal();
             }
