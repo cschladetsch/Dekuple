@@ -11,12 +11,12 @@
         : Transient
         , ILogger
     {
-        public event TransientHandler Completed;
+//        public event TransientHandler Completed;
 
-        public bool Active { get; protected set; }
-        public IKernel Kernel { get; set; }
-        public IFactory New => Kernel.Factory;
-        public IFactory Factory => New;
+//        public bool Active { get; protected set; }
+//        public IKernel Kernel { get; set; }
+//        public IFactory New => Kernel.Factory;
+//        public IFactory Factory => New;
         public INode Root => Kernel.Root;
     }
 

@@ -20,8 +20,9 @@ public static class TemplateMenu
         var workDir = Environment.GetEnvironmentVariable("WORK_DIR", EnvironmentVariableTarget.User);
         if (workDir == null)
         {
-            Debug.Log("Please set your WORK_DIR system environment variable.");
-            return;
+            //Debug.Log("Please set your WORK_DIR system environment variable.");
+            workDir = "w";
+//            return;
         }
 
         var templatesPath = Path.Combine(workDir, _templatesPath);
@@ -33,7 +34,7 @@ public static class TemplateMenu
         _modelInterface = Path.Combine(templatesPath, "IModelTemplate.cs.txt");
     }
 
-    [MenuItem("Liminal/Dekuple/Create Entity Scripts", false, 0)]
+    [MenuItem("Dekuple/Create Entity Scripts", false, 0)]
     public static void CreateEntity()
         => CreateEntityPopup.Init(_viewClass, _agentClass, _modelClass, _viewInterface, _agentInterface, _modelInterface);
 
