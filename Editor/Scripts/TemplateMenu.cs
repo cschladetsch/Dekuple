@@ -17,14 +17,14 @@ public static class TemplateMenu
     [InitializeOnLoadMethod]
     private static void Init()
     {
-        var workDir = Environment.GetEnvironmentVariable("WORK_DIR", EnvironmentVariableTarget.User);
-        if (workDir == null)
-        {
-            //Debug.Log("Please set your WORK_DIR system environment variable.");
-            workDir = "w";
-//            return;
-        }
-
+//        var workDir = Environment.GetEnvironmentVariable("WORK_DIR", EnvironmentVariableTarget.User);
+//        if (workDir == null)
+//        {
+//            //Debug.Log("Please set your WORK_DIR system environment variable.");
+//            workDir = "w";
+////            return;
+//        }
+        var workDir = "w:\\";
         var templatesPath = Path.Combine(workDir, _templatesPath);
         _viewClass = Path.Combine(templatesPath, "ViewTemplate.cs.txt");
         _viewInterface = Path.Combine(templatesPath, "IViewTemplate.cs.txt");
@@ -56,9 +56,7 @@ public static class TemplateMenu
         var agentName = $"{name}Agent";
         var modelName = $"{name}Model";
 
-        path = path.Replace('\\', '/');
         var template = File.ReadAllText(templateText);
-
         var output = template.Replace("$VIEWNAME$", viewName);
         output = output.Replace("$AGENTNAME$", agentName);
         output = output.Replace("$MODELNAME$", modelName);
@@ -102,12 +100,13 @@ public class CreateEntityPopup
         _modelClass = modelClass;
         _modelInterface = modelInterface;
 
-        _viewClassPath = Directory.GetParent(Application.dataPath).FullName + "/Assets/App/Views/Impl";
-        _viewInterfacePath = Directory.GetParent(Application.dataPath).FullName + "/Assets/App/Views";
-        _agentClassPath = Directory.GetParent(Application.dataPath).FullName + "/Assets/App/Agents/Impl";
-        _agentInterfacePath = Directory.GetParent(Application.dataPath).FullName + "/Assets/App/Agents";
-        _modelClassPath = Directory.GetParent(Application.dataPath).FullName + "/Assets/App/Models/Impl";
-        _modelInterfacePath = Directory.GetParent(Application.dataPath).FullName + "/Assets/App/Models";
+        var parent = Directory.GetParent(Application.dataPath).FullName;
+        _viewClassPath = parent + "/Assets/App/Views/Impl";
+        _viewInterfacePath = parent + "/Assets/App/Views";
+        _agentClassPath = parent + "/Assets/App/Agents/Impl";
+        _agentInterfacePath = parent + "/Assets/App/Agents";
+        _modelClassPath = parent + "/Assets/App/Models/Impl";
+        _modelInterfacePath = parent + "/Assets/App/Models";
 
         CreateEntityPopup window = CreateInstance<CreateEntityPopup>();
         window.name = "Create Entity";
