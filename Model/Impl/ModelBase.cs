@@ -25,6 +25,7 @@ namespace Dekuple.Model
         public event Action<IModel> OnDestroyed;
 
         public bool Prepared { get; protected set; }
+
         public IRegistry<IModel> Registry { get; set; }
         public string Name { get; set; }
         public Guid Id { get; /*private*/ set; }
@@ -47,6 +48,15 @@ namespace Dekuple.Model
             }
         }
 
+        public virtual void PrepareModels()
+        {
+        }
+
+        // public void Add<T>(T disposable) where T : IDisposable
+        // {
+        //     _Subscriptions.Add(disposable);
+        // }
+        //
         public bool SameOwner(IEntity other)
         {
             if (other == null)
@@ -110,6 +120,11 @@ namespace Dekuple.Model
         protected void NotImplemented(string text)
         {
             Error($"Not {text} implemented");
+        }
+
+        public void Add(IDisposable other)
+        {
+            _Subscriptions.Add(other);
         }
     }
 }

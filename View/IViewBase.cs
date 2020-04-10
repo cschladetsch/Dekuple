@@ -1,10 +1,9 @@
-﻿using Dekuple.Model;
-using UnityEngine;
-
-namespace Dekuple.View
+﻿namespace Dekuple.View
 {
+    using UnityEngine;
     using Registry;
     using Agent;
+    using Model;
 
     /// <inheritdoc cref="IEntity" />
     /// <summary>
@@ -22,6 +21,7 @@ namespace Dekuple.View
 
         void SetModel(IModel model);
         void SetAgent(IAgent agent);
+        void SetAgent(IAgent agent, IModel model);
     }
 
     public interface IView<out TIAgent>

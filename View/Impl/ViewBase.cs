@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-
-using UnityEngine;
-
-using CoLib;
-using Dekuple.Utility;
-using UniRx;
-
-namespace Dekuple.View.Impl
+﻿namespace Dekuple.View.Impl
 {
+    using System;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using CoLib;
+    using Utility;
+    using UniRx;
     using Registry;
     using Model;
     using Agent;
@@ -78,15 +75,23 @@ namespace Dekuple.View.Impl
             return other.Owner.Value == Owner.Value;
         }
 
-        public void SetModel(IModel model)
+        public virtual void SetModel(IModel model)
         {
             _localModel = model;
             model.OnDestroyed += o => Destroy();
         }
 
-        public void SetAgent(IAgent agent)
+        public virtual void SetAgent(IAgent agent)
         {
             AgentBase = agent;
+            if (_localModel == null)
+                _localModel = agent.BaseModel;
+        }
+
+        public virtual void SetAgent(IAgent agent, IModel model)
+        {
+            SetAgent(agent);
+            SetModel(model);
         }
 
         public void SetOwner(IOwner owner)
@@ -144,8 +149,10 @@ namespace Dekuple.View.Impl
         {
             if (Model is IPositionedModel positionedModel)
                 positionedModel.Position.DistinctUntilChanged().Subscribe(pos => Transform.position = pos);
+            
             if (Model is IScaledModel localScaledModel)
                 localScaledModel.LocalScale.DistinctUntilChanged().Subscribe(scale => Transform.localScale = scale);
+            
             if (Model is IRotatedModel rotatedModel)
                 rotatedModel.Rotation.DistinctUntilChanged().Subscribe(rot => Transform.rotation = rot);
         }
@@ -225,5 +232,10 @@ namespace Dekuple.View.Impl
         //{
         //    base.SetAgent(player, agent);
         //}
+
+        public virtual void SetAgent(TIAgent agent, IModel model)
+        {
+            base.SetAgent(agent, model);
+        }
     }
 }

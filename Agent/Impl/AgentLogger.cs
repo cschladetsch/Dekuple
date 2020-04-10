@@ -1,5 +1,7 @@
 ﻿namespace Dekuple.Agent
 {
+    using System;
+    using System.Collections.Generic;
     using Flow;
     using Flow.Impl;
 
@@ -9,15 +11,25 @@
     /// </summary>
     public class AgentLogger
         : Transient
-        , ILogger
+        , IHasSubscriptions
     {
-//        public event TransientHandler Completed;
-
-//        public bool Active { get; protected set; }
-//        public IKernel Kernel { get; set; }
-//        public IFactory New => Kernel.Factory;
-//        public IFactory Factory => New;
         public INode Root => Kernel.Root;
+        
+        protected List<IDisposable> _Subscriptions = new List<IDisposable>();
+
+        protected AgentLogger()
+        {
+            Completed += tr =>
+            {
+                foreach (var sub in _Subscriptions)
+                    sub.Dispose();
+            };
+        }
+        
+        public void Add(IDisposable other)
+        {
+            _Subscriptions.Add(other);
+        }
     }
 
     public abstract class AgentLogger<TModel>

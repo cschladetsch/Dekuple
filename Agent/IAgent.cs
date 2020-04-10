@@ -13,6 +13,7 @@
         , IEntity
         , IHasRegistry<IAgent>
         , IHasDestroyHandler<IAgent>
+        , IHasSubscriptions
     {
         IModel BaseModel { get; }
     }

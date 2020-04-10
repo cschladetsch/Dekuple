@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-
-namespace Dekuple.Registry
+﻿namespace Dekuple.Registry
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Reflection;
+    
     partial class Registry<TBase>
     {
         /// <summary>
@@ -116,6 +116,10 @@ namespace Dekuple.Registry
                 inject.FieldInfo.SetValue(model, val);
 
             return model;
+        }
+
+        public override void PrepareModels()
+        {
         }
     }
 }

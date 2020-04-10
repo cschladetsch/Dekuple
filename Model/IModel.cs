@@ -1,4 +1,6 @@
-﻿namespace Dekuple.Model
+﻿using System;
+
+namespace Dekuple.Model
 {
     using Registry;
 
@@ -11,10 +13,13 @@
         , IEntity
         , IHasDestroyHandler<IModel>
         , IHasRegistry<IModel>
+        , IHasSubscriptions
     {
         /// <summary>
         /// If true, this model has already been prepared.
         /// </summary>
         bool Prepared { get; }
+
+        void PrepareModels();
     }
 }

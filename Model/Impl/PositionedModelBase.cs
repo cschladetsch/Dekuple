@@ -18,5 +18,9 @@ namespace Dekuple.Model
         public PositionedModelBase(IOwner owner) : base(owner)
         {
         }
+
+        public override void PrepareModels()
+        {
+        }
     }
 }
