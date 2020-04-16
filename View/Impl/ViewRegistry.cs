@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Dekuple.View.Impl
 {
@@ -72,18 +74,25 @@ namespace Dekuple.View.Impl
         public TIView FromPrefab<TIView>(Object prefab)
             where TIView : class, IViewBase
         {
-            return FromPrefab<TIView>(prefab, (Transform) null);
+            //return FromPrefab<TIView>(prefab, (Transform) null);
+            throw new NotImplementedException();
         }
 
         ///<inheritdoc cref="FromPrefab{TIView}(UnityEngine.Object)"/>
         public TIView FromPrefab<TIView>(Object prefab, Transform parent) where TIView : class, IViewBase
         {
-            Assert.IsNotNull(prefab);
-            var view = Object.Instantiate(prefab, parent) as TIView;
-            Assert.IsNotNull(view);
-            view = Prepare(Inject(typeof(TIView), view)) as TIView;
-            view.AddSubscriptions();
-            return view;
+            throw new NotImplementedException();
+            // Assert.IsNotNull(prefab);
+            // var view = Object.Instantiate(prefab, parent) as TIView;
+            // Assert.IsNotNull(view);
+            // view = Prepare(Inject(typeof(TIView), view)) as TIView;
+            // if (view == null)
+            // {
+            //     Error($"Failed to make view from {prefab}");
+            //     return null;
+            // }
+            // view.AddSubscriptions();
+            // return view;
         }
 
         ///<inheritdoc cref="FromPrefab{TIView}(UnityEngine.Object)"/>
@@ -115,7 +124,6 @@ namespace Dekuple.View.Impl
             Assert.IsNotNull(view);
 
             view.SetAgent(agent);
-            view.SetModel(agent.BaseModel);
 
             view = Prepare(Inject(typeof(TIView), view)) as TIView;
             view.AddSubscriptions();
@@ -133,7 +141,6 @@ namespace Dekuple.View.Impl
             Assert.IsNotNull(view);
             var agent = agents.Get<TIAgent>();
             view.SetAgent(agent);
-            view.SetModel(agent.BaseModel);
             view.AddSubscriptions();
             agent.AddSubscriptions();
             agent.BaseModel.AddSubscriptions();
@@ -151,7 +158,6 @@ namespace Dekuple.View.Impl
             view = Prepare(Inject(typeof(TIView), view)) as TIView;
 
             view.SetAgent(agent);
-            view.SetModel(agent.BaseModel);
 
             agent.BaseModel.AddSubscriptions();
             agent.AddSubscriptions();
@@ -176,7 +182,6 @@ namespace Dekuple.View.Impl
             {
                 TIAgent agent = agents.Get<TIAgent>(model);
                 view.SetAgent(agent);
-                view.SetModel(model);
                 agent.AddSubscriptions();
                 agent.BaseModel.AddSubscriptions();
                 view.AddSubscriptions();
@@ -186,7 +191,6 @@ namespace Dekuple.View.Impl
             return view;
         }
 
-        [System.Obsolete("This is a remnant from first usage in Chess2")]
         public TIView FromPrefab<TIView, TIAgent, TModel>(IViewBase viewBase, Object prefab, TModel model)
             where TIView : class , IViewBase
             where TIAgent : class, IAgent, IHasDestroyHandler<IAgent>
@@ -196,7 +200,6 @@ namespace Dekuple.View.Impl
             Assert.IsNotNull(view);
             var agent = viewBase.AgentBase.Registry.Get<TIAgent>(model);
             view.SetAgent(agent);
-            view.SetModel(model);
             Assert.IsTrue(view.IsValid);
             return view;
         }

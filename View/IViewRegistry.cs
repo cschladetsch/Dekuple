@@ -32,14 +32,14 @@ namespace Dekuple.View
            public static Object Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent);
          */
 
-        TIView FromPrefab<TIView>(Object prefab)
-            where TIView : class, IViewBase;
-
-        TIView FromPrefab<TIView>(Object prefab, Transform parent)
-            where TIView : class, IViewBase;
-
-        TIView FromPrefab<TIView>(Object prefab, Transform parent, bool instantiateInWorldSpace)
-            where TIView : class, IViewBase;
+        // TIView FromPrefab<TIView>(Object prefab)
+        //     where TIView : class, IViewBase;
+        //
+        // TIView FromPrefab<TIView>(Object prefab, Transform parent)
+        //     where TIView : class, IViewBase;
+        //
+        // TIView FromPrefab<TIView>(Object prefab, Transform parent, bool instantiateInWorldSpace)
+        //     where TIView : class, IViewBase;
 
         TIView FromPrefab<TIView>(Object prefab, Transform parent, bool instantiateInWorldSpace, IAgent agent)
             where TIView : class, IViewBase;

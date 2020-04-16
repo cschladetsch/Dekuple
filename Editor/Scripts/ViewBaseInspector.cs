@@ -36,7 +36,7 @@ public class ViewBaseInspector
 
     //private const BindingFlags Flags = (BindingFlags) (0xFFFFFF);
     private BindingFlags Flags
-        = BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public;
+        = BindingFlags.Instance | BindingFlags.Public | BindingFlags.DeclaredOnly;
 
     public override void OnInspectorGUI()
     {

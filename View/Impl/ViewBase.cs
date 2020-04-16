@@ -25,11 +25,10 @@
         public IReadOnlyReactiveProperty<IOwner> Owner => AgentBase?.Owner ?? Model?.Owner;
         public event Action<IViewBase> OnDestroyed;
         public IAgent AgentBase { get; set; }
-        public IViewBase OwnerView { get; set; }
-        public IModel OwnerModel => Owner?.Value as IModel;
+        // public IModel OwnerModel => Owner?.Value as IModel;
         public GameObject GameObject => gameObject;
         public Transform Transform => gameObject.transform;
-        public IModel Model => AgentBase?.BaseModel ?? _localModel;
+        public IModel Model => AgentBase?.BaseModel;// ?? _localModel;
 
         // lazy create because most views won't need a queue or audio source
         protected CommandQueue _Queue => _queue ?? (_queue = new CommandQueue());
@@ -51,7 +50,6 @@
         private float _localTime;
         private CommandQueue _queue;
         private AudioSource _audioSource;
-        private IModel _localModel;
         private List<IDisposable> _subscriptions;
 
         public virtual bool IsValid
@@ -75,31 +73,14 @@
             return other.Owner.Value == Owner.Value;
         }
 
-        public virtual void SetModel(IModel model)
-        {
-            _localModel = model;
-            model.OnDestroyed += o => Destroy();
-        }
-
         public virtual void SetAgent(IAgent agent)
         {
+            Assert.IsNotNull(agent);
             AgentBase = agent;
-            if (_localModel == null)
-                _localModel = agent.BaseModel;
-        }
-
-        public virtual void SetAgent(IAgent agent, IModel model)
-        {
-            SetAgent(agent);
-            SetModel(model);
         }
 
         public void SetOwner(IOwner owner)
-        {
-            //Verbose(20, $"New owner of {this} is {owner}");
-
-            Model?.SetOwner(owner);
-        }
+            => Model?.SetOwner(owner);
 
         private void Awake()
             => Create();
@@ -122,9 +103,7 @@
         /// virtual functions and overrides.
         /// </remarks>
         protected virtual bool Create()
-        {
-            return !this.EarlyOut(ref _createCalled, $"{this} has already had AddSubscriptions called. Aborting.");
-        }
+            => !this.EarlyOut(ref _createCalled, $"{this} has already had AddSubscriptions called. Aborting.");
 
         /// <remarks>
         /// Unity initialisation methods are called via reflection.
@@ -132,9 +111,7 @@
         /// virtual functions and overrides.
         /// </remarks>
         protected virtual bool Begin()
-        {
-            return !this.EarlyOut(ref _beginCalled, $"{this} has already had Begin called. Aborting.");
-        }
+            => !this.EarlyOut(ref _beginCalled, $"{this} has already had Begin called. Aborting.");
 
         public virtual bool AddSubscriptions()
         {
@@ -163,26 +140,19 @@
         /// virtual functions and overrides.
         /// </remarks>
         protected virtual void Step()
-        {
-            _queue?.Update(Time.deltaTime);
-        }
+            => _queue?.Update(Time.deltaTime);
 
         public void Pause(bool pause = true)
-        {
-            _paused = pause;
-        }
+            => _paused = pause;
 
         public float LifeTime()
-        {
-            return _localTime;
-        }
+            => _localTime;
 
         public bool SameOwner(IOwned other)
-        {
-            return ReferenceEquals(Owner.Value, other);
-        }
+            => ReferenceEquals(Owner.Value, other.Owner.Value);
 
-        private void OnDestroy() => Destroy();
+        private void OnDestroy()
+            => Destroy();
 
         public virtual void Destroy()
         {
@@ -197,16 +167,12 @@
             _Subscriptions.Clear();
 
             AgentBase?.Destroy();
-            if (AgentBase == null)
-                _localModel?.Destroy();
             OnDestroyed?.Invoke(this);
             UnityEngine.Object.Destroy(GameObject);
         }
 
         public override string ToString()
-        {
-            return $"View {name} of type {GetType().Name}, Id={Id}";
-        }
+            => $"View {name} of type {GetType().Name}";
     }
 
     public class ViewBase<TIAgent>
@@ -233,9 +199,9 @@
         //    base.SetAgent(player, agent);
         //}
 
-        public virtual void SetAgent(TIAgent agent, IModel model)
-        {
-            base.SetAgent(agent, model);
-        }
+        // public virtual void SetAgent(TIAgent agent, IModel model)
+        // {
+        //     base.SetAgent(agent, model);
+        // }
     }
 }

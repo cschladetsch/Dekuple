@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
+﻿
 // Yet another way to assert runtime conditions. It was just easier
 // to add another one, than to add another dependancy. Sorry.
 //
@@ -11,6 +8,10 @@ using System.Linq;
 
 namespace Dekuple
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    
     public class AssertionException : Exception
     {
         public AssertionException(string text) : base(text)

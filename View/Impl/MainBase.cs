@@ -80,10 +80,11 @@ namespace Dekuple.View.Impl
             where TIView : class, IViewBase
             where TIModel : class, IModel
         {
-            var view = Views.FromPrefab<TIView>(prefab);
-            var model = Models.Get<TIModel>();
-            view.SetModel(model);
-            return view;
+            // var view = Views.FromPrefab<TIView>(prefab);
+            // var model = Models.Get<TIModel>();
+            // view.SetModel(model);
+            // return view;
+            throw new NotImplementedException();
         }
 
         public TIView NewEntity<TIView, TIAgent, TIModel>(Object prefab)
@@ -94,6 +95,7 @@ namespace Dekuple.View.Impl
             return Views.FromPrefab<TIView>(prefab, Agents.Get<TIAgent>(Models.Get<TIModel>()));
         }
 
+        /*
         protected TView BuildEntityAsSingle<TView, TIView, TIAgent, TIModel>(params object[] modelArgs)
             where TView : Component, TIView
             where TIView : class, IViewBase
@@ -124,7 +126,9 @@ namespace Dekuple.View.Impl
 
             return obj;
         }
+        */
 
+        /*
         /// <summary>
         /// Find all Views of type TIView that exist in the scene and give them a model and agent.
         /// </summary>
@@ -154,6 +158,7 @@ namespace Dekuple.View.Impl
             }
             return objs;
         }
+        */
 
         /// <summary>
         /// Add registry bindings in here using Registry.Bind

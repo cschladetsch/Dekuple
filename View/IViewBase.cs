@@ -19,9 +19,7 @@
         Transform Transform { get; }
         IModel Model { get; }
 
-        void SetModel(IModel model);
         void SetAgent(IAgent agent);
-        void SetAgent(IAgent agent, IModel model);
     }
 
     public interface IView<out TIAgent>

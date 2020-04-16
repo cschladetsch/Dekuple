@@ -36,10 +36,6 @@
             }
         }
 
-        protected List<IDisposable> _Subscriptions => _subscriptions ?? (_subscriptions = new List<IDisposable>());
-
-        private List<IDisposable> _subscriptions;
-
         protected AgentBase(TModel model)
         {
             if (model == null)
