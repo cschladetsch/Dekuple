@@ -1,5 +1,6 @@
-namespace App.Models.Impl
+namespace App.Model.Impl
 {
+    using UniRx;
     using Dekuple.Model;
     
     /// <inheritdoc cref="I$MODELNAME$" />
@@ -7,6 +8,5 @@ namespace App.Models.Impl
         : ModelBase
         , I$MODELNAME$
     {
-
     }
 }

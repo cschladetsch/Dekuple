@@ -1,15 +1,15 @@
-namespace App.Agents.Impl
+namespace App.Agent.Impl
 {
     using Dekuple.Agent;
-
-    using Models;
+    using Model;
 
     /// <inheritdoc cref="I$AGENTNAME$" />
     public class $AGENTNAME$
         : AgentBase<I$MODELNAME$>
         , I$AGENTNAME$
     {
-        public $AGENTNAME$(I$MODELNAME$ model) : base(model)
+        public $AGENTNAME$(I$MODELNAME$ model)
+            : base(model)
         {
         }
     }

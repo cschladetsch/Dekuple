@@ -1,14 +1,12 @@
-namespace App.Views.Impl
+namespace App.View.Impl
 {
     using Dekuple.View.Impl;
-
-    using Agents;
+    using Agent;
 
     /// <inheritdoc cref="I$VIEWNAME$" />
     public class $VIEWNAME$
         : ViewBase<I$AGENTNAME$>
         , I$VIEWNAME$
     {
-
     }
 }

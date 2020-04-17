@@ -1,13 +1,12 @@
-namespace App.Models
+namespace App.Model
 {
-    using Dekuple.Model;
-
+    using UniRx;
+    
     /// <summary>
     /// DOC
     /// </summary>
     public interface I$MODELNAME$
         : IModel
     {
-
     }
 }

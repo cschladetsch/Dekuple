@@ -101,12 +101,12 @@ public class CreateEntityPopup
         _modelInterface = modelInterface;
 
         var parent = Directory.GetParent(Application.dataPath).FullName;
-        _viewClassPath = parent + "/Assets/App/Views/Impl";
-        _viewInterfacePath = parent + "/Assets/App/Views";
-        _agentClassPath = parent + "/Assets/App/Agents/Impl";
-        _agentInterfacePath = parent + "/Assets/App/Agents";
-        _modelClassPath = parent + "/Assets/App/Models/Impl";
-        _modelInterfacePath = parent + "/Assets/App/Models";
+        _viewClassPath = parent + "/Assets/App/View/Impl";
+        _viewInterfacePath = parent + "/Assets/App/View";
+        _agentClassPath = parent + "/Assets/App/Agent/Impl";
+        _agentInterfacePath = parent + "/Assets/App/Agent";
+        _modelClassPath = parent + "/Assets/App/Model/Impl";
+        _modelInterfacePath = parent + "/Assets/App/Model";
 
         CreateEntityPopup window = CreateInstance<CreateEntityPopup>();
         window.name = "Create Entity";

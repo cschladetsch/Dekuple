@@ -1,8 +1,7 @@
-namespace App.Views
+namespace App.View
 {
     using Dekuple.View;
-
-    using Agents;
+    using Agent;
 
     /// <summary>
     /// DOC
@@ -10,6 +9,5 @@ namespace App.Views
     public interface I$VIEWNAME$
         : IView<I$AGENTNAME$>
     {
-
     }
 }

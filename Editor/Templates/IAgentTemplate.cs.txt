@@ -1,8 +1,7 @@
-namespace App.Agents
+namespace App.Agent
 {
     using Dekuple.Agent;
-
-    using Models;
+    using Model;
 
     /// <summary>
     /// DOC
@@ -10,6 +9,5 @@ namespace App.Agents
     public interface I$AGENTNAME$
         : IAgent<I$MODELNAME$>
     {
-
     }
 }
