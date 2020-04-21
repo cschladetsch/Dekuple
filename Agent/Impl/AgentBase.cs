@@ -16,15 +16,14 @@
         , IAgent<TModel>
         where TModel : class, IModel
     {
-        private bool _addCalled;
         public event Action<IAgent> OnDestroyed;
         public IRegistry<IAgent> Registry { get; set; }
         public Guid Id { get; /*private*/ set; }
-
         public IModel BaseModel { get; }
-
         public TModel Model => BaseModel as TModel;
         public IReadOnlyReactiveProperty<IOwner> Owner => Model?.Owner;
+        
+        private bool _addCalled;
 
         public virtual bool IsValid
         {
@@ -68,22 +67,8 @@
             return other.Owner.Value == Owner.Value;
         }
 
-        // DK TODO Move to Chess2
-        //public virtual void StartGame()
-        //{
-        //    Assert.IsFalse(_started);
-        //    _started = true;
-        //}
-
-        //public virtual void EndGame()
-        //{
-        //    _started = false;
-        //}
-
         public virtual bool AddSubscriptions()
-        {
-            return !this.EarlyOut(ref _addCalled, $"{this} has already had AddSubscriptions called. Aborting.");
-        }
+            => !this.EarlyOut(ref _addCalled, $"{this} has already had AddSubscriptions called. Aborting.");
 
         public virtual void Destroy()
         {
@@ -95,7 +80,7 @@
             _Subscriptions.Clear();
 
             Model?.Destroy();
-            this.OnDestroyed?.Invoke(this);
+            OnDestroyed?.Invoke(this);
         }
     }
 }

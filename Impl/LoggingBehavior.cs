@@ -26,7 +26,7 @@ namespace Dekuple
 
         public void Info(string fmt, params object[] args)
         {
-            _log.Info(fmt, args);
+           _log.Info(fmt, args);
         }
 
         public void Warn(string fmt, params object[] args)

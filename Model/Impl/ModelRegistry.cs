@@ -5,6 +5,8 @@
     public interface IModelRegistry
         : IRegistry<IModel>
     {
+        // IModel Thaw();
+        // void Freeze();
     }
 
     /// <summary>

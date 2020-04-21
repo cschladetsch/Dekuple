@@ -11,6 +11,7 @@ namespace Dekuple
         NoChange,
         TooClose,
         NotImplemented,
-        NotEnoughMana
+        NotEnoughMana,
+        InCheck
     }
 }

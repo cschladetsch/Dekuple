@@ -52,11 +52,6 @@ namespace Dekuple.Model
         {
         }
 
-        // public void Add<T>(T disposable) where T : IDisposable
-        // {
-        //     _Subscriptions.Add(disposable);
-        // }
-        //
         public bool SameOwner(IEntity other)
         {
             if (other == null)

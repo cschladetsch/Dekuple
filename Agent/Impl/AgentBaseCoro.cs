@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections;
-using Flow;
-using Flow.Impl;
-
-namespace Dekuple.Agent
+﻿namespace Dekuple.Agent
 {
+    using System;
+    using System.Collections;
+    using Flow;
     using Model;
 
     /// <summary>
